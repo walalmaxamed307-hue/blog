@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React vs JavaScript – Isbarbardhigga Web Development Casri ah</title>
+
+    <meta name="description" content="React vs JavaScript: Faham farqiga u dhexeeya JavaScript caadi ah iyo React, faa’iidooyinka, khasaaraha, iyo midka kugu habboon barashada web development-ka casriga ah.">
+    <meta name="keywords" content="React vs JavaScript, Barashada React, Barashada JavaScript, Web Development Casri ah, TechSomali, Baro Coding Af-Soomaali">
+    <meta name="author" content="TechSomali">
+    <link rel="icon" href="https://techsomalia.com/images/techsomali-logo.png">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "TechSomali",
+  "url": "https://techsomalia.com",
+  "logo": "https://techsomalia.com/images/techsomali-logo.png"
+}
+</script>
+
+    <style>
+        :root{
+            --primary:#1e293b;
+            --secondary:#0ea5e9;
+            --bg:#f8fafc;
+            --card:#ffffff;
+            --text:#334155;
+            --border:#e2e8f0;
+        }
+
+        body{
+            margin:0;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            background:var(--bg);
+            color:var(--text);
+            line-height:1.9;
+        }
+
+        .container{
+            max-width:1100px;
+            margin:50px auto;
+            padding:0 20px;
+        }
+
+        .hero{
+            background:linear-gradient(135deg, #0ea5e9, #2563eb);
+            color:#fff;
+            padding:60px 30px;
+            border-radius:20px;
+            margin-bottom:40px;
+        }
+
+        .hero h1{
+            font-size:2.4rem;
+            margin-bottom:15px;
+        }
+
+        .hero p{
+            font-size:1.1rem;
+            max-width:800px;
+        }
+
+        .content-card{
+            background:var(--card);
+            padding:35px;
+            border-radius:18px;
+            margin-bottom:35px;
+            border:1px solid var(--border);
+        }
+
+        h2{
+            color:var(--primary);
+            margin-top:40px;
+            margin-bottom:15px;
+        }
+
+        h3{
+            color:var(--secondary);
+            margin-top:30px;
+        }
+
+        ul{
+            padding-left:20px;
+        }
+
+        li{
+            margin-bottom:10px;
+        }
+
+        .compare{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:25px;
+            margin-top:30px;
+        }
+
+        .box{
+            background:#f1f5f9;
+            padding:25px;
+            border-radius:15px;
+        }
+
+        .box h4{
+            margin-top:0;
+            color:#0f172a;
+        }
+
+        .highlight{
+            background:#e0f2fe;
+            padding:20px;
+            border-left:5px solid var(--secondary);
+            border-radius:10px;
+            margin:30px 0;
+        }
+
+        .footer-note{
+            text-align:center;
+            margin-top:60px;
+            font-size:0.95rem;
+            color:#64748b;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <section class="hero">
+        <h1>React vs JavaScript</h1>
+        <p>
+            Maqaalkan wuxuu si qoto dheer u sharxayaa farqiga u dhexeeya JavaScript caadi ah iyo React,
+            sida ay u shaqeeyaan, goorta mid walba la isticmaalo, iyo kan ku habboon mustaqbalka
+            web development-ka casriga ah.
+        </p>
+    </section>
+
+    <article class="content-card">
+
+        <h2>Hordhac</h2>
+        <p>
+            Qof kasta oo bilaabaya ama horumarinaya xirfaddiisa web development wuxuu mar uun la kulmaa
+            su’aasha ah: <strong>JavaScript ma ku filan yahay mise React ayaan u baahanahay?</strong>
+            Inkastoo labada magac ay si dhow isugu xiran yihiin, haddana maaha wax isku mid ah.
+        </p>
+
+        <h2>Waa maxay JavaScript?</h2>
+        <p>
+            JavaScript waa luqad barnaamij oo aasaasi u ah webka. Waxaa lagu dhisaa dhammaan
+            is-dhaqaaqa bogagga sida buttons shaqeeya, form validation, animations, iyo
+            wax walba oo browser-ka dhexdiisa ka shaqeeya.
+        </p>
+
+        <h3>Faa’iidooyinka JavaScript</h3>
+        <ul>
+            <li>Waa luqadda ugu muhiimsan ee webka</li>
+            <li>Browser walba waa taageeraa</li>
+            <li>Ma u baahna libraries ama frameworks si loo bilaabo</li>
+            <li>Ku fiican barashada aasaaska programming</li>
+        </ul>
+
+        <h3>Xaddidaadaha JavaScript</h3>
+        <ul>
+            <li>Ma fududa marka project-ku weynaado</li>
+            <li>Koodhku wuu isku dhex yaacayaa marka UI-ku adkaado</li>
+            <li>Ma laha structure rasmi ah</li>
+        </ul>
+
+        <h2>Waa maxay React?</h2>
+        <p>
+            React waa JavaScript library ay samaysay Meta (Facebook). Waxaa si gaar ah loogu talagalay
+            dhisidda user interfaces casri ah, gaar ahaan Single Page Applications (SPA).
+        </p>
+
+        <p>
+            React wuxuu ku shaqeeyaa fikrad la yiraahdo <strong>components</strong>, taas oo micnaheedu yahay
+            in bogga loo kala jebiyo qaybo yar-yar oo dib loo isticmaali karo.
+        </p>
+
+        <h3>Faa’iidooyinka React</h3>
+        <ul>
+            <li>UI nadiif ah oo la maamuli karo</li>
+            <li>Reusable components</li>
+            <li>Virtual DOM oo waxqabad sare leh</li>
+            <li>Ku habboon project-yada waaweyn</li>
+            <li>Fursado shaqo oo badan (freelance & jobs)</li>
+        </ul>
+
+        <div class="compare">
+            <div class="box">
+                <h4>JavaScript</h4>
+                <ul>
+                    <li>Luqad barnaamij</li>
+                    <li>Aasaaska webka</li>
+                    <li>Ku fiican beginners</li>
+                    <li>Project yar-yar</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h4>React</h4>
+                <ul>
+                    <li>JavaScript Library</li>
+                    <li>UI casri ah</li>
+                    <li>Project waaweyn</li>
+                    <li>Single Page Applications</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>React vs JavaScript – Kee Ayaan Baranayaa?</h2>
+        <p>
+            Haddii aad bilow tahay, JavaScript waa lama huraan. React laguma baran karo la’aanteed
+            JavaScript. Laakiin marka aad fahamto JavaScript basics, React wuxuu kuu furayaa
+            albaabyo badan oo horumar iyo shaqo ah.
+        </p>
+
+        <div class="highlight">
+            <strong>Talo:</strong> JavaScript → kadib React → kadib frameworks kale sida Next.js
+        </div>
+
+        <h2>Gunaanad</h2>
+        <p>
+            React iyo JavaScript maaha labo is diidan, balse waa labo is kaabaya. JavaScript waa saldhigga,
+            React-na waa qalab kaa caawinaya inaad dhisto web apps casri ah, degdeg ah, oo la maamuli karo.
+            Haddii aad rabto mustaqbal web development ah, labadaba waa inaad taqaan.
+        </p>
+
+    </article>
+
+    <div class="footer-note">
+        © 2026 TechSomali – Teknoolojiyada Casriga ah Af-Soomaali
+    </div>
+
+</div>
+
+</body>
+</html>

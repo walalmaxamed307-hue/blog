@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog</title>
+    <meta name="description" content="TechSomali waa blog Af-Soomaali ah oo ka hadla Programming, Web Development, JavaScript, HTML, CSS iyo Technology casri ah.">
+    <meta name="keywords" content="TechSomali, Programming Af-Soomaali, Web Development, JavaScript, HTML, CSS, Teknoolajiyadda Casriga ah, Baro Coding Af-Soomaali">
+    <meta name="author" content="TechSomali">
+    <link rel="icon" href="https://techsomalia.com/images/techsomali-logo.png">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "TechSomali",
+  "url": "https://techsomalia.com",
+  "logo": "https://techsomalia.com/images/techsomali-logo.png"
+}
+</script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eee5e5;
+            box-sizing: border-box;
+        }
+
+
+        header {
+            background-color: #0932d3a3;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .big {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #f8f1f1;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+
+        }
+
+        .big h2 {
+            color: #1709e7;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns:repeat(2,1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.479);
+            transition: transform 0.3s ease;
+        }
+
+
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .cards .card img{
+            width:100%;
+           max-width: 1200px;
+            height: 300px;
+            object-fit: cover;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            
+        }
+
+        .card h3 {
+            font-size: 18px;
+            color: #333;
+            margin: 15px;
+        }
+
+        .card a {
+            display: inline-block;
+            margin: 0 15px 15px 15px;
+            padding: 10px 15px;
+
+            color: rgb(2, 107, 244);
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .card a h3 {
+            margin: 0;
+            font-size: 16px;
+            color: #1709e7;
+        }
+
+        .navbar {
+           
+            background-color: #161616;
+            color: #ffffff;
+            padding: 10px;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+            color: rgba(0, 255, 60, 0.719);
+        }
+        .menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+.navbar ul {
+display: none;
+flex-direction: column;
+background-color: rgb(0, 0, 0);
+width: 40%;
+position: absolute;
+top: 60px;
+right:0;
+z-index: 1000;
+  }
+
+  .navbar ul.show {
+    display: flex;
+  }
+ .menu-toggle {
+    display: block;
+    position: fixed;
+    top: 10px;
+    right: 15px;
+    z-index: 1000;
+  }
+ul li{
+    border-top: 1px solid #1e293b;
+    padding: 15px 0;
+    width:100%;
+    text-align: center;
+  
+    
+
+}
+ul li:hover{
+text-decoration: underline;
+cursor: pointer;
+    
+
+}
+.cards{
+display: grid;
+grid-template-columns: repeat(1,1fr);
+gap: 20px;
+
+}
+
+
+
+}
+
+
+        .footer-note{
+            text-align:center;
+            margin-top:60px;
+            font-size:0.95rem;
+            color:#64748b;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <nav class="navbar">
+        <div class="logo">💻Tech Somali</div>
+        <div class="menu-toggle">
+            ☰
+        </div>
+        <ul>
+
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./index.html">home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./privecy.html">Privacy</a></li>
+            <li><a href="./terms&conditions.html">Terms</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Somali tech articles</h1>
+    </header>
+    <main>
+        <div class="big">
+            <h2>list articles</h2>
+            <div class="cards">
+                <div class="card">
+                    <a href="./adsense.html"><img
+                            src="./1724925728104.webp"
+                            alt="swir" loading="lazy"></a>
+
+                    <a href="./adsense.html">
+                        <h3>sidee adsense looga shaqeeya somaaliya?</h3>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="./payoneer.html"><img
+                            src="./11522-postblog_image_1200x630-2.jpg.webp"
+                            alt="payoneer" loading="lazy"></a>
+
+                    <a href="./payoneer.html">
+                        <h3>payoneer somaliya:sida loo furo loo isticmaalo?</h3>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="./website.html"><img
+                            src="./pexels-photo-4050319.jpeg"
+                            alt="website" loading="lazy"></a>
+
+                    <a href="./website.html">
+                        <h3>website sidee lacag looga sameeyaa?</h3>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="./freelencing.html"><img
+                            src="./young-woman-freelancer-working-in-a-coffeehouse-u-2023-06-07-17-57-09-utc.jpg"
+                            alt="freelancing" loading="lazy"></a>
+
+                    <a href="./freelencing.html">
+                        <h3>freelancing somalia:hagaha billowga?</h3>
+                    </a>
+                </div>
+                     <div class="card">
+                    <a href="./onlineincome.html"><img
+                            src="./pexels-photo-5902919.jpeg"
+                            alt="online income" loading="lazy"></a>
+                    <a href="./onlineincome.html">
+                        <h3>qaabkee lacag looga sameeya internetka?</h3>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="./hosting&domain.html"><img
+                            src="./Domain-vs-Hosting-Definitions-Working-And-Key-Differences.webp"
+                            alt="domain and hosting" loading="lazy"></a>
+
+                    <a href="./hosting&domain.html">
+                        <h3>hosting iyo domain:hagaha billowga?</h3>
+                    </a>
+                </div>
+               
+                <div class="card">
+                    <a href="./programing.html"><img
+                            src="./understanding-web-development-frameworks-og-image.jpg"
+                            alt="programing" loading="lazy"></a>
+                    <a href="./programing.html">
+                        <h3>programing:luqadaha ugu muhiimsan?</h3>
+                    </a>
+                </div>
+            <div class="card">
+                    <a href="./webdevelopment.html"><img
+                            src="./Website-to-Make-Money.webp"
+                            alt="web development" loading="lazy"></a>
+                    <a href="./webdevelopment.html">
+                        <h3>web development: xagee ka bilaabaa?</h3>
+                    </a>
+                </div>
+                         <div class="card">
+                    <a href="./frontendvsbackend.html"><img
+                            src="./Front-End-Back-End-Development-Featured.jpg"
+                            alt="frontend vs backend" loading="lazy"></a>
+                    <a href="./frontendvsbackend.html">
+                        <h3>frontend vs backend keen ku billaabaa? </h3>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="./barashadahtmliyocss.html"><img
+                            src="./Make Simple Website in HTML CSS.webp"
+                            alt="barashada html iyo css" loading="lazy"></a>
+                    <a href="./barashadahtmliyocss.html">
+                        <h3>barashada html iyo css xageen ka billabaa ?</h3>
+                    </a>
+                </div>
+                    <div class="card">
+                    <a href="./jv.html"><img
+                            src="./pexels-photo-31343632.jpeg"
+                            alt="javascript" loading="lazy"></a>
+                    <a href="./jv.html">
+                        <h3>javascript:maxayta muhiimada uu uleeyahay webseedka?</h3>
+                    </a>
+                </div>
+                     <div class="card">
+                    <a href="react.html"><img
+                            src="./images.png"
+                            alt="react" loading="lazy"></a>
+                    <a href="react.html">
+                        <h3>sababata react loogu webseedyada casriga ah maxayta?</h3>
+                    </a>
+                </div>  
+                     <div class="card">
+                    <a href="reactvsjv.html"><img
+                            src="./Vanilla-JS-Vs-React-JS_-What-To-Choose-For-Your-Development_-2.webp"
+                            alt="react vs javascript" loading="lazy"></a>
+                    <a href="reactvsjv.html">
+                        <h3>react vs javascript</h3>
+                    </a> 
+                </div>  
+
+                    <div class="card">
+                    <a href="./git&github.html"><img
+                            src="./git-vs-github.webp"
+                            alt="git and github" loading="lazy"></a>
+                    <a href="./git&github.html">
+                        <h3>git&github maxay kaa caawinayaan faaidooda maxay tahay?</h3>
+                    </a>
+                </div>
+                    <div class="card">
+                    <a href="./githubworkflow.html"><img
+                            src="./746_github_flow.webp"
+                            alt="github workflow" loading="lazy"></a>
+                    <a href="./githubworkflow.html">
+                        <h3>sidee project dhab ah loogu shaqeeyaa?</h3>
+                    </a>
+                </div>
+                    <div class="card">
+                    <a href="./github+netfly.html"><img
+                            src="./4c68473a73da8b08a4dccadc10276ab997d09ade-2400x1350_Z1unRdg.webp"
+                            alt="github and netfly" loading="lazy"></a>
+                    <a href="./github+netfly.html">
+                        <h3>sidee webseed looga dhigaa online?</h3>
+                    </a>
+                </div>
+                    <div class="card">
+                    <a href="seobasics.html"><img
+                            src="./shutterstock_423521506-scaled-1.webp"
+                            alt="seo basics" loading="lazy"></a>
+                    <a href="seobasics.html">
+                        <h3>sidee webseedkaaga loogu hagaajiyaa google?</h3>
+                    </a>
+                </div>
+                    <div class="card">
+                    <a href="contentstrategy.html"><img
+                            src="./Depositphotos_67853485_xl-2015-1024x683.webp"
+                            alt="content strategy" loading="lazy"></a>
+                    <a href="contentstrategy.html">
+                        <h3>sidee loo qorsheeyaa qorista articles?</h3>
+                    </a>
+                </div>
+                    <div class="card">
+                    <a href="top6somaliblog.html"><img
+                            src="./images.webp"
+                            alt="top 6 somali blog" loading="lazy"></a>
+                    <a href="top6somaliblog.html">
+                        <h3>how it helps grow your blog/professional skills?</h3>
+                    </a>
+                </div>
+                    <div class="card">
+                    <a href="frontendrodmap2026.html"><img
+                            src="./maxresdefault.webp"
+                            alt="frontend roadmap 2026" loading="lazy"></a>
+                    <a href="frontendrodmap2026.html">
+                        <h3>Frontend Roadmap 2026 – Sida Loogu Noqdo Frontend Developer Casri ah🤏</h3>
+                    </a>
+                </div>
+               
+        
+            </div>
+                   <div class="footer-note">
+        © 2026 TechSomali – Teknoolojiyada Casriga ah Af-Soomaali
+    </div>
+        </div> 
+    </main>
+      <script>
+const menutoggle=document.querySelector(".menu-toggle");
+const navbar=document.querySelector(".navbar ul");
+
+menutoggle.addEventListener("click", () => {
+  navbar.classList.toggle("show");
+});
+</script>
+</body>
+
+</html>

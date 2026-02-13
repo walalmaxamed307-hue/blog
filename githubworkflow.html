@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Workflow - Project Dhab ah</title>
+  <meta name="description" content="GitHub Workflow: Baro sida project dhab ah loogu shaqeeyo. Tallaabo tallaabo hagitaan ku saabsan isbeddelka project-kaaga.">
+  <meta name="keywords" content="GitHub Workflow, Git Workflow, Project Management, Web Development Afsoomaali, TechSomali">
+  <meta name="author" content="TechSomali">
+  <link rel="icon" href="https://techsomalia.com/images/techsomali-logo.png">
+      <script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "TechSomali",
+  "url": "https://techsomalia.com",
+  "logo": "https://techsomalia.com/images/techsomali-logo.png"
+}
+</script>
+  
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top, #020617, #000);
+      color: #e5e7eb;
+      line-height: 1.9;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 80px auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.08),
+        rgba(255, 255, 255, 0.03)
+      );
+      border-radius: 26px;
+      padding: 50px;
+      box-shadow: 0 40px 100px rgba(0, 0, 0, 0.7);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      top: -40%;
+      right: -40%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(56,189,248,0.35), transparent 70%);
+      filter: blur(60px);
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 8px 18px;
+      border-radius: 40px;
+      font-size: 14px;
+      font-weight: 600;
+      background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+      color: #020617;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: #f8fafc;
+    }
+
+    h2 {
+      margin-top: 35px;
+      font-size: 24px;
+      color: #7dd3fc;
+    }
+
+    p {
+      font-size: 17px;
+      margin-top: 18px;
+      color: #e5e7eb;
+    }
+
+    ul {
+      margin-top: 20px;
+      padding-left: 22px;
+    }
+
+    ul li {
+      margin-bottom: 14px;
+      font-size: 16px;
+    }
+
+    .note {
+      margin-top: 40px;
+      padding: 20px;
+      border-left: 4px solid #38bdf8;
+      background: rgba(56, 189, 248, 0.08);
+      border-radius: 10px;
+      font-size: 15px;
+      color: #cbd5f5;
+    }
+    
+        .footer-note{
+            text-align:center;
+            margin-top:60px;
+            font-size:0.95rem;
+            color:#64748b;
+        }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+    <article class="card">
+
+      <span class="tag">Git & GitHub</span>
+      <h1>GitHub Workflow: Sida Project Dhab ah Loogu Shaqeeyo</h1>
+
+      <p>
+        GitHub Workflow waa hab nidaamsan oo ay isticmaalaan developers-ka
+        xirfadlayaasha ah si ay u maareeyaan mashruucyo dhab ah.
+        Ma aha kaliya in code la qoro, balse waa hab fikir iyo nidaam
+        kuu sahlaya inaad si ammaan ah u horumariso project-kaaga,
+        aadna ula shaqeyso dad kale adigoon isku dhex yaacin.
+      </p>
+
+      <h2>Maxaa Looga Baahan Yahay Workflow?</h2>
+      <p>
+        Mashruuc dhab ah ma aha hal file ama hal page.
+        Waxaa jira isbeddelo badan, khaladaad la saxayo,
+        iyo features cusub oo lagu darayo.
+        GitHub Workflow wuxuu hubiyaa in isbeddel kasta
+        la diiwaangeliyo, lana fahmo sababta loo sameeyay.
+      </p>
+
+      <h2>Talaabada 1: Repository Sameynta</h2>
+      <p>
+        Talaabada ugu horreysa waa in aad project-kaaga
+        ka dhigto Git repository. Haddii uu project cusub yahay,
+        waxaad isticmaashaa <strong>git init</strong>,
+        haddii uu horay u jirayna waxaad isticmaashaa
+        <strong>git clone</strong>.
+        Tani waxay kuu oggolaaneysaa in Git uu bilaabo
+        la socodka dhammaan isbeddelada.
+      </p>
+
+      <h2>Talaabada 2: Branches Isticmaal</h2>
+      <p>
+        Mashruuc dhab ah laguma shaqeeyo branch-ka main kaliya.
+        Branch waa meel aad ku tijaabiso fikrad cusub adigoon
+        khatar gelin code-ka ugu muhiimsan.
+        Tusaale ahaan, feature cusub waxaad u samaynaysaa branch
+        gaar ah ilaa aad hubto inuu si sax ah u shaqeynayo.
+      </p>
+
+      <ul>
+        <li>Main branch: Code-ka rasmi ah</li>
+        <li>Feature branch: Wax cusub</li>
+        <li>Fix branch: Khaladaad la saxayo</li>
+      </ul>
+
+      <h2>Talaabada 3: Commit & Push</h2>
+      <p>
+        Commit waa fariin taariikhi ah oo sharxeysa
+        waxa aad beddeshay. Commit wanaagsan wuxuu leeyahay
+        fariin kooban oo cad, taasoo qof kasta u fududeysa
+        inuu fahmo waxa dhacay.
+        Markaad commit sameyso kadib, waxaad u push-gareyneysaa
+        GitHub si online ah.
+      </p>
+
+      <h2>Talaabada 4: Pull Request & Merge</h2>
+      <p>
+        Pull Request waa meesha lagu hubiyo code-ka.
+        Waxaa lagu eegi karaa khaladaad, qaab dhismeed,
+        iyo in uu la jaanqaadayo project-ka intiisa kale.
+        Marka la oggolaado, code-ka ayaa lagu daraa
+        branch-ka main.
+      </p>
+
+      <div class="note">
+        GitHub Workflow wuxuu kaa dhigayaa developer nidaamsan,
+        xirfad leh, isla markaana diyaar u ah shaqo dhab ah.
+        Haddii aad rabto inaad shaqo hesho ama freelance noqoto,
+        workflow-kan waa mid lama huraan ah.
+      </div>
+
+    </article>
+           <div class="footer-note">
+        © 2026 TechSomali – Teknoolojiyada Casriga ah Af-Soomaali
+    </div>
+  </main>
+
+</body>
+</html>
