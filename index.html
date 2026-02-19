@@ -58,9 +58,9 @@
 
         header {
           width: 100%;
+            height: 60px;
       position: fixed;
-      
-            background-color: #000000d0;
+      background-color: rgba(16, 137, 230, 0.945);
             color: white;
             padding: 10px 0;
             display: flex;
@@ -118,7 +118,7 @@
   align-items: center;
   text-align: center;
   background:
-    linear-gradient(rgba(0, 0, 0, 0.192), rgba(0, 0, 0, 0.126)),
+    linear-gradient(rgba(0, 0, 0, 0.192), rgba(255, 255, 255, 0.126)),
     url("./premium_photo-1661582351565-9ef475b8df9e.webp");
   background-size: cover;
   background-position: center;
@@ -313,6 +313,52 @@ ul li{
     
 
 }
+.hero {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ }
+ .hero h1 {
+  font-size: 1.5rem;
+  color: rgba(0, 81, 255, 0.774);
+  position: relative;
+  top: 10px;
+  font-weight: bold;
+  font-style: italic;
+  position: relative;
+  top: 30px;
+}
+header {
+  width: 100%;
+  height: 40px;
+  position: fixed;
+  background-color: rgba(16, 137, 230, 0.945);
+  color: white;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  }
+  header .logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+  
+  }
+    header .logo span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+  }
+.hero p {
+  font-size: 16px;
+  color: #0559e0bb;
+  font-weight: bold;
+}
 .logo span {
     font-size: 1rem;
     font-weight: bold;
@@ -336,8 +382,9 @@ cursor: pointer;
 .hero p {
   font-size: 12px;
 }
-}
 
+
+}
 .footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -460,12 +507,21 @@ footer  h4 span {
   font-size: 20px;
   margin-right: 8px;
 }
+
 .logo {
   font-size: 1.6rem;
   font-weight: bold;
   color: #ffffff; /* Base color */
   text-transform: uppercase;
   }
+ .logo img {
+ width: 30%;
+  height: auto;
+position: relative;
+right: 10px;
+  }
+
+
         </style> 
       </head>
 <body>
@@ -474,7 +530,7 @@ footer  h4 span {
  
         <header>
              
-        <div class="logo"> 💻<span>Tech</span>somalia</div>   
+        <div class="logo"> <img src="./171b2cde-e683-40d0-baa6-2d6af2de83ea.png" alt="swir"></div>   
           <div class="menu-toggle">
     ☰
   </div>
@@ -601,7 +657,6 @@ footer  h4 span {
     <a href="#">Twitter</a>
   </div>
 </footer>
-
 <div class="copyright">
   © 2026 TechSomali. All rights reserved.
 </div>
@@ -614,7 +669,6 @@ const navbar=document.querySelector(".navbar ul");
 menutoggle.addEventListener("click", () => {
   navbar.classList.toggle("show");
 });
-
 
 
 </script>
