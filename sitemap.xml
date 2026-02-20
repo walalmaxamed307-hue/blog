@@ -1,29 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <!-- Home page -->
   <url>
     <loc>https://techsomalia.com/</loc>
   </url>
-
-  <!-- About page -->
+ <!-- About page -->
   <url>
     <loc>https://techsomalia.com/about.html</loc>
   </url>
-
-  <!-- Contact page -->
+ <!-- Contact page -->
   <url>
     <loc>https://techsomalia.com/contact.html</loc>
   </url>
-
-  <!-- Example Blog Post -->
+ <!--  Blog Post -->
   <url>
     <loc>https://techsomalia.com/privecy.html</loc>
   </url>
-
-  <!-- Example Blog Post -->
+ <!--  Blog Post -->
   <url>
-    <loc>https://techsomalia.com/terms&conditions.html</loc>
+  <loc>https://techsomalia.com/terms&amp;conditons.html</loc>
   </url>
   <url>
     <loc>https://techsomalia.com/adsense.html</loc>
@@ -55,6 +50,4 @@
   <url>
     <loc>https://techsomalia.com/website.html</loc>
   </url>
-
-
 </urlset>
