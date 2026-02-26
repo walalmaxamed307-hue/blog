@@ -12,281 +12,169 @@
   <meta name="author" content="TechSomali">
   <link rel="icon" href="techsomalia_favicon_square.ico">
 
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f4f6f8;
-      color: #333;
-      line-height: 1.8;
-    }
-
-    header {
-      background: #0056a3;
-      color: #fff;
-      text-align: center;
-      padding: 25px 10px;
-    }
-header h1 {
-      margin: 0;
-      font-size: 28px;
-      font-weight: normal;
-      font-style: italic;
-      color: #fff;
-    }
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 25px;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    h1,
-    h2 {
-      color: #0056a3;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 16px;
-      box-sizing: border-box;
-    }
-
-    button {
-      background: #0056a3;
-      color: #fff;
-      border: none;
-      padding: 12px 25px;
-      font-size: 16px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    button:hover {
-      background: #0077cc;
-      transform: translateY(-3px);
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .contact-info {
-      margin-top: 20px;
-      padding: 15px;
-      background: #eaf2fb;
-      border-radius: 10px;
-    }
-
-    a {
-      color: #0056a3;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .success-message {
-      display: none;
-      background: #d4edda;
-      color: #155724;
-      padding: 15px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-    }
-  
-        .navbar {
-          max-width: 1250px;
-          height: 40px;
-            background-color: #0b0b0b;
-            color: #ffffff;
-            padding: 10px;
-            align-items: center;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            margin: 0;
-        }
-
-        nav ul li {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-
-        }
-
-        nav ul li a:hover {
-            text-decoration: underline;
-            color: rgba(0, 255, 4, 0.719);
-        }
-        .menu-toggle {
-  display: none;
-  font-size: 28px;
-  color: #fff;
-  cursor: pointer;
-}
-
-
-/* 📱 MOBILE */
-@media (max-width: 768px) {
-
-.navbar ul {
-display: none;
-flex-direction: column;
-background-color: rgb(0, 0, 0);
-width: 40%;
-position: absolute;
-top: 60px;
-right:0;
-z-index: 1000;
-  }
-
-  .navbar ul.show {
-    display: flex;
-  }
- .menu-toggle {
-    display: block;
-    position: fixed;
-    top: 10px;
-    right: 15px;
-    z-index: 1000;
-  }
-ul li{
-    border-top: 1px solid #1e293b;
-    padding: 15px 0;
-    width:100%;
-    text-align: center;
-  
+ <!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Mohamed Ahmed Ali</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: { extend: { fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] } } }
+        }
+    </script>
 
-}
-ul li:hover{
-text-decoration: underline;
-cursor: pointer;
-    
-
-}
-}
- .logo img {
- width: 30%;
-  height: auto;
-position: relative;
-right: 10px;
-  }
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        .glass-nav { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        input:focus, textarea:focus { border-color: #2563eb; ring: 2px; ring-color: #3b82f6; outline: none; }
+        /* Mobile Overlay Position Fix */
+        #mobile-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: 9999; display: none; }
+        #mobile-overlay.active { display: flex; }
     </style>
 </head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
 
-<body>
+    <nav class="glass-nav sticky top-0 z-[100] bg-white/80 dark:bg-slate-900/90 border-b border-slate-200 dark:border-slate-800 h-20">
+        <div class="max-w-7xl mx-auto px-6 h-full flex justify-between items-center">
+            <div class="flex items-center gap-10">
+                <a href="./index.html" class="flex items-center gap-2">
+                    <img src="./171b2cde-e683-40d0-baa6-2d6af2de83ea.png" alt="logo" class="h-10 w-auto">
+                    <span class="text-2xl font-black bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent italic">TechSomali</span>
+                </a>
+                <ul class="hidden md:flex items-center space-x-1 font-semibold text-sm">
+                    <li><a href="./index.html" class="px-4 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/30 hover:text-blue-600 transition">Home</a></li>
+                    <li><a href="./blog.html" class="px-4 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/30 hover:text-blue-600 transition">Blog</a></li>
+                    <li><a href="./about.html" class="px-4 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/30 hover:text-blue-600 transition">About</a></li>
+                    <li><a href="./contact.html" class="px-4 py-2 rounded-lg bg-blue-600 text-white">Contact</a></li>
+                </ul>
+            </div>
 
-
-    <nav class="navbar">
-        <div class="logo"> <img src="./171b2cde-e683-40d0-baa6-2d6af2de83ea.png" alt="swir"></div>
-        <div class="menu-toggle">
-            ☰
+            <div class="flex items-center gap-4">
+                <button id="theme-toggle" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                    <span class="dark:hidden">🌙</span><span class="hidden dark:inline">☀️</span>
+                </button>
+                <button id="open-menu" class="md:hidden text-3xl text-blue-600">☰</button>
+            </div>
         </div>
-        <ul>
-
-            <li><a href="./blog.html">Blog</a></li>
-            <li><a href="./index.html">home</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-            <li><a href="./privecy.html">Privacy</a></li>
-            <li><a href="./terms&conditions.html">Terms</a></li>
-        </ul>
     </nav>
 
-  <header>
-    <h1>Contact Us - TechSomali</h1>
-  </header>
-
-  <main>
-    <p>If you have any questions, feedback, or inquiries, please fill out the form below:</p>
-
-    <!-- Success Message -->
-    <div id="successMessage" class="success-message">
-      Thank you! Your message has been sent successfully.
+    <div id="mobile-overlay" class="bg-white dark:bg-slate-950 flex-col items-center justify-center space-y-8 text-2xl font-bold">
+        <button id="close-menu" class="absolute top-6 right-8 text-6xl text-slate-400">&times;</button>
+        <a href="./index.html">Home</a>
+        <a href="./blog.html">Blog</a>
+        <a href="./about.html">About</a>
+        <a href="./contact.html" class="text-blue-600">Contact</a>
+        <a href="./privecy.html" class="text-lg text-slate-500">Privacy</a>
+        <a href="./terms&conditions.html" class="text-lg text-slate-500">Terms</a>
     </div>
 
-    <!-- Netlify Form -->
-    <form name="contact" method="POST" data-netlify="true" id="contactForm">
-      <input type="hidden" name="form-name" value="contact">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <input type="text" name="subject" placeholder="Subject" required>
-      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-
-    <div class="contact-info">
-      <h2>Other Ways to Contact Us</h2>
-      <p>Email: <a href="mailto:techsomali.com@gmail.com">techsomali.com@gmail.com</a></p>
-
-        <!-- WhatsApp -->
-      <p>
-    <a
-      href="https://wa.me/252628561611?text=Salaan,%20waxaan%20kala%20xiriirayaa%20Somali%20Tech%20Blog"
-      target="_blank"
-      class="contact-item whatsapp"
-    >
-      💬
-      <span style="color: #333;">WhatsApp</span>
-      <small>+252 628 561 611</small>
-    </a></p>
-    </div>
-  </main>
-
-  <script>
+    <main class="max-w-6xl mx-auto px-4 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12">
         
-const menutoggle=document.querySelector(".menu-toggle");
-const navbar=document.querySelector(".navbar ul");
+        <div class="space-y-8">
+            <h1 class="text-5xl font-extrabold tracking-tighter">Nagala <span class="text-blue-600">Xiriir</span></h1>
+            <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                Haddii aad qabto su'aalo ku saabsan tignoolajiyada, blogging-ka, ama aad u baahantahay la talin gaar ah, fadlan foomka buuxi ama @gmailkena iyo whattsappkeena hoos ku yaalo  nagala soo xarrir MAHADSANID. Mohamed Ahmed Ali ayaa si toos ah kuugu soo jawaabi doona.
+            </p>
 
-menutoggle.addEventListener("click", () => {
-  navbar.classList.toggle("show");
-});
+            <div class="space-y-4">
+                <div class="flex items-center gap-4 p-4 bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800">
+                    <div class="text-3xl">📧</div>
+                    <div>
+                        <p class="text-sm text-slate-500">Email-ka rasmiga ah</p>
+                        <a href="mailto:techsomali.com@gmail.com" class="font-bold hover:text-blue-600">techsomali.com@gmail.com</a>
+                    </div>
+                </div>
 
-    // Netlify Forms AJAX Submission with success message
-    const form = document.getElementById('contactForm');
-    const successMessage = document.getElementById('successMessage');
+                <a href="https://wa.me/252628561611" target="_blank" class="flex items-center gap-4 p-4 bg-green-50 dark:bg-green-900/10 rounded-2xl border border-green-100 dark:border-green-800 group hover:scale-[1.02] transition">
+                    <div class="text-3xl">💬</div>
+                    <div>
+                        <p class="text-sm text-green-600 dark:text-green-400">WhatsApp Me</p>
+                        <p class="font-bold">+252 628 561 611</p>
+                    </div>
+                </a>
+            </div>
+        </div>
 
-    form.addEventListener('submit', function (event) {
-      event.preventDefault();
-      const formData = new FormData(form);
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData).toString()
-      })
-        .then(() => {
-          successMessage.style.display = 'block';  // Show success message
-          form.reset(); // Clear the form
-        })
-        .catch((error) => alert('Error sending message: ' + error));
-    });
-  </script>
+        <div class="bg-white dark:bg-slate-900 p-8 md:p-10 rounded-[2.5rem] shadow-2xl border border-slate-100 dark:border-slate-800">
+            <div id="successMessage" class="hidden mb-6 p-4 bg-green-100 text-green-700 rounded-xl text-center font-bold italic">
+                ✅ Mahadsanid! Fariintaada si guul leh ayaa loo diray.
+            </div>
 
+            <form name="contact" method="POST" data-netlify="true" id="contactForm" class="space-y-5">
+                <input type="hidden" name="form-name" value="contact">
+                
+                <div>
+                    <label class="block text-sm font-bold mb-2 opacity-70 italic">Magacaaga</label>
+                    <input type="text" name="name" placeholder="Mohamed Ahmed" class="w-full p-4 rounded-xl bg-slate-50 dark:bg-slate-800 border-none ring-1 ring-slate-200 dark:ring-slate-700" required>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold mb-2 opacity-70 italic">Email-kaaga</label>
+                    <input type="email" name="email" placeholder="example@mail.com" class="w-full p-4 rounded-xl bg-slate-50 dark:bg-slate-800 border-none ring-1 ring-slate-200 dark:ring-slate-700" required>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold mb-2 opacity-70 italic">Mowduuca (Subject)</label>
+                    <input type="text" name="subject" placeholder="Maxaan kugu caawin karaa?" class="w-full p-4 rounded-xl bg-slate-50 dark:bg-slate-800 border-none ring-1 ring-slate-200 dark:ring-slate-700" required>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold mb-2 opacity-70 italic">Fariintaada</label>
+                    <textarea name="message" rows="4" placeholder="Halkan ku qor fariintaada..." class="w-full p-4 rounded-xl bg-slate-50 dark:bg-slate-800 border-none ring-1 ring-slate-200 dark:ring-slate-700" required></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg shadow-blue-500/30 transition-all transform hover:-translate-y-1">
+                    Dir Fariinta (Send Message)
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="text-center py-10 opacity-50 text-sm">
+        © 2026 TechSomali Blog | Designed by Mohamed Ahmed Ali
+    </footer>
+
+    <script>
+        // Menu Logic
+        const overlay = document.getElementById('mobile-overlay');
+        document.getElementById('open-menu').addEventListener('click', () => {
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+        document.getElementById('close-menu').addEventListener('click', () => {
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Theme Toggle
+        document.getElementById('theme-toggle').addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+
+        // Netlify AJAX Submission
+        const form = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+            fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formData).toString()
+            })
+            .then(() => {
+                successMessage.classList.remove('hidden');
+                form.reset();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            })
+            .catch((error) => alert('Error: ' + error));
+        });
+    </script>
 </body>
-
 </html>

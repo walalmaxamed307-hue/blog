@@ -10,145 +10,142 @@
   <meta name="author" content="TechSomali">
   <link rel="icon" href="techsomalia_favicon_square.ico">
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Programming: Fikradaha Programming si Fudud oo Af-Soomaali ah. Baro fikradaha aasaasiga ah ee programming sida variables, conditions, loops, iyo logic. Ku bilow safarkaaga barashada coding maanta!">
+    <meta name="keywords" content="programming afsoomaali, barashada programming afsoomaali, fikradaha programming, variables, conditions, loops, logic, web development afsoomaali, techsomali">
+    <meta name="author" content="TechSomali">
+    <link rel="icon" href="techsomalia_favicon_square.ico">
 
-  <title>webdevelopment</title>
-  <style>
-       body {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    <title>programing</title>
+<!DOCTYPE html>
+<html lang="so">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payoneer Soomaaliya: Qaabka Loo Helo iyo Sida Loo Isticmaalo</title>
+  <meta name="description" content="Baro sida Payoneer looga helo Soomaaliya, sida loo isticmaalo, qaabka lacagta loo qaato, iyo sida loogu xiro Google AdSense.">
+  <meta name="keywords" content="Payoneer Soomaaliya, Sida Loo Helo Payoneer, Freelancing Soomaaliya, Google AdSense Soomaaliya, Lacag Ka Sameynta Internetka, TechSomali">
+  <meta name="author" content="TechSomali">
+  <link rel="icon" href="techsomalia_favicon_square.ico">
 
-    }
-      .blog-post {
-        max-width: 1000px;
-        margin: 40px auto;
-        background: #ffffff;
-        padding: 40px;
-        border-radius: 12px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-      }
+  <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } } }
+    </script>
+    <style>
+        
+        /* --- General Setup --- */
+        .glass-nav { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        #mobile-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: 9999; display: none; }
+        #mobile-overlay.active { display: flex; }
+        #scroll-progress { position: fixed; top: 0; left: 0; height: 4px; background: #2563eb; z-index: 100; width: 0%; }
 
-    .blog-post {
-      object-fit: cover;
-      overflow-x: hidden;
-      
- align-items: center;
-      padding: 30px 24px;
-      font-family: 'Arial', sans-serif;
-      line-height: 1.8;
-      color: #1e293b;
-      background: #f8fafc;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    }
+        /* --- ARTCLE BODY DESIGN (Halkan ayay dhibaatadu ka jirtay) --- */
+        .article-body { color: #475569; line-height: 1.8; font-size: 1.15rem; }
+        .dark .article-body { color: #94a3b8; }
 
-    .blog-post h1 {
-      font-size: 32px;
-      color: #0f172a;
-      margin-bottom: 25px;
-      text-align: center;
-    }
+        /* Cinwaannada kala duwan */
+        .article-body h1 { font-size: 2.5rem; font-weight: 800; color: #1e293b; margin-bottom: 1.5rem; }
+        .article-body h2 { font-size: 1.9rem; font-weight: 800; color: #2563eb; margin-top: 2.5rem; margin-bottom: 1.25rem; border-left: 5px solid #2563eb; padding-left: 1rem; }
+        .article-body h3 { font-size: 1.6rem; font-weight: 700; color: #1e293b; margin-top: 2rem; margin-bottom: 1rem; }
+        .article-body h4 { font-size: 1.3rem; font-weight: 700; color: #334155; margin-top: 1.5rem; }
+        .dark .article-body h1, .dark .article-body h3, .dark .article-body h4 { color: #f1f5f9; }
 
-    .blog-post h2 {
-      font-size: 24px;
-      color: #1e40af;
-      margin-top: 35px;
-      margin-bottom: 20px;
-    }
+        /* Hagaajinta Liisaska (Lists) - Tan ayaa muhiim u ah koodhkaaga */
+        .article-body ul { list-style-type: disc !important; margin-bottom: 1.5rem; padding-left: 1.5rem; }
+        .article-body ol { list-style-type: decimal !important; margin-bottom: 1.5rem; padding-left: 1.5rem; }
+        .article-body li { margin-bottom: 0.6rem; }
+        .article-body li::marker { color: #2563eb; font-weight: bold; }
 
-    .blog-post h3 {
-      font-size: 20px;
-      color: #3b82f6;
-      margin-top: 25px;
-      margin-bottom: 15px;
-    }
-
-    .blog-post p {
-      font-size: 16px;
-      margin-bottom: 18px;
-      text-align: justify;
-    }
-
-    .btn-contact {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 14px 30px;
-      border-radius: 25px;
-      background: #38bdf8;
-      color: #020617;
-      font-weight: bold;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .btn-contact:hover {
-      background: #0ea5e9;
-      transform: scale(1.05);
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .blog-post {
-        max-width: 400px;
-      }
-
-      .blog-post h1 {
-        font-size: 28px;
-      }
-
-      .blog-post h2 {
-        font-size: 22px;
-      }
-
-      .blog-post h3 {
-        font-size: 18px;
-      }
-    }
-
-    span code {
-      background: #e0e7ff;
-    }
-
-    ul {
-
-      list-style: none;
-      margin-bottom: 20px;
-    }
-    span {
-   color: #38bdf8;
-   font-weight: bold;
-   font-style: italic;
-   font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    }
-
-    h4 {
-      margin-top: 20px;
-      color: #38bdf8;
-     }
-     
-        .footer-note{
-            text-align:center;
-            margin-top:60px;
-            font-size:0.95rem;
-            color:#64748b;
-        }
-        .cta {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 15px 25px;
-            background-color: #38bdf8;
-            color: white;
-            border-radius: 6px;
-            text-align: center;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-  </style>
+        /* Strong & Links */
+        .article-body strong { color: #1e293b; font-weight: 700; }
+        .dark .article-body strong { color: #f8fafc; }
+        .article-body a { color: #2563eb; text-decoration: underline; font-weight: 600; }
+        
+        /* Sawirrada */
+        .article-body img { border-radius: 2rem; margin: 2rem 0; width: 100%; height: auto; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+    </style>
 </head>
+<body class="bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
 
-<body>
-  <section id="web-development" class="blog-post">
+    <div id="scroll-progress"></div>
+
+    <nav class="glass-nav sticky top-0 z-50 bg-white/80 dark:bg-slate-900/90 border-b border-slate-200 dark:border-slate-800 h-20">
+        <div class="max-w-7xl mx-auto px-6 h-full flex justify-between items-center text-slate-900 dark:text-white">
+            <div class="flex items-center gap-2">
+                <img src="./171b2cde-e683-40d0-baa6-2d6af2de83ea.png" alt="logo" class="h-10 w-auto">
+                <span class="text-2xl font-black italic">TechSomali</span>
+            </div>
+            <ul class="hidden md:flex space-x-8 font-bold text-sm">
+                <li><a href="./index.html">home</a></li>
+                <li><a href="./blog.html" class="text-blue-600">Blog</a></li>
+                <li><a href="./about.html">about</a></li>
+                <li><a href="./contact.html">contact</a></li>
+            </ul>
+            <button id="open-menu" class="md:hidden text-3xl text-blue-600">☰</button>
+        </div>
+    </nav>
+
+    <div id="mobile-overlay" class="bg-white dark:bg-slate-950 flex-col items-center justify-center space-y-8 text-2xl font-bold transition-all dark:text-white">
+        <button id="close-menu" class="absolute top-6 right-8 text-6xl text-slate-400">&times;</button>
+        <a href="./index.html">home</a>
+        <a href="./about.html">about</a>
+        <a href="./blog.html">Blog</a>
+        <a href="./contact.html">contact</a>
+    </div>
+<button id="theme-toggle" class="fixed bottom-6 right-6 z-[100] p-4 bg-white dark:bg-slate-800 shadow-2xl rounded-full border border-slate-200 dark:border-slate-700 hover:scale-110 transition-all text-2xl">
+    <span id="theme-toggle-icon">🌙</span>
+</button>
+
+<script>
+    // Logic-ga Dark Mode
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeToggleIcon = document.getElementById('theme-toggle-icon');
+    const htmlElement = document.documentElement;
+
+    // Hubi haddii uu qofku horay u doortay dark mode
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        htmlElement.classList.add('dark');
+        themeToggleIcon.innerText = '☀️';
+    } else {
+        htmlElement.classList.remove('dark');
+        themeToggleIcon.innerText = '🌙';
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+        if (htmlElement.classList.contains('dark')) {
+            htmlElement.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+            themeToggleIcon.innerText = '🌙';
+        } else {
+            htmlElement.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+            themeToggleIcon.innerText = '☀️';
+        }
+    });
+</script>
+    <header class="py-16 px-6 text-center max-w-4xl mx-auto">
+        <div class="mb-4 inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-full text-xs font-bold uppercase">Technology</div>
+        <h1 class="text-4xl md:text-6xl font-black tracking-tight text-slate-900 dark:text-white mb-6 leading-tight">
+           web development xagee laga billaabaa:albaabka?
+        </a>
+    </div>
+        </h1>
+        <div class="flex justify-center items-center gap-4 text-slate-500 text-sm">
+            <span>By TechSomali</span> • <span>Febraayo 2026</span> • <span>5 min read</span>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 pb-24">
+        <div class="bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 md:p-12 shadow-2xl border border-slate-100 dark:border-slate-800 article-body">
+            
+          
+ <section id="web-development" class="blog-post">
     <h1>💻 Barashada Web Development: HTML, CSS, JavaScript iyo Frameworks Casri ah</h1>
     <p>Barashada Web Development waxay ka mid tahay xirfadaha ugu qiimaha badan ee qofka casriga ah uu barto.
       Maanta, shirkado badan oo caalami ah waxay raadinayaan dad awood u leh dhisidda websites responsive ah, web
@@ -236,13 +233,52 @@
         <p><span>Ugu dambeyn</span> hadii aan soo koobo barta aad ka billaabaysa web-developer waxay noqonaysaa frontend developer kadib backend developer kadibna waxaad noqonaysaa full stack developer hadii aad labadas isku darto. barashada web development waa maalgashi weyn oo mustaqbalkaaga xirfadeed. Fahamka HTML, CSS,
           JavaScript, iyo frameworks casri ah waxay kuu abuuri doonaan fursado shaqo, inaad websites casri ah dhisto,
           iyo inaad noqoto developer xirfad leh oo ku tartami kara suuqa caalamiga ah.</p>
- <a href="https://techsomalia.com/blog.html" class="cta">Booqo TechSomali blogs oo Akhri Maqaallo Dheeraad Ah👈</a>
-        
-               <div class="footer-note">
-        © 2026 TechSomali – Teknoolojiyada Casriga ah Af-Soomaali
-    </div>
+
+
+            <div class="mt-12 pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-4 items-center justify-between">
+                <span class="font-bold dark:text-white">La wadaag asxaabta:</span>
+                <div class="flex gap-2">
+<a href="https://api.whatsapp.com/send?text=Halkan ka aqri maqaal aad u xiiso badan: https://techsomali.com/payoneer.html" 
+   target="_blank" 
+   class="px-4 py-2 bg-green-500 text-white rounded-xl text-sm font-bold"style="color: #f8fafc; text-decoration: none;">
+   
+   WhatsApp
+</a>
+               <a href="https://www.facebook.com/sharer/sharer.php?u=https://techsomali.com/payoneer.html" 
+   target="_blank" 
+   class="px-4 py-2 bg-blue-600 text-white rounded-xl text-sm font-bold" style="color: #f8fafc; text-decoration: none;">
+   Facebook
+</a>
+                </div>
+            </div>
+        </div>
   </section>
+        <div class="grid md:grid-cols-2 gap-6 mt-12">
+            <a href="./programing.html" class="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 hover:border-blue-500 transition shadow-lg">
+                <span class="text-xs text-slate-500 uppercase">Maqaalkii hore</span>
+                <p class="font-bold dark:text-white mt-1">programing muxuu yahay</p>
+            </a>
+            <a href="frontendvsbackend.html" class="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 hover:border-blue-500 transition shadow-lg">
+                <span class="text-xs text-slate-500 uppercase">Maqaalka xiga</span>
+                <p class="font-bold dark:text-white mt-1">frontend vs backend</p>
+            </a>
+        </div>
+    </main>
 
+    <script>
+        // Scroll Progress Bar
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("scroll-progress").style.width = scrolled + "%";
+        };
+
+        // Mobile Menu
+        const overlay = document.getElementById('mobile-overlay');
+        document.getElementById('open-menu').addEventListener('click', () => overlay.classList.add('active'));
+        document.getElementById('close-menu').addEventListener('click', () => overlay.classList.remove('active'));
+    </script>
 </body>
-
 </html>
+ 

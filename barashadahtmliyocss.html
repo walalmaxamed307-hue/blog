@@ -1,206 +1,128 @@
 <!DOCTYPE html>
 <html lang="so">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>barashada html iyo css afsoomaali?</title>
-  <meta name="description" content="barashada html iyo css: albaabka laga galyo xirfada web-developer halkaan ooga baro luuqada soomaaliga.">
-  <meta name="keywords" content="barashada html iyo css, html afsoomaali, css afsoomaali, web development afsoomaali, baro coding afsoomaali, techsomali">
-  <meta name="author" content="TechSomali">
-  <link rel="icon" href="techsomalia_favicon_square.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barashada HTML iyo CSS Af-Soomaali - TechSomali</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } } }
+    </script>
+    <style>
+        .glass-nav { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        #mobile-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: 9999; display: none; }
+        #mobile-overlay.active { display: flex; }
+        #scroll-progress { position: fixed; top: 0; left: 0; height: 4px; background: #2563eb; z-index: 100; width: 0%; }
+        
+        /* Typography System */
+        .article-body { color: #475569; line-height: 1.8; font-size: 1.1rem; }
+        .dark .article-body { color: #94a3b8; }
+        .article-body h2 { font-size: 2rem; font-weight: 800; color: #2563eb; margin: 2.5rem 0 1rem; border-left: 6px solid #2563eb; padding-left: 1rem; }
+        .article-body h3 { font-size: 1.5rem; font-weight: 700; color: #1e293b; margin: 2rem 0 1rem; position: relative; padding-left: 2rem; }
+        .article-body h3::before { content: "✔"; position: absolute; left: 0; color: #2563eb; }
+        .dark .article-body h3 { color: #f1f5f9; }
+        
+        /* Code Block Styling */
+        .code-container { position: relative; margin: 1.5rem 0; border-radius: 12px; overflow: hidden; border: 1px solid #334155; }
+        .code-header { background: #1e293b; color: #94a3b8; padding: 8px 16px; font-size: 0.8rem; display: flex; justify-content: space-between; align-items: center; }
+        pre { background: #0f172a; color: #e2e8f0; padding: 20px; overflow-x: auto; font-family: 'Fira Code', monospace; font-size: 0.95rem; margin: 0; }
+        .copy-btn { background: #334155; color: white; padding: 4px 10px; border-radius: 6px; cursor: pointer; font-size: 0.75rem; transition: 0.3s; }
+        .copy-btn:hover { background: #2563eb; }
 
-
-  <style>
-    /* ===== HTML & CSS Learning Card Design ===== */
-    .html-css-card {
-      background: #fefefe;
-      /* Light neutral background */
-      padding: 35px 40px;
-      border-left: 6px solid #2563eb;
-      /* Blue accent */
-      border-radius: 14px;
-      margin-bottom: 40px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      line-height: 1.8;
-      color: #1e293b;
-    }
-
-    .html-css-card h2 {
-      color: #1e40af;
-      font-size: 2rem;
-      margin-bottom: 25px;
-      text-align: center;
-    }
-
-    .html-css-card h3 {
-      color: #1e3a8a;
-      font-size: 1.2rem;
-      margin-top: 20px;
-      margin-bottom: 12px;
-      position: relative;
-      padding-left: 22px;
-    }
-
-    .html-css-card h3::before {
-      content: "✔";
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: #2563eb;
-      font-size: 1rem;
-    }
-
-    .html-css-card p {
-      font-size: 1rem;
-      margin-bottom: 15px;
-    }
-
-    .html-css-card ul {
-      margin: 12px 0 18px 25px;
-    }
-
-    .html-css-card li {
-      margin-bottom: 8px;
-    }
-
-    .html-css-card pre {
-      background: #f1f5f9;
-      padding: 12px 15px;
-      border-radius: 8px;
-      overflow-x: auto;
-      font-family: monospace;
-      margin-bottom: 18px;
-    }
-
-    .html-css-card blockquote {
-      border-left: 6px solid #2563eb;
-      background: #e0f2fe;
-      padding: 15px 20px;
-      margin: 25px 0;
-      border-radius: 12px;
-      font-style: italic;
-      color: #1e40af;
-    }
-
-    /* Highlight strong and emphasis */
-    .html-css-card strong {
-      color: #1e40af;
-    }
-
-    .html-css-card em {
-      background: #e0f2fe;
-      padding: 4px 8px;
-      border-radius: 6px;
-      font-style: normal;
-    }
-
-    /* ===== Responsive ===== */
-    @media (max-width: 768px) {
-      .html-css-card {
-        padding: 20px 20px;
-      }
-
-      .html-css-card h2 {
-        font-size: 1.6rem;
-      }
-
-      .html-css-card h3 {
-        font-size: 1.1rem;
-      }
-    }
-
-    .footer-note {
-      text-align: center;
-      margin-top: 60px;
-      font-size: 0.95rem;
-      color: #64748b;
-    }
-    .html-css-card img{
-        width:100%;
-      height: auto;
-        border-radius:8px;
-        margin-bottom:20px;
-    }
-    a {
-      color: #2563eb;
-      text-decoration: none;
-      font-weight: 700;
-      font-style: italic;
-      font-size: 25px;
-      margin-bottom: 20px;
-    }
-    a:hover {
-      text-decoration: underline;
-      color: red;
-    }
-      .cta {
-              display: inline-block;
-              margin-top: 25px;
-              padding: 15px 25px;
-              background-color: #0d6efd;
-              color: white;
-              border-radius: 6px;
-              text-align: center;
-              font-weight: bold;
-              font-size: 1.1rem;
-              text-decoration: none;
-          }
-  </style>
+        /* General Content Styling */
+        .article-body ul { list-style: disc; margin: 0 0 1.5rem 2rem; }
+        .article-body li { margin-bottom: 0.5rem; }
+        .article-body strong { color: #1e40af; }
+        .dark .article-body strong { color: #60a5fa; }
+        blockquote { border-left: 6px solid #2563eb; background: #eff6ff; padding: 20px; border-radius: 0 15px 15px 0; font-style: italic; margin: 2.5rem 0; color: #1e40af; }
+        .dark blockquote { background: #1e293b; color: #60a5fa; }
+        .article-body img { width: 100%; height: auto; border-radius: 1rem; margin: 2rem 0; shadow: 0 10px 15px rgba(0,0,0,0.1); }
+    </style>
 </head>
 
-<body>
-  <section class="html-css-card">
-    <img src="./pexels-photo-34803984 (1).webp" alt="HTML and CSS Learning" loading="lazy">
-    <h2>Barashada HTML iyo CSS: Hagaha Bilowga</h2>
+<body class="bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
 
-    <p>
-      Barashada HTML iyo CSS waa talaabada ugu muhiimsan ee qof kasta oo raba inuu website dhiso. HTML (HyperText Markup
-      Language) wuxuu ka masuul yahay qaab-dhismeedka webseed-kaaga, halka CSS (Cascading Style Sheets) uu ka mas'uul
-      yahay muuqaalka, midabka, iyo layout-ka. Fahamka labadan luqad waa aasaaska web development waana meesha ama
-      albaabka saxda ah ee uu qofka ka soo galayo xirfada web-develper.
-    </p>
+    <div id="scroll-progress"></div>
 
-    <h3>1. Waa Maxay HTML?</h3>
-    <img src="./pexels-photo-14553707.webp" alt="HTML Learning" loading="lazy">
-    <p>
-      HTML waa luqad lagu dhiso qaab-dhismeedka website-ka. Waxay ka kooban tahay <strong>elements</strong> iyo
-      <strong>tags</strong> kuwaas oo qeexaya qaybaha bogga sida headings, paragraphs, images, links, lists, iyo forms. sida aan horay sawirka kuugu soo bandhignay, HTML qaab noocaas ayaa loo qorayaa lakiin si fudud aan usii kala dhigdhigno.
-      Tusaale:
-    </p>
+    <nav class="glass-nav sticky top-0 z-50 bg-white/80 dark:bg-slate-900/90 border-b border-slate-200 dark:border-slate-800 h-20">
+        <div class="max-w-7xl mx-auto px-6 h-full flex justify-between items-center text-slate-900 dark:text-white">
+            <div class="flex items-center gap-2">
+                <img src="./171b2cde-e683-40d0-baa6-2d6af2de83ea.png" alt="logo" class="h-10 w-auto">
+                <span class="text-2xl font-black italic tracking-tighter">TechSomali</span>
+            </div>
+            <ul class="hidden md:flex space-x-8 font-bold text-sm">
+                <li><a href="./index.html" class="hover:text-blue-600">Home</a></li>
+                <li><a href="./blog.html" class="text-blue-600">Blog</a></li>
+                <li><a href="./about.html">about</a></li>
+                <li><a href="./contact.html">contact</a></li>
+            </ul>
+            <div class="flex items-center gap-4">
+                <button id="theme-toggle" class="p-2 bg-slate-100 dark:bg-slate-800 rounded-lg text-xl transition">🌙</button>
+                <button id="open-menu" class="md:hidden text-3xl text-blue-600">☰</button>
+            </div>
+        </div>
+    </nav>
 
-    <pre>
-&lt;h1&gt;Hello World!&lt;/h1&gt;
-&lt;p&gt;Tani waa paragraph HTML ah.&lt;/p&gt;
-  </pre>
-<h3>xagee ayaan koorso html ah oo buuxda oo free ah ka helayaa ?</h3> 
-<p>ok aan kuu sheego meesha aad ka helayso full course html si aad u barato kaliya ku dhufo linkigaan hoose si aad u qaadato koorsada </p>
-<a href="https://www.youtube.com/watch?v=9bBGJr-xZXg&t=3s&pp=ygUKc29mdGNhbXBlcg%3D%3D">full html course 2024</a>
-    <h3>2. Waa Maxay CSS?</h3>
-    <img src="./pexels-photo-14553706.webp" alt="CSS Learning" loading="lazy">
-    <p>
-      <strong>CSS waa luqadda mas'uulka ka ah muuqaalka webseed-ka. Waxaad ku hagaajin kartaa midabada, fonts, spacing, layout,
-      hover effects, iyo animations. CSS waxay ka dhigtaa website-ka mid soo jiidasho leh oo professional ah</strong>.si lamid ah sawirka kore, CSS waxaynu u qori karnaa qaab noocaan bal aynu faahfaahino tusaalaha css.
-    </p>
+    <div id="mobile-overlay" class="bg-white dark:bg-slate-950 flex-col items-center justify-center space-y-8 text-2xl font-bold transition-all dark:text-white">
+        <button id="close-menu" class="absolute top-6 right-8 text-6xl text-slate-400">&times;</button>
+        <a href="./index.html">Home</a>
+        <a href="./blog.html">Blog</a>
+        <a href="./contact.html">contact</a>
+        <a href="./about.html">about</a>
+    </div>
 
-    <pre>
-p {
+    <main class="max-w-4xl mx-auto px-6 py-12">
+        <article class="bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 md:p-14 shadow-2xl border border-slate-100 dark:border-slate-800 article-body">
+            
+            <img src="./pexels-photo-34803984 (1).webp" alt="HTML and CSS Learning" loading="lazy">
+            <h1 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-8 leading-tight">Barashada HTML iyo CSS: Hagaha Bilowga</h1>
+
+            <p>
+                Barashada HTML iyo CSS waa talaabada ugu muhiimsan ee qof kasta oo raba inuu website dhiso. HTML (HyperText Markup Language) wuxuu ka masuul yahay qaab-dhismeedka webseed-kaaga, halka CSS (Cascading Style Sheets) uu ka mas'uul yahay muuqaalka, midabka, iyo layout-ka. Fahamka labadan luqad waa aasaaska web development waana meesha ama albaabka saxda ah ee uu qofka ka soo galayo xirfada web-develper.
+            </p>
+
+            <h3>1. Waa Maxay HTML?</h3>
+            <img src="./pexels-photo-14553707.webp" alt="HTML Learning" loading="lazy">
+            <p>
+                HTML waa luqad lagu dhiso qaab-dhismeedka website-ka. Waxay ka kooban tahay <strong>elements</strong> iyo <strong>tags</strong> kuwaas oo qeexaya qaybaha bogga sida headings, paragraphs, images, links, lists, iyo forms. sida aan horay sawirka kuugu soo bandhignay, HTML qaab noocaas ayaa loo qorayaa lakiin si fudud aan usii kala dhigdhigno. Tusaale:
+            </p>
+
+            <div class="code-container">
+                <div class="code-header"><span>HTML Tusaale</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+                <pre><code>&lt;h1&gt;Hello World!&lt;/h1&gt;
+&lt;p&gt;Tani waa paragraph HTML ah.&lt;/p&gt;</code></pre>
+            </div>
+
+            <h3>Xagee ayaan koorso html ah oo buuxda oo free ah ka helayaa?</h3> 
+            <p>Ok aan kuu sheego meesha aad ka helayso full course html si aad u barato kaliya ku dhufo linkigaan hoose si aad u qaadato koorsada:</p>
+            <a href="https://www.youtube.com/watch?v=9bBGJr-xZXg&t=3s" class="inline-block py-3 px-6 bg-blue-600 text-white font-bold rounded-xl hover:bg-red-600 transition mb-6">Full HTML Course 2024</a>
+
+            <h3>2. Waa Maxay CSS?</h3>
+            <img src="./pexels-photo-14553706.webp" alt="CSS Learning" loading="lazy">
+            <p>
+                <strong>CSS waa luqadda mas'uulka ka ah muuqaalka webseed-ka. Waxaad ku hagaajin kartaa midabada, fonts, spacing, layout, hover effects, iyo animations. CSS waxay ka dhigtaa website-ka mid soo jiidasho leh oo professional ah</strong>. si lamid ah sawirka kore, CSS waxaynu u qori karnaa qaab noocaan bal aynu faahfaahino tusaalaha css.
+            </p>
+
+            <div class="code-container">
+                <div class="code-header"><span>CSS Tusaale</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+                <pre><code>p {
   color: #1e293b;
   font-size: 16px;
   line-height: 1.6;
-}
-  </pre>
-<h3>sidoo kale xagee ayaan koorso css ah oo buuxda oo free ah ka helayaa ?</h3> 
-<p>ok aan kuu sheego meesha aad ka helayso full course css si aad u barato kaliya ku dhufo linkigaan hoose si aad u qaadato koorsada </p>
-<a href="https://www.youtube.com/watch?v=WA-_6P3TM9A&t=44013s&pp=ygUKc29mdGNhbXBlcg%3D%3D">full css course 2024</a>
-    <h3>3. Qaab-dhismeedka Aasaasiga ah ee HTML + CSS</h3>
-    <p>
-      Marka la isku daro HTML iyo CSS, waxaad dhisi kartaa bog caadi ah oo nadiif ah. Tusaale layout fudud:
-    </p>
+}</code></pre>
+            </div>
 
-    <pre>
-&lt;!DOCTYPE html&gt;
+            <h3>Sidoo kale xagee ayaan koorso css ah oo buuxda oo free ah ka helayaa?</h3> 
+            <p>Ok aan kuu sheego meesha aad ka helayso full course css si aad u barato kaliya ku dhufo linkigaan hoose si aad u qaadato koorsada:</p>
+            <a href="https://www.youtube.com/watch?v=WA-_6P3TM9A" class="inline-block py-3 px-6 bg-blue-600 text-white font-bold rounded-xl hover:bg-red-600 transition mb-6">Full CSS Course 2024</a>
+
+            <h3>3. Qaab-dhismeedka Aasaasiga ah ee HTML + CSS</h3>
+            <p>Marka la isku daro HTML iyo CSS, waxaad dhisi kartaa bog caadi ah oo nadiif ah. Tusaale layout fudud:</p>
+
+            <div class="code-container">
+                <div class="code-header"><span>HTML Structure</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+                <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="so"&gt;
 &lt;head&gt;
   &lt;meta charset="UTF-8"&gt;
@@ -211,44 +133,113 @@ p {
   &lt;h1&gt;Hello HTML & CSS!&lt;/h1&gt;
   &lt;p&gt;Boggan wuxuu tusaale u yahay barashada web development.&lt;/p&gt;
 &lt;/body&gt;
-&lt;/html&gt;
-  </pre>
+&lt;/html&gt;</code></pre>
+            </div>
 
-    <h3>4. Talooyin Bilowga</h3>
-    <ul>
-      <li>Ku bilow barashada HTML, kadib CSS si tartiib ah.</li>
-      <li>Samee mashruucyo yaryar sida website portfolio ama landing page.</li>
-      <li>Fahmo box model, flexbox, iyo grid si aad u dhisto layouts fiican.</li>
-      <li>Ku celceli code-ka si xirfad aad u hesho.</li>
-      <li>Isticmaal browser developer tools si aad u aragto isbeddelada real-time.</li>
-    </ul>
+            <h3>4. Talooyin Bilowga</h3>
+            <ul>
+                <li>Ku bilow barashada HTML, kadib CSS si tartiib ah.</li>
+                <li>Samee mashruucyo yaryar sida website portfolio ama landing page.</li>
+                <li>Fahmo box model, flexbox, iyo grid si aad u dhisto layouts fiican.</li>
+                <li>Ku celceli code-ka si xirfad aad u hesho.</li>
+                <li>Isticmaal browser developer tools si aad u aragto isbeddelada real-time.</li>
+            </ul>
 
-    <h3>5. Khayraadka Waxbarashada</h3>
-    <p>
-     sidoo kale Waxaa jira ilo fara badan oo bilaash ah oo lagu barto HTML iyo CSS:
-    </p>
+            <h3>5. Khayraadka Waxbarashada</h3>
+            <p>Waxaa jira ilo fara badan oo bilaash ah oo lagu barto HTML iyo CSS:</p>
+            <ul>
+                <li><strong>MDN Web Docs</strong> – documentation rasmi ah oo ka socota Mozilla</li>
+                <li><strong>W3Schools</strong> – tutorials fudud oo la fahmi karo</li>
+                <li><strong>FreeCodeCamp</strong> – projects iyo exercises practical ah</li>
+                <li><strong>YouTube Tutorials</strong> – casharro muuqaal ah oo step-by-step</li>
+            </ul>
 
-    <ul>
-      <li><strong>MDN Web Docs</strong> – documentation rasmi ah oo ka socota Mozilla</li>
-      <li><strong>W3Schools</strong> – tutorials fudud oo la fahmi karo</li>
-      <li><strong>FreeCodeCamp</strong> – projects iyo exercises practical ah</li>
-      <li><strong>YouTube Tutorials</strong> – casharro muuqaal ah oo step-by-step</li>
-    </ul>
+            <blockquote>
+                "Barashada HTML iyo CSS waa aasaaska web development. Qofkii fahma labadan luqad, wuxuu horumarin karaa xirfadiisa webka si joogto ah."
+            </blockquote>
 
-    <blockquote>
-      "Barashada HTML iyo CSS waa aasaaska web development. Qofkii fahma labadan luqad, wuxuu horumarin karaa xirfadiisa
-      webka si joogto ah."
-    </blockquote>
+            <p>
+                Marka aad ku tababarto HTML iyo CSS, waxaad u diyaar garoobi kartaa inaad barato JavaScript, frameworks, iyo backend development. Bilowga saxda ah wuxuu kaa dhigayaa developer xirfad leh, website-kaaga iyo mashruucaaga internet-ka uu noqdo mid professional ah, soo jiidasho leh, oo functional.
+            </p>
+  <div class="mt-12 pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-4 items-center justify-between">
+                <span class="font-bold dark:text-white">La wadaag asxaabta:</span>
+                <div class="flex gap-2">
+<a href="https://api.whatsapp.com/send?text=Halkan ka aqri maqaal aad u xiiso badan: https://techsomali.com/payoneer.html" 
+   target="_blank" 
+   class="px-4 py-2 bg-green-500 text-white rounded-xl text-sm font-bold"style="color: #f8fafc; text-decoration: none;">
+   
+   WhatsApp
+</a>
+               <a href="https://www.facebook.com/sharer/sharer.php?u=https://techsomali.com/payoneer.html" 
+   target="_blank" 
+   class="px-4 py-2 bg-blue-600 text-white rounded-xl text-sm font-bold" style="color: #f8fafc; text-decoration: none;">
+   Facebook
+</a>
+                </div>
+            </div>
+        </div>
 
-    <p>
-      Marka aad ku tababarto HTML iyo CSS, waxaad u diyaar garoobi kartaa inaad barato JavaScript, frameworks, iyo
-      backend development. Bilowga saxda ah wuxuu kaa dhigayaa developer xirfad leh, website-kaaga iyo mashruucaaga
-      internet-ka uu noqdo mid professional ah, soo jiidasho leh, oo functional.
-    </p>
-    <a href="https://techsomalia.com/blog.html" class="cta">Booqo TechSomali blogs oo Akhri Maqaallo Dheeraad Ah👈</a>
+          <div class="grid md:grid-cols-2 gap-6 mt-12">
+            <a href="frontendvsbackend.html" class="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 hover:border-blue-500 transition shadow-lg">
+                <span class="text-xs text-slate-500 uppercase">Maqaalka hore</span>
+                <p class="font-bold dark:text-white mt-1">frontend vs backend</p>
+            </a>
+            <a href="jv.html" class="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 hover:border-blue-500 transition shadow-lg">
+                <span class="text-xs text-slate-500 uppercase">Maqaalka xiga</span>
+                <p class="font-bold dark:text-white mt-1">barashada javascript</p>
+            </a>
+        </div>
+         </article>
+    </main>
 
-    <div class="footer-note">
-      © 2026 TechSomali – Teknoolojiyada Casriga ah Af-Soomaali
-    </div>
-  </section>
+    <script>
+        // --- COPY CODE FUNCTION ---
+        function copyCode(button) {
+            const code = button.parentElement.nextElementSibling.innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                const originalText = button.innerText;
+                button.innerText = "La Koobiyey!";
+                button.style.background = "#10b981";
+                setTimeout(() => {
+                    button.innerText = originalText;
+                    button.style.background = "#334155";
+                }, 2000);
+            }).catch(err => {
+                console.error('Qalad baa dhacay: ', err);
+            });
+        }
+
+        // --- DARK MODE LOGIC ---
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlElement.classList.add('dark');
+            themeToggleBtn.innerText = '☀️';
+        }
+        themeToggleBtn.addEventListener('click', () => {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                themeToggleBtn.innerText = '🌙';
+            } else {
+                htmlElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                themeToggleBtn.innerText = '☀️';
+            }
+        });
+
+        // --- MOBILE MENU ---
+        const overlay = document.getElementById('mobile-overlay');
+        document.getElementById('open-menu').addEventListener('click', () => overlay.classList.add('active'));
+        document.getElementById('close-menu').addEventListener('click', () => overlay.classList.remove('active'));
+
+        // --- SCROLL PROGRESS ---
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("scroll-progress").style.width = scrolled + "%";
+        };
+    </script>
 </body>
+</html>

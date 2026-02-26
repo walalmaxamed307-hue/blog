@@ -9,232 +9,148 @@
     <meta name="author" content="TechSomali">
     <link rel="icon" href="techsomalia_favicon_square.ico">
 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } }
+        }
+    </script>
+
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f6f8;
-            color: #333;
-            line-height: 1.8;
+        .glass-nav { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        #mobile-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: 9999; display: none; }
+        #mobile-overlay.active { display: flex; }
+        
+        .terms-container h2 { 
+            font-size: 1.6rem; 
+            font-weight: 800; 
+            margin-top: 2.5rem; 
+            margin-bottom: 1rem; 
+            color: #2563eb; 
         }
-        header {
-            background-color: #0056a3;
-            color: #fff;
-            text-align: center;
-            padding: 25px 10px;
+        .terms-container p { margin-bottom: 1.25rem; line-height: 1.8; color: #475569; font-size: 1.05rem; }
+        .dark .terms-container p { color: #94a3b8; }
+        .terms-container ul { margin-bottom: 1.5rem; list-style-type: none; padding-left: 0; }
+        .terms-container li { 
+            margin-bottom: 0.75rem; 
+            padding-left: 1.5rem; 
+            position: relative; 
+            color: #475569;
         }
-        header h1 {
-            margin: 0;
-            font-size: 28px;
-            font-weight: normal;
-            font-style: italic;
-            color: #fff;
+        .dark .terms-container li { color: #94a3b8; }
+        .terms-container li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #2563eb;
+            font-weight: bold;
         }
-        main {
-            max-width: 950px;
-            margin: 40px auto;
-            padding: 25px;
-            background-color: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        h1, h2 {
-            color: #0056a3;
-        }
-        h2 {
-            margin-top: 25px;
-        }
-        p, li {
-            margin-bottom: 15px;
-        }
-        ul {
-            padding-left: 25px;
-        }
-        a {
-            color: #0056a3;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
- 
-        .navbar {
-           max-width: 1250px;
-              height: 40px;
-            background-color: #161616;
-            color: #ffffff;
-            padding: 10px;
-            align-items: center;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            margin: 0;
-        }
-
-        nav ul li {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-
-        }
-
-        nav ul li a:hover {
-            text-decoration: underline;
-            color: rgba(0, 255, 60, 0.719);
-        }
-        .menu-toggle {
-  display: none;
-  font-size: 28px;
-  color: #fff;
-  cursor: pointer;
-}
-
-
-/* 📱 MOBILE */
-@media (max-width: 768px) {
-
-.navbar ul {
-display: none;
-flex-direction: column;
-background-color: rgb(0, 0, 0);
-width: 40%;
-position: absolute;
-top: 60px;
-right:0;
-z-index: 1000;
-  }
-
-  .navbar ul.show {
-    display: flex;
-  }
- .menu-toggle {
-    display: block;
-    position: fixed;
-    top: 10px;
-    right: 15px;
-    z-index: 1000;
-  }
-ul li{
-    border-top: 1px solid #1e293b;
-    padding: 15px 0;
-    width:100%;
-    text-align: center;
-  
-    
-
-}
-ul li:hover{
-text-decoration: underline;
-cursor: pointer;
-    
-
-}
-}
-        .footer-note{
-            text-align:center;
-            margin-top:60px;
-            font-size:0.95rem;
-            color:#64748b;
-        }
-         .logo img {
- width: 30%;
-  height: auto;
-position: relative;
-right: 10px;
-  }
     </style>
 </head>
 
-<body>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
 
+    <nav class="glass-nav sticky top-0 z-50 bg-white/80 dark:bg-slate-900/90 border-b border-slate-200 dark:border-slate-800 h-20">
+        <div class="max-w-7xl mx-auto px-6 h-full flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <img src="./171b2cde-e683-40d0-baa6-2d6af2de83ea.png" alt="logo" class="h-10 w-auto">
+                <span class="text-2xl font-black bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent italic tracking-tighter">TechSomali</span>
+            </div>
 
-    <nav class="navbar">
-         <div class="logo"> <img src="./171b2cde-e683-40d0-baa6-2d6af2de83ea.png" alt="swir"></div>
-        <div class="menu-toggle">
-            ☰
+            <ul class="hidden md:flex items-center space-x-8 font-bold text-sm">
+                <li><a href="./index.html" class="hover:text-blue-600 transition">home</a></li>
+                <li><a href="./blog.html" class="hover:text-blue-600 transition">Blog</a></li>
+                <li><a href="./about.html" class="hover:text-blue-600 transition">about</a></li>
+                <li><a href="./contact.html" class="hover:text-blue-600 transition">contact</a></li>
+                <li><a href="./terms&conditions.html" class="text-blue-600 underline decoration-2 underline-offset-4 font-extrabold">terms </a></li>
+            </ul>
+
+            <button id="open-menu" class="md:hidden text-3xl text-blue-600">☰</button>
         </div>
-        <ul>
-
-            <li><a href="./blog.html">Blog</a></li>
-            <li><a href="./index.html">home</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-            <li><a href="./privecy.html">Privacy</a></li>
-            <li><a href="./terms&conditions.html">Terms</a></li>
-        </ul>
     </nav>
-    <header>
-        <h1>Terms & Conditions - TechSomali</h1>
+
+    <div id="mobile-overlay" class="bg-white dark:bg-slate-950 flex-col items-center justify-center space-y-8 text-2xl font-bold transition-all">
+        <button id="close-menu" class="absolute top-6 right-8 text-6xl text-slate-400 hover:text-blue-600">&times;</button>
+        <a href="./index.html">Home</a>
+        <a href="./blog.html">Blog</a>
+        <a href="./about.html">about</a>
+        <a href="./contact.html">contact</a>
+        <div class="h-px w-20 bg-slate-200 dark:bg-slate-800"></div>
+        <a href="./privecy.html" class="text-lg text-slate-500">privacy policy</a>
+        <a href="./terms&conditions.html" class="text-blue-600">terms&condtions</a>
+    </div>
+
+    <header class="py-24 bg-gradient-to-b from-blue-600/10 to-transparent border-b border-slate-100 dark:border-slate-900 text-center">
+        <h1 class="text-5xl md:text-7xl font-black tracking-tighter mb-6 italic">Shuruudaha & <span class="text-blue-600">Adeegga</span></h1>
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-xs font-bold uppercase tracking-widest">
+            last updated: Febraayo 2026
+        </div>
     </header>
 
-    <main>
-        <p>Last updated: February 2026</p>
+    <main class="max-w-4xl mx-auto px-6 py-16">
+        <div class="bg-white dark:bg-slate-900 rounded-[3rem] p-10 md:p-16 shadow-2xl border border-slate-100 dark:border-slate-800 terms-container">
+            
+            <p class="text-lg font-medium">Ku soo dhowow <strong>TechSomali</strong>. Markaad isticmaaleyso website-kan, waxaad oggolaatay inaad u hoggaansanto Shuruudaha iyo Adeegga hoos ku xusan. Shuruudahani waxay khuseeyaan dhammaan booqdayaasha iyo isticmaaleyaasha bogga.</p>
 
-        <h2>1. Introduction</h2>
-        <p>Welcome to <strong>TechSomali</strong>. By accessing or using this website, you agree to comply with these Terms & Conditions. These terms apply to all visitors, users, and others who access the website.</p>
+            <h2>1. Horudhac</h2>
+            <p>Shuruudahani waxay xakameeyaan habka aad u isticmaali karto TechSomali. Haddii aadan ku qanacsanayn qayb ka mid ah shuruudahan, fadlan ha isticmaalin website-ka.</p>
 
-        <h2>2. Intellectual Property Rights</h2>
-        <p>All content on <strong>TechSomali</strong>, including articles, tutorials, images, videos, and graphics, is owned by TechSomali or its content creators. You may not copy, reproduce, distribute, or modify our content without prior written consent. Unauthorized use may violate copyright laws and is strictly prohibited.</p>
+            <h2>2. Xuquuqda Lahaanshaha Aqooneed</h2>
+            <p>Dhammaan waxyaabaha ku jira <strong>TechSomali</strong>, sida maqaallada, casharrada, sawirrada, iyo naqshadaha, waxaa iska leh TechSomali ama dadka soo diyaariyay. Lama ogola in la koobiyeeyo, dib loo soo saaro, ama la beddelo waxyaabaha ku jira bogga iyada oo aan oggolaansho qoraal ah laga helin maamulka.</p>
 
-        <h2>3. Use of Website</h2>
-        <p>By using this website, you agree to use it only for lawful purposes. Prohibited activities include, but are not limited to:</p>
-        <ul>
-            <li>Posting or transmitting unlawful, harmful, threatening, defamatory, obscene, or offensive content.</li>
-            <li>Attempting to access restricted areas of the website without authorization.</li>
-            <li>Using the website to collect personal data of other users without consent.</li>
-            <li>Engaging in any activity that may disrupt or damage the website or its servers.</li>
-        </ul>
+            <h2>3. Isticmaalka Website-ka</h2>
+            <p>Markaad isticmaaleyso website-kan, waxaad oggolaatay inaad u isticmaasho ujeedooyin sharci ah oo keliya. Waxyaabaha mamnuuca ah waxaa ka mid ah:</p>
+            <ul>
+                <li>Inaad soo geliso waxyeello, hanjabaad, ama qoraallo meel ka dhac ku ah dadka kale.</li>
+                <li>Inaad isku daydo inaad jabsato meelaha xaddidan ee website-ka.</li>
+                <li>Inaad u isticmaasho website-ka ururinta xogta shakhsi ahaaneed ee dadka kale oggolaansho la'aan.</li>
+            </ul>
 
-        <h2>4. Third-Party Links</h2>
-        <p><strong>TechSomali</strong> may contain links to external websites. We do not control these third-party websites and are not responsible for their content, policies, or practices. Visiting these links is at your own risk. We encourage you to read their privacy policies and terms before using those websites.</p>
+            <h2>4. Xiriirinta Dhinac Saddexaad</h2>
+            <p><strong>TechSomali</strong> waxaa laga yaabaa inay ku jiraan xiriiriyo (links) kuu geynaya website-yo kale. Annagu ma xakameyno mana mas'uul ka nihin nuxurka ama qaanuunka website-yadaas. Mas'uuliyadda booqashada website-yadaas adiga ayaa iska leh.</p>
 
-        <h2>5. Disclaimer</h2>
-        <p>All content on <strong>TechSomali</strong> is provided for educational and informational purposes only. While we strive to ensure accuracy, TechSomali makes no guarantees regarding completeness, reliability, or currentness of the information. Users rely on the content at their own risk. TechSomali is not responsible for any damages, losses, or inconveniences resulting from the use of this website.</p>
+            <h2>5. Mas'uuliyadda Macluumaadka</h2>
+            <p>Dhammaan macluumaadka ku jira <strong>TechSomali</strong> waxaa loogu talagalay ujeeddooyin waxbarasho oo keliya. In kasta oo aan ku dadaalno saxnaanta, ma dammaanad qaadayno dhammaystirka ama xilligan ee macluumaadka. Isticmaaluhu wuxuu mas'uul ka yahay khatar kasta oo ka dhalata raacitaanka casharrada.</p>
 
-        <h2>6. Limitation of Liability</h2>
-        <p>TechSomali shall not be liable for any direct, indirect, incidental, consequential, or punitive damages arising from your use of the website, including but not limited to: errors, omissions, or inaccuracies in content, or technical issues affecting website accessibility.</p>
+            <h2>6. Xayeysiisyada iyo Dakhliga</h2>
+            <p>TechSomali waxay isticmaashaa adeegga Google AdSense si ay dakhli uga soo saarto bogga. Markaad isticmaaleyso website-ka, waxaad oggolaatay isticmaalka cookies-ka loogu talagalay in lagu tuso xayeysiisyo kugu habboon.</p>
 
-        <h2>7. Advertising and Monetization</h2>
-        <p>TechSomali uses third-party advertising, including Google AdSense, to monetize the website. Cookies and tracking technologies may be used to deliver personalized ads. By using this website, you consent to the use of cookies and third-party advertising.</p>
+            <h2>7. Qaanuunka Khaaska ah</h2>
+            <p>Isticmaalkaaga website-kan wuxuu sidoo kale hoos imanayaa <a href="./privecy.html" class="text-blue-600 font-bold underline">Qaanuunka Khaaska ah</a> (Privacy Policy). Fadlan si fiican u akhri si aad u fahamto sida xogtaada loo ilaaliyo.</p>
 
-        <h2>8. Privacy Policy</h2>
-        <p>Your use of this website is also governed by our <a href="./privecy.html">Privacy Policy</a>. Please read it carefully to understand how your information is collected, used, and protected.</p>
+            <h2>8. Beddelidda Shuruudaha</h2>
+            <p>TechSomali waxay xaq u leedahay inay baddasho ama cusboonaysiiso shuruudahan wakhti kasta. Isbeddeladu waxay dhaqan-galayaan isla marka bogga lagu soo qoro. Isticmaalkaaga joogtada ah ee bogga ka dib isbeddelka wuxuu ka dhigan yahay inaad oggolaatay shuruudaha cusub.</p>
 
-        <h2>9. Modification of Terms</h2>
-        <p>TechSomali reserves the right to update or modify these Terms & Conditions at any time. Changes take effect immediately upon posting. Continued use of the website after updates constitutes acceptance of the revised terms.</p>
+            <h2>9. Sharciga lagu Maamulo</h2>
+            <p>Shuruudahan waxaa lagu maamulaa laguna fasiraa si uyada oo loo eegayo sharciyada dalka Soomaaliya. Wixii khilaaf ah oo ka dhasha isticmaalka website-kan waxaa lagu xallin doonaa maxkamadaha Soomaaliya.</p>
 
-        <h2>10. Governing Law</h2>
-        <p>These Terms & Conditions are governed by and construed in accordance with the laws of Somalia. Any disputes arising from the use of this website shall be subject to the exclusive jurisdiction of Somali courts.</p>
+            <h2>10. Macluumaadka Xiriirka</h2>
+            <p>Haddii aad qabto wax su'aalo ah oo ku saabsan shuruudahan, fadlan nagala soo xiriir <a href="./contact.html" class="text-blue-600 font-bold underline">Boggayaga Xiriirka</a> ama email-ka: <strong>techsomali.com@gmail.com</strong>.</p>
 
-        <h2>11. Contact Information</h2>
-        <p>If you have questions about these Terms & Conditions, please contact us via our <a href="./contact.html">Contact Page</a> or email directly at <strong>techsomali.com</strong>.</p>
-
-        <h2>12. User Agreement</h2>
-        <p>By using TechSomali, you acknowledge that you have read, understood, and agreed to these Terms & Conditions, including all disclaimers and limitations of liability.</p>
-               <div class="footer-note">
-        © 2026 TechSomali – Teknoolojiyada Casriga ah Af-Soomaali
-    </div>
+            <div class="mt-20 pt-10 border-t border-slate-100 dark:border-slate-800 text-center">
+                <div class="font-bold text-slate-800 dark:text-slate-200 mb-2 italic">© 2026 TechSomali – Baro Teknoolajiyada Casriga ah Af-Soomaali</div>
+                <p class="text-sm opacity-50 italic">Waxaa loo dhisay horumarinta bulshada Soomaaliyeed ee dhanka tignoolajiyada.</p>
+            </div>
+        </div>
     </main>
-            <script>
-const menutoggle=document.querySelector(".menu-toggle");
-const navbar=document.querySelector(".navbar ul");
 
-menutoggle.addEventListener("click", () => {
-  navbar.classList.toggle("show");
-});
-</script>
+    <script>
+        const overlay = document.getElementById('mobile-overlay');
+        const openBtn = document.getElementById('open-menu');
+        const closeBtn = document.getElementById('close-menu');
+
+        openBtn.addEventListener('click', () => {
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeBtn.addEventListener('click', () => {
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+    </script>
 </body>
 </html>

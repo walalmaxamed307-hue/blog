@@ -13,268 +13,238 @@
 
     <title>about us</title>
 
-    <style>
-      body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background-color: #eaedf1;
-  color: #222;
-  line-height: 1.8;
-}
-        /* ABOUT PAGE STYLE */
-.about-page {
-  max-width: 1000px;
-  margin: 60px auto;
-  padding: 30px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  font-family: Arial, Helvetica, sans-serif;
-}
+   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap"
+    rel="stylesheet">
 
-.about-page h1 {
-  font-size: 32px;
-  color: #d60606;
-  position: relative;
-  bottom: 40px;
-  text-align: center;
-}
-
-.about-page h2 {
-  font-size: 22px;
-  color: #0077cc;
-  margin-top: 35px;
-  margin-bottom: 12px;
-}
-
-.about-page p {
-  font-size: 16px;
-  line-height: 1.8;
-  color: #444;
-  position: relative;
-  bottom: 20px;
-}
-
-.about-page ul {
-  margin-left: -20px;
-  margin-top: 10px;
-}
-
-.about-page ul li {
-  font-size: 16px;
-  color: #333;
-  margin-bottom: 8px;
-  list-style: disc;
-}
-
-/* Mobile Responsive */
-@media (max-width: 600px) {
-
-
-  .about-page h1 {
-    font-size: 26px;
-  }
-  .about-page {
-    padding: 20px;
-    margin: 30px 15px;
-  }
-  .about-page h2 {
-    font-size: 20px;
-  }
-
-  .about-page p,
-  .about-page ul li {
-    font-size: 15px;
-  }
-}
-.about-page .last {
-  text-align: center;
-  margin-top: 20px;
-  color: #d60606;
-  font-weight: bold;
-  }
-    .navbar {
-             max-width: 1250px;
-             height: 40px;
-            background-color: #0990ff;
-            color: #ffffff;
-            padding: 20px;
-            align-items: center;
-            display: flex;
-            justify-content: space-between;
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
         }
+      }
+    }
+  </script>
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            margin: 0;
-        }
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
 
-        nav ul li {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
+    .glass-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(12px);
+    }
 
-        }
+    .dark .glass-nav {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
+    .about-card {
+      transition: all 0.4s ease;
+    }
 
-        }
-
-        nav ul li a:hover {
-            text-decoration: underline;
-            color: rgba(51, 255, 0, 0.719);
-        }
-        .menu-toggle {
-  display: none;
-  font-size: 28px;
-  color: #fff;
-  cursor: pointer;
-}
-
-
-/* 📱 MOBILE */
-@media (max-width: 768px) {
-
-.navbar ul {
-display: none;
-flex-direction: column;
-background-color: rgb(5, 5, 5);
-width: 40%;
-position: absolute;
-top: 60px;
-right:0;
-z-index: 1000;
-  }
-
-  .navbar ul.show {
-    display: flex;
-  }
- .menu-toggle {
-    display: block;
-    position: fixed;
-    top: 10px;
-    right: 15px;
-    z-index: 1000;
-  }
-ul li{
-    border-top: 1px solid #1e293b;
-    padding: 15px 0;
-    width:100%;
-    text-align: center;
-  
-    
-
-}
-ul li:hover{
-text-decoration: underline;
-cursor: pointer;
-    
-
-}
-}
-
-        .footer-note{
-            text-align:center;
-            margin-top:60px;
-            font-size:0.95rem;
-            color:#64748b;
-        }
-        .about-page img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 30px;
-        }
-         .logo img {
- width: 30%;
-  height: auto;
-position: relative;
-right: 10px;
-  }
-    </style>
+    #mobile-menu {
+      transition: transform 0.3s ease-in-out;
+    }
+  </style>
 </head>
 
-<body>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
 
+  <nav class="glass-nav bg-white/80 dark:bg-slate-900/90 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 h-20 flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <img src="./171b2cde-e683-40d0-baa6-2d6af2de83ea.png" alt="logo" class="h-10 w-auto">
+        <span
+          class="text-2xl font-extrabold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent italic">TechSomali</span>
+      </div>
 
-    <nav class="navbar">
-         <div class="logo"> <img src="./171b2cde-e683-40d0-baa6-2d6af2de83ea.png" alt="swir"></div>
-        <div class="menu-toggle">
-            ☰
-        </div>
-        <ul>
+      <ul class="hidden md:flex items-center space-x-8 font-semibold">
+        <li><a href="./index.html" class="hover:text-blue-600 transition">Home</a></li>
+        <li><a href="./blog.html" class="hover:text-blue-600 transition">Blog</a></li>
+        <li><a href="./about.html" class="text-blue-600 underline decoration-2">About</a></li>
+        <li><a href="./contact.html" class="hover:text-blue-600 transition">Contact</a></li>
+        <button id="theme-toggle"
+          class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+          <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-slate-800" fill="currentColor"
+            viewBox="0 0 20 20">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+          </svg>
+          <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-yellow-400" fill="currentColor"
+            viewBox="0 0 20 20">
+            <path
+              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0z">
+            </path>
+          </svg>
+        </button>
+      </ul>
 
-            <li><a href="./blog.html">Blog</a></li>
-            <li><a href="./index.html">home</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-            <li><a href="./privecy.html">Privacy</a></li>
-            <li><a href="./terms&conditions.html">Terms</a></li>
-        </ul>
-    </nav>
+      <div class="md:hidden flex items-center gap-4">
+        <button id="mobile-theme-toggle" class="p-2">
+          <svg class="w-6 h-6 dark:hidden text-slate-800" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+          </svg>
+          <svg class="w-6 h-6 hidden dark:block text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0z">
+            </path>
+          </svg>
+        </button>
+        <button id="menu-btn" class="text-3xl text-blue-600">☰</button>
+      </div>
+      </nav>
 
-    <section class="about-page">
-      <img src="pexels-thngocbich-669996.jpg" alt="pexels-thngocbich-669996" loading="lazy">
-  <h1>About tech somali Blog</h1>
-
-  <p>
-  tech somali  Blog waa website casri ah oo loogu talagalay in uu caawiyo dadka Soomaaliyeed
-    ee xiisaynaya teknoolojiyada, blogging, iyo online lacag ka samaynta.
-    Ujeeddadeennu waa in aan bixino macluumaad sax ah, fudud, oo la fahmi karo.
-  </p>
-<p >tech somali  blog waxaa la asaasay 2026 si uu unoqdo meel ay soomalidu si fudud ugu baran karaan teknoolijiyada casriga ah</p>
-  <h2 style="position: relative; bottom: 10px;">Ujeeddadeenna</h2>
-  <p style="position: relative; bottom: 10px;">
-    Ujeeddada tech somali Blog waa in aan bulshada Soomaaliyeed ku hagno
-    sida loo isticmaalo internet-ka si wax ku ool ah, gaar ahaan arrimaha la xiriira
-    Google AdSense, freelancing, Payoneer, hosting, domain, iyo dhismaha website-yada.
-  </p>
-
-  <h2>Waxaad Ka Heli Doontaa Website-kan</h2>
-  <ul>
-    <li>Hagayaal ku saabsan Google AdSense iyo monetization</li>
-    <li>Casharro ku saabsan blogging iyo website dhisid</li>
-    <li>Talooyin freelancing oo ku habboon bilowga</li>
-    <li>Macluumaad la xiriira Payoneer iyo adeegyada online-ka</li>
-    <li>Qoraallo tech ah oo si fudud loo sharaxay</li>
-  </ul>
-
-  <h2>Yaa Maamula Website-kan?</h2>
-  <p>
-    tech somali Blog waxaa maamula qof xiiseeya teknoolojiyada iyo horumarinta
-    xirfadaha digital-ka, ujeeddaduna tahay in aqoon waxtar leh lala wadaago
-    bulshada Soomaaliyeed, gaar ahaan kuwa bilowga ah.
-    <p>aniga ahaan waxaan muddo ku jiray barashada blogging, google adsense iyo dhismaha website-yada. qoraaalada aan halkaaan ku daaabacno waxay ka yimaadaan waxyaabo aan aniga tijaabiyay ama si qoto dheer ubaaray </p>
-  </p>
-
-  <h2>Maxaad Ugu Kalsoonaan Kartaa?</h2>
-  <p>
-    Qoraallada ku jira website-kan waxay ku salaysan yihiin cilmi-baaris,
-    waayo-aragnimo, iyo xog la hubiyay. Ma daabacno wax khiyaano ah ama
-    macluumaad aan faa’iido lahayn.
-  </p>
-
-  <p>
-    Haddii aad rabto inaad barato teknoolojiyada ama aad bilowdo safarka
-    online lacag ka samaynta, tech somali Blog waa meesha kugu habboon.
-  </p>
-  <p class="last">hadii aad talo ama suaal aad qabto fadlan nagala soo xariir bogga contact</p>
-    <div class="footer-note">
-        © 2026 TechSomali – Teknoolojiyada Casriga ah Af-Soomaali
+    <div id="mobile-menu"
+      class="fixed inset-0 bg-white dark:bg-slate-950 z-[100] hidden flex-col items-center justify-center space-y-8 text-2xl font-bold">
+      <button id="close-menu" class="absolute top-6 right-6 text-4xl text-slate-500">&times;</button>
+      <a href="./index.html">Home</a>
+      <a href="./blog.html">Blog</a>
+      <a href="./about.html" class="text-blue-600">About</a>
+      <a href="./contact.html">Contact</a>
     </div>
-</section>
-        <script>
-const menutoggle=document.querySelector(".menu-toggle");
-const navbar=document.querySelector(".navbar ul");
+</div>
 
-menutoggle.addEventListener("click", () => {
-  navbar.classList.toggle("show");
-});
-</script>
- 
+  <header class="py-20 bg-gradient-to-b from-blue-600/10 to-transparent text-center px-4">
+    <h1 class="text-5xl md:text-8xl font-extrabold mb-6 tracking-tighter">about <span
+        class="text-blue-600 italic">TechSomali</span></h1>
+    <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed">Hagaha ugu weyn ee
+      tignoolajiyada, blogging-ka, iyo online income-ka ee bulshada Soomaaliyeed.</p>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-12">
+    <div
+      class="bg-white dark:bg-slate-900 rounded-[3rem] p-8 md:p-20 shadow-2xl border border-slate-100 dark:border-slate-800">
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+        <div class="space-y-8">
+          <h2 class="text-blue-600 font-bold uppercase tracking-[0.2em] text-sm">Hordhac & Hadaf</h2>
+          <h3 class="text-4xl font-extrabold leading-tight">Maxay tahay TechSomali, sideese ku dhalatay?</h3>
+          <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+            Dunida maanta waxay u guurtay dhanka tignoolajiyada, laakiin nasiib darro, aqoon badan oo dhinacaan ah
+            laguma helo Af-Soomaali dhammaystiran. **TechSomali** waxay u dhalatay inay buuxiso kaalintaas. Waxaan
+            bilownay safarkayaga sanadkii 2026 annagoo hiigsanayna inay Soomaalidu qayb ka noqoto kacaanka digital-ka ee
+            caalamka.
+          </p>
+          <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+            Ma ahan kaliya blog qoraalo lagu daabaco, ee waa madal loogu talagalay in lagu dhiirigeliyo dhalinyarada
+            Soomaaliyeed si ay xirfado lacag looga sameeyo internet-ka u bartaan. Haddii aad tahay qof raba inuu bilaabo
+            Blogging, Freelancing, ama Web Development, waxaad halkaan ka helaysaa hagaha saxda ah ee aad u baahantahay.
+          </p>
+        </div>
+        <div class="relative group">
+          <div
+            class="absolute -inset-4 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-[2.5rem] blur opacity-25 group-hover:opacity-40 transition duration-1000">
+          </div>
+          <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg" alt="tech work"
+            class="relative rounded-[2rem] shadow-2xl object-cover w-full h-[500px]">
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-24">
+        <div class="p-12 bg-blue-50 dark:bg-blue-900/20 rounded-[2.5rem] border border-blue-100 dark:border-blue-800">
+          <h4 class="text-3xl font-bold mb-6 text-blue-700 dark:text-blue-400 italic">Aragtideena</h4>
+          <p class="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">Inaan noqono isha koowaad ee aqoonta
+            tignoolajiyada casriga ah ee Af-Soomaaliga looga barto, anagoo soo saarayna kumanaan dhalinyaro ah oo
+            xirfadlayaal digital ah ah.</p>
+        </div>
+        <div
+          class="p-12 bg-slate-50 dark:bg-slate-800/50 rounded-[2.5rem] border border-slate-100 dark:border-slate-700">
+          <h4 class="text-3xl font-bold mb-6 text-slate-700 dark:text-slate-200 italic">ujeedkeena</h4>
+          <p class="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">Inaan bixino casharo tayo leh, oo ku
+            salaysan waayo-aragnimo dhab ah, si loogu fududeeyo bulshada Soomaaliyeed isticmaalka internet-ka iyo ka
+            faa'iidaysigiisa.</p>
+        </div>
+      </div>
+
+      <div class="bg-slate-900 dark:bg-blue-950 rounded-[3.5rem] p-10 md:p-20 text-white relative overflow-hidden">
+        <div class="absolute -top-10 -right-10 w-64 h-64 bg-blue-600/20 rounded-full blur-3xl"></div>
+        <div class="relative z-10 flex flex-col md:flex-row items-center gap-16">
+          <div class="w-56 h-56 md:w-72 md:h-72 flex-shrink-0 group">
+            <img src="https://ui-avatars.com/api/?name=Mohamed+Ahmed+Ali&size=512&background=2563eb&color=fff&bold=true"
+              alt="Mohamed Ahmed Ali"
+              class="w-full h-full object-cover rounded-[2.5rem] border-4 border-white/10 shadow-2xl group-hover:scale-105 transition duration-500">
+          </div>
+          <div>
+            <h2 class="text-blue-400 font-bold uppercase tracking-widest text-sm mb-4">Founder & Developer</h2>
+            <h3 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">Mohamed Ahmed Ali</h3>
+            <p class="text-slate-300 text-xl leading-relaxed mb-8">
+              "Waxaan aaminsanahay in aqoontu ay tahay furaha kaliya ee isbeddel lagu keeni karo. Safarkayga dhanka
+              Blogging-ka iyo Web Development-ka wuxuu bilaawday sanado ka hor, maantana waxaan rabaa inaan khibraddaas
+              u adeegsado dhisidda jiilka cusub ee Tech-ka Soomaaliya."
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <span
+                class="px-5 py-2 bg-white/10 rounded-full text-xs font-bold uppercase tracking-widest border border-white/5">Full
+                Stack Developer</span>
+              <span
+                class="px-5 py-2 bg-white/10 rounded-full text-xs font-bold uppercase tracking-widest border border-white/5">SEO
+                Expert</span>
+              <span
+                class="px-5 py-2 bg-white/10 rounded-full text-xs font-bold uppercase tracking-widest border border-white/5">Professional
+                Blogger</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mt-16 text-center">
+      <p class="text-slate-500 text-sm font-medium">© 2026 TechSomali – Made with ❤️ by Mohamed Ahmed Ali</p>
+    </div>
+  </main>
+
+  <script>
+    // MOBILE MENU LOGIC
+    const menuBtn = document.getElementById('menu-btn');
+    const closeBtn = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('hidden');
+      mobileMenu.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    });
+
+    closeBtn.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    });
+
+    // DARK MODE LOGIC
+    const themeToggle = document.getElementById('theme-toggle');
+    const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+    const darkIcon = document.getElementById('theme-toggle-dark-icon');
+    const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+      lightIcon.classList.remove('hidden');
+    } else {
+      document.documentElement.classList.remove('dark');
+      darkIcon.classList.remove('hidden');
+    }
+
+    function toggleMode() {
+      darkIcon.classList.toggle('hidden');
+      lightIcon.classList.toggle('hidden');
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('color-theme', 'light');
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('color-theme', 'dark');
+      }
+    }
+
+    themeToggle.addEventListener('click', toggleMode);
+    mobileThemeToggle.addEventListener('click', toggleMode);
+  </script>
 </body>
+
 </html>

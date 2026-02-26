@@ -5,447 +5,545 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>blog</title>
-    <meta name="description" content="TechSomali waa blog Af-Soomaali ah oo ka hadla Programming, Web Development, JavaScript, HTML, CSS iyo Technology casri ah.">
-    <meta name="keywords" content="TechSomali, Programming Af-Soomaali, Web Development, JavaScript, HTML, CSS, Teknoolajiyadda Casriga ah, Baro Coding Af-Soomaali">
+    <meta name="description"
+        content="TechSomali waa blog Af-Soomaali ah oo ka hadla Programming, Web Development, JavaScript, HTML, CSS iyo Technology casri ah.">
+    <meta name="keywords"
+        content="TechSomali, Programming Af-Soomaali, Web Development, JavaScript, HTML, CSS, Teknoolajiyadda Casriga ah, Baro Coding Af-Soomaali">
     <meta name="author" content="TechSomali">
     <link rel="icon" href="techsomalia_favicon_square.ico">
 
+   <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        // Tailwind Configuration for Dark Mode
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #eee5e5;
-            box-sizing: border-box;
-        }
-
-
-        header {
-            background-color: #0932d3a3;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-            position: relative;
-        }
-
-        h1 {
-            font-size: 24px;
-            font-weight: bold;
-            font-style: italic;
-        }
-
-        main {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .big {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: #f8f1f1;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            font-size: 14px;
-
-        }
-
-        .big h2 {
-            color: #1709e7;
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns:repeat(2,1fr);
-            gap: 20px;
-        }
-
-        .card {
-            background: #ffffff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.479);
-            transition: transform 0.3s ease;
-        }
-
-
-
-        .card:hover {
-            transform: translateY(-8px);
-        }
-
-        .cards .card img{
-            width:100%;
-           max-width: 1200px;
-            height: 300px;
-            object-fit: cover;
-            border-top-left-radius: 8px;
-            border-top-right-radius: 8px;
-            
-        }
-
-        .card h3 {
-            font-size: 18px;
-            color: #333;
-            margin: 15px;
-        }
-
-        .card a {
-            display: inline-block;
-            margin: 0 15px 15px 15px;
-            padding: 10px 15px;
-
-            color: rgb(2, 107, 244);
-            text-decoration: none;
-            border-radius: 4px;
-        }
-
-        .card a h3 {
-            margin: 0;
-            font-size: 16px;
-            color: #1709e7;
-        }
-
-        .navbar {
-           max-width: 1250px;
-            height: 40px;
-            background-color: #161616;
-            color: #ffffff;
-            padding: 10px;
-            align-items: center;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            margin: 0;
-        }
-
-        nav ul li {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-
-        }
-
-        nav ul li a:hover {
-            text-decoration: underline;
-            color: rgba(0, 255, 60, 0.719);
-        }
-        .menu-toggle {
-  display: none;
-  font-size: 28px;
-  color: #fff;
-  cursor: pointer;
-}
-
-
-/* 📱 MOBILE */
-@media (max-width: 768px) {
-
-.navbar ul {
-display: none;
-flex-direction: column;
-background-color: rgb(0, 0, 0);
-width: 40%;
-position: absolute;
-top: 60px;
-right:0;
-z-index: 1000;
-  }
-
-  .navbar ul.show {
-    display: flex;
-  }
- .menu-toggle {
-    display: block;
-    position: fixed;
-    top: 10px;
-    right: 15px;
-    z-index: 1000;
-  }
-ul li{
-    border-top: 1px solid #1e293b;
-    padding: 15px 0;
-    width:100%;
-    text-align: center;
-  
-    
-
-}
-ul li:hover{
-text-decoration: underline;
-cursor: pointer;
-    
-
-}
-.cards{
-display: grid;
-grid-template-columns: repeat(1,1fr);
-gap: 20px;
-
-}
-
-
-
-}
-
-
-        .footer-note{
-            text-align:center;
-            margin-top:60px;
-            font-size:0.95rem;
-            color:#64748b;
-        }
-         .logo img {
- width: 30%;
-  height: auto;
-position: relative;
-right: 10px;
-  }
+        .glass-nav { @apply sticky top-0 z-50 bg-white/80 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800; }
+        .card-hover { @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10; }
+        #mobile-menu { @apply transition-all duration-300 transform; }
+        .mobile-menu-open { @apply translate-x-0 opacity-100; }
+        .mobile-menu-closed { @apply translate-x-full opacity-0; }
     </style>
 </head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 overflow-x-hidden">
 
-<body>
+    <nav class="glass-nav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-2">
+                    <img src="./171b2cde-e683-40d0-baa6-2d6af2de83ea.png" alt="logo" class="h-10 w-auto">
+                    <span class="text-2xl font-extrabold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent italic">TechSomali</span>
+                </div>
 
+                <div class="hidden md:flex items-center space-x-8 font-semibold">
+                    <a href="./index.html" class="hover:text-blue-600 transition">Home</a>
+                    <a href="./blog.html" class="text-blue-600">Blog</a>
+                    <a href="./about.html" class="hover:text-blue-600 transition">About</a>
+                    <a href="./contact.html" class="hover:text-blue-600 transition">Contact</a>
+                    
+                    <button id="theme-toggle" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-yellow-400">
+                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg>
+                    </button>
+                </div>
 
-    <nav class="navbar">
-         <div class="logo"> <img src="./171b2cde-e683-40d0-baa6-2d6af2de83ea.png" alt="swir"></div>
-        <div class="menu-toggle">
-            ☰
+                <div class="md:hidden flex items-center gap-4">
+                    <button id="mobile-theme-toggle" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-yellow-500">
+                         <svg class="w-6 h-6 dark:hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                         <svg class="w-6 h-6 hidden dark:block text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0z"></path></svg>
+                    </button>
+                    <button id="menu-btn" class="text-3xl focus:outline-none text-blue-600">☰</button>
+                </div>
+            </div>
         </div>
-        <ul>
 
-            <li><a href="./blog.html">Blog</a></li>
-            <li><a href="./index.html">home</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-            <li><a href="./privecy.html">Privacy</a></li>
-            <li><a href="./terms&conditions.html">Terms</a></li>
-        </ul>
+        <div id="mobile-menu" class="fixed inset-0 bg-white dark:bg-slate-950 z-[100] hidden flex-col items-center justify-center space-y-8 text-2xl font-bold">
+            <button id="close-menu" class="absolute top-6 right-6 text-4xl text-slate-500">&times;</button>
+            <a href="./index.html" class="hover:text-blue-600">Home</a>
+            <a href="./blog.html" class="text-blue-600">Blog</a>
+            <a href="./about.html" class="hover:text-blue-600">About</a>
+            <a href="./contact.html" class="hover:text-blue-600">Contact</a>
+        </div>
     </nav>
 
-    <header>
-        <h1>Somali tech articles</h1>
+    <header class="py-20 px-4 bg-gradient-to-b from-blue-50 to-white dark:from-slate-900 dark:to-slate-950 text-center">
+        <h1 class="text-4xl md:text-7xl font-extrabold mb-6 tracking-tight">Somali <span class="text-blue-600 italic">Tech</span> Articles</h1>
+        <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg md:text-xl">Hagaha ugu sarreeya ee barashada tignoolajiyada iyo online income-ka Af-Soomaaliga.</p>
     </header>
-    <main>
-        <div class="big">
-            <h2>list articles</h2>
-            <div class="cards">
-                <div class="card">
-                    <a href="./adsense.html"><img
-                            src="./1724925728104.webp"
-                            alt="swir" loading="lazy"></a>
 
+    <main class="max-w-7xl mx-auto px-4 py-12">
+        <div class="flex items-center gap-4 mb-12 border-l-4 border-blue-600 pl-4">
+            <h2 class="text-3xl font-bold">List Articles</h2>
+            <span class="bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full dark:bg-blue-900/30 dark:text-blue-400">22 Posts</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+                <div class="relative h-60 overflow-hidden">
+                    <img src="./1724925728104.webp" alt="adsense" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                </div>
+                <div class="p-8">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 text-[10px] font-bold uppercase rounded-md tracking-wider">Passive Income</span>
+                        <span class="text-slate-400 text-[10px] font-bold uppercase tracking-wider">5 Min Read</span>
+                    </div>
                     <a href="./adsense.html">
-                        <h3>sidee adsense looga shaqeeya somaaliya?</h3>
+                        <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize">sidee adsense looga shaqeeya somaaliya?</h3>
                     </a>
                 </div>
-                <div class="card">
-                    <a href="./payoneer.html"><img
-                            src="./11522-postblog_image_1200x630-2.jpg.webp"
-                            alt="payoneer" loading="lazy"></a>
+            </article>
 
+            <article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+                <div class="relative h-60 overflow-hidden">
+                    <img src="./11522-postblog_image_1200x630-2.jpg.webp" alt="payoneer" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+                </div>
+                <div class="p-8">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400 text-[10px] font-bold uppercase rounded-md tracking-wider">Banking</span>
+                    </div>
                     <a href="./payoneer.html">
-                        <h3>payoneer somaliya:sida loo furo loo isticmaalo?</h3>
+                        <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize">payoneer somaliya: sida loo furo loo isticmaalo?</h3>
                     </a>
                 </div>
-                <div class="card">
-                    <a href="./waafi.html"><img
-                            src="./WhatsApp Image 2026-02-21 at 15.59.05.webp"
-                            alt="waafi" loading="lazy"></a>
-                    <a href="./waafi.html">
-                        <h3>waafi mastercard somaliya:sida loo furo loo isticmaalo?</h3>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="./website.html">
-                        <img
-                            src="./pexels-photo-4050319.jpeg"
-                            alt="website" loading="lazy"></a>
-
-                    <a href="./website.html">
-                        <h3>website sidee lacag looga sameeyaa?</h3>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="./freelencing.html"><img
-                            src="./young-woman-freelancer-working-in-a-coffeehouse-u-2023-06-07-17-57-09-utc.jpg"
-                            alt="freelancing" loading="lazy"></a>
-
-                    <a href="./freelencing.html">
-                        <h3>freelancing somalia:hagaha billowga?</h3>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="./fiver.html"><img
-                            src="./WhatsApp Image 2026-02-21 at 17.07.47.jpeg"
-                            alt="fiver" loading="lazy"></a>
-
-                    <a href="./fiver.html">
-                        <h3>fiver somalia:sida  loo furto looga shaqaysto loona isticmaalo ?</h3>
-                    </a>
-                </div>
-                     <div class="card">
-                    <a href="./onlineincome.html"><img
-                            src="./pexels-photo-5902919.jpeg"
-                            alt="online income" loading="lazy"></a>
-                    <a href="./onlineincome.html">
-                        <h3>qaabkee lacag looga sameeya internetka?</h3>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="./hosting&domain.html"><img
-                            src="./Domain-vs-Hosting-Definitions-Working-And-Key-Differences.webp"
-                            alt="domain and hosting" loading="lazy"></a>
-
-                    <a href="./hosting&domain.html">
-                        <h3>hosting iyo domain:hagaha billowga?</h3>
-                    </a>
-                </div>
-               
-                <div class="card">
-                    <a href="./programing.html"><img
-                            src="./understanding-web-development-frameworks-og-image.jpg"
-                            alt="programing" loading="lazy"></a>
-                    <a href="./programing.html">
-                        <h3>programing:luqadaha ugu muhiimsan?</h3>
-                    </a>
-                </div>
-            <div class="card">
-                    <a href="./webdevelopment.html"><img
-                            src="./Website-to-Make-Money.webp"
-                            alt="web development" loading="lazy"></a>
-                    <a href="./webdevelopment.html">
-                        <h3>web development: xagee ka bilaabaa?</h3>
-                    </a>
-                </div>
-                         <div class="card">
-                    <a href="./frontendvsbackend.html"><img
-                            src="./Front-End-Back-End-Development-Featured.jpg"
-                            alt="frontend vs backend" loading="lazy"></a>
-                    <a href="./frontendvsbackend.html">
-                        <h3>frontend vs backend keen ku billaabaa? </h3>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="./barashadahtmliyocss.html"><img
-                            src="./Make Simple Website in HTML CSS.webp"
-                            alt="barashada html iyo css" loading="lazy"></a>
-                    <a href="./barashadahtmliyocss.html">
-                        <h3>barashada html iyo css xageen ka billabaa ?</h3>
-                    </a>
-                </div>
-                    <div class="card">
-                    <a href="./jv.html"><img
-                            src="./pexels-photo-31343632.jpeg"
-                            alt="javascript" loading="lazy"></a>
-                    <a href="./jv.html">
-                        <h3>javascript:maxayta muhiimada uu uleeyahay webseedka?</h3>
-                    </a>
-                </div>
-                     <div class="card">
-                    <a href="react.html"><img
-                            src="./images.png"
-                            alt="react" loading="lazy"></a>
-                    <a href="react.html">
-                        <h3>sababata react loogu webseedyada casriga ah maxayta?</h3>
-                    </a>
-                </div>  
-                     <div class="card">
-                    <a href="reactvsjv.html"><img
-                            src="./Vanilla-JS-Vs-React-JS_-What-To-Choose-For-Your-Development_-2.webp"
-                            alt="react vs javascript" loading="lazy"></a>
-                    <a href="reactvsjv.html">
-                        <h3>react vs javascript</h3>
-                    </a> 
-                </div>  
-
-                    <div class="card">
-                    <a href="./git&github.html"><img
-                            src="./git-vs-github.webp"
-                            alt="git and github" loading="lazy"></a>
-                    <a href="./git&github.html">
-                        <h3>git&github maxay kaa caawinayaan faaidooda maxay tahay?</h3>
-                    </a>
-                </div>
-                    <div class="card">
-                    <a href="./githubworkflow.html"><img
-                            src="./746_github_flow.webp"
-                            alt="github workflow" loading="lazy"></a>
-                    <a href="./githubworkflow.html">
-                        <h3>sidee project dhab ah loogu shaqeeyaa?</h3>
-                    </a>
-                </div>
-                    <div class="card">
-                    <a href="./github+netfly.html"><img
-                            src="./4c68473a73da8b08a4dccadc10276ab997d09ade-2400x1350_Z1unRdg.webp"
-                            alt="github and netfly" loading="lazy"></a>
-                    <a href="./github+netfly.html">
-                        <h3>sidee webseed looga dhigaa online?</h3>
-                    </a>
-                </div>
-                    <div class="card">
-                    <a href="seobasics.html"><img
-                            src="./shutterstock_423521506-scaled-1.webp"
-                            alt="seo basics" loading="lazy"></a>
-                    <a href="seobasics.html">
-                        <h3>sidee webseedkaaga loogu hagaajiyaa google?</h3>
-                    </a>
-                </div>
-                    <div class="card">
-                    <a href="contentstrategy.html"><img
-                            src="./Depositphotos_67853485_xl-2015-1024x683.webp"
-                            alt="content strategy" loading="lazy"></a>
-                    <a href="contentstrategy.html">
-                        <h3>sidee loo qorsheeyaa qorista articles?</h3>
-                    </a>
-                </div>
-                    <div class="card">
-                    <a href="top6somaliblog.html"><img
-                            src="./images.webp"
-                            alt="top 6 somali blog" loading="lazy"></a>
-                    <a href="top6somaliblog.html">
-                        <h3>how it helps grow your blog/professional skills?</h3>
-                    </a>
-                </div>
-                    <div class="card">
-                    <a href="frontendrodmap2026.html"><img
-                            src="./maxresdefault.webp"
-                            alt="frontend roadmap 2026" loading="lazy"></a>
-                    <a href="frontendrodmap2026.html">
-                        <h3>Frontend Roadmap 2026 – Sida Loogu Noqdo Frontend Developer Casri ah🤏</h3>
-                    </a>
-                </div>
-               
-        
-            </div>
-                   <div class="footer-note">
-        © 2026 TechSomali – Teknoolojiyada Casriga ah Af-Soomaali
+            </article>
+            <article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+    <div class="relative h-60 overflow-hidden">
+        <img src="./WhatsApp Image 2026-02-21 at 15.59.05.webp" alt="waafi" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+        <div class="absolute top-4 left-4 bg-purple-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Payments</div>
     </div>
-        </div> 
+    <div class="p-8">
+        <a href="./waafi.html">
+            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">waafi mastercard somaliya: sida loo furo loo isticmaalo?</h3>
+        </a>
+    </div>
+</article>
+
+<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+    <div class="relative h-60 overflow-hidden">
+        <img src="./pexels-photo-4050319.jpeg" alt="website" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+        <div class="absolute top-4 left-4 bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Monetize</div>
+    </div>
+    <div class="p-8">
+        <a href="./website.html">
+            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">website sidee lacag looga sameeyaa?</h3>
+        </a>
+    </div>
+</article>
+
+<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+    <div class="relative h-60 overflow-hidden">
+        <img src="./young-woman-freelancer-working-in-a-coffeehouse-u-2023-06-07-17-57-09-utc.jpg" alt="freelancing" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+        <div class="absolute top-4 left-4 bg-orange-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Freelance</div>
+    </div>
+    <div class="p-8">
+        <a href="./freelencing.html">
+            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">freelancing somalia: hagaha billowga?</h3>
+        </a>
+    </div>
+</article>
+
+<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+    <div class="relative h-60 overflow-hidden">
+        <img src="./WhatsApp Image 2026-02-21 at 17.07.47.jpeg" alt="fiverr" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+        <div class="absolute top-4 left-4 bg-green-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Gig Economy</div>
+    </div>
+    <div class="p-8">
+        <a href="./fiver.html">
+            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">fiver somalia: sida loo furto looga shaqaysto?</h3>
+        </a>
+    </div>
+</article>
+
+<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+    <div class="relative h-60 overflow-hidden">
+        <img src="./pexels-photo-5902919.jpeg" alt="online income" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+        <div class="absolute top-4 left-4 bg-yellow-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Earning</div>
+    </div>
+    <div class="p-8">
+        <a href="./onlineincome.html">
+            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">qaabkee lacag looga sameeya internetka?</h3>
+        </a>
+    </div>
+</article>
+
+<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+    <div class="relative h-60 overflow-hidden">
+        <img src="./Domain-vs-Hosting-Definitions-Working-And-Key-Differences.webp" alt="hosting" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+        <div class="absolute top-4 left-4 bg-cyan-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Web Infrastructure</div>
+    </div>
+    <div class="p-8">
+        <a href="./hosting&domain.html">
+            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">hosting iyo domain: hagaha billowga?</h3>
+        </a>
+    </div>
+</article>
+
+<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+    <div class="relative h-60 overflow-hidden">
+        <img src="./understanding-web-development-frameworks-og-image.jpg" alt="programming" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+        <div class="absolute top-4 left-4 bg-red-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Coding</div>
+    </div>
+    <div class="p-8">
+        <a href="./programing.html">
+            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">programming: luqadaha ugu muhiimsan?</h3>
+        </a>
+    </div>
+</article>
+
+<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+    <div class="relative h-60 overflow-hidden">
+        <img src="./Website-to-Make-Money.webp" alt="web dev" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+        <div class="absolute top-4 left-4 bg-indigo-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Development</div>
+    </div>
+    <div class="p-8">
+        <a href="./webdevelopment.html">
+            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">web development: xagee ka bilaabaa?</h3>
+        </a>
+    </div>
+</article>
+
+<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+    <div class="relative h-60 overflow-hidden">
+        <img src="./Front-End-Back-End-Development-Featured.jpg" alt="frontend backend" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+        <div class="absolute top-4 left-4 bg-pink-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Career Path</div>
+    </div>
+    <div class="p-8">
+        <a href="./frontendvsbackend.html">
+            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">frontend vs backend keen ku billaabaa?</h3>
+        </a>
+    </div>
+</article>
+
+<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+    <div class="relative h-60 overflow-hidden">
+        <img src="./Make Simple Website in HTML CSS.webp" alt="html css" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+        <div class="absolute top-4 left-4 bg-orange-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Basics</div>
+    </div>
+    <div class="p-8">
+        <a href="./barashadahtmliyocss.html">
+            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">barashada html iyo css xageen ka billabaa ?</h3>
+        </a>
+    </div>
+</article>
+
+<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+    <div class="relative h-60 overflow-hidden">
+        <img src="./pexels-photo-31343632.jpeg" alt="js" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+        <div class="absolute top-4 left-4 bg-yellow-400 text-black text-[10px] font-bold px-3 py-1 rounded-full uppercase">JavaScript</div>
+    </div>
+    <div class="p-8">
+        <a href="./jv.html">
+            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">javascript: maxayta muhiimada uu uleeyahay?</h3>
+        </a>
+    </div>
+</article>
+
+<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+    <div class="relative h-60 overflow-hidden">
+        <img src="./images.png" alt="react" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+        <div class="absolute top-4 left-4 bg-blue-400 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Library</div>
+    </div>
+    <div class="p-8">
+        <a href="react.html">
+            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">sababata react loogu webseedyada casriga ah?</h3>
+        </a>
+    </div>
+</article>
+
+<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+    <div class="relative h-60 overflow-hidden">
+        <img src="./Vanilla-JS-Vs-React-JS_-What-To-Choose-For-Your-Development_-2.webp" alt="comparison" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+        <div class="absolute top-4 left-4 bg-gray-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Comparison</div>
+    </div>
+    <div class="p-8">
+        <a href="reactvsjv.html">
+            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">react vs javascript: keen loo baahanyahay?</h3>
+        </a>
+    </div>
+</article>
+
+<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+    <div class="relative h-60 overflow-hidden">
+        <img src="./git-vs-github.webp" alt="git" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+        <div class="absolute top-4 left-4 bg-black text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Version Control</div>
+    </div>
+    <div class="p-8">
+        <a href="./git&github.html">
+            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">git & github: faaidada ay kuu leeyihiin?</h3>
+        </a>
+    </div>
+</article>
+
+<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+    <div class="relative h-60 overflow-hidden">
+        <img src="./746_github_flow.webp" alt="flow" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+        <div class="absolute top-4 left-4 bg-teal-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Workflow</div>
+    </div>
+    <div class="p-8">
+        <a href="./githubworkflow.html">
+            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">sidee project dhab ah loogu shaqeeyaa?</h3>
+        </a>
+    </div>
+</article>
+
+<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+    <div class="relative h-60 overflow-hidden">
+        <img src="./4c68473a73da8b08a4dccadc10276ab997d09ade-2400x1350_Z1unRdg.webp" alt="deploy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+        <div class="absolute top-4 left-4 bg-emerald-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Deployment</div>
+    </div>
+    <div class="p-8">
+        <a href="./github+netfly.html">
+            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">sidee webseed looga dhigaa online?</h3>
+        </a>
+    </div>
+</article>
+
+<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+    <div class="relative h-60 overflow-hidden">
+        <img src="./shutterstock_423521506-scaled-1.webp" alt="seo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+        <div class="absolute top-4 left-4 bg-blue-800 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">SEO</div>
+    </div>
+    <div class="p-8">
+        <a href="seobasics.html">
+            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">sidee webseedkaaga loogu hagaajiyaa google?</h3>
+        </a>
+    </div>
+</article>
+
+<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+    <div class="relative h-60 overflow-hidden">
+        <img src="./Depositphotos_67853485_xl-2015-1024x683.webp" alt="content" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+        <div class="absolute top-4 left-4 bg-rose-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Strategy</div>
+    </div>
+    <div class="p-8">
+        <a href="contentstrategy.html">
+            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">sidee loo qorsheeyaa qorista articles?</h3>
+        </a>
+    </div>
+</article>
+
+<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+    <div class="relative h-60 overflow-hidden">
+        <img src="./images.webp" alt="blogs" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+        <div class="absolute top-4 left-4 bg-slate-700 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Community</div>
+    </div>
+    <div class="p-8">
+        <a href="top6somaliblog.html">
+            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">Top 6 Somali Blogs: Sidee kuu caawin karaan?</h3>
+        </a>
+    </div>
+</article>
+
+<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+    <div class="relative h-60 overflow-hidden">
+        <img src="./maxresdefault.webp" alt="roadmap" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+        <div class="absolute top-4 left-4 bg-purple-700 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Roadmap 2026</div>
+    </div>
+    <div class="p-8">
+        <a href="frontendrodmap2026.html">
+            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">Frontend Roadmap 2026 – Sida loogu noqdo pro?</h3>
+        </a>
+    </div>
+</article>
+
+            </div>
     </main>
-      <script>
-const menutoggle=document.querySelector(".menu-toggle");
-const navbar=document.querySelector(".navbar ul");
 
-menutoggle.addEventListener("click", () => {
-  navbar.classList.toggle("show");
-});
-</script>
+    <footer class="bg-slate-900 text-slate-400 py-16 px-4 mt-20 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div>
+                <h3 class="text-white text-2xl font-bold mb-6 italic underline decoration-blue-600">TechSomalia</h3>
+                <p class="leading-relaxed">Baro teknoolajiyadda, programming iyo web development Af-Soomaali si fudud oo casri ah. Ka dhis mustaqbalkaaga halkan.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Explore</h4>
+                <div class="grid grid-cols-2 gap-4">
+                    <a href="./privecy.html" class="hover:text-blue-400">Privacy</a>
+                    <a href="./about.html" class="hover:text-blue-400">About</a>
+                    <a href="./contact.html" class="hover:text-blue-400">Contact</a>
+                    <a href="./terms&conditions.html" class="hover:text-blue-400">Terms</a>
+                    <a href="./index.html" class="hover:text-blue-400">home</a>
+                   
+                </div>
+            </div>
+            <div>
+                <!-- ===== Premium Footer Newsletter ===== -->
+<style>
+.footer-newsletter{
+  background: linear-gradient(135deg,#0f172a,#1e293b);
+  padding:60px 20px;
+  text-align:center;
+  color:white;
+}
+
+.footer-newsletter h2{
+  font-size:28px;
+  margin-bottom:10px;
+  font-weight:700;
+}
+
+.footer-newsletter p{
+  color:#cbd5e1;
+  margin-bottom:30px;
+  font-size:15px;
+}
+
+.newsletter-form{
+  max-width:500px;
+  margin:auto;
+  display:flex;
+  background:white;
+  border-radius:50px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
+  transition:0.3s ease;
+}
+
+.newsletter-form:hover{
+  transform:translateY(-3px);
+}
+
+.newsletter-form input{
+  flex:1;
+  padding:15px 20px;
+  border:none;
+  outline:none;
+  font-size:14px;
+}
+
+.newsletter-form button{
+  padding:0 25px;
+  border:none;
+  background:#3b82f6;
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s ease;
+}
+
+.newsletter-form button:hover{
+  background:#2563eb;
+}
+
+.newsletter-note{
+  margin-top:15px;
+  font-size:13px;
+  color:#94a3b8;
+}
+
+/* Responsive */
+@media(max-width:600px){
+  .newsletter-form{
+    flex-direction:column;
+    border-radius:15px;
+  }
+  .newsletter-form input,
+  .newsletter-form button{
+    width:100%;
+    border-radius:0;
+  }
+  .newsletter-form button{
+    padding:15px;
+  }
+}
+</style>
+
+<section class="footer-newsletter">
+
+  <h2>Ku Biir Community-ga Premium</h2>
+  <p>Hel casharro cusub, SEO tips, iyo updates gaar ah.</p>
+
+  <form 
+    action="https://formspree.io/f/xzdaoeyv" 
+    method="POST"
+    class="newsletter-form"
+  >
+    <input 
+      type="email" 
+      name="email" 
+      required 
+      placeholder="Gali Email-kaaga"
+    >
+
+    <button type="submit">
+      Subscribe
+    </button>
+  </form>
+
+  <div class="newsletter-note">
+    No spam. Ka bax wakhti kasta.
+  </div>
+
+</section>
+            </div>
+        </div>
+        <div class="text-center mt-16 pt-8 border-t border-slate-800 text-sm">
+            © 2026 TechSomali. Made with 🔥 for the Somali Tech Community.
+        </div>
+    </footer>
+
+    <script>
+        // 1. MOBILE MENU LOGIC
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            mobileMenu.classList.add('flex');
+            document.body.style.overflow = 'hidden'; // Stop scrolling
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('flex');
+            document.body.style.overflow = 'auto'; // Resume scrolling
+        });
+
+        // 2. DARK MODE LOGIC
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        // Check local storage or system preference
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            themeToggleLightIcon.classList.remove('hidden');
+        } else {
+            document.documentElement.classList.remove('dark');
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const toggleTheme = () => {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+        };
+
+        themeToggleBtn.addEventListener('click', toggleTheme);
+        mobileThemeToggle.addEventListener('click', toggleTheme);
+    </script>
 </body>
-
 </html>
