@@ -1,284 +1,184 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Baro Web Development Af-Soomaali: HTML, CSS, JavaScript, iyo Frameworks Casri ah. Hagaha dhameystiran ee bilowga ilaa heerka sare.">
-  <meta name="keywords" content="Web Development Af-Soomaali, HTML, CSS, JavaScript, Frameworks Casri ah, TechSomali">
-  <meta name="author" content="TechSomali">
-  <link rel="icon" href="techsomalia_favicon_square.ico">
-
-<!DOCTYPE html>
-<html lang="en">
+<html lang="so" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Programming: Fikradaha Programming si Fudud oo Af-Soomaali ah. Baro fikradaha aasaasiga ah ee programming sida variables, conditions, loops, iyo logic. Ku bilow safarkaaga barashada coding maanta!">
-    <meta name="keywords" content="programming afsoomaali, barashada programming afsoomaali, fikradaha programming, variables, conditions, loops, logic, web development afsoomaali, techsomali">
-    <meta name="author" content="TechSomali">
-    <link rel="icon" href="techsomalia_favicon_square.ico">
-
-    <title>programing</title>
-<!DOCTYPE html>
-<html lang="so">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Payoneer Soomaaliya: Qaabka Loo Helo iyo Sida Loo Isticmaalo</title>
-  <meta name="description" content="Baro sida Payoneer looga helo Soomaaliya, sida loo isticmaalo, qaabka lacagta loo qaato, iyo sida loogu xiro Google AdSense.">
-  <meta name="keywords" content="Payoneer Soomaaliya, Sida Loo Helo Payoneer, Freelancing Soomaaliya, Google AdSense Soomaaliya, Lacag Ka Sameynta Internetka, TechSomali">
-  <meta name="author" content="TechSomali">
-  <link rel="icon" href="techsomalia_favicon_square.ico">
-
-  <script src="https://cdn.tailwindcss.com"></script>
+    <title>Barashada Web Development - TechSomali</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <script>
-        tailwind.config = { darkMode: 'class', theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } } }
+        tailwind.config = { 
+            darkMode: 'class', 
+            theme: { 
+                extend: { 
+                    fontFamily: { sans: ['Inter', 'sans-serif'] } 
+                } 
+            } 
+        }
     </script>
     <style>
-        
-        /* --- General Setup --- */
         .glass-nav { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
-        #mobile-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: 9999; display: none; }
-        #mobile-overlay.active { display: flex; }
-        #scroll-progress { position: fixed; top: 0; left: 0; height: 4px; background: #2563eb; z-index: 100; width: 0%; }
-
-        /* --- ARTCLE BODY DESIGN (Halkan ayay dhibaatadu ka jirtay) --- */
-        .article-body { color: #475569; line-height: 1.8; font-size: 1.15rem; }
-        .dark .article-body { color: #94a3b8; }
-
-        /* Cinwaannada kala duwan */
-        .article-body h1 { font-size: 2.5rem; font-weight: 800; color: #1e293b; margin-bottom: 1.5rem; }
-        .article-body h2 { font-size: 1.9rem; font-weight: 800; color: #2563eb; margin-top: 2.5rem; margin-bottom: 1.25rem; border-left: 5px solid #2563eb; padding-left: 1rem; }
-        .article-body h3 { font-size: 1.6rem; font-weight: 700; color: #1e293b; margin-top: 2rem; margin-bottom: 1rem; }
-        .article-body h4 { font-size: 1.3rem; font-weight: 700; color: #334155; margin-top: 1.5rem; }
-        .dark .article-body h1, .dark .article-body h3, .dark .article-body h4 { color: #f1f5f9; }
-
-        /* Hagaajinta Liisaska (Lists) - Tan ayaa muhiim u ah koodhkaaga */
-        .article-body ul { list-style-type: disc !important; margin-bottom: 1.5rem; padding-left: 1.5rem; }
-        .article-body ol { list-style-type: decimal !important; margin-bottom: 1.5rem; padding-left: 1.5rem; }
-        .article-body li { margin-bottom: 0.6rem; }
-        .article-body li::marker { color: #2563eb; font-weight: bold; }
-
-        /* Strong & Links */
-        .article-body strong { color: #1e293b; font-weight: 700; }
-        .dark .article-body strong { color: #f8fafc; }
-        .article-body a { color: #2563eb; text-decoration: underline; font-weight: 600; }
+        #scroll-progress { position: fixed; top: 0; left: 0; height: 4px; background: #2563eb; z-index: 100; width: 0%; transition: width 0.1s; }
         
-        /* Sawirrada */
-        .article-body img { border-radius: 2rem; margin: 2rem 0; width: 100%; height: auto; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+        /* Typography - Responsive sizes */
+        .article-body { color: #475569; line-height: 1.8; }
+        .dark .article-body { color: #94a3b8; }
+        .article-body p { margin-bottom: 1.5rem; font-size: 1.1rem; }
+        
+        /* Code styling for mobile */
+        .code-snippet { 
+            background: #0f172a; 
+            color: #e2e8f0; 
+            padding: 1rem; 
+            border-radius: 0.75rem; 
+            font-family: monospace; 
+            font-size: 0.875rem; 
+            overflow-x: auto; 
+            white-space: pre-wrap;
+            word-break: break-all;
+            position: relative;
+            border: 1px solid #334155;
+            margin: 1rem 0;
+        }
+
+        /* Nav Mobile Logic */
+        #mobile-menu { display: none; }
+        #mobile-menu.active { display: flex; }
     </style>
 </head>
+
 <body class="bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
 
     <div id="scroll-progress"></div>
 
-    <nav class="glass-nav sticky top-0 z-50 bg-white/80 dark:bg-slate-900/90 border-b border-slate-200 dark:border-slate-800 h-20">
-        <div class="max-w-7xl mx-auto px-6 h-full flex justify-between items-center text-slate-900 dark:text-white">
-            <div class="flex items-center gap-2">
-                <img src="./171b2cde-e683-40d0-baa6-2d6af2de83ea.png" alt="logo" class="h-10 w-auto">
-                <span class="text-2xl font-black italic">TechSomali</span>
-            </div>
-            <ul class="hidden md:flex space-x-8 font-bold text-sm">
-                <li><a href="./index.html">home</a></li>
-                <li><a href="./blog.html" class="text-blue-600">Blog</a></li>
-                <li><a href="./about.html">about</a></li>
-                <li><a href="./contact.html">contact</a></li>
-            </ul>
-            <button id="open-menu" class="md:hidden text-3xl text-blue-600">☰</button>
-        </div>
-    </nav>
+    <nav class="glass-nav sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 md:h-20">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold italic text-xl">T</div>
+                    <span class="text-xl md:text-2xl font-black italic tracking-tighter text-slate-900 dark:text-white">TechSomali</span>
+                </div>
 
-    <div id="mobile-overlay" class="bg-white dark:bg-slate-950 flex-col items-center justify-center space-y-8 text-2xl font-bold transition-all dark:text-white">
-        <button id="close-menu" class="absolute top-6 right-8 text-6xl text-slate-400">&times;</button>
-        <a href="./index.html">home</a>
-        <a href="./about.html">about</a>
-        <a href="./blog.html">Blog</a>
-        <a href="./contact.html">contact</a>
-    </div>
-<button id="theme-toggle" class="fixed bottom-6 right-6 z-[100] p-4 bg-white dark:bg-slate-800 shadow-2xl rounded-full border border-slate-200 dark:border-slate-700 hover:scale-110 transition-all text-2xl">
-    <span id="theme-toggle-icon">🌙</span>
-</button>
+                <div class="hidden md:flex items-center space-x-8 font-bold text-sm">
+                    <a href="./index.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600">home</a>
+                    <a href="./blog.html" class="text-blue-600">Blog</a>
+                    <a href="./about.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600">about</a>
+                    <a href="./contact.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600">contact</a>
+                    <button id="theme-toggle" class="p-2 bg-slate-100 dark:bg-slate-800 rounded-full text-lg">🌙</button>
+                </div>
 
-<script>
-    // Logic-ga Dark Mode
-    const themeToggleBtn = document.getElementById('theme-toggle');
-    const themeToggleIcon = document.getElementById('theme-toggle-icon');
-    const htmlElement = document.documentElement;
-
-    // Hubi haddii uu qofku horay u doortay dark mode
-    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        htmlElement.classList.add('dark');
-        themeToggleIcon.innerText = '☀️';
-    } else {
-        htmlElement.classList.remove('dark');
-        themeToggleIcon.innerText = '🌙';
-    }
-
-    themeToggleBtn.addEventListener('click', () => {
-        if (htmlElement.classList.contains('dark')) {
-            htmlElement.classList.remove('dark');
-            localStorage.setItem('theme', 'light');
-            themeToggleIcon.innerText = '🌙';
-        } else {
-            htmlElement.classList.add('dark');
-            localStorage.setItem('theme', 'dark');
-            themeToggleIcon.innerText = '☀️';
-        }
-    });
-</script>
-    <header class="py-16 px-6 text-center max-w-4xl mx-auto">
-        <div class="mb-4 inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-full text-xs font-bold uppercase">Technology</div>
-        <h1 class="text-4xl md:text-6xl font-black tracking-tight text-slate-900 dark:text-white mb-6 leading-tight">
-           web development xagee laga billaabaa:albaabka?
-        </a>
-    </div>
-        </h1>
-        <div class="flex justify-center items-center gap-4 text-slate-500 text-sm">
-            <span>By TechSomali</span> • <span>Febraayo 2026</span> • <span>5 min read</span>
-        </div>
-    </header>
-
-    <main class="max-w-4xl mx-auto px-6 pb-24">
-        <div class="bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 md:p-12 shadow-2xl border border-slate-100 dark:border-slate-800 article-body">
-            
-          
- <section id="web-development" class="blog-post">
-    <h1>💻 Barashada Web Development: HTML, CSS, JavaScript iyo Frameworks Casri ah</h1>
-    <p>Barashada Web Development waxay ka mid tahay xirfadaha ugu qiimaha badan ee qofka casriga ah uu barto.
-      Maanta, shirkado badan oo caalami ah waxay raadinayaan dad awood u leh dhisidda websites responsive ah, web
-      applications casri ah, iyo interface user-friendly ah. Web Development waxaa ka mid ah HTML, CSS,
-      JavaScript, iyo frameworks kala duwan oo fududeeya horumarinta software-ka casriga ah. Fahamka qotodheer ee
-      luqadahaan iyo sida ay isku xirmaan waxay qofka ka dhigtaa developer awood leh oo fursado shaqo ka heli kara
-      gudaha iyo dibadda.</p>
-
-    <h2>1️⃣ HTML – Aasaaska Dhismaha Webka</h2>
-    <p>HTML (HyperText Markup Language) waa luqadda dhismaha website-ka, oo bixisa structure-ka boggaaga. Waxay kuu
-      ogolaaneysaa inaad ku darto headings, paragraphs, images, links, forms, iyo lists. Fahamka HTML waa
-      tallaabada ugu horeysa ee qof kasta oo raba inuu noqdo web developer. Qof aan HTML aqoon u lahayn ma dhisi
-      karo web pages sax ah. Waxaa muhiim ah inaad barato semantic HTML si website-kaagu u noqdo search engine
-      friendly, accessible, oo fudud in la maamulo mustaqbalka.</p>
-    <h4>hadii aan tusaale yar usoo qaadano qaabka loo qorayo html waxay noqonaysaa</h4>
-    <ul>
-      <li><span> <code>&lt;!DOCTYPE html&gt;</code> </span>- Tani waxay sheegaysaa in dukumiintigu yahay HTML5.</li>
-      <li> <span><code>&lt;html&gt;&lt;/html&gt;</code> </span>- Waxay calaamadeysaa bilowga iyo dhammaadka dukumiintiga
-        HTML.</li>
-      <li> <span><code>&lt;head&gt;&lt;/head&gt;</code> </span>- Qaybtan waxay ka kooban tahay macluumaadka aan muuqan
-        ee bogga, sida cinwaanka iyo metadata.</li>
-      <li> <span><code>&lt;title&gt;&lt;/title&gt;</code> </span>- Waxay dejisaa cinwaanka bogga oo ka muuqda tab-ka
-        browser-ka.</li>
-      <li> <span><code>&lt;body&gt;&lt;/body&gt;</code> </span>- Qaybtan waxay ka kooban tahay dhammaan waxyaabaha
-        muuqda ee bogga, sida qoraalka, sawirrada, iyo links-ka.</li>
-      <li> <span><code>&lt;h1&gt;&lt;/h1&gt;</code> </span>- Waxay abuureysaa cinwaan weyn oo muhiim ah oo bogga ku
-        jira.</li>
-      <li> <span><code>&lt;p&gt;&lt;/p&gt;</code> </span>- Waxay abuureysaa faqrado qoraal ah oo bogga ku jira.</li>
-    </ul>
-
-    <h2>2️⃣ CSS – Qurxinta iyo Layout-ka</h2>
-    <p>CSS (Cascading Style Sheets) waxay ka dhigtaa website-ka mid soo jiidasho leh, isla markaana leh design casri
-      ah. Waxaad ku maamuli kartaa colors, fonts, spacing, borders, background images, iyo responsive layouts.
-      Waxaa kale oo aad ku dari kartaa animations fudud sida hover effects, transitions, iyo micro-interactions.
-      Fahamka CSS flexbox iyo grid layout wuxuu kuu ogolaanayaa inaad dhisto layout ka shaqeeya desktop iyo
-      mobile, taasoo ah skill aad u muhiim ah oo ka dhigaysa websites-kaaga professional.</p>
-    <h4>sidoo kale hadii aan tusaale yar usoo qaadano qaabka loo qorayo CSS waxay noqonaysaa</h4>
-    <ul>
-      <li><span> <code>body { background-color: #f0f0f0; }</code> </span>- Tani waxay dejineysaa midabka asalka ee
-        bogga.</li>
-      <li> <span><code>h1 { color: #333333; font-size: 36px; }</code> </span>- Waxay dejineysaa midabka iyo cabirka
-        font-ka cinwaanka weyn.</li>
-      <li> <span><code>p { line-height: 1.6; margin-bottom: 20px; }</code> </span>- Waxay hagaajineysaa dhererka
-        xariiqda iyo meel bannaan oo hoose ee faqradaha.</li>
-      <li> <span><code>.container { max-width: 1200px; margin: 0 auto; padding: 20px; }</code> </span>- Waxay abuureysaa
-        weel dhexe oo leh ballac ugu badan iyo padding gudaha ah.</li>
-      <li> <span><code>a:hover { color: #007BFF; text-decoration: underline; }</code> </span>- Waxay dejineysaa midabka
-        iyo hoos-u-saarista link-yada marka la dul istaago.</li>
-
-      <h2>3️⃣ JavaScript – Interactivity iyo Functionality</h2>
-      <p>JavaScript waa luqadda programming-ka ee ka dhigaysa webka mid interactive. Waxaad ku dari kartaa
-        functionality sida form validation, dynamic content updates, animations, API requests, iyo even complex
-        logic oo backend la xiriira. Fahamka JavaScript waa muhiim si website-kaagu u noqdo mid lively,
-        user-friendly, iyo modern. Frameworks sida React.js, Vue.js, iyo Angular waxay ka dhigi karaan JavaScript
-        mid structured oo scalable, gaar ahaan marka la dhisayo web applications waaweyn.</p>
-      <h4>in la qoro JavaScript ma ahan wax adag hadii aynu qorno code yar oo JavaScript ah waxaynu uqori karnaa</h4>
-      <ul>
-        <li><span>
-            <code>document.getElementById("myButton").addEventListener("click", function() { alert("Button clicked!"); });</code>
-          </span>- Tani waxay abuureysaa event listener oo ku xiran button leh ID-ga "myButton" kaasoo soo bandhigaya
-          alert marka la gujiyo.</li>
-        <li> <span><code>function changeText() { document.getElementById("myText").innerHTML = "Text changed!"; }</code>
-          </span>- Waxay abuureysaa function beddela qoraalka element-ka leh ID-ga "myText".</li>
-        <li> <span><code>let count = 0; function increment() { count++; document.getElementById("counter").innerHTML = count; }</code>
-          </span>- Waxay abuureysaa counter oo kordhiya qiimaha marka la waco function-ka increment.</li>
-
-        <h2>4️⃣ Frameworks Casri ah</h2>
-        <h3>React.js</h3>
-        <p>React waa library caan ah oo frontend development loogu talagalay. Waxay kuu ogolaaneysaa inaad dhisto
-          components reusable ah, taasoo ka dhigaysa code-ka nadiif, maintainable, isla markaana fast. React waxay
-          sidoo kale leedahay ecosystem weyn sida Redux, React Router, iyo Next.js, taasoo ka dhigaysa choice fiican
-          haddii aad rabto inaad ka shaqeyso startups ama shirkado waaweyn.</p>
-
-        <h3>Vue.js</h3>
-        <p>Vue waa framework frontend fudud oo loo isticmaalo web development. Waxay ku sahlaysaa inaad dhisto
-          interactive UI components, iyadoo syntax-keedu fudud yahay. Vue waxay leedahay community taageero weyn leh,
-          documentation cad, iyo ecosystem oo kaa caawinaya inaad horumariso apps casri ah si dhakhso leh.</p>
-
-        <h3>Node.js & Express</h3>
-        <p>Node.js iyo Express waxay kuu ogolaanayaan inaad backend-ka ku dhisto JavaScript. Waxaad abuuri kartaa
-          servers, APIs, database connections, iyo authentication. Fahamka backend-ka wuxuu developer-ka ka dhigaa
-          full-stack, taasoo ka dhigaysa inuu ka shaqeeyo dhammaan dhinacyada webka, iyo inuu fursado shaqo badan
-          helo.</p>
-
-        <p><span>Ugu dambeyn</span> hadii aan soo koobo barta aad ka billaabaysa web-developer waxay noqonaysaa frontend developer kadib backend developer kadibna waxaad noqonaysaa full stack developer hadii aad labadas isku darto. barashada web development waa maalgashi weyn oo mustaqbalkaaga xirfadeed. Fahamka HTML, CSS,
-          JavaScript, iyo frameworks casri ah waxay kuu abuuri doonaan fursado shaqo, inaad websites casri ah dhisto,
-          iyo inaad noqoto developer xirfad leh oo ku tartami kara suuqa caalamiga ah.</p>
-
-
-            <div class="mt-12 pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-4 items-center justify-between">
-                <span class="font-bold dark:text-white">La wadaag asxaabta:</span>
-                <div class="flex gap-2">
-<a href="https://api.whatsapp.com/send?text=Halkan ka aqri maqaal aad u xiiso badan: https://techsomali.com/payoneer.html" 
-   target="_blank" 
-   class="px-4 py-2 bg-green-500 text-white rounded-xl text-sm font-bold"style="color: #f8fafc; text-decoration: none;">
-   
-   WhatsApp
-</a>
-               <a href="https://www.facebook.com/sharer/sharer.php?u=https://techsomali.com/payoneer.html" 
-   target="_blank" 
-   class="px-4 py-2 bg-blue-600 text-white rounded-xl text-sm font-bold" style="color: #f8fafc; text-decoration: none;">
-   Facebook
-</a>
+                <div class="flex md:hidden items-center gap-3">
+                    <button id="theme-toggle-m" class="p-2 bg-slate-100 dark:bg-slate-800 rounded-full">🌙</button>
+                    <button id="menu-btn" class="p-2 text-blue-600 text-2xl">☰</button>
                 </div>
             </div>
         </div>
-  </section>
-        <div class="grid md:grid-cols-2 gap-6 mt-12">
-            <a href="./programing.html" class="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 hover:border-blue-500 transition shadow-lg">
-                <span class="text-xs text-slate-500 uppercase">Maqaalkii hore</span>
-                <p class="font-bold dark:text-white mt-1">programing muxuu yahay</p>
-            </a>
-            <a href="frontendvsbackend.html" class="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 hover:border-blue-500 transition shadow-lg">
-                <span class="text-xs text-slate-500 uppercase">Maqaalka xiga</span>
-                <p class="font-bold dark:text-white mt-1">frontend vs backend</p>
-            </a>
+
+        <div id="mobile-menu" class="absolute top-16 left-0 w-full bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex-col p-6 space-y-4 md:hidden shadow-xl transition-all">
+            <a href="./index.html" class="font-bold py-2 border-b dark:border-slate-800 dark:text-white">Home</a>
+            <a href="./blog.html" class="font-bold py-2 border-b dark:border-slate-800 text-blue-600">Blog</a>
+            <a href="./about.html" class="font-bold py-2 dark:text-white">about</a>
+            <a href="./contact.html" class="font-bold py-2 dark:text-white">contact</a>
         </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 py-8 md:py-16">
+        <article class="bg-white dark:bg-slate-900 rounded-3xl md:rounded-[2.5rem] p-6 sm:p-10 md:p-16 shadow-xl border border-slate-100 dark:border-slate-800 article-body">
+            
+            <h1 class="text-2xl sm:text-3xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-8 leading-tight">
+                💻 Barashada Web Development: HTML, CSS, JavaScript iyo Frameworks Casri ah
+            </h1>
+
+            <p>Barashada Web Development waxay ka mid tahay xirfadaha ugu qiimaha badan ee qofka casriga ah uu barto. Maanta, shirkado badan oo caalami ah waxay raadinayaan dad awood u leh dhisidda websites responsive ah, web applications casri ah, iyo interface user-friendly ah. Web Development waxaa ka mid ah HTML, CSS, JavaScript, iyo frameworks kala duwan oo fududeeya horumarinta software-ka casriga ah. Fahamka qotodheer ee luqadahaan iyo sida ay isku xirmaan waxay qofka ka dhigtaa developer awood leh oo fursado shaqo ka heli kara gudaha iyo dibadda.</p>
+
+            <h2 class="text-xl sm:text-2xl font-bold text-blue-600 mt-10 mb-4 border-l-4 border-blue-600 pl-4">1️⃣ HTML – Aasaaska Dhismaha Webka</h2>
+            <p>HTML (HyperText Markup Language) waa luqadda dhismaha website-ka, oo bixisa structure-ka boggaaga. Waxay kuu ogolaaneysaa inaad ku darto headings, paragraphs, images, links, forms, iyo lists. Fahamka HTML waa tallaabada ugu horeysa ee qof kasta oo raba inuu noqdo web developer. Qof aan HTML aqoon u lahayn ma dhisi karo web pages sax ah. Waxaa muhiim ah inaad barato semantic HTML si website-kaagu u noqdo search engine friendly, accessible, oo fudud in la maamulo mustaqbalka.</p>
+            
+            <h4 class="font-bold text-slate-700 dark:text-slate-300 italic mb-4 text-lg">Hadii aan tusaale yar usoo qaadano qaabka loo qorayo html waxay noqonaysaa:</h4>
+            
+            <div class="grid grid-cols-1 gap-4 mb-8">
+                <div class="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700">
+                    <ul class="space-y-3">
+                        <li><code class="text-blue-600 font-bold">&lt;!DOCTYPE html&gt;</code> - Tani waxay sheegaysaa in dukumiintigu yahay HTML5.</li>
+                        <li><code class="text-blue-600 font-bold">&lt;html&gt;&lt;/html&gt;</code> - Waxay calaamadeysaa bilowga iyo dhammaadka dukumiintiga HTML.</li>
+                        <li><code class="text-blue-600 font-bold">&lt;head&gt;&lt;/head&gt;</code> - Qaybtan waxay ka kooban tahay macluumaadka aan muuqan ee bogga.</li>
+                        <li><code class="text-blue-600 font-bold">&lt;body&gt;&lt;/body&gt;</code> - Qaybtan waxay ka kooban tahay dhammaan waxyaabaha muuqda ee bogga.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2 class="text-xl sm:text-2xl font-bold text-blue-600 mt-10 mb-4 border-l-4 border-blue-600 pl-4">2️⃣ CSS – Qurxinta iyo Layout-ka</h2>
+            <p>CSS (Cascading Style Sheets) waxay ka dhigtaa website-ka mid soo jiidasho leh, isla markaana leh design casri ah. Waxaad ku maamuli kartaa colors, fonts, spacing, borders, background images, iyo responsive layouts. Fahamka CSS flexbox iyo grid layout wuxuu kuu ogolaanayaa inaad dhisto layout ka shaqeeya desktop iyo mobile.</p>
+            
+            <div class="code-snippet">
+                <button onclick="copyCode(this)" class="absolute top-2 right-2 bg-slate-700 text-xs py-1 px-2 rounded">Copy</button>
+                <code>body { background-color: #f0f0f0; margin: 0 auto; padding: 20px; }</code>
+            </div>
+
+            <h2 class="text-xl sm:text-2xl font-bold text-blue-600 mt-10 mb-4 border-l-4 border-blue-600 pl-4">3️⃣ JavaScript – Interactivity</h2>
+            <p>JavaScript waa luqadda programming-ka ee ka dhigaysa webka mid interactive. Waxaad ku dari kartaa functionality sida form validation, dynamic content updates, iyo API requests.</p>
+            
+            <div class="code-snippet">
+                <button onclick="copyCode(this)" class="absolute top-2 right-2 bg-slate-700 text-xs py-1 px-2 rounded">Copy</button>
+                <code>document.getElementById("myButton").addEventListener("click", function() { alert("Asc TechSomali!"); });</code>
+            </div>
+
+            <h2 class="text-xl sm:text-2xl font-bold text-blue-600 mt-10 mb-4 border-l-4 border-blue-600 pl-4">4️⃣ Frameworks Casri ah</h2>
+            <div class="space-y-6">
+                <div class="p-6 bg-slate-50 dark:bg-slate-800/30 rounded-2xl">
+                    <h3 class="font-bold text-lg mb-2 text-slate-900 dark:text-white">React.js</h3>
+                    <p>React waa library caan ah oo frontend development loogu talagalay. Waxay kuu ogolaaneysaa inaad dhisto components reusable ah, taasoo ka dhigaysa code-ka nadiif iyo fast.</p>
+                </div>
+                <div class="p-6 bg-slate-50 dark:bg-slate-800/30 rounded-2xl">
+                    <h3 class="font-bold text-lg mb-2 text-slate-900 dark:text-white">Node.js & Express</h3>
+                    <p>Node.js iyo Express waxay kuu ogolaanayaan inaad backend-ka ku dhisto JavaScript. Fahamka backend-ka wuxuu developer-ka ka dhigaa full-stack developer.</p>
+                </div>
+            </div>
+
+            <div class="mt-12 p-6 sm:p-10 bg-blue-600 text-white rounded-[2rem] shadow-xl">
+                <h3 class="text-xl font-bold mb-4 italic">Ugu dambeyn...</h3>
+                <p class="mb-0">Hadii aan soo koobo barta aad ka billaabaysa web-developer waxay noqonaysaa frontend developer kadib backend developer kadibna waxaad noqonaysaa full stack developer hadii aad labadas isku darto. Barashada web development waa maalgashi weyn oo mustaqbalkaaga xirfadeed.</p>
+            </div>
+        </article>
     </main>
 
+    <footer class="bg-white dark:bg-slate-900 py-10 border-t border-slate-200 dark:border-slate-800 text-center">
+        <p class="text-slate-500 text-sm">© 2026 TechSomali. Dhammaan xuquuqdu waa dhowran tahay.</p>
+    </footer>
+
     <script>
-        // Scroll Progress Bar
-        window.onscroll = function() {
-            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            let scrolled = (winScroll / height) * 100;
+        // Copy Code Function
+        function copyCode(btn) {
+            const code = btn.nextElementSibling.innerText;
+            navigator.clipboard.writeText(code);
+            btn.innerText = "Copied!";
+            setTimeout(() => btn.innerText = "Copy", 2000);
+        }
+
+        // Theme Toggle
+        const themeBtn = document.getElementById('theme-toggle');
+        const themeBtnM = document.getElementById('theme-toggle-m');
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+            const icon = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+            themeBtn.innerText = icon;
+            themeBtnM.innerText = icon;
+        }
+        themeBtn.onclick = toggleTheme;
+        themeBtnM.onclick = toggleTheme;
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.onclick = () => mobileMenu.classList.toggle('active');
+
+        // Scroll Progress
+        window.onscroll = () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
             document.getElementById("scroll-progress").style.width = scrolled + "%";
         };
-
-        // Mobile Menu
-        const overlay = document.getElementById('mobile-overlay');
-        document.getElementById('open-menu').addEventListener('click', () => overlay.classList.add('active'));
-        document.getElementById('close-menu').addEventListener('click', () => overlay.classList.remove('active'));
     </script>
 </body>
 </html>
- 

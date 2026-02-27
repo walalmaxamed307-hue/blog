@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="so" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sida loo isticmaalo AI (ChatGPT & Claude) ee Coding-ka - TechSomali</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { 
+            darkMode: 'class', 
+            theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } } 
+        }
+    </script>
+    <style>
+        .glass-nav { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        #scroll-progress { position: fixed; top: 0; left: 0; height: 4px; background: #2563eb; z-index: 100; width: 0%; transition: width 0.1s; }
+        .article-body { color: #475569; line-height: 1.9; }
+        .dark .article-body { color: #94a3b8; }
+        .article-body h2 { font-size: 1.8rem; font-weight: 800; color: #2563eb; margin: 3rem 0 1rem; border-left: 6px solid #2563eb; padding-left: 1rem; }
+        .article-body h3 { font-size: 1.4rem; font-weight: 700; color: #1e293b; margin: 2rem 0 1rem; }
+        .dark .article-body h3 { color: #f1f5f9; }
+        .code-container { background: #0f172a; color: #e2e8f0; padding: 1.2rem; border-radius: 1rem; font-family: monospace; position: relative; margin: 1.5rem 0; border: 1px solid #334155; overflow-x: auto; }
+        .copy-btn { position: absolute; right: 10px; top: 10px; background: #334155; color: white; padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; cursor: pointer; }
+        #mobile-menu { display: none; }
+        #mobile-menu.active { display: flex; }
+    </style>
+</head>
+
+<body class="bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
+
+    <div id="scroll-progress"></div>
+
+    <nav class="glass-nav sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 h-16 md:h-20 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold italic text-xl">T</div>
+                <span class="text-xl md:text-2xl font-black italic tracking-tighter dark:text-white">TechSomali</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8 font-bold text-sm">
+                <a href="./index.html" class="dark:text-slate-300">Home</a>
+                <a href="./blog.html" class="text-blue-600">Blog</a>
+                <a href="./contact.html" class="dark:text-slate-300">contact</a>
+                <a href="./about.html" class="dark:text-slate-300">about</a>
+                <button id="theme-toggle" class="p-2 bg-slate-100 dark:bg-slate-800 rounded-full">🌙</button>
+            </div>
+            <button id="menu-btn" class="md:hidden text-2xl text-blue-600">☰</button>
+        </div>
+        <div id="mobile-menu" class="bg-white dark:bg-slate-900 flex-col p-6 space-y-4 md:hidden border-b dark:border-slate-800">
+            <a href="./index.html" class="font-bold dark:text-white">Home</a>
+            <a href="./blog.html" class="font-bold text-blue-600">Blog</a>
+            <a href="./contact.html" class="font-bold dark:text-white">contact</a>
+            <a href="./about.html" class="font-bold dark:text-white">about</a>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-4 py-10 md:py-20">
+        <article class="bg-white dark:bg-slate-900 rounded-[2.5rem] p-6 md:p-16 shadow-2xl border border-slate-100 dark:border-slate-800 article-body">
+            
+            <h1 class="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-10 leading-tight">🤖 Sida loo isticmaalo AI-ga (ChatGPT & Claude) si aad Koodhka u qorto: Hagaha 2026</h1>
+
+            <p class="text-lg md:text-xl font-medium text-slate-600 dark:text-slate-400 mb-8 italic">
+                "Maanta, developer-ka fiican ma ahan kan madaxa wax walba ku haysta, laakiin waa kan yaqaanna sida loo adeegsado qalabka saxda ah si uu u gaaro natiijo degdeg ah."
+            </p>
+
+            <p>Dunida koodh-qorista (Coding) waxay gashay xilli cusub. Haddii markii hore aan saacado badan ku bixin jirnay raadinta khaladaadka (Debugging) ama dhex-wareegga bogga Stack Overflow, maanta waxaa noo dhashay kaaliyayaal caqli badan sida ChatGPT iyo Claude. AI-gu hadda ma ahan mashiin qoraal uun soo saara, ee waa saaxiib kula fadhiya oo fahmaya luqad kasta oo programming ah laga bilaabo HTML ilaa Python.</p>
+
+            <h2>1. Waa maxay Kaalinta AI ee Coding-ka?</h2>
+            <p>Markaan ka hadlayno isticmaalka AI ee koodhka, uguma talo galin inuu AI-gu adiga booskaaga qabsado. Taas beddelkeeda, AI wuxuu u shaqeeyaa sidii **Junior Developer** oo aad u dhakhso badan. Waxaad u isticmaali kartaa inaad ku abuurto qaab-dhismeedka hore ee bogga, inaad ku sharaxdo koodh adag oo aad garan weyday, ama inaad ka raadiso khaladaadka yar-yar ee dhibka badan (Logical Errors).</p>
+
+            
+
+            <h2>2. ChatGPT vs Claude: Midkee ugu fiican Coding-ka?</h2>
+            <p>Inkastoo labaduba ay awood badan yihiin, haddana waxay ku kala duwan yihiin qaabka ay u shaqeeyaan:</p>
+            <ul class="list-disc pl-6 space-y-4 mb-8">
+                <li><strong>ChatGPT (GPT-4o):</strong> Aad ayuu ugu fiican yahay dhisidda algorithm-yada adag iyo inuu kuu keeno xalal kala duwan. Waa qalabka ugu caansan ee loo adeegsado helitaanka fikradaha cusub ee dhismaha software-ka.</li>
+                <li><strong>Claude (Claude 3.5 Sonnet):</strong> Hadda waxaa loo arkaa boqorka coding-ka. Sababta ayaa ah inuu aad u yaqaanno naxwaha koodhka (Syntax), uuna soo saaro koodh aad u nadiif ah (Clean Code) oo aan khaladaad badneyn. Claude wuxuu si fiican u fahmaa "Context"-ka dheer, haddii aad u dhiibto 22 maqaal oo dhan, wuu wada falanqayn karaa mar qura.</li>
+            </ul>
+
+            <h2>3. Prompt Engineering: Sidee AI looga helaa koodh sax ah?</h2>
+            <p>Khaladka ugu weyn ee ay sameeyaan dadka bilowga ah ayaa ah inay AI-ga waydiiyaan su'aal kooban sida: "Ii dhis website." Taas natiijadeedu waxay noqonaysaa mid liidata. Si aad u hesho koodh professional ah, raac qaabkan:</p>
+            
+            <div class="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-2xl mb-8 border-l-4 border-blue-600">
+                <h3 class="mt-0">Qaabka "Role-Context-Task"</h3>
+                <p><strong>Tusaale:</strong> "Waxaad tahay senior frontend developer. Waxaan rabaa inaad ii dhisto Navbar leh Dark Mode oo loo isticmaalay Tailwind CSS. Navbar-ku waa inuu noqdaa mid responsive ah oo taleefanka ugu muuqda Hamburger Menu. Isticmaal JavaScript saafi ah (Vanilla JS)."</p>
+            </div>
+
+            
+
+            <h2>4. Sida loo dhex-geliyo AI-ga shaqadaada maalinlaha ah</h2>
+            <h3>A. Ka raadinta khaladaadka (Debugging)</h3>
+            <p>Haddii koodhkaagu shaqayn waayo, ha is dhibin. Nuqul ka dhigo (Copy) koodhka khaldan, ka dibna u dhiib ChatGPT adoo ku leh: *"Koodhkan maxaa ka khaldan? Maxay u soo baxaysaa Error-tan?"* AI wuxuu kuu sheegayaa meesha ay dhibtu jirto, xitaa haddii ay tahay hal dhibic ama "Semicolon" kaa dhiman.</p>
+
+            <h3>B. U beddelka naqshadda (UI/UX) koodh</h3>
+            <p>Hadda AI-ga sida Claude wuxuu awoodaa inuu sawir u beddelo koodh. Haddii aad gacanta ku sawirto naxshadda website-ka, sawir ka qaad oo u dhiib, wuxuu kuu soo saarayaa HTML/CSS u eg sawirkaagii.</p>
+
+            <div class="code-container">
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                <code><button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 transform hover:scale-105">
+  Riix Halkan
+</button></code>
+            </div>
+
+            <h2>5. Khatarta iyo Digniinta isticmaalka AI</h2>
+            <p>Inkastoo AI uu yahay saaxiib fiican, haddana waxaa jira godad laga dhici karo:</p>
+            <ul class="list-decimal pl-6 space-y-4 mb-8">
+                <li><strong>Hal-abuurka:</strong> Ha noqon qof kaliya "Copy and Paste" sameeya. Haddii aadan fahmin koodhka AI ku siiyay, waxaad ku dhibtoon doontaa inaad mustaqbalka wax ka beddesho.</li>
+                <li><strong>Amniga:</strong> Weligaa AI ha u dhiibin macluumaad sir ah (Passwords ama API Keys). AI-gu wuxuu xasuusan karaa macluumaadkaas oo dad kale ayuu tusaale ahaan ugu muujin karaa.</li>
+                <li><strong>Khaladaadka Caqliga:</strong> Mararka qaar AI wuxuu soo saaraa koodh u muuqda mid sax ah laakiin aan shaqaynayn (Hallucination). Had iyo jeer tijaabi koodhka ka hor intaadan live u saarin website-ka.</li>
+            </ul>
+
+            <div class="mt-12 p-8 bg-slate-900 text-white rounded-[2rem] shadow-xl relative overflow-hidden">
+                <div class="relative z-10">
+                    <h3 class="text-blue-400 font-black mb-4">Gunaanad</h3>
+                    <p class="leading-relaxed">AI-ga (ChatGPT & Claude) ma ahan wax laga baqo, ee waa awood kuu ogolaanaysa inaad ku tartanto suuqa caalamiga ah. Haddii aad tahay developer Soomaaliyeed, barashada AI waxay kuu sahlaysaa inaad shaqooyinka ku dhameystirto 10-jeer ka dhakhso badan sidii hore. TechSomali waxay kugu dhiirigelinaysaa inaad tijaabiso Claude maanta oo aad u dhiibto koodhkaaga si aad u aragto farqiga.</p>
+                </div>
+                <div class="absolute -right-10 -bottom-10 opacity-10 text-9xl font-black italic">AI</div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="bg-white dark:bg-slate-900 py-12 border-t border-slate-200 dark:border-slate-800 text-center">
+        <p class="text-slate-500 text-sm">© 2026 TechSomali – Teknoolojiyada Af-Soomaali ku sharaxan.</p>
+    </footer>
+
+    <script>
+        // Copy Code Function
+        function copyCode(btn) {
+            const code = btn.nextElementSibling.innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                btn.innerText = "La koobiyey!";
+                setTimeout(() => btn.innerText = "Copy", 2000);
+            });
+        }
+
+        // Theme Toggle
+        const themeBtn = document.getElementById('theme-toggle');
+        themeBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            themeBtn.innerText = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+        });
+
+        // Mobile Menu
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.onclick = () => mobileMenu.classList.toggle('active');
+
+        // Scroll Bar
+        window.onscroll = () => {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            document.getElementById("scroll-progress").style.width = (winScroll / height) * 100 + "%";
+        };
+    </script>
+</body>
+</html>
