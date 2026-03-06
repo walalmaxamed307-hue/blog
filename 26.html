@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>web developer tools</title>
+  <meta name="description" content="qalabyada looga baahan yahay developer kasta 2026 in uu ogaado .">
+  <meta name="keywords" content="maxaa la iiga baahan ayhay si aan developer sax ah u noqdo">
+  <meta name="author" content="TechSomali">
+  <link rel="icon" href="techsomalia_favicon_square.ico">
+
+ <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } } }
+    </script>
+    <style>
+        
+        /* --- General Setup --- */
+        .glass-nav { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        #mobile-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: 9999; display: none; }
+        #mobile-overlay.active { display: flex; }
+        #scroll-progress { position: fixed; top: 0; left: 0; height: 4px; background: #2563eb; z-index: 100; width: 0%; }
+
+        /* --- ARTCLE BODY DESIGN (Halkan ayay dhibaatadu ka jirtay) --- */
+        .article-body { color: #475569; line-height: 1.8; font-size: 1.15rem; }
+        .dark .article-body { color: #94a3b8; }
+
+        /* Cinwaannada kala duwan */
+        .article-body h1 { font-size: 2.5rem; font-weight: 800; color: #1e293b; margin-bottom: 1.5rem; }
+        .article-body h2 { font-size: 1.9rem; font-weight: 800; color: #2563eb; margin-top: 2.5rem; margin-bottom: 1.25rem; border-left: 5px solid #2563eb; padding-left: 1rem; }
+        .article-body h3 { font-size: 1.6rem; font-weight: 700; color: #1e293b; margin-top: 2rem; margin-bottom: 1rem; }
+        .article-body h4 { font-size: 1.3rem; font-weight: 700; color: #334155; margin-top: 1.5rem; }
+        .dark .article-body h1, .dark .article-body h3, .dark .article-body h4 { color: #f1f5f9; }
+
+        /* Hagaajinta Liisaska (Lists) - Tan ayaa muhiim u ah koodhkaaga */
+        .article-body ul { list-style-type: disc !important; margin-bottom: 1.5rem; padding-left: 1.5rem; }
+        .article-body ol { list-style-type: decimal !important; margin-bottom: 1.5rem; padding-left: 1.5rem; }
+        .article-body li { margin-bottom: 0.6rem; }
+        .article-body li::marker { color: #2563eb; font-weight: bold; }
+
+        /* Strong & Links */
+        .article-body strong { color: #1e293b; font-weight: 700; }
+        .dark .article-body strong { color: #f8fafc; }
+        .article-body a { color: #2563eb; text-decoration: underline; font-weight: 600; }
+        
+        /* Sawirrada */
+        .article-body img { border-radius: 2rem; margin: 2rem 0; width: 100%; height: auto; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
+
+    <div id="scroll-progress"></div>
+
+    <nav class="glass-nav sticky top-0 z-50 bg-white/80 dark:bg-slate-900/90 border-b border-slate-200 dark:border-slate-800 h-20">
+        <div class="max-w-7xl mx-auto px-6 h-full flex justify-between items-center text-slate-900 dark:text-white">
+            <div class="flex items-center gap-2">
+                <img src="./171b2cde-e683-40d0-baa6-2d6af2de83ea.png" alt="logo" class="h-10 w-auto">
+                <span class="text-2xl font-black italic">TechSomali</span>
+            </div>
+            <ul class="hidden md:flex space-x-8 font-bold text-sm">
+                <li><a href="./index.html">home</a></li>
+                <li><a href="./blog.html" class="text-blue-600">Blog</a></li>
+                <li><a href="./about.html">about</a></li>
+                <li><a href="./contact.html">contact</a></li>
+            </ul>
+            <button id="open-menu" class="md:hidden text-3xl text-blue-600">☰</button>
+        </div>
+    </nav>
+
+    <div id="mobile-overlay" class="bg-white dark:bg-slate-950 flex-col items-center justify-center space-y-8 text-2xl font-bold transition-all dark:text-white">
+        <button id="close-menu" class="absolute top-6 right-8 text-6xl text-slate-400">&times;</button>
+        <a href="./index.html">home</a>
+        <a href="./about.html">about</a>
+        <a href="./blog.html">Blog</a>
+        <a href="./contact.html">contact</a>
+    </div>
+<button id="theme-toggle" class="fixed bottom-6 right-6 z-[100] p-4 bg-white dark:bg-slate-800 shadow-2xl rounded-full border border-slate-200 dark:border-slate-700 hover:scale-110 transition-all text-2xl">
+    <span id="theme-toggle-icon">🌙</span>
+</button>
+
+<script>
+    // Logic-ga Dark Mode
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeToggleIcon = document.getElementById('theme-toggle-icon');
+    const htmlElement = document.documentElement;
+
+    // Hubi haddii uu qofku horay u doortay dark mode
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        htmlElement.classList.add('dark');
+        themeToggleIcon.innerText = '☀️';
+    } else {
+        htmlElement.classList.remove('dark');
+        themeToggleIcon.innerText = '🌙';
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+        if (htmlElement.classList.contains('dark')) {
+            htmlElement.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+            themeToggleIcon.innerText = '🌙';
+        } else {
+            htmlElement.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+            themeToggleIcon.innerText = '☀️';
+        }
+    });
+</script>
+    <header class="py-16 px-6 text-center max-w-4xl mx-auto">
+        <div class="mb-4 inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-full text-xs font-bold uppercase">Technology</div>
+        <h2 class="text-4xl md:text-6xl font-black tracking-tight text-slate-900 dark:text-white mb-6 leading-tight">
+         web developer tools 2026
+        </h2>
+    </div>
+        </h1>
+        <div class="flex justify-center items-center gap-4 text-slate-500 text-sm">
+            <span>By TechSomali</span> • <span>Febraayo 2026</span> • <span>5 min read</span>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 pb-24">
+        <div class="bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 md:p-12 shadow-2xl border border-slate-100 dark:border-slate-800 article-body">
+<h1>10 Tools oo Web Developer kasta u baahan yahay</h1>
+
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="web developer coding">
+
+<p>
+Web development waa xirfad si degdeg ah u koraysa. Maanta, qof kasta oo dhisaya website ama web application wuxuu u baahan yahay qalab ka caawinaya shaqada inuu noqdo mid degdeg ah, sax ah, oo nadiif ah. Tools-ka saxda ah waxay kaa caawin karaan inaad wax badan ku qabato waqti yar, isla markaana ay yareeyaan khaladaadka.
+</p>
+
+<p>
+Web developer kasta, ha noqdo beginner ama professional, wuxuu isticmaalaa tools gaar ah si uu u fududeeyo coding, design, testing, iyo deployment. Qaar ka mid ah tools-kan waxay noqdeen kuwo standard ah oo ay isticmaalaan developers badan oo dunida ku kala nool.
+</p>
+
+<p>
+Maqaalkan waxaan ku soo bandhigaynaa 10 tools oo muhiim u ah web developer kasta oo doonaya inuu si xirfad leh u horumariyo websites ama web applications.
+</p>
+
+<h2>1. Visual Studio Code</h2>
+
+<img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c" alt="code editor">
+
+<p>
+Visual Studio Code (VS Code) waa mid ka mid ah code editors-ka ugu caansan ee ay isticmaalaan web developers. Waxaa sameeyay Microsoft waxaana loo yaqaan inuu yahay editor aad u degdeg badan oo leh features badan.
+</p>
+
+<p>
+VS Code wuxuu taageeraa luuqado badan sida HTML, CSS, JavaScript, Python, iyo kuwo kale. Waxa kale oo uu leeyahay extensions badan oo kordhiya awooddiisa.
+</p>
+
+<ul>
+<li>Autocomplete iyo syntax highlighting</li>
+<li>Extensions badan</li>
+<li>Git integration</li>
+<li>Debugging tools</li>
+</ul>
+
+<p>
+Sababtan awgeed, VS Code wuxuu noqday tool ay isticmaalaan malaayiin developers.
+</p>
+
+<h2>2. GitHub</h2>
+
+<img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb" alt="github coding">
+
+<p>
+GitHub waa platform loo isticmaalo kaydinta iyo maareynta code-ka. Web developers waxay isticmaalaan GitHub si ay u kaydiyaan projects-kooda, u wada shaqeeyaan, isla markaana u ilaaliyaan version history-ga code-ka.
+</p>
+
+<p>
+GitHub wuxuu ku shaqeeyaa nidaamka Git, kaas oo u oggolaanaya developers inay sameeyaan changes iyaga oo aan lumin code hore.
+</p>
+
+<ul>
+<li>Version control</li>
+<li>Collaboration</li>
+<li>Code backup</li>
+<li>Open source projects</li>
+</ul>
+
+<h2>3. Figma</h2>
+
+<img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e" alt="figma ui design">
+
+<p>
+Figma waa tool loo isticmaalo design-ka user interface. Web developers iyo designers waxay isticmaalaan si ay u sameeyaan layout-ka website-ka ka hor inta aan la qorin code-ka.
+</p>
+
+<p>
+Figma wuxuu fududeeyaa wada shaqaynta kooxaha, sababtoo ah dadka badan ayaa isla waqtigaas wax ka beddeli kara design-ka.
+</p>
+
+<h2>4. Chrome Developer Tools</h2>
+
+<img src="https://images.unsplash.com/photo-1542831371-d531d36971e6" alt="browser developer tools">
+
+<p>
+Chrome DevTools waa qalab ku dhex jira browser-ka Google Chrome. Waxaa loo isticmaalaa debugging iyo testing website-ka.
+</p>
+
+<p>
+Developers waxay ku arki karaan HTML, CSS, iyo JavaScript si ay u ogaadaan khaladaadka ama ay u tijaabiyaan design-ka.
+</p>
+
+<h2>5. Netlify</h2>
+
+<img src="https://images.unsplash.com/photo-1559028012-481c04fa702d" alt="website deployment">
+
+<p>
+Netlify waa platform loogu talagalay hosting iyo deployment-ka websites. Developers waxay si fudud ugu publish gareyn karaan websites iyaga oo isticmaalaya GitHub integration.
+</p>
+
+<p>
+Waxaa si gaar ah ugu fiican static websites sida kuwa lagu dhisay HTML, CSS, iyo JavaScript.
+</p>
+
+<h2>6. Tailwind CSS</h2>
+
+<p>
+Tailwind CSS waa CSS framework aad loo isticmaalo maanta. Waxay developers-ka u oggolaanaysaa inay si degdeg ah u sameeyaan design-ka website-ka iyaga oo isticmaalaya utility classes.
+</p>
+
+<ul>
+<li>Design degdeg ah</li>
+<li>Responsive layout</li>
+<li>Customization badan</li>
+</ul>
+
+<h2>7. Node.js</h2>
+
+<p>
+Node.js wuxuu u oggolaanayaa developers inay JavaScript ku isticmaalaan server-side. Tani waxay suurtogal ka dhigtaa in hal luuqad lagu dhiso frontend iyo backend.
+</p>
+
+<p>
+Node.js waxaa si weyn loogu isticmaalaa web applications iyo APIs.
+</p>
+
+<h2>8. Postman</h2>
+
+<p>
+Postman waa tool loo isticmaalo testing APIs. Developers waxay ku tijaabin karaan requests sida GET, POST, PUT, iyo DELETE.
+</p>
+
+<p>
+Tool-kan wuxuu si gaar ah muhiim ugu yahay backend developers.
+</p>
+
+<h2>9. Canva</h2>
+
+<p>
+Inkasta oo Canva uu yahay design tool, web developers badan ayaa isticmaala si ay u sameeyaan images, thumbnails, ama graphics loogu talagalay websites.
+</p>
+
+<p>
+Canva wuxuu fududeeyaa design-ka dadka aan ahayn graphic designers.
+</p>
+
+<h2>10. Stack Overflow</h2>
+
+<p>
+Stack Overflow waa website ay developers ku weydiiyaan su'aalo oo ay ku helaan jawaabo. Waa mid ka mid ah meelaha ugu weyn ee laga helo xalalka coding problems.
+</p>
+
+<p>
+Web developers badan ayaa maalin kasta isticmaala si ay u xalliyaan khaladaadka ama ay u bartaan farsamooyin cusub.
+</p>
+
+<h2>Gunaanad</h2>
+
+<p>
+Web development wuxuu noqdaa mid fudud marka aad isticmaasho tools sax ah. Qalabka sida VS Code, GitHub, iyo Figma waxay kaa caawinayaan coding iyo design, halka tools sida Netlify iyo Postman ay fududeeyaan deployment iyo testing.
+</p>
+
+<p>
+Developer kasta oo doonaya inuu horumar sameeyo waa inuu barto isticmaalka tools-kan. Waxay kordhiyaan xawaaraha shaqada, waxay yareeyaan khaladaadka, waxayna ka dhigaan development-ka mid xirfad leh.
+</p>
+
+<p>
+Marka aad si joogto ah u isticmaasho tools-kan, waxaad si tartiib ah u dhisi kartaa xirfad adag oo web development ah.
+</p>
+
+            <div class="mt-12 pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-4 items-center justify-between">
+                <span class="font-bold dark:text-white">La wadaag asxaabta:</span>
+                <div class="flex gap-2">
+<a href="https://api.whatsapp.com/send?text=Halkan ka aqri maqaal aad u xiiso badan: https://techsomali.com/payoneer.html" 
+   target="_blank" 
+   class="px-4 py-2 bg-green-500 text-white rounded-xl text-sm font-bold"style="color: #f8fafc; text-decoration: none;">
+   
+   WhatsApp
+</a>
+               <a href="https://www.facebook.com/sharer/sharer.php?u=https://techsomali.com/payoneer.html" 
+   target="_blank" 
+   class="px-4 py-2 bg-blue-600 text-white rounded-xl text-sm font-bold" style="color: #f8fafc; text-decoration: none;">
+   Facebook
+</a>
+                </div>
+            </div>
+        </div>
+</article>
+        <div class="grid md:grid-cols-2 gap-6 mt-12">
+            <a href="react.html" class="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 hover:border-blue-500 transition shadow-lg">
+                <span class="text-xs text-slate-500 uppercase">Maqaalkii hore</span>
+                <p class="font-bold dark:text-white mt-1">barashada react js</p>
+            </a>
+            <a href="adsense.html" class="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 hover:border-blue-500 transition shadow-lg">
+                <span class="text-xs text-slate-500 uppercase">Maqaalka xiga</span>
+                <p class="font-bold dark:text-white mt-1">google adsense</p>
+            </a>
+        </div>
+    </main>
+
+    <script>
+        // Scroll Progress Bar
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("scroll-progress").style.width = scrolled + "%";
+        };
+
+        // Mobile Menu
+        const overlay = document.getElementById('mobile-overlay');
+        document.getElementById('open-menu').addEventListener('click', () => overlay.classList.add('active'));
+        document.getElementById('close-menu').addEventListener('click', () => overlay.classList.remove('active'));
+    </script>
+</body>
+</html>
