@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="so">
+
+<head>
+
+<title>AI + Dropshipping: Sida Loo Bilaabo Ganacsi Online oo Guul Leh</title>
+<link rel="icon" href="techsomalia_favicon_square.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+
+
+
+<meta name="description" content="Baro sida AI iyo dropshipping ay iskugu dhafan karaan si aad u bilowdo ganacsi online oo guul leh. Talooyin, tools AI, SEO, iyo fursado lacag sameyn leh.">
+<meta name="keywords" content="AI dropshipping, ganacsi online, lacag samaynta online, AI tools ganacsi, ecommerce Somalia, automated dropshipping, AI ecommerce, AI lacag samayn">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } } }
+    </script>
+    <style>
+        /* --- General Setup --- */
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        #mobile-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 9999;
+            display: none;
+        }
+
+        #mobile-overlay.active {
+            display: flex;
+        }
+
+        #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: #2563eb;
+            z-index: 100;
+            width: 0%;
+        }
+
+        /* --- ARTCLE BODY DESIGN (Halkan ayay dhibaatadu ka jirtay) --- */
+        .article-body {
+            color: #475569;
+            line-height: 1.8;
+            font-size: 1.15rem;
+        }
+
+        .dark .article-body {
+            color: #94a3b8;
+        }
+
+        /* Cinwaannada kala duwan */
+        .article-body h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #1e293b;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-body h2 {
+            font-size: 1.9rem;
+            font-weight: 800;
+            color: #2563eb;
+            margin-top: 2.5rem;
+            margin-bottom: 1.25rem;
+            border-left: 5px solid #2563eb;
+            padding-left: 1rem;
+        }
+
+        .article-body h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-body h4 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #334155;
+            margin-top: 1.5rem;
+        }
+
+        .dark .article-body h1,
+        .dark .article-body h3,
+        .dark .article-body h4 {
+            color: #f1f5f9;
+        }
+
+        /* Hagaajinta Liisaska (Lists) - Tan ayaa muhiim u ah koodhkaaga */
+        .article-body ul {
+            list-style-type: disc !important;
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .article-body ol {
+            list-style-type: decimal !important;
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .article-body li {
+            margin-bottom: 0.6rem;
+        }
+
+        .article-body li::marker {
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        /* Strong & Links */
+        .article-body strong {
+            color: #1e293b;
+            font-weight: 700;
+        }
+
+        .dark .article-body strong {
+            color: #f8fafc;
+        }
+
+        .article-body a {
+            color: #2563eb;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        /* Sawirrada */
+        .article-body img {
+            border-radius: 2rem;
+            margin: 2rem 0;
+            width: 100%;
+            height: auto;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
+
+    <div id="scroll-progress"></div>
+
+    <nav
+        class="glass-nav sticky top-0 z-50 bg-white/80 dark:bg-slate-900/90 border-b border-slate-200 dark:border-slate-800 h-20">
+        <div class="max-w-7xl mx-auto px-6 h-full flex justify-between items-center text-slate-900 dark:text-white">
+            <div class="flex items-center gap-2">
+                <img src="./171b2cde-e683-40d0-baa6-2d6af2de83ea.png" alt="logo" class="h-10 w-auto">
+                <span class="text-2xl font-black italic">TechSomali</span>
+            </div>
+            <ul class="hidden md:flex space-x-8 font-bold text-sm">
+                <li><a href="./index.html">home</a></li>
+                <li><a href="./blog.html" class="text-blue-600">Blog</a></li>
+                <li><a href="./about.html">about</a></li>
+                <li><a href="./contact.html">contact</a></li>
+            </ul>
+            <button id="open-menu" class="md:hidden text-3xl text-blue-600">☰</button>
+        </div>
+    </nav>
+
+    <div id="mobile-overlay"
+        class="bg-white dark:bg-slate-950 flex-col items-center justify-center space-y-8 text-2xl font-bold transition-all dark:text-white">
+        <button id="close-menu" class="absolute top-6 right-8 text-6xl text-slate-400">&times;</button>
+        <a href="./index.html">home</a>
+        <a href="./about.html">about</a>
+        <a href="./blog.html">Blog</a>
+        <a href="./contact.html">contact</a>
+    </div>
+    <button id="theme-toggle"
+        class="fixed bottom-6 right-6 z-[100] p-4 bg-white dark:bg-slate-800 shadow-2xl rounded-full border border-slate-200 dark:border-slate-700 hover:scale-110 transition-all text-2xl">
+        <span id="theme-toggle-icon">🌙</span>
+    </button>
+
+    <script>
+        // Logic-ga Dark Mode
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleIcon = document.getElementById('theme-toggle-icon');
+        const htmlElement = document.documentElement;
+
+        // Hubi haddii uu qofku horay u doortay dark mode
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlElement.classList.add('dark');
+            themeToggleIcon.innerText = '☀️';
+        } else {
+            htmlElement.classList.remove('dark');
+            themeToggleIcon.innerText = '🌙';
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                themeToggleIcon.innerText = '🌙';
+            } else {
+                htmlElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                themeToggleIcon.innerText = '☀️';
+            }
+        });
+    </script>
+    <header class="py-16 px-6 text-center max-w-4xl mx-auto">
+        <div
+            class="mb-4 inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-full text-xs font-bold uppercase">
+            Technology</div>
+        <h1 class="text-4xl md:text-6xl font-black tracking-tight text-slate-900 dark:text-white mb-6 leading-tight">
+            sidee loo bilaabo ganacsi online oo guul leh?
+            <div class="mt-4">
+                <a href="https://techsomali.com" class="text-sm text-blue-600 hover:underline">
+                    techsomali.com
+        
+            </a>
+            </div>
+        </h1>
+        <div class="flex justify-center items-center gap-4 text-slate-500 text-sm">
+            <span>By TechSomali</span> • <span>april 2026</span> • <span>5 min read</span>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 pb-24">
+        <div
+            class="bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 md:p-12 shadow-2xl border border-slate-100 dark:border-slate-800 article-body">
+
+<article>
+<h1>AI + Dropshipping: Sida Loo Bilaabo Ganacsi Online oo Guul Leh</h1>
+
+<p>Haddii aad rabto inaad bilowdo ganacsi online oo soo saara dakhli joogto ah, isku darka <strong>AI (Artificial Intelligence)</strong> iyo <strong>Dropshipping</strong> waa fursad dahabi ah. Maqaalkan waxaan ku sharxi doonaa talaabo talaabo, tools AI oo kaa caawinaya ganacsigaaga, iyo sida aad u abuuri karto dakhli online ah adigoo aan kayd badan laheyn.</p>
+
+<h2>Maxaa Loo Adeegsadaa AI ee Dropshipping?</h2>
+<p>AI waxay kuu sahlaysaa inaad si caqli leh u maamusho ganacsigaaga dropshipping:</p>
+<ul>
+<li><strong>Forecasting Products:</strong> AI waxay saadaalin kartaa badeecadaha ugu iibsiga badan.</li>
+<li><strong>Automated Customer Service:</strong> Chatbots iyo AI assistants ayaa ka jawaaba su'aalaha macaamiisha 24/7.</li>
+<li><strong>Marketing Automation:</strong> AI waxay kaa caawisaa inaad target gareyso ads-ka saxda ah iyo email marketing.</li>
+<li><strong>Inventory Management:</strong> AI waxay la socotaa stock-ka iyo supplier-ka si aad u yareyso khaladaadka.</li>
+</ul>
+
+<h2>Sida Loo Bilaabo AI + Dropshipping</h2>
+<h3>Tallaabada 1: Doorashada Niche-ka Saxda ah</h3>
+<p>Dooro niche ganacsi oo leh baahi sare oo online ah. Waxaa fiican inaad isticmaasho AI tools sida <a href="https://www.oberlo.com/" target="_blank">Oberlo</a> ama <a href="https://www.shopify.com/" target="_blank">Shopify</a> si aad u aragto badeecadaha ugu caansan.</p>
+
+<h3>Tallaabada 2: Dooro Platform Dropshipping</h3>
+<p>Platform-yada caanka ah ee dropshipping waxaa ka mid ah:</p>
+<ul>
+<li><a href="https://www.shopify.com/" target="_blank">Shopify</a> – Platform fudud oo beginner-friendly.</li>
+<li><a href="https://www.bigcommerce.com/" target="_blank">BigCommerce</a> – Ecommerce oo xooggan.</li>
+<li><a href="https://www.woocommerce.com/" target="_blank">WooCommerce</a> – WordPress ku dhisan, flexible.</li>
+</ul>
+
+<h3>Tallaabada 3: Isticmaal AI Tools</h3>
+<p>AI waxay kaa caawin kartaa:</p>
+<ul>
+<li><strong>Product Research:</strong> Tools sida <a href="https://www.trends.co/" target="_blank">Trends.co</a> iyo <a href="https://www.ahrefs.com/" target="_blank">Ahrefs</a>.</li>
+<li><strong>Ad Creatives:</strong> AI design tools sida <a href="https://www.canva.com/" target="_blank">Canva</a> iyo <a href="https://www.midjourney.com/" target="_blank">MidJourney</a>.</li>
+<li><strong>Content & Copywriting:</strong> AI copywriters sida <a href="https://www.jasper.ai/" target="_blank">Jasper AI</a> iyo <a href="https://www.chat.openai.com/" target="_blank">ChatGPT</a>.</li>
+</ul>
+
+<h3>Tallaabada 4: Marketing & Sales</h3>
+<p>Si aad u kordhiso iibka:</p>
+<ul>
+<li>SEO – Optimize website-kaaga keywords sida "AI dropshipping", "lahaansho online", iyo "ecommerce Somalia".</li>
+<li>Email marketing – Isticmaal AI email generators si aad u abuurto campaigns xiiso leh.</li>
+<li>Social Media Ads – AI platforms sida <a href="https://ads.google.com/" target="_blank">Google Ads</a> iyo <a href="https://www.facebook.com/business/ads" target="_blank">Facebook Ads</a> waxay kaa caawin karaan target audience sax ah.</li>
+</ul>
+
+<h2>SEO Keywords oo Aad U Xoogan</h2>
+<p>Keywords muhiim ah oo ku habboon maqaalkaan:</p>
+<ul>
+<li>AI dropshipping</li>
+<li>Ganacsi online Somalia</li>
+<li>Ecommerce Somalia</li>
+<li>Automated dropshipping</li>
+<li>Lacag online ka samee AI</li>
+<li>AI tools ganacsi</li>
+<li>Shopify Somalia</li>
+<li>Product research AI</li>
+<li>AI marketing tools</li>
+</ul>
+
+<h2>Internal Links (Ku xir webkaaga)</h2>
+<ul>
+<li><a href="/aiforbusinessonline.html">AI Tools for Business Online</a></li>
+<li><a href="/aiforfreelencers.html">Sida Loo Bilaabo Freelancing AI</a></li>
+<li><a href="/makingmoneyai.html">making money with AI</a></li>
+</ul>
+
+<h2>External Links (Authority & References)</h2>
+<ul>
+<li><a href="https://www.shopify.com/" target="_blank">Shopify Official</a></li>
+<li><a href="https://www.oberlo.com/" target="_blank">Oberlo Official</a></li>
+<li><a href="https://www.canva.com/" target="_blank">Canva Official</a></li>
+<li><a href="https://www.ahrefs.com/" target="_blank">Ahrefs SEO Tool</a></li>
+</ul>
+
+<h2>FAQ – Su'aalaha Inta Badan La Isweydiiyo</h2>
+<h3>1. Waa maxay AI + Dropshipping?</h3>
+<p>AI + Dropshipping waa isku darka teknoolojiyada caqliga artificial (AI) iyo ganacsi dropshipping, si loo automate gareeyo iibka, marketing, iyo adeegga macaamiisha.</p>
+
+<h3>2. Immisa lacag baan uga baahanahay bilowga?</h3>
+<p>Waxaa ku filan $200 – $500 si aad u bilowdo platform sida Shopify, AI tools, iyo ads. Hase yeeshee, kharashka wuu kordhi karaa iyadoo ku xiran badeecadaha iyo marketing-ka.</p>
+
+<h3>3. Sidee AI u kordhisaa iibka?</h3>
+<p>AI waxay ka caawisaa product research, ad targeting, copywriting, iyo customer support si dakhli badan looga sameeyo ganacsigaaga.</p>
+
+<h3>4. Ma u baahanahay stock kayd?</h3>
+<p>Maya, dropshipping wuxuu kuu ogolaanayaa inaad iibiso badeecooyinka supplier-ka adiga oo aan stock haysan.</p>
+
+<h3>5. Sidee SEO ugu shaqaysaa AI dropshipping?</h3>
+<p>SEO waxay ka caawisaa inaad website-kaaga ka dhigto mid la heli karo search engines, keywords-ka saxda ahna waxay kordhiyaan traffic organic.</p>
+<h2>Qaybta 2: Sida AI u Beddelayso Ganacsiga Dropshipping</h2>
+<p>Teknoolojiyada casriga ah ee <strong>AI</strong> waxay beddeshay sida ganacsiyada dropshipping u shaqeeyaan. Halkan waxaan ku eegi doonaa qaybaha muhiimka ah ee AI ku kordhiyo ganacsiga:</p>
+
+<h3>1. Product Research iyo Trend Forecasting</h3>
+<p>Mid ka mid ah caqabadaha ugu weyn ee dropshipping waa helida badeecadaha ugu iibka badan. AI waxay isticmaashaa <em>data analytics</em> si ay u saadaaliso badeecadaha suuqa ku cusub ama kuwa koraya. Tools sida <a href="https://www.trends.co/" target="_blank">Trends.co</a> iyo <a href="https://www.ahrefs.com/" target="_blank">Ahrefs</a> waxay kaa caawin karaan inaad ogaato:</p>
+<ul>
+<li>Badeecadaha ugu caansan bil kasta</li>
+<li>Keywords iyo suuqyada ugu faa’iidada badan</li>
+<li>Competitors analysis si aad uga horeyso suuqa</li>
+</ul>
+
+<h3>2. Automated Marketing & Ad Targeting</h3>
+<p>AI waxay kuu ogolaanaysaa inaad si toos ah u target gareyso ads-ka saxda ah. Ad platforms sida <a href="https://ads.google.com/" target="_blank">Google Ads</a> iyo <a href="https://www.facebook.com/business/ads" target="_blank">Facebook Ads</a> waxay isticmaalaan AI si ay u fahmaan dabeecadda users-ka oo ay u muujiyaan badeecada saxda ah waqtiga saxda ah.</p>
+
+<h3>3. Customer Service oo 24/7 ah</h3>
+<p>Chatbots iyo AI assistants waxay ka jawaabi karaan su’aalaha macaamiisha, xitaa marka aad hurudid. Tani waxay kordhisaa satisfaction-ka macaamiisha oo waxay yareysaa churn rate-ka. Tools sida <a href="https://www.intercom.com/" target="_blank">Intercom</a> iyo <a href="https://www.tidio.com/" target="_blank">Tidio</a> waa kuwo caan ah.</p>
+
+<h3>4. Inventory & Supplier Management</h3>
+<p>AI waxay la socotaa stock-ka suppliers-ka, waxay kaa caawisaa inaad ka fogaato out-of-stock ama overstock. Waxaa jira tools AI automated oo kugu xira Shopify ama WooCommerce si aad u hesho update real-time ah.</p>
+
+<h2>Qaybta 3: Talooyin Muhiim ah oo Guuleysiga AI + Dropshipping</h2>
+<p>Halkan waxaa ku jira strategies iyo tips gaar ah oo kaa caawin kara inaad guul ka gaarto:</p>
+
+<h3>1. Start Small, Scale Fast</h3>
+<p>Bilow badeeco yar oo niche ah. Haddii AI iyo marketing-ku muujiyaan performance wanaagsan, markaas waxaad ku ballaarin kartaa inventory iyo ads budget.</p>
+
+<h3>2. Focus on Quality Product Descriptions</h3>
+<p>AI copywriting tools sida <a href="https://www.jasper.ai/" target="_blank">Jasper AI</a> ama <a href="https://www.chat.openai.com/" target="_blank">ChatGPT</a> waxay kaa caawin karaan inaad abuurto descriptions soo jiidasho leh, keywords-optimized, oo kordhiya conversion rate.</p>
+
+<h3>3. Leverage Social Proof & Reviews</h3>
+<p>Macaamiisha waxay jecel yihiin inay arkaan reviews. Isticmaal AI-generated review monitoring tools si aad ula socoto feedback-ka online.</p>
+
+<h3>4. Automate Repetitive Tasks</h3>
+<p>AI waxay kaa caawin kartaa inaad automate gareyso:</p>
+<ul>
+<li>Order fulfillment</li>
+<li>Inventory updates</li>
+<li>Email campaigns</li>
+<li>Customer follow-ups</li>
+</ul>
+
+<h2>Case Study: Ganacsi Dropshipping oo AI ku Guuleystay</h2>
+<p>Example: "SomaliShopAI" waa ecommerce store ka bilaabay 2023 oo isticmaalay AI product research iyo automated marketing. Bishii ugu horeysay waxay iibiyeen <strong>1500+ units</strong> iyaga oo aan haysan stock badan. Waxay isticmaaleen AI chatbots si ay u yareeyaan waqtiga customer support-ka iyo tools SEO si ay u kordhiyaan traffic organic.</p>
+
+<h2>Qaybta 4: AI Tools ee Dropshipping</h2>
+<p>Waxaa jira AI tools badan oo kaa caawin kara ganacsigaaga:</p>
+<ul>
+<li><a href="https://www.shopify.com/" target="_blank">Shopify AI Features</a> – Product suggestions, sales insights</li>
+<li><a href="https://www.canva.com/" target="_blank">Canva</a> – AI design for ads & social media posts</li>
+<li><a href="https://www.jasper.ai/" target="_blank">Jasper AI</a> – Copywriting & email campaigns</li>
+<li><a href="https://www.ahrefs.com/" target="_blank">Ahrefs</a> – SEO research & analytics</li>
+<li><a href="https://www.tidio.com/" target="_blank">Tidio</a> – AI chatbots for customer support</li>
+</ul>
+
+<h2>Advanced Tips SEO & Traffic Generation</h2>
+<ul>
+<li>Optimize every product page with long-tail keywords sida "AI dropshipping Somalia" ama "Ganacsi online oo automated".</li>
+<li>Use AI blog content generation for related posts to increase internal linking.</li>
+<li>Create video content showcasing products using AI video generators.</li>
+<li>Engage on social media platforms with AI tools for scheduling & analytics.</li>
+</ul>
+
+<h2>FAQs (Qaybta Dheeraad ah)</h2>
+<h3>6. Immisa waqtiga ayaa qaadata in ganacsi bilaabo lacag sameynta?</h3>
+<p>Bilaawga dropshipping AI-powered ganacsi waxay qaadan kartaa 1 – 3 bilood si aad u aragto profit muuqda, iyadoo ku xiran niche-ka iyo marketing strategies.</p>
+
+<h3>7. Ma ku habboon yahay beginners?</h3>
+<p>Haa, AI waxay fududaysaa process-ka, waxaana jira tutorials iyo tools beginner-friendly sida Shopify, Oberlo, Jasper AI iyo Canva.</p>
+
+<h3>8. Maxaa halis ah?</h3>
+<p>Halisaha waxaa ka mid ah dependency supplier, competitive market, iyo ads cost. Si kastaba ha ahaatee, AI iyo analytics fiican waxay yareyn karaan halistaas.</p>
+
+<h2>Gunaanad</h2>
+<p>AI + Dropshipping waa mustaqbalka ecommerce. Iyadoo la adeegsanayo AI tools, SEO xooggan, automated marketing, iyo customer service, waxaad abuuri kartaa ganacsi online oo guuleysta oo leh dakhliga joogtada ah. Bilow maanta, tijaabi niche-yada kala duwan, oo isticmaal AI si aad uga horeyso suuqa. Waxaad noqon kartaa mid ka mid ah ganacsatada ugu horeeya ee AI-powered dropshipping Somalia!</p>
+
+</article>
+
+
+
+            <div
+                class="mt-12 pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-4 items-center justify-between">
+                <span class="font-bold dark:text-white">La wadaag asxaabta:</span>
+                <div class="flex gap-2">
+                    <a href="https://api.whatsapp.com/send?text=Halkan ka aqri maqaal aad u xiiso badan: https://techsomali.com/payoneer.html"
+                        target="_blank" class="px-4 py-2 bg-green-500 text-white rounded-xl text-sm font-bold"
+                        style="color: #f8fafc; text-decoration: none;">
+
+                        WhatsApp
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://techsomali.com/payoneer.html"
+                        target="_blank" class="px-4 py-2 bg-blue-600 text-white rounded-xl text-sm font-bold"
+                        style="color: #f8fafc; text-decoration: none;">
+                        Facebook
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6 mt-12">
+            <a href="passiveincomeaitools.html"
+                class="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 hover:border-blue-500 transition shadow-lg">
+                <span class="text-xs text-slate-500 uppercase">Maqaalka xiga</span>
+                <p class="font-bold dark:text-white mt-1">si fudud daqli joogto u hel </p>
+            </a>
+                 <a href="makemoneychatgpt.html" class="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 hover:border-blue-500 transition shadow-lg">
+                <span class="text-xs text-slate-500 uppercase">Maqaalka xiga</span>
+                <p class="font-bold dark:text-white mt-1">lacag ka samee chatgpt maanta</p>
+            </a>
+        </div>
+    </main>
+
+    <script>
+        // Scroll Progress Bar
+        window.onscroll = function () {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("scroll-progress").style.width = scrolled + "%";
+        };
+
+        // Mobile Menu
+        const overlay = document.getElementById('mobile-overlay');
+        document.getElementById('open-menu').addEventListener('click', () => overlay.classList.add('active'));
+        document.getElementById('close-menu').addEventListener('click', () => overlay.classList.remove('active'));
+    </script>
+</body>
+
+</html>
