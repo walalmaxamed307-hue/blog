@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-26STFV9LR7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-26STFV9LR7');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms & Conditions - TechSomali</title>
+  <meta name="description" content="Full Terms and Conditions for TechSomali website. Rules, guidelines, and legal information for users.">
+  <meta name="keywords" content="TechSomali Terms and Conditions, Website Terms, User Agreement, TechSomali Legal, Website Rules, TechSomali Policies">
+  <meta name="author" content="TechSomali">
+  <link rel="icon" href="./techsomalia-logo.png">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght=500;600;700;900&family=Inter:wght=400;500;600;700;800&family=JetBrains+Mono:wght=400;600&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { 
+        extend: { 
+          fontFamily: { 
+            sans: ['Inter', 'sans-serif'] 
+          } 
+        } 
+      }
+    }
+  </script> 
+
+  <style>
+    :root{
+      --ink:#0F1B2D;
+      --surface:#16243A;
+      --surface-2:#1C2D47;
+      --line:rgba(245,243,234,0.10);
+      --cream:#F5F3EA;
+      --cream-dim:#C9CCD6;
+      --coral:#FF6B4A;
+      --mint:#6FE0BE;
+    }
+
+    body{
+      background:var(--ink);
+      color:var(--cream);
+      font-family:'Inter',sans-serif;
+    }
+
+    .font-display{font-family:'Fraunces',sans-serif;}
+
+    .card{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:18px;
+    }
+
+    .btn{
+      background:var(--coral);
+      color:#111;
+      padding:10px 18px;
+      border-radius:999px;
+      font-weight:700;
+    }
+
+    .glass-nav { 
+      background:rgba(22,36,58,0.75);
+      backdrop-filter: blur(12px); 
+      -webkit-backdrop-filter: blur(12px); 
+    }
+
+    #mobile-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: 9999; display: none; }
+    #mobile-overlay.active { display: flex; }
+    
+    .terms-container h2 { 
+      font-family: 'Fraunces', serif;
+      font-size: 1.75rem; 
+      font-weight: 700; 
+      margin-top: 2.5rem; 
+      margin-bottom: 1rem; 
+      color: var(--coral); 
+    }
+    .terms-container p { margin-bottom: 1.25rem; line-height: 1.8; color: var(--cream-dim); font-size: 1.05rem; }
+    .terms-container ul { margin-bottom: 1.5rem; list-style-type: none; padding-left: 0; }
+    .terms-container li { 
+      margin-bottom: 0.75rem; 
+      padding-left: 1.5rem; 
+      position: relative; 
+      color: var(--cream-dim);
+    }
+    .terms-container li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--mint);
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav class="glass-nav sticky top-0 z-50 border-b border-white/10 h-20">
+    <div class="max-w-7xl mx-auto px-6 h-full flex justify-between items-center">
+      <div class="flex items-center gap-2">
+    
+        <span class="text-2xl font-bold font-display">Tech<span style="color:var(--coral)">Somali</span></span>
+      </div>
+
+      <ul class="hidden md:flex items-center space-x-8 font-bold text-sm text-[var(--cream-dim)]">
+        <li><a href="./index.html" class="hover:text-[var(--coral)] transition">Home</a></li>
+        <li><a href="./blog.html" class="hover:text-[var(--coral)] transition">Blog</a></li>
+        <li><a href="./about.html" class="hover:text-[var(--coral)] transition">About</a></li>
+        <li><a href="./contact.html" class="hover:text-[var(--coral)] transition">Contact</a></li>
+        <li><a href="./terms&conditions.html" class="text-[var(--coral)] underline decoration-2 underline-offset-4 font-extrabold">Terms</a></li>
+      </ul>
+      <button id="open-menu" class="md:hidden text-3xl style='color:var(--coral)'">☰</button>
+    </div>
+  </nav>
+
+  <!-- MOBILE OVERLAY -->
+  <div id="mobile-overlay" class="bg-[#0F1B2D] flex-col items-center justify-center space-y-8 text-2xl font-bold transition-all">
+    <button id="close-menu" class="absolute top-6 right-8 text-6xl text-[var(--cream-dim)] hover:text-[var(--coral)]">&times;</button>
+    <a href="./index.html" class="hover:text-[var(--coral)]">Home</a>
+    <a href="./blog.html" class="hover:text-[var(--coral)]">Blog</a>
+    <a href="./about.html" class="hover:text-[var(--coral)]">About</a>
+    <a href="./contact.html" class="hover:text-[var(--coral)]">Contact</a>
+    <div class="h-px w-20 bg-white/10"></div>
+    <a href="./privacy.html" class="text-lg text-[var(--cream-dim)] hover:text-[var(--coral)]">Privacy Policy</a>
+    <a href="./terms&conditions.html" class="text-[var(--coral)]">Terms & Conditions</a>
+  </div>
+
+  <!-- HERO -->
+  <header class="py-24 text-center px-6">
+    <h1 class="text-5xl md:text-7xl font-bold font-display tracking-tight mb-6">
+      Terms & <span style="color:var(--coral)">Conditions</span>
+    </h1>
+    <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/5 text-[var(--mint)] rounded-full text-xs font-bold uppercase tracking-widest border border-white/10">
+      Last updated: June 2026
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="max-w-4xl mx-auto px-6 py-16">
+    <div class="card p-10 md:p-16 shadow-2xl terms-container"> 
+      <p class="text-lg font-medium">Welcome to <strong>TechSomali</strong>. By accessing and using this website, you accept and agree to comply with the Terms and Conditions outlined below. These terms apply directly to all visitors, users, and others who interact with our services.</p>
+      
+      <h2>1. Introduction</h2>
+      <p>These terms govern your administrative usage of TechSomali. If you strongly disagree with any specific operational parameter or clause within these terms, you must immediately cease all browsing sessions on this platform.</p>
+      
+      <h2>2. Intellectual Property Rights</h2>
+      <p>All core components hosted on <strong>TechSomali</strong>—including text articles, code blocks, programming tutorials, graphical interfaces, and structural designs—are the exclusive intellectual property of TechSomali and its founders. You are strictly prohibited from copying, distributing, republishing, or modifying our content for commercial purposes without explicit written validation.</p>
+
+      <h2>3. Acceptable Website Usage</h2>
+      <p>By leveraging this technical blog, you warrant that you will engage with the services for entirely lawful and educational purposes. Prohibited behaviors include, but are not limited to:</p>
+      <ul>
+        <li>Uploading or broadcasting malicious code, security exploits, or defamatory commentary.</li>
+        <li>Attempting unauthorized computational access to restricted sections of the server interface.</li>
+        <li>Utilizing any automated mining script to harvest user parameters or personal details without consent.</li>
+      </ul>
+
+      <h2>4. Third-Party External Hyperlinks</h2>
+      <p><strong>TechSomali</strong> explicitly contains reference linkages that route to external web domains. We maintain zero authority over, and assume no responsibility for, the data structures, accuracy, or privacy policies of those third-party nodes. Navigating outside our platform is entirely at your own discretion.</p>
+
+      <h2>5. Limitation of Liability & Disclaimers</h2>
+      <p>All informational assets and development pathways detailed on <strong>TechSomali</strong> are designed strictly for educational frameworks. While we prioritize accurate data synthesis, we offer no absolute guarantees on script configurations or financial outcomes. The user assumes full technical risks associated with code implementations.</p>
+      
+      <h2>6. Advertisement Infrastructure & Revenue</h2>
+      <p>TechSomali collaborates with Google AdSense to safely serve contextual advertisements. By interacting with our interface, you formally acknowledge and approve the utilization of standard tracking cookies engineered to match optimized ad units to your user persona.</p>
+      
+      <h2>7. Privacy Integration</h2>
+      <p>Your entire browsing session is concurrently structured around our digital guidelines. Please thoroughly review our updated <a href="./privacy.html" class="text-[var(--mint)] font-bold underline">Privacy Policy</a> to comprehend how your anonymized logs are protected.</p>
+      
+      <h2>8. Modifications to Operational Terms</h2>
+      <p>TechSomali holds the absolute right to update, revise, or change these conditions at any given moment. Structural modifications become instantly valid upon public publication. Your continued use of the platform verifies your binding agreement to the updated versions.</p>
+      
+      <h2>9. Governing Law</h2>
+      <p>These framework terms are compiled and governed in absolute alignment with the digital regulations of Somalia. Any legal discrepancies or structural conflicts arising from your usage will fall under the jurisdiction of the national court architectures.</p>
+      
+      <h2>10. Contact Information</h2>
+      <p>If you require further clarity or wish to address inquiries regarding these operational frameworks, do not hesitate to contact our desk through our <a href="./contact.html" class="text-[var(--coral)] font-bold underline">Contact Page</a>.
+      
+      <!-- FOOTER INNER -->
+      <div class="mt-20 pt-10 border-t border-white/10 text-center">
+        <div class="font-bold text-[var(--cream)] mb-2 font-display text-lg">© 2026 TechSomali — Empowering Innovation</div>
+        <p class="text-sm text-[var(--cream-dim)] opacity-70">Dedicated to delivering high-tier modern technology, programming, and AI insights globally.</p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const overlay = document.getElementById('mobile-overlay');
+    const openBtn = document.getElementById('open-menu');
+    const closeBtn = document.getElementById('close-menu');
+    openBtn.addEventListener('click', () => {
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+    closeBtn.addEventListener('click', () => {
+      overlay.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    });
+  </script>
+</body>
+</html>

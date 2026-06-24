@@ -49,30 +49,30 @@
         .dark blockquote { background: #1e293b; color: #60a5fa; }
         .article-body img { width: 100%; height: auto; border-radius: 1rem; margin: 2rem 0; shadow: 0 10px 15px rgba(0,0,0,0.1); }
     </style>
+<link rel="stylesheet" href="./style.css">
 </head>
 
-<body class="bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
+<body>
 
     <div id="scroll-progress"></div>
 
-    <nav class="glass-nav sticky top-0 z-50 bg-white/80 dark:bg-slate-900/90 border-b border-slate-200 dark:border-slate-800 h-20">
-        <div class="max-w-7xl mx-auto px-6 h-full flex justify-between items-center text-slate-900 dark:text-white">
-            <div class="flex items-center gap-2">
-                <img src="./171b2cde-e683-40d0-baa6-2d6af2de83ea.png" alt="logo" class="h-10 w-auto">
-                <span class="text-2xl font-black italic tracking-tighter">TechSomali</span>
-            </div>
-            <ul class="hidden md:flex space-x-8 font-bold text-sm">
-                <li><a href="./index.html" class="hover:text-blue-600">Home</a></li>
-                <li><a href="./blog.html" class="text-blue-600">Blog</a></li>
-                <li><a href="./about.html">about</a></li>
-                <li><a href="./contact.html">contact</a></li>
-            </ul>
-            <div class="flex items-center gap-4">
-                <button id="theme-toggle" class="p-2 bg-slate-100 dark:bg-slate-800 rounded-lg text-xl transition">🌙</button>
-                <button id="open-menu" class="md:hidden text-3xl text-blue-600">☰</button>
-            </div>
-        </div>
-    </nav>
+
+<nav class="glass-nav sticky top-0 z-[100] border-b border-white/10 h-20">
+  <div class="max-w-7xl mx-auto flex justify-between items-center h-full px-6">
+    <a href="./index.html" class="flex items-center gap-2">
+  
+      <span class="text-2xl font-bold font-display text-white">Tech<span style="color:var(--coral)">Somali</span></span>
+    </a>
+    <div class="flex items-center">
+      <ul class="hidden md:flex items-center space-x-1 font-semibold text-sm text-[var(--cream-dim)]">
+        <li><a href="./index.html" class="px-4 py-2 rounded-lg hover:text-[var(--coral)] transition">Home</a></li>
+        <li><a href="./blog.html" class="px-4 py-2 rounded-lg text-[var(--coral)] font-bold">Blog</a></li>
+        <li><a href="./about.html" class="px-4 py-2 rounded-lg hover:text-[var(--coral)] transition">About</a></li>
+        <li><a href="./contact.html" class="px-4 py-2 rounded-lg hover:text-[var(--coral)] transition">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
     <div id="mobile-overlay" class="bg-white dark:bg-slate-950 flex-col items-center justify-center space-y-8 text-2xl font-bold transition-all dark:text-white">
         <button id="close-menu" class="absolute top-6 right-8 text-6xl text-slate-400">&times;</button>
@@ -190,11 +190,11 @@
         </div>
 
           <div class="grid md:grid-cols-2 gap-6 mt-12">
-            <a href="frontendvsbackend.html" class="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 hover:border-blue-500 transition shadow-lg">
+            <a href="frontendvsbackend.html" class="p-6 bg-[#131926] rounded-3xl border border-white/5 text-white dark:border-slate-800 hover:border-blue-500 transition shadow-lg">
                 <span class="text-xs text-slate-500 uppercase">Maqaalka hore</span>
                 <p class="font-bold dark:text-white mt-1">frontend vs backend</p>
             </a>
-            <a href="jv.html" class="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 hover:border-blue-500 transition shadow-lg">
+            <a href="jv.html" class="p-6 bg-[#131926] rounded-3xl border border-white/5 text-white dark:border-slate-800 hover:border-blue-500 transition shadow-lg">
                 <span class="text-xs text-slate-500 uppercase">Maqaalka xiga</span>
                 <p class="font-bold dark:text-white mt-1">barashada javascript</p>
             </a>

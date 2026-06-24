@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="so">
 <head>
-           <!-- Google tag (gtag.js) -->
+
+<!-- ===== Analytics & AdSense (preserved) ===== -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-26STFV9LR7"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -11,946 +11,2190 @@
 
   gtag('config', 'G-26STFV9LR7');
 </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>blog</title>
-    <meta name="description"
-        content="TechSomali waa blog Af-Soomaali ah oo ka hadla lacag ka samaynta AI, online income, barashada AI.">
-    <meta name="keywords"
-        content="TechSomali, online income Af-Soomaali, AI tools, Teknoolajiyadda Casriga ah, Baro AI Af-Soomaali">
-    <meta name="author" content="TechSomali">
-    <link rel="icon" href="./techsomalia-logo.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechSomalia Blog | Baro AI, Online Income & Coding Af-Soomaali</title>
+<meta name="description" content="TechSomali waa blog Af-Soomaali ah oo ka hadla lacag ka samaynta AI, online income, barashada AI, coding iyo teknoolajiyadda casriga ah.">
+<meta name="keywords" content="TechSomali, online income Af-Soomaali, AI tools, Teknoolajiyadda Casriga ah, Baro AI Af-Soomaali">
+<meta name="author" content="TechSomali">
+<link rel="icon" href="./techsomalia-logo.png">
 
-   <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-    
-    <script>
-        // Tailwind Configuration for Dark Mode
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
+<!-- Open Graph -->
+<meta property="og:title" content="TechSomalia Blog">
+<meta property="og:description" content="Baro AI, Online Income, Coding iyo Teknoolajiyadda Casriga ah Af-Soomaali.">
+<meta property="og:type" content="website">
 
-    <style>
-        .glass-nav { @apply sticky top-0 z-50 bg-white/80 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800; }
-        .card-hover { @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10; }
-        #mobile-menu { @apply transition-all duration-300 transform; }
-        .mobile-menu-open { @apply translate-x-0 opacity-100; }
-        .mobile-menu-closed { @apply translate-x-full opacity-0; }
-    </style>
-</head>
-<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 overflow-x-hidden">
+<!-- Fonts: homepage design system -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <nav class="glass-nav">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex items-center gap-2">
-                    <img src="./171b2cde-e683-40d0-baa6-2d6af2de83ea.png" alt="logo" class="h-10 w-auto">
-                    <span class="text-2xl font-extrabold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent italic">TechSomali</span>
-                </div>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: { extend: { fontFamily: { sans: ['Inter','sans-serif'] } } }
+  }
+</script>
 
-                <div class="hidden md:flex items-center space-x-8 font-semibold">
-                    <a href="./index.html" class="hover:text-blue-600 transition">Home</a>
-                    <a href="./blog.html" class="text-blue-600">Blog</a>
-                    <a href="./about.html" class="hover:text-blue-600 transition">About</a>
-                    <a href="./contact.html" class="hover:text-blue-600 transition">Contact</a>
-                    
-                    <button id="theme-toggle" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-yellow-400">
-                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg>
-                    </button>
-                </div>
-
-                <div class="md:hidden flex items-center gap-4">
-                    <button id="mobile-theme-toggle" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-yellow-500">
-                         <svg class="w-6 h-6 dark:hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-                         <svg class="w-6 h-6 hidden dark:block text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0z"></path></svg>
-                    </button>
-                    <button id="menu-btn" class="text-3xl focus:outline-none text-blue-600">☰</button>
-                </div>
-            </div>
-        </div>
-
-        <div id="mobile-menu" class="fixed inset-0 bg-white dark:bg-slate-950 z-[100] hidden flex-col items-center justify-center space-y-8 text-2xl font-bold">
-            <button id="close-menu" class="absolute top-6 right-6 text-4xl text-slate-500">&times;</button>
-            <a href="./index.html" class="hover:text-blue-600">Home</a>
-            <a href="./blog.html" class="text-blue-600">Blog</a>
-            <a href="./about.html" class="hover:text-blue-600">About</a>
-            <a href="./contact.html" class="hover:text-blue-600">Contact</a>
-        </div>
-    </nav>
-
-    <header class="py-20 px-4 bg-gradient-to-b from-blue-50 to-white dark:from-slate-900 dark:to-slate-950 text-center">
-        <h1 class="text-4xl md:text-7xl font-extrabold mb-6 tracking-tight">Somali <span class="text-blue-600 italic">Tech</span> Articles</h1>
-        <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg md:text-xl">Hagaha ugu sarreeya ee barashada tignoolajiyada iyo online income-ka Af-Soomaaliga.</p>
-    </header>
-
-    <main class="max-w-7xl mx-auto px-4 py-12"> 
-        <div class="flex items-center gap-4 mb-12 border-l-4 border-blue-600 pl-4">
-            <h2 class="text-3xl font-bold">List Articles</h2>
-            <span class="bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full dark:bg-blue-900/30 dark:text-blue-400">60+ Posts</span>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                </article>
-                     <article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="./12fcf017-756a-4e3c-b09c-3d36e160d6e7.png" alt="ai" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400 text-[10px] font-bold uppercase rounded-md tracking-wider">making money(AI)</span>
-                    </div>
-                    <a href="./makingmoneyai.html">
-                        <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize"><i>billow lacag ka samynta AI maanta🫰🤑</i></h3>
-                    </a>
-                </div>
-            </article>
-                     <article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="./imageGenerotor.png" alt="ai" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400 text-[10px] font-bold uppercase rounded-md tracking-wider">image generators</span>
-                    </div>
-                    <a href="./imageGenerotors.html">
-                        <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize"><i>sawiradaada uhagaajiso qaab morden ah🐦‍🔥(AI)</i></h3>
-                    </a>
-                </div>
-            </article>
-               
-                     <article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="./100$.png" alt="ai" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400 text-[10px] font-bold uppercase rounded-md tracking-wider">earn money</span>
-                    </div>
-                    <a href="./earnmoney.html">
-                        <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize"><i>100$ Maalin Walba samee💵</i></h3>
-                    </a>
-                </div>
-            </article>
-               
-               <article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="./934cf3d0-caab-4c6b-ac22-eb5a25f874ea.png" alt="ai" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400 text-[10px] font-bold uppercase rounded-md tracking-wider">fiver AI</span>
-                    </div>
-                    <a href="./workingfiver.html">
-                        <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize"><i>ku Shaqayso xirfadaada maanta</i></h3>
-                    </a>
-                </div>
-            </article>
-               <article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="./WhatsApp Image 2026-03-26 at 15.42.05.jpeg" alt="ai" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400 text-[10px] font-bold uppercase rounded-md tracking-wider">free AI</span>
-                    </div>
-                    <a href="./freeai.html">
-                        <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize"><i>qalabayada AI ee bilaashka ah kuwa ugu fiican</i></h3>
-                    </a>
-                </div>
-            </article>
-               <article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="./AI agents.png" alt="ai" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400 text-[10px] font-bold uppercase rounded-md tracking-wider"> AI agents</span>
-                    </div>
-                    <a href="./aiAgents.html">
-                        <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize"><i>waa maxay AI agents, sideese loo isticmaalaa?</i></h3>
-                    </a>
-                </div>
-            </article>
-         
-               <article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="./ChatGPT Image Apr 2, 2026, 02_22_04 PM.png" alt="ai" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400 text-[10px] font-bold uppercase rounded-md tracking-wider">passive income</span>
-                    </div>
-                    <a href="./passiveincomeaitools.html">
-                        <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize"><i>samee daqli joogto ah adigoon maalin walba shaqaynayn🧠</i></h3>
-                    </a>
-                </div>
-            </article>
-               <article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="./d585bc5d-86df-4660-aa68-04ac7cd461eb.png" alt="ai" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400 text-[10px] font-bold uppercase rounded-md tracking-wider">AI for students</span>
-                    </div>
-                    <a href="./aitoolsforstudents.html">
-                        <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize"><i>Adigoo arday ah internetka lacag maka samyn kartaa🤭💵?</i></h3>
-                    </a>
-                </div>
-            </article>
-               <article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="./WhatsApp Image 2026-04-02 at 14.59.34.jpeg" alt="ai" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400 text-[10px] font-bold uppercase rounded-md tracking-wider">AI + Dropshipping</span>
-                    </div>
-                    <a href="./aidropshiping.html">
-                        <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize"><i>Billow maanta  ganacsi online oo guulaysta?</i></h3>
-                    </a>
-                </div>
-            </article>
-            </article>
-            
-       
-               <article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="./WhatsApp Image 2026-03-27 at 15.08.48.jpeg" alt="ai" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400 text-[10px] font-bold uppercase rounded-md tracking-wider">ai for graphic designers</span>
-                    </div>
-                    <a href="./aiforgraphicdesghners.html">
-                        <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize"><i>muhiimada uu uleeyahay AI(Artificial Intelligence) graphic designers</i></h3>
-                    </a>
-                </div>
-                    </article>
-               <article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="./bbb6d471-dd92-44ed-b656-cc48b46dd95d.png" alt="ai" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400 text-[10px] font-bold uppercase rounded-md tracking-wider">ai for video editors</span>
-                    </div>
-                    <a href="./aiforvedioeditors.html">
-                        <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize"><i>ma tahay vedio editor isticmaal habkaan si aad xirfadaada iyo daqligaadaba u kordhiso🧠</i></h3>
-                    </a>
-                </div>
-                    </article>
-                <article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="./eb47bcf8-f12a-49ea-a97a-0df21cee097a.webp" alt="ai" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400 text-[10px] font-bold uppercase rounded-md tracking-wider">making money</span>
-                    </div>
-                    <a href="./10waysmakemoneyai.html">
-                        <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize"><i>10 hab oo oo aad lacag uga samayn karto onlineka maanta</i></h3>
-                    </a>
-                </div>
-                    </article>
-               <article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="./9fbfd8f0-b998-482d-8ec3-25f611341e7f.png" alt="ai" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400 text-[10px] font-bold uppercase rounded-md tracking-wider">ai for logo design</span>
-                    </div>
-                    <a href="./ailogodesghn.html">
-                        <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize"><i>waatan xirfada ugu fudud ee internetka lacag looga sameeyo</i></h3>
-                    </a>
-                </div>
-            </article>
-               <article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="./webAplications.jpg" alt="ai" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400 text-[10px] font-bold uppercase rounded-md tracking-wider">ai for web applications</span>
-                    </div>
-                    <a href="./AiWebApliactions.html">
-                        <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize"><i>dhis web applications casri ah</i></h3>
-                    </a>
-                </div>
-            </article>
-               <article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="./top10aicoding.png" alt="ai" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400 text-[10px] font-bold uppercase rounded-md tracking-wider">top 10 coding tools</span>
-                    </div>
-                    <a href="./Top10AiCodingTools.html">
-                        <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize"><i>top 10 coding tools in(AI)</i></h3>
-                    </a>
-                </div>
-            </article>
-               <article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="./ChatGPT Image Mar 26, 2026, 05_00_57 PM.png" alt="ai" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400 text-[10px] font-bold uppercase rounded-md tracking-wider">ai for freelencing</span>
-                    </div>
-                    <a href="./aiforfreelencers.html">
-                        <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize"><i>siduu u caawiyay CAQLIGA MACMALKA  ah freelencers </i></h3>
-                    </a>
-                </div>
-            </article>
-                    <article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="./make100$.png" alt="ai" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400 text-[10px] font-bold uppercase rounded-md tracking-wider">make $100/day</span>
-                    </div>
-                    <a href="./make100$.html">
-                        <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize"><i>ka samee lacagtaada ugu horayso internetka</i></h3>
-                    </a>
-                </div>
-                    </article>
-               <article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="./ChatGPT Image Mar 27, 2026, 01_06_27 PM.png" alt="ai" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400 text-[10px] font-bold uppercase rounded-md tracking-wider">ai for blogging</span>
-                    </div>
-                    <a href="./aiforblogging.html">
-                        <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize"><i>siduu u caawiyay CAQLIGA MACMALKA  ah blogging</i></h3>
-                    </a>
-                </div>
-            </article>
-               <article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="./9b96968e-530d-4f7f-bc76-8bb149f36795.png" alt="ai" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400 text-[10px] font-bold uppercase rounded-md tracking-wider">ai for content creation</span>
-                    </div>
-                    <a href="./aiforcontentcreation.html">
-                        <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize"><i>sidee ayay content creators u kordhiyaan daqligooda💵</i></h3>
-                    </a>
-                </div>
-            </article>
-                  <article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="./freeai.png" alt="ai" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400 text-[10px] font-bold uppercase rounded-md tracking-wider">free AI websites</span>
-                    </div>
-                    <a href="freeaiwebsite.html">
-                        <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize"><i>10 qalab oo uu qof walba isticmaali karo(AI)</i></h3>
-                    </a>
-                </div>
-            </article>
-            <article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="./37de6a50-ab13-4a54-bbcc-6952102a40f9.png" alt="ai" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400 text-[10px] font-bold uppercase rounded-md tracking-wider">social media automation</span>
-                    </div>
-                    <a href="./socialmediaautomization.html">
-                        <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize"><i>lacag intee dhan ayaad ka samayn kartaa Tiktok iyo YouTube</i></h3>
-                    </a>
-                </div>
-            </article>
-               <article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="./ChatGPT Image Mar 27, 2026, 01_40_08 PM.png" alt="ai" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400 text-[10px] font-bold uppercase rounded-md tracking-wider">ai for youtopers</span>
-                    </div>
-                    <a href="./aiforyoutope.html">
-                        <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize"><i>AI(Artificial Intelligence) muxuu ka cawwiyay youtubers</i></h3>
-                    </a>
-                </div>
-            </article>
-               <article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="./dbdda5d3-6195-40bf-8129-0b38d36b8dd1.png" alt="ai" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400 text-[10px] font-bold uppercase rounded-md tracking-wider">top 5 business ideas</span>
-                    </div>
-                    <a href="./top5businessideas.html">
-                        <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize"><i>5ta hab ee aad ganacsi ku billaabi karto maanta🧑‍💼</i></h3>
-                    </a>
-                </div>
-            </article>
-               <article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="./ChatGPT Image Apr 2, 2026, 01_30_01 PM.png" alt="ai" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400 text-[10px] font-bold uppercase rounded-md tracking-wider">ai for youtopers</span>
-                    </div>
-                    <a href="./makemoneychatgpt.html">
-                        <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize"><i>ka samee lacag chatgpt maanta💰</i></h3>
-                    </a>
-                </div>
-            </article>
-               <article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="./WhatsApp Image 2026-04-03 at 13.22.37.jpeg" alt="ai" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400 text-[10px] font-bold uppercase rounded-md tracking-wider">ai for affiliate marketing</span>
-                    </div>
-                    <a href="./aiforaffliate.html">
-                        <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize"><i>kordhi affiliate_incomekaaga(using AI)</i></h3>
-                    </a>
-                </div>
-            </article>
-               
-               <article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="./WhatsApp Image 2026-03-27 at 14.13.00.jpeg" alt="ai" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400 text-[10px] font-bold uppercase rounded-md tracking-wider">ai for business online</span>
-                    </div>
-                    <a href="./aiforbusinessonline.html">
-                        <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize"><i>qaabka uu ufududeeyay AI(Artificial Intelligence) in internetka daqli laga sameeyo</i></h3>
-                    </a>
-                </div>
-            </article>
-           
-        <article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="./ChatGPT Image Mar 26, 2026, 03_09_37 PM.png" alt="ai" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400 text-[10px] font-bold uppercase rounded-md tracking-wider">BEST AI</span>
-                    </div>
-                    <a href="./bestai.html">
-                        <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize"><i>AI sida lacag looga sameeyo billowga</i></h3>
-                    </a>
-                </div>
-            </article>
-        <article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="./5cf3c929-3b5c-4678-814e-b691144c7473.png" alt="ai" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400 text-[10px] font-bold uppercase rounded-md tracking-wider">AI for Website Builders</span>
-                    </div>
-                    <a href="./aiforwebsitebuilders.html">
-                        <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize"><i>samee wabseed casri ah adigoo adeegsanayo (AI)</i></h3>
-                    </a>
-                </div>
-            </article>
-      
-            <article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="./1724925728104.webp" alt="adsense" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 text-[10px] font-bold uppercase rounded-md tracking-wider">Passive Income</span>
-                        <span class="text-slate-400 text-[10px] font-bold uppercase tracking-wider">5 Min Read</span>
-                    </div>
-                    <a href="./adsense.html">
-                        <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize">sidee adsense looga shaqeeya somaaliya?</h3>
-                    </a>
-                </div>
-            </article>
-
-            <article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="./11522-postblog_image_1200x630-2.jpg.webp" alt="payoneer" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400 text-[10px] font-bold uppercase rounded-md tracking-wider">Banking</span>
-                    </div>
-                    <a href="./payoneer.html">
-                        <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize">payoneer somaliya: sida loo furo loo isticmaalo?</h3>
-                    </a>
-                </div>
-            </article>
-            <article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-    <div class="relative h-60 overflow-hidden">
-        <img src="./WhatsApp Image 2026-02-21 at 15.59.05.webp" alt="waafi" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-        <div class="absolute top-4 left-4 bg-purple-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Payments</div>
-    </div>
-    <div class="p-8">
-        <a href="./waafi.html">
-            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">waafi mastercard somaliya: sida loo furo loo isticmaalo?</h3>
-        </a>
-    </div>
-</article>
-
-<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-    <div class="relative h-60 overflow-hidden">
-        <img src="./pexels-photo-4050319.jpeg" alt="website" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-        <div class="absolute top-4 left-4 bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Monetize</div>
-    </div>
-    <div class="p-8">
-        <a href="./website.html">
-            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">website sidee lacag looga sameeyaa?</h3>
-        </a>
-    </div>
-</article>
-
-<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-    <div class="relative h-60 overflow-hidden">
-        <img src="./young-woman-freelancer-working-in-a-coffeehouse-u-2023-06-07-17-57-09-utc.jpg" alt="freelancing" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-        <div class="absolute top-4 left-4 bg-orange-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Freelance</div>
-    </div>
-    <div class="p-8">
-        <a href="./freelencing.html">
-            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">freelancing somalia: hagaha billowga?</h3>
-        </a>
-    </div>
-</article>
-
-<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-    <div class="relative h-60 overflow-hidden">
-        <img src="./WhatsApp Image 2026-02-21 at 17.07.47.jpeg" alt="fiverr" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-        <div class="absolute top-4 left-4 bg-green-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Gig Economy</div>
-    </div>
-    <div class="p-8">
-        <a href="./fiver.html">
-            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">fiver somalia: sida loo furto looga shaqaysto?</h3>
-        </a>
-    </div>
-</article>
-
-<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-    <div class="relative h-60 overflow-hidden">
-        <img src="./pexels-photo-5902919.jpeg" alt="online income" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-        <div class="absolute top-4 left-4 bg-yellow-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Earning</div>
-    </div>
-    <div class="p-8">
-        <a href="./onlineincome.html">
-            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">qaabkee lacag looga sameeya internetka?</h3>
-        </a>
-    </div>
-</article>
-
-<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-    <div class="relative h-60 overflow-hidden">
-        <img src="./Domain-vs-Hosting-Definitions-Working-And-Key-Differences.webp" alt="hosting" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-        <div class="absolute top-4 left-4 bg-cyan-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Web Infrastructure</div>
-    </div>
-    <div class="p-8">
-        <a href="./hosting&domain.html">
-            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">hosting iyo domain: hagaha billowga?</h3>
-        </a>
-    </div>
-</article>
-
-<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-    <div class="relative h-60 overflow-hidden">
-        <img src="./understanding-web-development-frameworks-og-image.jpg" alt="programming" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-        <div class="absolute top-4 left-4 bg-red-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Coding</div>
-    </div>
-    <div class="p-8">
-        <a href="./programing.html">
-            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">programming: luqadaha ugu muhiimsan?</h3>
-        </a>
-    </div>
-</article>
-
-<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-    <div class="relative h-60 overflow-hidden">
-        <img src="./Website-to-Make-Money.webp" alt="web dev" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-        <div class="absolute top-4 left-4 bg-indigo-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Development</div>
-    </div>
-    <div class="p-8">
-        <a href="./webdevelopment.html">
-            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">web development: xagee ka bilaabaa?</h3>
-        </a>
-    </div>
-</article>
-
-<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-    <div class="relative h-60 overflow-hidden">
-        <img src="./Front-End-Back-End-Development-Featured.jpg" alt="frontend backend" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-        <div class="absolute top-4 left-4 bg-pink-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Career Path</div>
-    </div>
-    <div class="p-8">
-        <a href="./frontendvsbackend.html">
-            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">frontend vs backend keen ku billaabaa?</h3>
-        </a>
-    </div>
-</article>
-
-<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-    <div class="relative h-60 overflow-hidden">
-        <img src="./Make Simple Website in HTML CSS.webp" alt="html css" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-        <div class="absolute top-4 left-4 bg-orange-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Basics</div>
-    </div>
-    <div class="p-8">
-        <a href="./barashadahtmliyocss.html">
-            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">barashada html iyo css xageen ka billabaa ?</h3>
-        </a>
-    </div>
-</article>
-
-<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-    <div class="relative h-60 overflow-hidden">
-        <img src="./pexels-photo-31343632.jpeg" alt="js" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-        <div class="absolute top-4 left-4 bg-yellow-400 text-black text-[10px] font-bold px-3 py-1 rounded-full uppercase">JavaScript</div>
-    </div>
-    <div class="p-8">
-        <a href="./jv.html">
-            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">javascript: maxayta muhiimada uu uleeyahay?</h3>
-        </a>
-    </div>
-</article>
-
-<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-    <div class="relative h-60 overflow-hidden">
-        <img src="./images.png" alt="react" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-        <div class="absolute top-4 left-4 bg-blue-400 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Library</div>
-    </div>
-    <div class="p-8">
-        <a href="react.html">
-            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">sababata react loogu webseedyada casriga ah?</h3>
-        </a>
-    </div>
-</article>
-
-<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-    <div class="relative h-60 overflow-hidden">
-        <img src="./Vanilla-JS-Vs-React-JS_-What-To-Choose-For-Your-Development_-2.webp" alt="comparison" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-        <div class="absolute top-4 left-4 bg-gray-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Comparison</div>
-    </div>
-    <div class="p-8">
-        <a href="reactvsjv.html">
-            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">react vs javascript: keen loo baahanyahay?</h3>
-        </a>
-    </div>
-</article>
-
-<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-    <div class="relative h-60 overflow-hidden">
-        <img src="./git-vs-github.webp" alt="git" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-        <div class="absolute top-4 left-4 bg-black text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Version Control</div>
-    </div>
-    <div class="p-8">
-        <a href="./git&github.html">
-            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">git & github: faaidada ay kuu leeyihiin?</h3>
-        </a>
-    </div>
-</article>
-
-<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-    <div class="relative h-60 overflow-hidden">
-        <img src="./746_github_flow.webp" alt="flow" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-        <div class="absolute top-4 left-4 bg-teal-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Workflow</div>
-    </div>
-    <div class="p-8">
-        <a href="./githubworkflow.html">
-            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">sidee project dhab ah loogu shaqeeyaa?</h3>
-        </a>
-    </div>
-</article>
-
-<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-    <div class="relative h-60 overflow-hidden">
-        <img src="./4c68473a73da8b08a4dccadc10276ab997d09ade-2400x1350_Z1unRdg.webp" alt="deploy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-        <div class="absolute top-4 left-4 bg-emerald-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Deployment</div>
-    </div>
-    <div class="p-8">
-        <a href="./github+netfly.html">
-            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">sidee webseed looga dhigaa online?</h3>
-        </a>
-    </div>
-</article>
-
-<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-    <div class="relative h-60 overflow-hidden">
-        <img src="./shutterstock_423521506-scaled-1.webp" alt="seo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-        <div class="absolute top-4 left-4 bg-blue-800 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">SEO</div>
-    </div>
-    <div class="p-8">
-        <a href="seobasics.html">
-            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">sidee webseedkaaga loogu hagaajiyaa google?</h3>
-        </a>
-    </div>
-</article>
-
-<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-    <div class="relative h-60 overflow-hidden">
-        <img src="./Depositphotos_67853485_xl-2015-1024x683.webp" alt="content" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-        <div class="absolute top-4 left-4 bg-rose-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Strategy</div>
-    </div>
-    <div class="p-8">
-        <a href="contentstrategy.html">
-            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">sidee loo qorsheeyaa qorista articles?</h3>
-        </a>
-    </div>
-</article>
-
-<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-    <div class="relative h-60 overflow-hidden">
-        <img src="./images.webp" alt="blogs" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-        <div class="absolute top-4 left-4 bg-slate-700 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Community</div>
-    </div>
-    <div class="p-8">
-        <a href="top6somaliblog.html">
-            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">Top 6 Somali Blogs: Sidee kuu caawin karaan?</h3>
-        </a>
-    </div>
-</article>
-
-<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-    <div class="relative h-60 overflow-hidden">
-        <img src="./maxresdefault.webp" alt="roadmap" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-        <div class="absolute top-4 left-4 bg-purple-700 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Roadmap 2026</div>
-    </div>
-    <div class="p-8">
-        <a href="frontendrodmap2026.html">
-            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">Frontend Roadmap 2026 – Sida loogu noqdo pro?</h3>
-        </a>
-    </div>
-</article>
-<article class="card-hover group bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-    <div class="relative h-60 overflow-hidden">
-        <img src="./WhatsApp Image 2026-02-27 at 15.11.49.jpeg" alt="ai" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-        <div class="absolute top-4 left-4 bg-purple-700 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">AI 2026</div>
-    </div>
-    <div class="p-8">
-        <a href="ai.html">
-            <h3 class="text-xl font-extrabold group-hover:text-blue-600 transition-colors leading-tight capitalize italic">sida loo isticmaalo AI 2026?</h3>
-        </a>
-    </div>
-</article>
-
-            </div>
-    </main>
-
-    <footer class="bg-slate-900 text-slate-400 py-16 px-4 mt-20 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div>
-                <h3 class="text-white text-2xl font-bold mb-6 italic underline decoration-blue-600">TechSomalia</h3>
-                <p class="leading-relaxed">Baro teknoolajiyadda, programming iyo web development Af-Soomaali si fudud oo casri ah. Ka dhis mustaqbalkaaga halkan.</p>
-            </div>
-            <div>
-                <h4 class="text-white font-bold mb-6">Explore</h4>
-                <div class="grid grid-cols-2 gap-4">
-                    <a href="./privecy.html" class="hover:text-blue-400">Privacy policy</a>
-                    <a href="./about.html" class="hover:text-blue-400">About</a>
-                    <a href="./contact.html" class="hover:text-blue-400">Contact</a>
-                    <a href="./terms&conditions.html" class="hover:text-blue-400">Terms</a>
-                    <a href="./index.html" class="hover:text-blue-400">home</a>
-                   
-                </div>
-            </div>
-            <div>
-                <!-- ===== Premium Footer Newsletter ===== -->
 <style>
-
-
-.footer-newsletter{
-  background: linear-gradient(135deg,#0f172a,#1e293b);
-  padding:60px 20px;
-  text-align:center;
-  color:white;
+/* =============================================
+   HOMEPAGE DESIGN SYSTEM — TOKENS
+   ============================================= */
+:root {
+  --ink:       #0F1B2D;
+  --surface:   #16243A;
+  --surface-2: #1C2D47;
+  --line:      rgba(245,243,234,0.10);
+  --line-hover:rgba(245,243,234,0.22);
+  --cream:     #F5F3EA;
+  --cream-dim: #A9AFC0;
+  --coral:     #FF6B4A;
+  --coral-dim: #FF8A6C;
+  --mint:      #6FE0BE;
+  --mint-dim:  #4FB89A;
+  --purple:    #8B9DFF;
+  --gold:      #FFC15E;
 }
 
-.footer-newsletter h2{
-  font-size:28px;
-  margin-bottom:10px;
-  font-weight:700;
+/* =============================================
+   RESET & BASE
+   ============================================= */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--ink);
+  color: var(--cream);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
-.footer-newsletter p{
-  color:#cbd5e1;
-  margin-bottom:30px;
-  font-size:15px;
+/* Dark mode body handled via class — keep light mode for accessibility */
+.dark body { background: #020617; }
+
+/* Subtle grid texture (homepage signature) */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle at 1px 1px, rgba(245,243,234,0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
 }
 
-.newsletter-form{
-  max-width:500px;
-  margin:auto;
-  display:flex;
-  background:white;
-  border-radius:50px;
-  overflow:hidden;
-  box-shadow:0 10px 25px rgba(0,0,0,0.25);
-  transition:0.3s ease;
+.font-display { font-family: 'Fraunces', serif; }
+.font-mono    { font-family: 'JetBrains Mono', monospace; }
+
+::selection { background: var(--coral); color: #1A0E09; }
+
+/* =============================================
+   NAVIGATION
+   ============================================= */
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 12px 0;
+  background: rgba(15,27,45,0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+  transition: background 0.3s ease;
 }
 
-.newsletter-form:hover{
-  transform:translateY(-3px);
+.nav-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
 }
 
-.newsletter-form input{
-  flex:1;
-  padding:15px 20px;
-  border:none;
-  outline:none;
-  font-size:14px;
+.nav-logo {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.nav-logo img { height: 36px; width: auto; }
+.nav-logo-accent { color: var(--coral); }
+
+.nav-links {
+  display: none;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+@media (min-width: 768px) { .nav-links { display: flex; } }
+
+.nav-links a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--cream-dim);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--cream); }
+.nav-links a.active { color: var(--coral); }
+
+.nav-actions { display: flex; align-items: center; gap: 12px; }
+
+/* Theme toggle */
+.theme-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--cream-dim);
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+.theme-btn:hover { border-color: var(--line-hover); color: var(--cream); }
+.theme-btn svg { width: 18px; height: 18px; }
+
+/* Mobile hamburger */
+.hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: none;
+  background: none;
+  color: var(--cream);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+@media (min-width: 768px) { .hamburger { display: none; } }
+
+/* =============================================
+   MOBILE MENU OVERLAY
+   ============================================= */
+#mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(10,16,28,0.97);
+  backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+#mobile-menu.open { opacity: 1; visibility: visible; }
+
+#mobile-menu a {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--cream);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+#mobile-menu a:hover, #mobile-menu a.active { color: var(--coral); }
+
+#close-menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--cream-dim);
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s, color 0.2s;
+}
+#close-menu:hover { border-color: var(--line-hover); color: var(--cream); }
+
+/* Mobile theme toggle inside menu */
+#mobile-theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--cream-dim);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  margin-top: 8px;
+}
+#mobile-theme-toggle:hover { border-color: var(--line-hover); }
+#mobile-theme-toggle svg { width: 18px; height: 18px; }
+
+/* =============================================
+   HERO
+   ============================================= */
+.blog-hero {
+  position: relative;
+  z-index: 1;
+  padding: 110px 24px 56px;
+  text-align: center;
 }
 
-.newsletter-form button{
-  padding:0 25px;
-  border:none;
-  background:#3b82f6;
-  color:white;
-  font-weight:600;
-  cursor:pointer;
-  transition:0.3s ease;
+.blog-hero .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mint);
+  margin-bottom: 20px;
+}
+.blog-hero .eyebrow::before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--mint);
 }
 
-.newsletter-form button:hover{
-  background:#2563eb;
+.blog-hero h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: clamp(2.4rem, 6vw, 4.5rem);
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  color: var(--cream);
+  margin-bottom: 16px;
+}
+.blog-hero h1 span { color: var(--coral); }
+
+.blog-hero p {
+  font-size: 1.1rem;
+  color: var(--cream-dim);
+  max-width: 520px;
+  margin: 0 auto 36px;
+  line-height: 1.65;
 }
 
-.newsletter-note{
-  margin-top:15px;
-  font-size:13px;
-  color:#94a3b8;
+/* =============================================
+   SEARCH BAR
+   ============================================= */
+.search-wrap {
+  position: relative;
+  max-width: 560px;
+  margin: 0 auto;
 }
 
-/* Responsive */
-@media(max-width:600px){
-  .newsletter-form{
-    flex-direction:column;
-    border-radius:15px;
+.search-wrap input {
+  width: 100%;
+  padding: 1.1rem 3.5rem 1.1rem 1.6rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: var(--cream);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.search-wrap input::placeholder { color: var(--cream-dim); }
+.search-wrap input:focus {
+  border-color: rgba(255,107,74,0.5);
+  box-shadow: 0 0 0 3px rgba(255,107,74,0.1);
+}
+
+.search-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--cream-dim);
+  pointer-events: none;
+  font-size: 1.2rem;
+}
+
+/* =============================================
+   STICKY CONTROL BAR (tabs + sort)
+   ============================================= */
+.control-bar {
+  position: sticky;
+  top: 65px;
+  z-index: 40;
+  background: rgba(15,27,45,0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+  padding: 0 24px;
+}
+
+.control-bar-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 0;
+}
+
+.tabs-scroll {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  overflow-x: auto;
+  flex: 1;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 3px 0;
+}
+.tabs-scroll::-webkit-scrollbar { display: none; }
+
+.tab-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 7px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--cream-dim);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  min-height: 36px;
+}
+.tab-btn:hover { border-color: var(--line-hover); color: var(--cream); }
+.tab-btn.active {
+  background: var(--coral);
+  border-color: var(--coral);
+  color: #1A0E09;
+  font-weight: 700;
+}
+
+.sort-select {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--cream-dim);
+  cursor: pointer;
+  outline: none;
+  min-height: 36px;
+  white-space: nowrap;
+  transition: border-color 0.2s;
+}
+.sort-select:hover { border-color: var(--line-hover); }
+
+/* =============================================
+   PAGE WRAPPER
+   ============================================= */
+.page-wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* =============================================
+   SECTION HEADERS
+   ============================================= */
+.section-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--coral);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  letter-spacing: -0.03em;
+  color: var(--cream);
+  margin-bottom: 4px;
+}
+
+/* =============================================
+   FEATURED SECTION
+   ============================================= */
+.featured-section {
+  padding: 48px 0 0;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 24px;
+}
+@media (min-width: 1024px) {
+  .featured-grid {
+    grid-template-columns: 1.4fr 1fr;
+    grid-template-rows: auto auto;
   }
-  .newsletter-form input,
-  .newsletter-form button{
-    width:100%;
-    border-radius:0;
-  }
-  .newsletter-form button{
-    padding:15px;
-  }
+  .featured-main { grid-row: 1 / 3; }
+}
+
+/* Featured Main Card */
+.feat-main {
+  display: block;
+  text-decoration: none;
+  background: var(--surface);
+  border: 1px solid rgba(255,107,74,0.3);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), border-color 0.3s ease;
+  height: 100%;
+}
+.feat-main:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,107,74,0.6);
+}
+
+.feat-main .img-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+.feat-main .img-wrap img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.22,1,0.36,1);
+}
+.feat-main:hover .img-wrap img { transform: scale(1.06); }
+.feat-main .img-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(15,27,45,0.5) 0%, transparent 50%);
+}
+
+.feat-main-body { padding: 28px; }
+.feat-main-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.badge-pick {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--coral);
+  color: #1A0E09;
+  border: none;
+}
+
+.badge-cat {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--mint);
+}
+
+.feat-main h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--cream);
+  margin-bottom: 20px;
+}
+
+.feat-main-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--cream-dim);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.feat-main-meta .read-link { color: var(--cream); }
+
+/* Featured Secondary Cards */
+.feat-secondary {
+  display: block;
+  text-decoration: none;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), border-color 0.3s ease, background 0.3s ease;
+  min-height: 130px;
+}
+.feat-secondary:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255,107,74,0.35);
+  background: var(--surface-2);
+}
+
+.feat-secondary .s-img {
+  width: 120px;
+  min-width: 120px;
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 640px) { .feat-secondary .s-img { width: 140px; min-width: 140px; } }
+
+.feat-secondary .s-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s cubic-bezier(0.22,1,0.36,1);
+}
+.feat-secondary:hover .s-img img { transform: scale(1.08); }
+
+.feat-secondary .s-body {
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.feat-secondary .s-cat {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--mint);
+  font-weight: 500;
+}
+
+.feat-secondary h3 {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.3;
+  color: var(--cream);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.feat-secondary .s-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--cream-dim);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* =============================================
+   ARTICLE LIBRARY
+   ============================================= */
+.library-section { padding: 48px 0; }
+
+.library-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.result-count {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--cream-dim);
+  align-self: flex-end;
+}
+
+/* Article Grid */
+#article-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 640px)  { #article-grid { grid-template-columns: repeat(2,1fr); } }
+@media (min-width: 1024px) { #article-grid { grid-template-columns: repeat(3,1fr); } }
+
+/* Article Card */
+.article-card {
+  display: block;
+  text-decoration: none;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), border-color 0.3s ease, background 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.article-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255,107,74,0.35);
+  background: var(--surface-2);
+}
+.article-card.hidden { display: none; }
+
+.card-img {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  flex-shrink: 0;
+}
+.card-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.22,1,0.36,1);
+}
+.article-card:hover .card-img img { transform: scale(1.07); }
+
+/* Category pill overlay */
+.card-cat-pill {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(15,27,45,0.82);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--line);
+  color: var(--cream);
+  z-index: 2;
+}
+.card-cat-pill[data-cat="ai-tools"]          { color: var(--mint); border-color: rgba(111,224,190,0.35); }
+.card-cat-pill[data-cat="online-income"]     { color: var(--coral); border-color: rgba(255,107,74,0.35); }
+.card-cat-pill[data-cat="coding"]            { color: var(--purple); border-color: rgba(139,157,255,0.35); }
+.card-cat-pill[data-cat="freelancing"]       { color: var(--gold); border-color: rgba(255,193,94,0.35); }
+.card-cat-pill[data-cat="digital-skills"]    { color: var(--cream-dim); border-color: var(--line); }
+.card-cat-pill[data-cat="affiliate-marketing"]{ color: var(--gold); border-color: rgba(255,193,94,0.35); }
+
+.card-body {
+  padding: 20px 22px 22px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  line-height: 1.35;
+  color: var(--cream);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: color 0.2s ease;
+}
+.article-card:hover .card-title { color: var(--coral); }
+
+.card-footer {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  color: var(--cream-dim);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.card-read-cta {
+  font-weight: 600;
+  color: var(--mint);
+  transition: color 0.2s;
+  font-size: 0.68rem;
+}
+.article-card:hover .card-read-cta { color: var(--coral); }
+
+/* Empty state */
+#empty-state {
+  display: none;
+  text-align: center;
+  padding: 64px 24px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875rem;
+  color: var(--cream-dim);
+}
+#empty-state .es-icon { font-size: 3rem; margin-bottom: 16px; }
+#empty-state h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; color: var(--cream); margin-bottom: 8px; }
+
+/* Load More */
+.load-more-wrap { text-align: center; margin-top: 40px; }
+
+.load-more-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 14px 36px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--cream);
+  cursor: pointer;
+  transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+}
+.load-more-btn:hover {
+  border-color: var(--line-hover);
+  background: var(--surface-2);
+  transform: translateY(-2px);
+}
+
+/* =============================================
+   NEWSLETTER STRIP (inline — replaces footer-newsletter)
+   ============================================= */
+.newsletter-strip {
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 48px 24px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.newsletter-strip h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  letter-spacing: -0.02em;
+  color: var(--cream);
+  margin-bottom: 8px;
+}
+
+.newsletter-strip p {
+  font-size: 0.95rem;
+  color: var(--cream-dim);
+  margin-bottom: 28px;
+}
+
+.newsletter-strip form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 460px;
+  margin: 0 auto;
+}
+@media (min-width: 500px) {
+  .newsletter-strip form { flex-direction: row; }
+}
+
+.newsletter-strip input {
+  flex: 1;
+  padding: 14px 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: var(--cream);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  outline: none;
+  transition: border-color 0.25s;
+}
+.newsletter-strip input::placeholder { color: var(--cream-dim); }
+.newsletter-strip input:focus { border-color: rgba(255,107,74,0.5); }
+
+.newsletter-strip button {
+  padding: 14px 28px;
+  border-radius: 999px;
+  border: none;
+  background: var(--coral);
+  color: #1A0E09;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.newsletter-strip button:hover { background: var(--coral-dim); transform: translateY(-2px); }
+
+.newsletter-strip .nl-note {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--cream-dim);
+  margin-top: 14px;
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+.site-footer {
+  background: rgba(15,27,45,0.95);
+  border-top: 1px solid var(--line);
+  padding: 48px 24px 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+}
+@media (min-width: 768px) {
+  .footer-inner { grid-template-columns: 2fr 1fr 1fr; gap: 48px; }
+}
+
+.footer-brand h3 {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--cream);
+  margin-bottom: 10px;
+}
+.footer-brand p {
+  font-size: 0.875rem;
+  color: var(--cream-dim);
+  line-height: 1.65;
+  max-width: 320px;
+  margin-bottom: 20px;
+}
+.footer-social { display: flex; gap: 16px; }
+.footer-social a {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--cream-dim);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-social a:hover { color: var(--coral); }
+
+.footer-col h4 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--coral);
+  margin-bottom: 14px;
+}
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-col ul li a {
+  font-size: 0.875rem;
+  color: var(--cream-dim);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-col ul li a:hover { color: var(--cream); }
+
+.footer-bottom {
+  max-width: 1280px;
+  margin: 36px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--cream-dim);
+}
+
+/* =============================================
+   DIVIDER
+   ============================================= */
+.section-divider {
+  height: 1px;
+  background: var(--line);
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* =============================================
+   SCROLL REVEAL ANIMATION
+   ============================================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.65s cubic-bezier(0.22,1,0.36,1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .article-card, .feat-main, .feat-secondary { transition: none; }
 }
 </style>
+</head>
 
-<section class="footer-newsletter">
+<body>
 
-  <h2>Ku Biir Community-ga Premium</h2>
-  <p>Hel casharro cusub, SEO tips, iyo updates gaar ah.</p>
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav class="site-nav" role="navigation" aria-label="Primary">
+  <div class="nav-inner">
 
-  <form 
-    action="https://formspree.io/f/xzdaoeyv" 
-    method="POST"
-    class="newsletter-form" 
-  >
-    <input 
-      type="email" 
-      name="email" 
-      required
-      placeholder="Gali Email-kaaga"
+    <!-- Logo -->
+    <a href="./index.html" class="nav-logo">
+ 
+      Tech<span class="nav-logo-accent">Somalia</span>
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="nav-links" role="list">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./blog.html" class="active">Blog</a></li>
+      <li><a href="./about.html">About</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+    </ul>
+
+    <!-- Desktop actions -->
+    <div class="nav-actions">
+      <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+        <svg id="theme-toggle-dark-icon" class="hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+        <svg id="theme-toggle-light-icon" class="hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg>
+      </button>
+      <button id="menu-btn" class="hamburger" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+
+  </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <button id="close-menu" aria-label="Close menu">&times;</button>
+  <a href="./index.html">Home</a>
+  <a href="./blog.html" class="active">Blog</a>
+  <a href="./about.html">About</a>
+  <a href="./contact.html">Contact</a>
+  <button id="mobile-theme-toggle" aria-label="Toggle theme">
+    <svg class="w-5 h-5" id="m-dark-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+    <svg class="w-5 h-5 hidden" id="m-light-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg>
+    <span id="m-theme-label">Toggle theme</span>
+  </button>
+</div>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<header class="blog-hero" role="banner">
+  <p class="eyebrow">60+ Cashar · Af-Soomaali · Si Joogto ah Loo Cusboonaysiiyo</p>
+  <h1>Somali <span>Tech</span> Blog</h1>
+  <p>Baro AI, Online Income, Coding iyo Teknoolajiyadda Casriga ah — si degdeg ah oo aan kaa dhigin mid waaya-aragnimo u baahan.</p>
+  <div class="search-wrap" role="search">
+    <label for="search-input" class="sr-only">Raadi cashar</label>
+    <input
+      type="search"
+      id="search-input"
+      name="q"
+      placeholder="Raadi cashar — tusaale: ChatGPT, coding, affiliate..."
+      autocomplete="off"
+      spellcheck="false"
     >
+    <span class="search-icon" aria-hidden="true">⌕</span>
+  </div>
+</header>
 
-    <button  type="submit">
-      Subscribe
-    </button>
-  </form>
+<!-- ============================================================
+     STICKY CONTROL BAR — Category Tabs + Sort
+     ============================================================ -->
+<div class="control-bar" role="navigation" aria-label="Article filters">
+  <div class="control-bar-inner">
+    <div class="tabs-scroll" role="tablist" aria-label="Categories" id="tabs-row">
+      <button class="tab-btn active" data-cat="all" role="tab" aria-selected="true">Dhammaan</button>
+      <button class="tab-btn" data-cat="ai-tools" role="tab" aria-selected="false">AI Tools</button>
+      <button class="tab-btn" data-cat="online-income" role="tab" aria-selected="false">Online Income</button>
+      <button class="tab-btn" data-cat="coding" role="tab" aria-selected="false">Coding</button>
+      <button class="tab-btn" data-cat="freelancing" role="tab" aria-selected="false">Freelancing</button>
+      <button class="tab-btn" data-cat="digital-skills" role="tab" aria-selected="false">Digital Skills</button>
+      <button class="tab-btn" data-cat="affiliate-marketing" role="tab" aria-selected="false">Affiliate</button>
+    </div>
+    <select id="sort-select" class="sort-select" aria-label="Sort articles">
+      <option value="default">Default</option>
+      <option value="az">A → Z</option>
+      <option value="za">Z → A</option>
+    </select>
+  </div>
+</div>
 
-  <div class="newsletter-note">
-    No spam. Ka bax wakhti kasta.
+
+<div class="section-divider" style="margin: 40px auto;"></div>
+
+<!-- ============================================================
+     MAIN ARTICLE LIBRARY
+     ============================================================ -->
+<main class="library-section page-wrap" id="library" role="main">
+
+  <div class="library-header reveal">
+    <div>
+      <span class="section-eyebrow">Maqaalada</span>
+      <h2 class="section-title">Dhammaan Casharrada</h2>
+    </div>
+    <span class="result-count" id="result-count" aria-live="polite"></span>
   </div>
 
-</section>
-            </div>
-        </div>
-        <div class="text-center mt-16 pt-8 border-t border-slate-800 text-sm">
-            © 2026 TechSomali. Made with 🔥 for the Somali Tech Community.
-        </div>
-    </footer>
+  <!-- ARTICLE GRID — all 51 articles preserved with exact hrefs & images -->
+  <div id="article-grid" role="list" aria-label="Articles">
 
-    <script>
-        // 1. MOBILE MENU LOGIC
-        const menuBtn = document.getElementById('menu-btn');
-        const closeMenu = document.getElementById('close-menu');
-        const mobileMenu = document.getElementById('mobile-menu');
+    <a href="./makingmoneyai.html"
+       class="article-card"
+       data-cat="online-income"
+       data-title="billow lacag ka samynta AI maanta"
+       role="listitem">
+      <div class="card-img">
+        <img src="./12fcf017-756a-4e3c-b09c-3d36e160d6e7.png" alt="ai" loading="lazy">
+        <span class="card-cat-pill" data-cat="online-income">Online Income</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">billow lacag ka samynta AI maanta🫰🤑</h3>
+        <div class="card-footer"><span>making money(AI)</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
 
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.remove('hidden');
-            mobileMenu.classList.add('flex');
-            document.body.style.overflow = 'hidden'; // Stop scrolling
-        });
+    <a href="./imageGenerotors.html"
+       class="article-card"
+       data-cat="ai-tools"
+       data-title="sawiradaada uhagaajiso qaab morden ah AI"
+       role="listitem">
+      <div class="card-img">
+        <img src="./imageGenerotor.png" alt="ai" loading="lazy">
+        <span class="card-cat-pill" data-cat="ai-tools">AI Tools</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">sawiradaada uhagaajiso qaab morden ah🐦‍🔥(AI)</h3>
+        <div class="card-footer"><span>image generators</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
 
-        closeMenu.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-            mobileMenu.classList.remove('flex');
-            document.body.style.overflow = 'auto'; // Resume scrolling
-        });
+    <a href="./earnmoney.html"
+       class="article-card"
+       data-cat="online-income"
+       data-title="100$ Maalin Walba samee"
+       role="listitem">
+      <div class="card-img">
+        <img src="./100$.png" alt="ai" loading="lazy">
+        <span class="card-cat-pill" data-cat="online-income">Online Income</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">100$ Maalin Walba samee💵</h3>
+        <div class="card-footer"><span>earn money</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
 
-        // 2. DARK MODE LOGIC
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
-        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+    <a href="./workingfiver.html"
+       class="article-card"
+       data-cat="freelancing"
+       data-title="ku Shaqayso xirfadaada maanta"
+       role="listitem">
+      <div class="card-img">
+        <img src="./934cf3d0-caab-4c6b-ac22-eb5a25f874ea.png" alt="ai" loading="lazy">
+        <span class="card-cat-pill" data-cat="freelancing">Freelancing</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">ku Shaqayso xirfadaada maanta</h3>
+        <div class="card-footer"><span>fiver AI</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
 
-        // Check local storage or system preference
-        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-            themeToggleLightIcon.classList.remove('hidden');
-        } else {
-            document.documentElement.classList.remove('dark');
-            themeToggleDarkIcon.classList.remove('hidden');
-        }
+    <a href="./freeai.html"
+       class="article-card"
+       data-cat="ai-tools"
+       data-title="qalabayada AI ee bilaashka ah kuwa ugu fiican"
+       role="listitem">
+      <div class="card-img">
+        <img src="./WhatsApp Image 2026-03-26 at 15.42.05.jpeg" alt="ai" loading="lazy">
+        <span class="card-cat-pill" data-cat="ai-tools">AI Tools</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">qalabayada AI ee bilaashka ah kuwa ugu fiican</h3>
+        <div class="card-footer"><span>free AI</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
 
-        const toggleTheme = () => {
-            themeToggleDarkIcon.classList.toggle('hidden');
-            themeToggleLightIcon.classList.toggle('hidden');
+    <a href="./aiAgents.html"
+       class="article-card"
+       data-cat="ai-tools"
+       data-title="waa maxay AI agents sideese loo isticmaalaa"
+       role="listitem">
+      <div class="card-img">
+        <img src="./AI agents.png" alt="ai" loading="lazy">
+        <span class="card-cat-pill" data-cat="ai-tools">AI Tools</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">waa maxay AI agents, sideese loo isticmaalaa?</h3>
+        <div class="card-footer"><span>AI agents</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
 
-            if (document.documentElement.classList.contains('dark')) {
-                document.documentElement.classList.remove('dark');
-                localStorage.setItem('color-theme', 'light');
-            } else {
-                document.documentElement.classList.add('dark');
-                localStorage.setItem('color-theme', 'dark');
-            }
-        };
+    <a href="./passiveincomeaitools.html"
+       class="article-card"
+       data-cat="online-income"
+       data-title="samee daqli joogto ah adigoon maalin walba shaqaynayn"
+       role="listitem">
+      <div class="card-img">
+        <img src="./ChatGPT Image Apr 2, 2026, 02_22_04 PM.png" alt="ai" loading="lazy">
+        <span class="card-cat-pill" data-cat="online-income">Online Income</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">samee daqli joogto ah adigoon maalin walba shaqaynayn🧠</h3>
+        <div class="card-footer"><span>passive income</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
 
-        themeToggleBtn.addEventListener('click', toggleTheme);
-        mobileThemeToggle.addEventListener('click', toggleTheme);
-        // const form = document.getElementById('form');
-        // const input = document.getElementById('input');
-        // const errorMessage = form.querySelector('small');
-        // form.addEventListener('submit', (e) => {
-        //     if (!input.value || !/\S+@\S+\.\S+/.test(input.value)) {
-        //         e.preventDefault();
-        //         errorMessage.textContent = 'Fadlan gali email sax ah.';
-        //         errorMessage.style.color = 'red';
-        //     } else {
-        //         errorMessage.textContent = '';
-        //     }
-        // });
-    </script>
+    <a href="./aitoolsforstudents.html"
+       class="article-card"
+       data-cat="ai-tools"
+       data-title="Adigoo arday ah internetka lacag maka samyn kartaa"
+       role="listitem">
+      <div class="card-img">
+        <img src="./d585bc5d-86df-4660-aa68-04ac7cd461eb.png" alt="ai" loading="lazy">
+        <span class="card-cat-pill" data-cat="ai-tools">AI Tools</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Adigoo arday ah internetka lacag maka samyn kartaa🤭💵?</h3>
+        <div class="card-footer"><span>AI for students</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./aidropshiping.html"
+       class="article-card"
+       data-cat="online-income"
+       data-title="Billow maanta ganacsi online oo guulaysta"
+       role="listitem">
+      <div class="card-img">
+        <img src="./WhatsApp Image 2026-04-02 at 14.59.34.jpeg" alt="ai" loading="lazy">
+        <span class="card-cat-pill" data-cat="online-income">Online Income</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Billow maanta ganacsi online oo guulaysta?</h3>
+        <div class="card-footer"><span>AI + Dropshipping</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./aiforgraphicdesghners.html"
+       class="article-card"
+       data-cat="ai-tools"
+       data-title="muhiimada uu uleeyahay AI graphic designers"
+       role="listitem">
+      <div class="card-img">
+        <img src="./WhatsApp Image 2026-03-27 at 15.08.48.jpeg" alt="ai" loading="lazy">
+        <span class="card-cat-pill" data-cat="ai-tools">AI Tools</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">muhiimada uu uleeyahay AI(Artificial Intelligence) graphic designers</h3>
+        <div class="card-footer"><span>ai for graphic designers</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./aiforvedioeditors.html"
+       class="article-card"
+       data-cat="ai-tools"
+       data-title="ma tahay vedio editor isticmaal habkaan xirfadaada daqligaada kordhiso"
+       role="listitem">
+      <div class="card-img">
+        <img src="./bbb6d471-dd92-44ed-b656-cc48b46dd95d.png" alt="ai" loading="lazy">
+        <span class="card-cat-pill" data-cat="ai-tools">AI Tools</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">ma tahay vedio editor isticmaal habkaan si aad xirfadaada iyo daqligaadaba u kordhiso🧠</h3>
+        <div class="card-footer"><span>ai for video editors</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./10waysmakemoneyai.html"
+       class="article-card"
+       data-cat="online-income"
+       data-title="10 hab oo aad lacag uga samayn karto onlineka maanta"
+       role="listitem">
+      <div class="card-img">
+        <img src="./eb47bcf8-f12a-49ea-a97a-0df21cee097a.webp" alt="ai" loading="lazy">
+        <span class="card-cat-pill" data-cat="online-income">Online Income</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">10 hab oo oo aad lacag uga samayn karto onlineka maanta</h3>
+        <div class="card-footer"><span>making money</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./ailogodesghn.html"
+       class="article-card"
+       data-cat="ai-tools"
+       data-title="waatan xirfada ugu fudud ee internetka lacag looga sameeyo"
+       role="listitem">
+      <div class="card-img">
+        <img src="./9fbfd8f0-b998-482d-8ec3-25f611341e7f.png" alt="ai" loading="lazy">
+        <span class="card-cat-pill" data-cat="ai-tools">AI Tools</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">waatan xirfada ugu fudud ee internetka lacag looga sameeyo</h3>
+        <div class="card-footer"><span>ai for logo design</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./AiWebApliactions.html"
+       class="article-card"
+       data-cat="coding"
+       data-title="dhis web applications casri ah"
+       role="listitem">
+      <div class="card-img">
+        <img src="./webAplications.jpg" alt="ai" loading="lazy">
+        <span class="card-cat-pill" data-cat="coding">Coding</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">dhis web applications casri ah</h3>
+        <div class="card-footer"><span>ai for web applications</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./Top10AiCodingTools.html"
+       class="article-card"
+       data-cat="coding"
+       data-title="top 10 coding tools in AI"
+       role="listitem">
+      <div class="card-img">
+        <img src="./top10aicoding.png" alt="ai" loading="lazy">
+        <span class="card-cat-pill" data-cat="coding">Coding</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">top 10 coding tools in(AI)</h3>
+        <div class="card-footer"><span>top 10 coding tools</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./aiforfreelencers.html"
+       class="article-card"
+       data-cat="freelancing"
+       data-title="siduu u caawiyay CAQLIGA MACMALKA ah freelencers"
+       role="listitem">
+      <div class="card-img">
+        <img src="./ChatGPT Image Mar 26, 2026, 05_00_57 PM.png" alt="ai" loading="lazy">
+        <span class="card-cat-pill" data-cat="freelancing">Freelancing</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">siduu u caawiyay CAQLIGA MACMALKA ah freelencers</h3>
+        <div class="card-footer"><span>ai for freelencing</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./make100$.html"
+       class="article-card"
+       data-cat="online-income"
+       data-title="ka samee lacagtaada ugu horayso internetka"
+       role="listitem">
+      <div class="card-img">
+        <img src="./make100$.png" alt="ai" loading="lazy">
+        <span class="card-cat-pill" data-cat="online-income">Online Income</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">ka samee lacagtaada ugu horayso internetka</h3>
+        <div class="card-footer"><span>make $100/day</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+    <a href="./usingChatgptAndOhterAI.html"
+       class="article-card"
+       data-cat="online-income"
+       data-title="ka samee lacagtaada ugu horayso internetka"
+       role="listitem">
+      <div class="card-img">
+        <img src="./usingchatgpt.jpg" alt="ai" loading="lazy">
+        <span class="card-cat-pill" data-cat="online-income">Using AI</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Baro qaabka saxda ah ee loo isticmaaalo AI</h3>
+        <div class="card-footer"><span>Isticmaalka AI</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+    <a href="./10skills.html"
+       class="article-card"
+       data-cat="online-income"
+       data-title="ka samee lacagtaada ugu horayso internetka"
+       role="listitem">
+      <div class="card-img">
+        <img src="./digital skills.jpg" alt="ai" loading="lazy">
+        <span class="card-cat-pill" data-cat="online-income">Digital Skills</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">10-ka xirfadood ee ugu lacagta badan waqtigaan</h3>
+        <div class="card-footer"><span>Baro xirfad</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+    <a href="./studingTechnology.html"
+       class="article-card"
+       data-cat="online-income"
+       data-title="ka samee lacagtaada ugu horayso internetka"
+       role="listitem">
+      <div class="card-img">
+        <img src="./Gemini_Generated_Image_b2ue90b2ue90b2ue.png" alt="ai" loading="lazy">
+        <span class="card-cat-pill" data-cat="online-income">Technology</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">si kooban ufahan qaabka ay ushaqayso tiknoolajiyada casriga ah</h3>
+        <div class="card-footer"><span>Dunida cusub</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./aiforblogging.html"
+       class="article-card"
+       data-cat="digital-skills"
+       data-title="siduu u caawiyay CAQLIGA MACMALKA ah blogging"
+       role="listitem">
+      <div class="card-img">
+        <img src="./ChatGPT Image Mar 27, 2026, 01_06_27 PM.png" alt="ai" loading="lazy">
+        <span class="card-cat-pill" data-cat="digital-skills">Digital Skills</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">siduu u caawiyay CAQLIGA MACMALKA ah blogging</h3>
+        <div class="card-footer"><span>ai for blogging</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./aiforcontentcreation.html"
+       class="article-card"
+       data-cat="digital-skills"
+       data-title="sidee ayay content creators u kordhiyaan daqligooda"
+       role="listitem">
+      <div class="card-img">
+        <img src="./9b96968e-530d-4f7f-bc76-8bb149f36795.png" alt="ai" loading="lazy">
+        <span class="card-cat-pill" data-cat="digital-skills">Digital Skills</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">sidee ayay content creators u kordhiyaan daqligooda💵</h3>
+        <div class="card-footer"><span>ai for content creation</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="freeaiwebsite.html"
+       class="article-card"
+       data-cat="ai-tools"
+       data-title="10 qalab oo uu qof walba isticmaali karo AI"
+       role="listitem">
+      <div class="card-img">
+        <img src="./freeai.png" alt="ai" loading="lazy">
+        <span class="card-cat-pill" data-cat="ai-tools">AI Tools</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">10 qalab oo uu qof walba isticmaali karo(AI)</h3>
+        <div class="card-footer"><span>free AI websites</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./socialmediaautomization.html"
+       class="article-card"
+       data-cat="digital-skills"
+       data-title="lacag intee dhan ayaad ka samayn kartaa Tiktok iyo YouTube"
+       role="listitem">
+      <div class="card-img">
+        <img src="./37de6a50-ab13-4a54-bbcc-6952102a40f9.png" alt="ai" loading="lazy">
+        <span class="card-cat-pill" data-cat="digital-skills">Digital Skills</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">lacag intee dhan ayaad ka samayn kartaa Tiktok iyo YouTube</h3>
+        <div class="card-footer"><span>social media automation</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./aiforyoutope.html"
+       class="article-card"
+       data-cat="ai-tools"
+       data-title="AI Artificial Intelligence muxuu ka cawwiyay youtubers"
+       role="listitem">
+      <div class="card-img">
+        <img src="./ChatGPT Image Mar 27, 2026, 01_40_08 PM.png" alt="ai" loading="lazy">
+        <span class="card-cat-pill" data-cat="ai-tools">AI Tools</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">AI(Artificial Intelligence) muxuu ka cawwiyay youtubers</h3>
+        <div class="card-footer"><span>ai for youtopers</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./top5businessideas.html"
+       class="article-card"
+       data-cat="online-income"
+       data-title="5ta hab ee aad ganacsi ku billaabi karto maanta"
+       role="listitem">
+      <div class="card-img">
+        <img src="./dbdda5d3-6195-40bf-8129-0b38d36b8dd1.png" alt="ai" loading="lazy">
+        <span class="card-cat-pill" data-cat="online-income">Online Income</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">5ta hab ee aad ganacsi ku billaabi karto maanta🧑‍💼</h3>
+        <div class="card-footer"><span>top 5 business ideas</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./makemoneychatgpt.html"
+       class="article-card"
+       data-cat="ai-tools"
+       data-title="ka samee lacag chatgpt maanta"
+       role="listitem">
+      <div class="card-img">
+        <img src="./ChatGPT Image Apr 2, 2026, 01_30_01 PM.png" alt="ai" loading="lazy">
+        <span class="card-cat-pill" data-cat="ai-tools">AI Tools</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">ka samee lacag chatgpt maanta💰</h3>
+        <div class="card-footer"><span>ai for youtopers</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./aiforaffliate.html"
+       class="article-card"
+       data-cat="affiliate-marketing"
+       data-title="kordhi affiliate incomekaaga using AI"
+       role="listitem">
+      <div class="card-img">
+        <img src="./WhatsApp Image 2026-04-03 at 13.22.37.jpeg" alt="ai" loading="lazy">
+        <span class="card-cat-pill" data-cat="affiliate-marketing">Affiliate Marketing</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">kordhi affiliate_incomekaaga(using AI)</h3>
+        <div class="card-footer"><span>ai for affiliate marketing</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./aiforbusinessonline.html"
+       class="article-card"
+       data-cat="online-income"
+       data-title="qaabka uu ufududeeyay AI in internetka daqli laga sameeyo"
+       role="listitem">
+      <div class="card-img">
+        <img src="./WhatsApp Image 2026-03-27 at 14.13.00.jpeg" alt="ai" loading="lazy">
+        <span class="card-cat-pill" data-cat="online-income">Online Income</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">qaabka uu ufududeeyay AI(Artificial Intelligence) in internetka daqli laga sameeyo</h3>
+        <div class="card-footer"><span>ai for business online</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./bestai.html"
+       class="article-card"
+       data-cat="ai-tools"
+       data-title="AI sida lacag looga sameeyo billowga"
+       role="listitem">
+      <div class="card-img">
+        <img src="./ChatGPT Image Mar 26, 2026, 03_09_37 PM.png" alt="ai" loading="lazy">
+        <span class="card-cat-pill" data-cat="ai-tools">AI Tools</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">AI sida lacag looga sameeyo billowga</h3>
+        <div class="card-footer"><span>BEST AI</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./aiforwebsitebuilders.html"
+       class="article-card"
+       data-cat="ai-tools"
+       data-title="samee wabseed casri ah adigoo adeegsanayo AI"
+       role="listitem">
+      <div class="card-img">
+        <img src="./5cf3c929-3b5c-4678-814e-b691144c7473.png" alt="ai" loading="lazy">
+        <span class="card-cat-pill" data-cat="ai-tools">AI Tools</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">samee wabseed casri ah adigoo adeegsanayo (AI)</h3>
+        <div class="card-footer"><span>AI for Website Builders</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./adsense.html"
+       class="article-card"
+       data-cat="online-income"
+       data-title="sidee adsense looga shaqeeya somaaliya"
+       role="listitem">
+      <div class="card-img">
+        <img src="./1724925728104.webp" alt="adsense" loading="lazy">
+        <span class="card-cat-pill" data-cat="online-income">Online Income</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">sidee adsense looga shaqeeya somaaliya?</h3>
+        <div class="card-footer"><span>Passive Income · 5 min</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./payoneer.html"
+       class="article-card"
+       data-cat="online-income"
+       data-title="payoneer somaliya sida loo furo loo isticmaalo"
+       role="listitem">
+      <div class="card-img">
+        <img src="./11522-postblog_image_1200x630-2.jpg.webp" alt="payoneer" loading="lazy">
+        <span class="card-cat-pill" data-cat="online-income">Online Income</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">payoneer somaliya: sida loo furo loo isticmaalo?</h3>
+        <div class="card-footer"><span>Banking</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./waafi.html"
+       class="article-card"
+       data-cat="online-income"
+       data-title="waafi mastercard somaliya sida loo furo loo isticmaalo"
+       role="listitem">
+      <div class="card-img">
+        <img src="./WhatsApp Image 2026-02-21 at 15.59.05.webp" alt="waafi" loading="lazy">
+        <span class="card-cat-pill" data-cat="online-income">Online Income</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">waafi mastercard somaliya: sida loo furo loo isticmaalo?</h3>
+        <div class="card-footer"><span>Payments</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./website.html"
+       class="article-card"
+       data-cat="online-income"
+       data-title="website sidee lacag looga sameeyaa"
+       role="listitem">
+      <div class="card-img">
+        <img src="./pexels-photo-4050319.jpeg" alt="website" loading="lazy">
+        <span class="card-cat-pill" data-cat="online-income">Online Income</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">website sidee lacag looga sameeyaa?</h3>
+        <div class="card-footer"><span>Monetize</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./freelencing.html"
+       class="article-card"
+       data-cat="freelancing"
+       data-title="freelancing somalia hagaha billowga"
+       role="listitem">
+      <div class="card-img">
+        <img src="./young-woman-freelancer-working-in-a-coffeehouse-u-2023-06-07-17-57-09-utc.jpg" alt="freelancing" loading="lazy">
+        <span class="card-cat-pill" data-cat="freelancing">Freelancing</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">freelancing somalia: hagaha billowga?</h3>
+        <div class="card-footer"><span>Freelance</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./fiver.html"
+       class="article-card"
+       data-cat="freelancing"
+       data-title="fiver somalia sida loo furto looga shaqaysto"
+       role="listitem">
+      <div class="card-img">
+        <img src="./WhatsApp Image 2026-02-21 at 17.07.47.jpeg" alt="fiverr" loading="lazy">
+        <span class="card-cat-pill" data-cat="freelancing">Freelancing</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">fiver somalia: sida loo furto looga shaqaysto?</h3>
+        <div class="card-footer"><span>Gig Economy</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./onlineincome.html"
+       class="article-card"
+       data-cat="online-income"
+       data-title="qaabkee lacag looga sameeya internetka"
+       role="listitem">
+      <div class="card-img">
+        <img src="./pexels-photo-5902919.jpeg" alt="online income" loading="lazy">
+        <span class="card-cat-pill" data-cat="online-income">Online Income</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">qaabkee lacag looga sameeya internetka?</h3>
+        <div class="card-footer"><span>Earning</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./hosting&domain.html"
+       class="article-card"
+       data-cat="coding"
+       data-title="hosting iyo domain hagaha billowga"
+       role="listitem">
+      <div class="card-img">
+        <img src="./Domain-vs-Hosting-Definitions-Working-And-Key-Differences.webp" alt="hosting" loading="lazy">
+        <span class="card-cat-pill" data-cat="coding">Coding</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">hosting iyo domain: hagaha billowga?</h3>
+        <div class="card-footer"><span>Web Infrastructure</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./programing.html"
+       class="article-card"
+       data-cat="coding"
+       data-title="programming luqadaha ugu muhiimsan"
+       role="listitem">
+      <div class="card-img">
+        <img src="./understanding-web-development-frameworks-og-image.jpg" alt="programming" loading="lazy">
+        <span class="card-cat-pill" data-cat="coding">Coding</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">programming: luqadaha ugu muhiimsan?</h3>
+        <div class="card-footer"><span>Coding</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./webdevelopment.html"
+       class="article-card"
+       data-cat="coding"
+       data-title="web development xagee ka bilaabaa"
+       role="listitem">
+      <div class="card-img">
+        <img src="./Website-to-Make-Money.webp" alt="web dev" loading="lazy">
+        <span class="card-cat-pill" data-cat="coding">Coding</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">web development: xagee ka bilaabaa?</h3>
+        <div class="card-footer"><span>Development</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./frontendvsbackend.html"
+       class="article-card"
+       data-cat="coding"
+       data-title="frontend vs backend keen ku billaabaa"
+       role="listitem">
+      <div class="card-img">
+        <img src="./Front-End-Back-End-Development-Featured.jpg" alt="frontend backend" loading="lazy">
+        <span class="card-cat-pill" data-cat="coding">Coding</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">frontend vs backend keen ku billaabaa?</h3>
+        <div class="card-footer"><span>Career Path</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./barashadahtmliyocss.html"
+       class="article-card"
+       data-cat="coding"
+       data-title="barashada html iyo css xageen ka billabaa"
+       role="listitem">
+      <div class="card-img">
+        <img src="./Make Simple Website in HTML CSS.webp" alt="html css" loading="lazy">
+        <span class="card-cat-pill" data-cat="coding">Coding</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">barashada html iyo css xageen ka billabaa?</h3>
+        <div class="card-footer"><span>Basics</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./jv.html"
+       class="article-card"
+       data-cat="coding"
+       data-title="javascript maxayta muhiimada uu uleeyahay"
+       role="listitem">
+      <div class="card-img">
+        <img src="./pexels-photo-31343632.jpeg" alt="js" loading="lazy">
+        <span class="card-cat-pill" data-cat="coding">Coding</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">javascript: maxayta muhiimada uu uleeyahay?</h3>
+        <div class="card-footer"><span>JavaScript</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="react.html"
+       class="article-card"
+       data-cat="coding"
+       data-title="sababata react loogu webseedyada casriga ah"
+       role="listitem">
+      <div class="card-img">
+        <img src="./images.png" alt="react" loading="lazy">
+        <span class="card-cat-pill" data-cat="coding">Coding</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">sababata react loogu webseedyada casriga ah?</h3>
+        <div class="card-footer"><span>Library</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="reactvsjv.html"
+       class="article-card"
+       data-cat="coding"
+       data-title="react vs javascript keen loo baahanyahay"
+       role="listitem">
+      <div class="card-img">
+        <img src="./Vanilla-JS-Vs-React-JS_-What-To-Choose-For-Your-Development_-2.webp" alt="comparison" loading="lazy">
+        <span class="card-cat-pill" data-cat="coding">Coding</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">react vs javascript: keen loo baahanyahay?</h3>
+        <div class="card-footer"><span>Comparison</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./git&github.html"
+       class="article-card"
+       data-cat="coding"
+       data-title="git github faaidada ay kuu leeyihiin"
+       role="listitem">
+      <div class="card-img">
+        <img src="./git-vs-github.webp" alt="git" loading="lazy">
+        <span class="card-cat-pill" data-cat="coding">Coding</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">git &amp; github: faaidada ay kuu leeyihiin?</h3>
+        <div class="card-footer"><span>Version Control</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./githubworkflow.html"
+       class="article-card"
+       data-cat="coding"
+       data-title="sidee project dhab ah loogu shaqeeyaa"
+       role="listitem">
+      <div class="card-img">
+        <img src="./746_github_flow.webp" alt="flow" loading="lazy">
+        <span class="card-cat-pill" data-cat="coding">Coding</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">sidee project dhab ah loogu shaqeeyaa?</h3>
+        <div class="card-footer"><span>Workflow</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="./github+netfly.html"
+       class="article-card"
+       data-cat="coding"
+       data-title="sidee webseed looga dhigaa online"
+       role="listitem">
+      <div class="card-img">
+        <img src="./4c68473a73da8b08a4dccadc10276ab997d09ade-2400x1350_Z1unRdg.webp" alt="deploy" loading="lazy">
+        <span class="card-cat-pill" data-cat="coding">Coding</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">sidee webseed looga dhigaa online?</h3>
+        <div class="card-footer"><span>Deployment</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="seobasics.html"
+       class="article-card"
+       data-cat="digital-skills"
+       data-title="sidee webseedkaaga loogu hagaajiyaa google"
+       role="listitem">
+      <div class="card-img">
+        <img src="./shutterstock_423521506-scaled-1.webp" alt="seo" loading="lazy">
+        <span class="card-cat-pill" data-cat="digital-skills">Digital Skills</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">sidee webseedkaaga loogu hagaajiyaa google?</h3>
+        <div class="card-footer"><span>SEO</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="contentstrategy.html"
+       class="article-card"
+       data-cat="digital-skills"
+       data-title="sidee loo qorsheeyaa qorista articles"
+       role="listitem">
+      <div class="card-img">
+        <img src="./Depositphotos_67853485_xl-2015-1024x683.webp" alt="content" loading="lazy">
+        <span class="card-cat-pill" data-cat="digital-skills">Digital Skills</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">sidee loo qorsheeyaa qorista articles?</h3>
+        <div class="card-footer"><span>Strategy</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="top6somaliblog.html"
+       class="article-card"
+       data-cat="digital-skills"
+       data-title="Top 6 Somali Blogs Sidee kuu caawin karaan"
+       role="listitem">
+      <div class="card-img">
+        <img src="./images.webp" alt="blogs" loading="lazy">
+        <span class="card-cat-pill" data-cat="digital-skills">Digital Skills</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Top 6 Somali Blogs: Sidee kuu caawin karaan?</h3>
+        <div class="card-footer"><span>Community</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="frontendrodmap2026.html"
+       class="article-card"
+       data-cat="coding"
+       data-title="Frontend Roadmap 2026 Sida loogu noqdo pro"
+       role="listitem">
+      <div class="card-img">
+        <img src="./maxresdefault.webp" alt="roadmap" loading="lazy">
+        <span class="card-cat-pill" data-cat="coding">Coding</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Frontend Roadmap 2026 – Sida loogu noqdo pro?</h3>
+        <div class="card-footer"><span>Roadmap 2026</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+    <a href="ai.html"
+       class="article-card"
+       data-cat="ai-tools"
+       data-title="sida loo isticmaalo AI 2026"
+       role="listitem">
+      <div class="card-img">
+        <img src="./WhatsApp Image 2026-02-27 at 15.11.49.jpeg" alt="ai" loading="lazy">
+        <span class="card-cat-pill" data-cat="ai-tools">AI Tools</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">sida loo isticmaalo AI 2026?</h3>
+        <div class="card-footer"><span>AI 2026</span><span class="card-read-cta">Akhri →</span></div>
+      </div>
+    </a>
+
+  </div><!-- /#article-grid -->
+
+  <!-- Empty state -->
+  <div id="empty-state" role="status">
+    <div class="es-icon">🔍</div>
+    <h3>Wax lama helin</h3>
+    <p>Isku day eray kale ama dooro qayb kale.</p>
+  </div>
+
+  <!-- Load More -->
+  <div class="load-more-wrap" id="load-more-wrap">
+    <button class="load-more-btn" id="load-more-btn" type="button">
+      Tus Wax Badan ↓
+    </button>
+  </div>
+
+</main>
+
+<!-- ============================================================
+     NEWSLETTER
+     ============================================================ -->
+<div class="newsletter-strip" role="complementary" aria-label="Newsletter signup">
+  <h2>Ku Biir Community-ga Premium</h2>
+  <p>Hel casharro cusub, SEO tips, iyo updates gaar ah oo toos kugu imaanaya email-kaaga.</p>
+  <form action="https://formspree.io/f/xzdaoeyv" method="POST">
+    <input type="email" name="email" required placeholder="Gali Email-kaaga" autocomplete="email">
+    <button type="submit">Subscribe</button>
+  </form>
+  <p class="nl-note">No spam. Ka bax wakhti kasta.</p>
+</div>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <h3>TechSomalia</h3>
+      <p>Baro teknoolajiyadda, programming iyo web development Af-Soomaali si fudud oo casri ah. Ka dhis mustaqbalkaaga halkan.</p>
+      <div class="footer-social">
+        <a href="https://www.youtube.com/@WalalMaxamed-i3u" rel="noopener" target="_blank">YouTube</a>
+        <a href="https://www.facebook.com/TechSomalia" rel="noopener" target="_blank">Facebook</a>
+        <a href="https://t.me/TechSomalia" rel="noopener" target="_blank">Telegram</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./blog.html">Blog</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="./privacy.html">Privacy Policy</a></li>
+        <li><a href="./terms.html">Terms</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 TechSomali. Made with 🔥 for the Somali Tech Community.</span>
+    <span>Mogadishu, Somalia</span>
+  </div>
+</footer>
+
+<!-- ============================================================
+     JAVASCRIPT — all logic preserved + search/filter added
+     ============================================================ -->
+<script>
+/* =============================================================
+   1. MOBILE MENU (original logic, preserved)
+   ============================================================= */
+const menuBtn   = document.getElementById('menu-btn');
+const closeMenu = document.getElementById('close-menu');
+const mobileMenu = document.getElementById('mobile-menu');
+
+menuBtn.addEventListener('click', () => {
+  mobileMenu.classList.add('open');
+  menuBtn.setAttribute('aria-expanded', 'true');
+  document.body.style.overflow = 'hidden';
+});
+
+closeMenu.addEventListener('click', () => {
+  mobileMenu.classList.remove('open');
+  menuBtn.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+});
+
+// Close on nav link click
+mobileMenu.querySelectorAll('a').forEach(a =>
+  a.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  })
+);
+
+/* =============================================================
+   2. DARK MODE (original logic, preserved)
+   ============================================================= */
+const themeToggleBtn      = document.getElementById('theme-toggle');
+const mobileThemeToggle   = document.getElementById('mobile-theme-toggle');
+const themeToggleDarkIcon  = document.getElementById('theme-toggle-dark-icon');
+const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+const mDarkIcon  = document.getElementById('m-dark-icon');
+const mLightIcon = document.getElementById('m-light-icon');
+const mThemeLabel = document.getElementById('m-theme-label');
+
+function setThemeIcons(isDark) {
+  if (isDark) {
+    themeToggleDarkIcon.classList.add('hidden');
+    themeToggleLightIcon.classList.remove('hidden');
+    mDarkIcon.classList.add('hidden');
+    mLightIcon.classList.remove('hidden');
+    mThemeLabel.textContent = 'Light Mode';
+  } else {
+    themeToggleDarkIcon.classList.remove('hidden');
+    themeToggleLightIcon.classList.add('hidden');
+    mDarkIcon.classList.remove('hidden');
+    mLightIcon.classList.add('hidden');
+    mThemeLabel.textContent = 'Dark Mode';
+  }
+}
+
+// Init
+const prefersDark = localStorage.getItem('color-theme') === 'dark' ||
+  (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+if (prefersDark) {
+  document.documentElement.classList.add('dark');
+  setThemeIcons(true);
+} else {
+  document.documentElement.classList.remove('dark');
+  setThemeIcons(false);
+}
+
+function toggleTheme() {
+  const isDark = document.documentElement.classList.toggle('dark');
+  localStorage.setItem('color-theme', isDark ? 'dark' : 'light');
+  setThemeIcons(isDark);
+}
+
+themeToggleBtn.addEventListener('click', toggleTheme);
+mobileThemeToggle.addEventListener('click', toggleTheme);
+
+/* =============================================================
+   3. ARTICLE FILTER + SEARCH + SORT (new — operates on DOM)
+   ============================================================= */
+const allCards     = Array.from(document.querySelectorAll('.article-card'));
+const grid         = document.getElementById('article-grid');
+const emptyState   = document.getElementById('empty-state');
+const resultCount  = document.getElementById('result-count');
+const loadMoreWrap = document.getElementById('load-more-wrap');
+const loadMoreBtn  = document.getElementById('load-more-btn');
+const searchInput  = document.getElementById('search-input');
+const sortSelect   = document.getElementById('sort-select');
+const tabBtns      = document.querySelectorAll('.tab-btn');
+
+const BATCH = 12;
+let currentCat    = 'all';
+let currentSearch = '';
+let currentSort   = 'default';
+let shownCount    = BATCH;
+
+// Cache original order
+allCards.forEach((c, i) => c.dataset.idx = i);
+
+function getFiltered() {
+  return allCards.filter(card => {
+
+    let category = card.dataset.cat || '';
+
+    const isAI =
+      category === 'ai-tools' ||
+      card.dataset.title.toLowerCase().includes('ai');
+
+    const matchCat =
+      currentCat === 'all'
+        ? true
+        : currentCat === 'ai'
+          ? isAI
+          : category === currentCat;
+
+    const searchableText = [
+      card.dataset.title || '',
+      card.dataset.cat || '',
+      card.querySelector('.card-title')?.textContent || '',
+      card.textContent || ''
+    ]
+      .join(' ')
+      .toLowerCase();
+
+    const matchSearch =
+      !currentSearch ||
+      searchableText.includes(currentSearch);
+
+    return matchCat && matchSearch;
+  });
+}
+
+function getSorted(list) {
+  if (currentSort === 'az') {
+    return [...list].sort((a, b) => a.dataset.title.localeCompare(b.dataset.title));
+  }
+  if (currentSort === 'za') {
+    return [...list].sort((a, b) => b.dataset.title.localeCompare(a.dataset.title));
+  }
+  return list; // default: original DOM order
+}
+
+function render() {
+  const filtered = getSorted(getFiltered());
+  const total    = filtered.length;
+
+  // Hide all, then show slice
+  allCards.forEach(c => {
+    c.style.display = 'none';
+    c.classList.remove('hidden');
+  });
+
+  const visible = filtered.slice(0, shownCount);
+  visible.forEach(c => { c.style.display = ''; });
+
+  // Re-append in sorted order to grid
+  if (currentSort !== 'default') {
+    visible.forEach(c => grid.appendChild(c));
+  }
+
+  // Result count
+  resultCount.textContent = `${total} cashar`;
+
+  // Empty state
+  emptyState.style.display = total === 0 ? 'block' : 'none';
+
+  // Load more
+  loadMoreWrap.style.display = total > shownCount ? 'block' : 'none';
+}
+
+// Tab filter
+tabBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    tabBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
+    btn.classList.add('active');
+    btn.setAttribute('aria-selected', 'true');
+    currentCat = btn.dataset.cat;
+    shownCount = BATCH;
+    render();
+  });
+});
+
+// Search
+let searchTimer;
+searchInput.addEventListener('input', e => {
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(() => {
+    currentSearch = e.target.value.trim().toLowerCase();
+    shownCount = BATCH;
+    render();
+  }, 200);
+});
+
+// Sort
+sortSelect.addEventListener('change', e => {
+  currentSort = e.target.value;
+  shownCount = BATCH;
+  render();
+});
+
+// Load More
+loadMoreBtn.addEventListener('click', () => {
+  shownCount += BATCH;
+  render();
+  // Smooth scroll hint
+  const cards = grid.querySelectorAll('.article-card:not([style*="none"])');
+  if (cards.length > 0) {
+    cards[cards.length - 1].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+});
+
+// Initial render
+render();
+
+/* =============================================================
+   4. SCROLL REVEAL
+   ============================================================= */
+if ('IntersectionObserver' in window) {
+  const ro = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        ro.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+} else {
+  document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+}
+</script>
+
 </body>
 </html>

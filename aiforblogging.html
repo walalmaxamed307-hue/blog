@@ -25,156 +25,31 @@
     <script>
         tailwind.config = { darkMode: 'class', theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } } }
     </script>
-    <style>
-        /* --- General Setup --- */
-        .glass-nav {
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
-
-        #mobile-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            z-index: 9999;
-            display: none;
-        }
-
-        #mobile-overlay.active {
-            display: flex;
-        }
-
-        #scroll-progress {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 4px;
-            background: #2563eb;
-            z-index: 100;
-            width: 0%;
-        }
-
-        /* --- ARTCLE BODY DESIGN (Halkan ayay dhibaatadu ka jirtay) --- */
-        .article-body {
-            color: #475569;
-            line-height: 1.8;
-            font-size: 1.15rem;
-        }
-
-        .dark .article-body {
-            color: #94a3b8;
-        }
-
-        /* Cinwaannada kala duwan */
-        .article-body h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: #1e293b;
-            margin-bottom: 1.5rem;
-        }
-
-        .article-body h2 {
-            font-size: 1.9rem;
-            font-weight: 800;
-            color: #2563eb;
-            margin-top: 2.5rem;
-            margin-bottom: 1.25rem;
-            border-left: 5px solid #2563eb;
-            padding-left: 1rem;
-        }
-
-        .article-body h3 {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: #1e293b;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .article-body h4 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #334155;
-            margin-top: 1.5rem;
-        }
-
-        .dark .article-body h1,
-        .dark .article-body h3,
-        .dark .article-body h4 {
-            color: #f1f5f9;
-        }
-
-        /* Hagaajinta Liisaska (Lists) - Tan ayaa muhiim u ah koodhkaaga */
-        .article-body ul {
-            list-style-type: disc !important;
-            margin-bottom: 1.5rem;
-            padding-left: 1.5rem;
-        }
-
-        .article-body ol {
-            list-style-type: decimal !important;
-            margin-bottom: 1.5rem;
-            padding-left: 1.5rem;
-        }
-
-        .article-body li {
-            margin-bottom: 0.6rem;
-        }
-
-        .article-body li::marker {
-            color: #2563eb;
-            font-weight: bold;
-        }
-
-        /* Strong & Links */
-        .article-body strong {
-            color: #1e293b;
-            font-weight: 700;
-        }
-
-        .dark .article-body strong {
-            color: #f8fafc;
-        }
-
-        .article-body a {
-            color: #2563eb;
-            text-decoration: underline;
-            font-weight: 600;
-        }
-
-        /* Sawirrada */
-        .article-body img {
-            border-radius: 2rem;
-            margin: 2rem 0;
-            width: 100%;
-            height: auto;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+  
+<link rel="stylesheet" href="./style.css">
 </head>
 
-<body class="bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
+<body>
 
     <div id="scroll-progress"></div>
 
-    <nav
-        class="glass-nav sticky top-0 z-50 bg-white/80 dark:bg-slate-900/90 border-b border-slate-200 dark:border-slate-800 h-20">
-        <div class="max-w-7xl mx-auto px-6 h-full flex justify-between items-center text-slate-900 dark:text-white">
-            <div class="flex items-center gap-2">
-                <img src="./171b2cde-e683-40d0-baa6-2d6af2de83ea.png" alt="logo" class="h-10 w-auto">
-                <span class="text-2xl font-black italic">TechSomali</span>
-            </div>
-            <ul class="hidden md:flex space-x-8 font-bold text-sm">
-                <li><a href="./index.html">home</a></li>
-                <li><a href="./blog.html" class="text-blue-600">Blog</a></li>
-                <li><a href="./about.html">about</a></li>
-                <li><a href="./contact.html">contact</a></li>
-            </ul>
-            <button id="open-menu" class="md:hidden text-3xl text-blue-600">☰</button>
-        </div>
-    </nav>
+
+<nav class="glass-nav sticky top-0 z-[100] border-b border-white/10 h-20">
+  <div class="max-w-7xl mx-auto flex justify-between items-center h-full px-6">
+    <a href="./index.html" class="flex items-center gap-2">
+  
+      <span class="text-2xl font-bold font-display text-white">Tech<span style="color:var(--coral)">Somali</span></span>
+    </a>
+    <div class="flex items-center">
+      <ul class="hidden md:flex items-center space-x-1 font-semibold text-sm text-[var(--cream-dim)]">
+        <li><a href="./index.html" class="px-4 py-2 rounded-lg hover:text-[var(--coral)] transition">Home</a></li>
+        <li><a href="./blog.html" class="px-4 py-2 rounded-lg text-[var(--coral)] font-bold">Blog</a></li>
+        <li><a href="./about.html" class="px-4 py-2 rounded-lg hover:text-[var(--coral)] transition">About</a></li>
+        <li><a href="./contact.html" class="px-4 py-2 rounded-lg hover:text-[var(--coral)] transition">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
     <div id="mobile-overlay"
         class="bg-white dark:bg-slate-950 flex-col items-center justify-center space-y-8 text-2xl font-bold transition-all dark:text-white">
@@ -184,44 +59,14 @@
         <a href="./blog.html">Blog</a>
         <a href="./contact.html">contact</a>
     </div>
-    <button id="theme-toggle"
-        class="fixed bottom-6 right-6 z-[100] p-4 bg-white dark:bg-slate-800 shadow-2xl rounded-full border border-slate-200 dark:border-slate-700 hover:scale-110 transition-all text-2xl">
-        <span id="theme-toggle-icon">🌙</span>
-    </button>
-
-    <script>
-        // Logic-ga Dark Mode
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const themeToggleIcon = document.getElementById('theme-toggle-icon');
-        const htmlElement = document.documentElement;
-
-        // Hubi haddii uu qofku horay u doortay dark mode
-        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            htmlElement.classList.add('dark');
-            themeToggleIcon.innerText = '☀️';
-        } else {
-            htmlElement.classList.remove('dark');
-            themeToggleIcon.innerText = '🌙';
-        }
-
-        themeToggleBtn.addEventListener('click', () => {
-            if (htmlElement.classList.contains('dark')) {
-                htmlElement.classList.remove('dark');
-                localStorage.setItem('theme', 'light');
-                themeToggleIcon.innerText = '🌙';
-            } else {
-                htmlElement.classList.add('dark');
-                localStorage.setItem('theme', 'dark');
-                themeToggleIcon.innerText = '☀️';
-            }
-        });
-    </script>
+  
     <header class="py-16 px-6 text-center max-w-4xl mx-auto">
         <div
             class="mb-4 inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-full text-xs font-bold uppercase">
             Technology</div>
-        <h1 class="text-4xl md:text-6xl font-black tracking-tight text-slate-900 dark:text-white mb-6 leading-tight">
-            qalabyada AI ee ay isticmaalaan blogging begginers
+    <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-6 leading-tight text-white">
+        qalabyada AI ee ay isticmaalaan blogging begginers
+    
             </a>
             </div>
         </h1>
@@ -231,12 +76,8 @@
     </header>
 
     <main class="max-w-4xl mx-auto px-6 pb-24">
-        <div
-            class="bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 md:p-12 shadow-2xl border border-slate-100 dark:border-slate-800 article-body">
-
+    <div class="article-body">
 <article>
-
-<h1>Best AI Tools for Blogging Beginners in 2026: Hagaha Dhamaystiran ee Bloggers-ka Cusub</h1>
 <img src="./55f18a39-2423-4b69-8894-2855bd6bcdac.png" alt="AI tools for blogging beginners" loading="lazy">
 <p>Blogging-ka maanta wuxuu galay marxalad cusub oo si weyn uga duwan sidii hore. Qofkii article qori jiray sannado ka hor wuxuu ku bixin jiray waqti badan cilmi baaris, title doorasho, keyword raadis, editing, iyo SEO optimization. Maanta arrintaas waxaa si weyn u beddelay qalabka AI ee casriga ah. Qof blogging cusub bilaabaya wuxuu heli karaa qalab awood badan leh oo ka caawinaya inuu article tayo sare leh qoro xitaa haddii uusan hore khibrad badan u lahayn content writing.</p>
 
@@ -451,17 +292,16 @@
             </div>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-6 mt-12">
-            <a href="aiforfreelencers.html"
-                class="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 hover:border-blue-500 transition shadow-lg">
-                <span class="text-xs text-slate-500 uppercase">Maqaalka xiga</span>
-                <p class="font-bold dark:text-white mt-1">adeegsiga AI dhinaca freelencers</p>
-            </a>
-                 <a href="aiforbusinessonline.html" class="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 hover:border-blue-500 transition shadow-lg">
-                <span class="text-xs text-slate-500 uppercase">Maqaalka xiga</span>
-                <p class="font-bold dark:text-white mt-1">AI for business online💵</p>
-            </a>
-        </div>
+      <div class="grid md:grid-cols-2 gap-6 mt-12">
+        <a href="aiforfreelencers.html" class="p-6 bg-[#131926] rounded-3xl border border-white/5 hover:border-[var(--coral)] transition shadow-lg text-white">
+            <span style="font-size: 0.875rem;color: #f75a00;text-align: center;">maqaalka xiga</span><br>
+            <p style="font-size: 0.875rem;color: #f8fafc;">Hagaha Dhamaystiran ee Freelancers-ka Cusub</p>
+        </a>
+        <a href="aiforbusinessonline.html" class="p-6 bg-[#131926] rounded-3xl border border-white/5 hover:border-[var(--coral)] transition shadow-lg text-white">
+            <span style="font-size: 0.875rem;color: #f75a00;text-align: center;">maqaalkii hore</span><br>
+            <p style="font-size: 0.875rem;color: #f8fafc;">Ganacsi ka bilow internetka</p>
+        </a>
+    </div>
     </main>
 
     <script>

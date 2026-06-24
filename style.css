@@ -1,0 +1,64 @@
+/* style.css - TechSomali Article Global Styles */
+
+:root {
+  --ink: #0F1B2D;
+  --surface: #16243A;
+  --surface-2: #1C2D47;
+  --line: rgba(245,243,234,0.10);
+  --cream: #F5F3EA;
+  --cream-dim: #C9CCD6;
+  --coral: #FF6B4A;
+  --mint: #6FE0BE;
+}
+
+body { 
+  background: var(--ink);
+  color: var(--cream);
+  font-family: 'Inter', sans-serif; 
+  scroll-behavior: smooth; 
+}
+
+.font-display { font-family: 'Fraunces', sans-serif; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+}
+
+.glass-nav { 
+  background: rgba(22, 36, 58, 0.75);
+  backdrop-filter: blur(12px); 
+  -webkit-backdrop-filter: blur(12px); 
+}
+
+#scroll-progress { position: fixed; top: 0; left: 0; height: 4px; background: var(--coral); z-index: 100; width: 0%; }
+#mobile-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: 9999; display: none; }
+#mobile-overlay.active { display: flex; }
+
+/* === DESIGN-KA MAQAALKA (KALA SOOCIDDA HEADERS-KA) === */
+.article-body { color: var(--cream-dim); line-height: 1.8; font-size: 1.15rem; }
+.article-body p { margin-bottom: 1.5rem; }
+
+/* H1 - Cinwaanka Wayn ee Maqaalka */
+.article-body h1 { font-family: 'Fraunces', sans-serif; font-size: 2.5rem; font-weight: 900; color: var(--cream); margin-bottom: 1.5rem; }
+
+/* H2 - Waxay helaysaa Midabka Coral-ka iyo Xariiq Bidix kaga yaal */
+.article-body h2 { font-family: 'Fraunces', sans-serif; font-size: 1.9rem; font-weight: 800; color: var(--coral); margin-top: 3rem; margin-bottom: 1.25rem; border-left: 4px solid var(--coral); padding-left: 1rem; }
+
+/* H3 - Waxay helaysaa Midabka Mint-ka ah */
+.article-body h3 { font-size: 1.4rem; font-weight: 700; color: var(--mint); margin-top: 2rem; margin-bottom: 1rem; }
+
+/* H4 - Waxay helaysaa Midabka Cream-ka oo ifaya */
+.article-body h4 { font-size: 1.25rem; font-weight: 700; color: var(--cream); margin-top: 1.5rem; }
+
+/* Liisaska (Lists) iyo Bar-tilmaameedyada */
+.article-body ul { list-style-type: disc !important; margin-bottom: 1.5rem; padding-left: 1.5rem; }
+.article-body ol { list-style-type: decimal !important; margin-bottom: 1.5rem; padding-left: 1.5rem; }
+.article-body li { margin-bottom: 0.6rem; }
+.article-body li::marker { color: var(--coral); font-weight: bold; }
+
+/* Links iyo Qoraalka Garabka adag */
+.article-body strong { color: var(--cream); font-weight: 700; }
+.article-body a { color: var(--mint); text-decoration: underline; font-weight: 600; }
+.article-body img { border-radius: 1.5rem; margin: 2rem 0; width: 100%; height: auto; border: 1px solid var(--line); }

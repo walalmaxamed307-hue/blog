@@ -23,304 +23,1529 @@
   <link rel="icon" href="./techsomalia-logo.png">
     
     <!-- Meta Tags -->
-    <meta name="description" content="TechSomali: Baro AI, Online Income, iyo Teknoolajiyadda casriga ah Af-Soomaali.">
-    <meta name="keywords" content="TechSomali, AI Af-Soomaali, Making Money Online, Somalia Tech">
+    <meta name="description" content="TechSomali: meesha ugu fiican ee aad ka baran karto AI,Digital Skills, Online Income,Isticmaalka AI iyo Teknoolajiyadda casriga ah Af-Soomaali.">
+    <meta name="keywords" content="TechSomali, AI Af-Soomaali, Making Money Online,Brashada AI,Fahanka AI Somalia Tech,Digital skills,xirfadaha online looga shaqaysto,wararka tiknoolijiyada">
     
-    <!-- Libraries -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap');
+<style>
+:root{
+  --ink:#0F1B2D;
+  --surface:#16243A;
+  --surface-2:#1C2D47;
+  --line:rgba(245,243,234,0.10);
+  --cream:#F5F3EA;
+  --cream-dim:#C9CCD6;
+  --coral:#FF6B4A;
+  --coral-dim:#FF8A6C;
+  --mint:#6FE0BE;
+  --mint-dim:#4FB89A;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--ink);
+  color:var(--cream);
+  font-family:'Inter',sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+.font-display{font-family:'Fraunces',serif;}
+.font-mono{font-family:'JetBrains Mono',monospace;}
 
-        :root {
-            --accent: #3b82f6;
-            --bg-dark: #020617;
-        }
+/* texture */
+body::before{
+  content:'';
+  position:fixed; inset:0; z-index:0; pointer-events:none;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(245,243,234,0.05) 1px, transparent 1px);
+  background-size:28px 28px;
+  opacity:.5;
+}
 
-        body {
-            font-family: 'Space Grotesk', sans-serif;
-            background-color: var(--bg-dark);
-            color: #f8fafc;
-            overflow-x: hidden;
-        }
+.eyebrow{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.7rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
 
-        /* Glassmorphism Classes */
-        .glass {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 24px;
-        }
+.card{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:18px;
+}
+.card-hover{ transition:transform .35s cubic-bezier(.22,1,.36,1), border-color .35s ease, background .35s ease; }
+.card-hover:hover{ transform:translateY(-4px); border-color:rgba(255,107,74,0.35); background:var(--surface-2); }
 
-        canvas#bg-canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1;
-            pointer-events: none;
-        }
+.btn-primary{
+  background:var(--coral);
+  color:#1A0E09;
+  font-weight:700;
+  border-radius:999px;
+  transition:transform .25s ease, background .25s ease;
+}
+.btn-primary:hover{ background:var(--coral-dim); transform:translateY(-2px); }
 
-        .text-gradient {
-            background: linear-gradient(to right, #60a5fa, #a78bfa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+.btn-secondary{
+  border:1px solid var(--line);
+  border-radius:999px;
+  transition:border-color .25s ease, background .25s ease, transform .25s ease;
+}
+.btn-secondary:hover{ border-color:rgba(245,243,234,0.4); background:rgba(245,243,234,0.04); transform:translateY(-2px); }
 
-        .bento-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            position: relative;
-            z-index: 10;
-        }
+.tag{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.68rem;
+  letter-spacing:.06em;
+  padding:.3rem .65rem;
+  border-radius:999px;
+  border:1px solid var(--line);
+}
 
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 0;
-            background-color: var(--accent);
-            transition: width 0.3s ease;
-        }
-        .nav-link:hover::after { width: 100%; }
+::selection{ background:var(--coral); color:#1A0E09; }
 
-        #mobileMenu { clip-path: circle(0% at 100% 0%); transition: clip-path 0.5s ease-in-out; }
-        #mobileMenu.active { clip-path: circle(150% at 100% 0%); }
-    </style>
+/* nav */
+#mobileMenu{ clip-path:circle(0% at 100% 0%); transition:clip-path .5s cubic-bezier(.65,0,.35,1); }
+#mobileMenu.active{ clip-path:circle(150% at 100% 0%); }
+
+/* reveal */
+.reveal{ opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s cubic-bezier(.22,1,.36,1); }
+.reveal.in{ opacity:1; transform:translateY(0); }
+
+/* path */
+.path-line{ stroke-dasharray:8 7; stroke-dashoffset:600; transition:stroke-dashoffset 1.6s cubic-bezier(.22,1,.36,1); }
+.path-line.in{ stroke-dashoffset:0; }
+.step-dot{ transition:background .3s ease, border-color .3s ease, transform .3s ease; }
+
+/* daily tip rotation */
+.tip-line{ transition:opacity .5s ease, transform .5s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal, .path-line, .card-hover, .btn-primary, .btn-secondary{ transition:none !important; }
+  .reveal{ opacity:1; transform:none; }
+}
+#mobileMenu{
+position:fixed;
+inset:0;
+z-index:9999;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+background:rgba(12,12,12,.85);
+backdrop-filter:blur(18px);
+
+opacity:0;
+visibility:hidden;
+
+transition:.35s ease;
+}
+
+#mobileMenu.active{
+opacity:1;
+visibility:visible;
+}
+
+.mobile-close{
+position:absolute;
+top:24px;
+right:24px;
+
+width:52px;
+height:52px;
+
+border:none;
+border-radius:50%;
+
+background:rgba(255,255,255,.08);
+
+font-size:2rem;
+cursor:pointer;
+}
+
+.mobile-nav{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:1.2rem;
+}
+
+.mobile-link{
+font-size:2rem;
+font-weight:700;
+text-decoration:none;
+color:var(--cream);
+
+opacity:0;
+transform:translateY(20px);
+
+transition:.4s ease;
+}
+
+#mobileMenu.active .mobile-link{
+opacity:1;
+transform:translateY(0);
+}
+
+.mobile-link:hover{
+color:var(--coral);
+}
+
+.accent-link{
+color:var(--coral);
+}
+
+.mobile-cta{
+margin-top:2rem;
+
+padding:14px 28px;
+
+border-radius:999px;
+
+background:var(--coral);
+color:#111;
+
+font-weight:700;
+text-decoration:none;
+}
+  .hero-slide{
+opacity:0;
+visibility:hidden;
+transition:all .8s ease;
+}
+
+.hero-slide.active{
+opacity:1;
+visibility:visible;
+}
+
+.hero-overlay{
+position:absolute;
+inset:0;
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+padding:2rem;
+background:linear-gradient(
+to top,
+rgba(0,0,0,.88),
+rgba(0,0,0,.45),
+transparent
+);
+}
+
+.hero-overlay h3{
+font-size:2rem;
+font-weight:700;
+margin-bottom:.75rem;
+}
+
+.hero-overlay p{
+color:#d0d0d0;
+line-height:1.7;
+max-width:420px;
+}
+
+.hero-tag{
+display:inline-block;
+margin-bottom:1rem;
+color:var(--coral);
+font-weight:600;
+}
+
+.dot{
+width:10px;
+height:10px;
+border-radius:50%;
+background:rgba(255,255,255,.3);
+transition:.3s;
+}
+
+.dot.active{
+background:white;
+transform:scale(1.2);
+}
+#featured .card img{
+  transition:transform .5s ease;
+}
+
+#featured .card:hover img{
+  transform:scale(1.05);
+}
+</style>
 </head>
-<body>
+<body class="overflow-x-hidden">
 
-    <canvas id="bg-canvas"></canvas>
+<!-- NAVIGATION -->
+<header class="fixed top-0 w-full z-[100] px-4 md:px-6 py-3">
 
-    <!-- NAVIGATION -->
-    <header class="fixed top-0 w-full z-[100] px-6 py-4 flex justify-between items-center glass m-4 w-[calc(100%-2rem)] mx-auto">
-        <div class="text-2xl font-bold tracking-tighter">
-            TECH<span class="text-blue-500">SOMALIA</span>
-        </div>
-        
-        <nav class="hidden md:flex items-center gap-10 font-medium">
-            <a href="./index.html" class="nav-link relative">Home</a>
-            <a href="./blog.html" class="nav-link relative">Blog</a>
-            <a href="./about.html" class="nav-link relative">About</a>
-            <a href="./contact.html" class="nav-link relative">Contact</a>
-        </nav>
+  <div class="max-w-7xl mx-auto flex items-center justify-between card px-5 py-3 backdrop-blur-md"
+    style="background:rgba(22,36,58,0.75);">
 
-        <div class="flex items-center gap-4">
-            <button id="menuBtn" class="p-2 text-2xl hover:text-blue-400 transition">☰</button>
-        </div>
-    </header>
+    <!-- LOGO -->
+    <a href="./index.html" class="font-display font-bold text-xl tracking-tight">
+      Tech<span style="color:var(--coral)">Somalia</span>
+    </a>
 
-    <!-- MOBILE MENU OVERLAY -->
-    <div id="mobileMenu" class="fixed inset-0 z-[110] bg-slate-950 flex flex-col items-center justify-center space-y-8 text-3xl font-bold">
-        <button id="closeBtn" class="absolute top-8 right-8 text-5xl">&times;</button>
-        <a href="./index.html" class="hover:text-blue-500">Home</a>
-        <a href="./blog.html" class="hover:text-blue-500">Blog</a>
-        <a href="./about.html" class="hover:text-blue-500">About</a>
-        <a href="./contact.html" class="hover:text-blue-500">Contact</a>
+    <!-- DESKTOP MENU -->
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium"
+      style="color:var(--cream-dim)">
+
+      <a href="./index.html" class="hover:text-[var(--cream)] transition">Home</a>
+      <a href="./blog.html" class="hover:text-[var(--cream)] transition">Blog</a>
+      <a href="./about.html" class="hover:text-[var(--cream)] transition">About</a>
+      <a href="./contact.html" class="hover:text-[var(--cream)] transition">Contact</a>
+
+      <a href="./faq.html" class="hover:text-[var(--coral)] transition">FAQ</a>
+      <a href="./privacy.html" class="hover:text-[var(--cream)] transition text-xs opacity-80">Privacy</a>
+      <a href="./terms.html" class="hover:text-[var(--cream)] transition text-xs opacity-80">Terms</a>
+
+    </nav>
+
+    <!-- ACTION BUTTON -->
+    <div class="flex items-center gap-3">
+
+      <a href="./index.html#categories"
+        class="hidden sm:inline-block btn-primary text-sm px-5 py-2.5">
+        Start Reading
+      </a>
+
+      <button id="menuBtn" class="md:hidden text-2xl leading-none px-1"
+        aria-label="Menu">☰</button>
+
     </div>
 
-    <!-- HERO SECTION -->
-    <section class="relative min-h-screen flex items-center justify-center z-10 px-6">
-        <div class="max-w-4xl text-center">
-            <div id="hero-pill" class="inline-block px-4 py-1 mb-6 border border-blue-500/30 rounded-full text-xs font-medium tracking-widest uppercase text-blue-400 bg-blue-500/10">
-                The Future of Somali Tech
-            </div>
-            <h1 id="hero-title" class="text-5xl md:text-8xl font-bold mb-6 tracking-tighter leading-tight">
-                Baro AI & <br><span class="text-gradient">Online Income</span>
-            </h1>
-            <p id="hero-sub" class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-                Ku dhis mustaqbalkaaga tignoolajiyadda adoo isticmaalaya casharro Af-Soomaali ah oo practical ah.
-            </p>
-            <div id="hero-btns" class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#features" class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-10 py-4 rounded-full transition-all transform hover:scale-105">
-                    🚀 Bilow Hadda
-                </a>
-                <a href="./blog.html" class="glass px-10 py-4 rounded-full font-bold hover:bg-white/10 transition">
-                    Akhri Blog-ga
-                </a>
-            </div>
-        </div>
-    </section>
+  </div>
+</header>
 
-    <!-- STATS -->
-    <section class="relative z-10 py-20">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="glass p-10 text-center stat-card">
-                <h2 class="text-5xl font-extrabold text-blue-500 mb-2">1000+</h2>
-                <p class="text-slate-400 uppercase tracking-widest text-sm">Arday Soomaaliyeed</p>
-            </div>
-            <div class="glass p-10 text-center stat-card">
-                <h2 class="text-5xl font-extrabold text-purple-500 mb-2">50+</h2>
-                <p class="text-slate-400 uppercase tracking-widest text-sm">Casharro Practical ah</p>
-            </div>
-            <div class="glass p-10 text-center stat-card">
-                <h2 class="text-5xl font-extrabold text-emerald-500 mb-2">100%</h2>
-                <p class="text-slate-400 uppercase tracking-widest text-sm">Af-Soomaali Nadiif ah</p>
-            </div>
-        </div>
-    </section>
+<!-- MOBILE MENU -->
+<div id="mobileMenu">
 
-    <!-- FEATURES BENTO GRID -->
-    <section id="features" class="relative z-10 py-24 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="mb-16 text-center">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">Maxaad ka Baran Doontaa?</h2>
-                <div class="h-1 w-20 bg-blue-500 mx-auto"></div>
-            </div>
+  <button id="closeBtn" class="mobile-close">
+    &times;
+  </button>
 
-            <div class="bento-grid">
-                <!-- Large Card -->
-                <div class="glass p-8 md:col-span-2 group hover:border-blue-500/50 transition">
-                    <div class="text-4xl mb-6">💻</div>
-                    <h3 class="text-2xl font-bold mb-4 group-hover:text-blue-400 transition">Using Artificial Intelligence</h3>
-                    <p class="text-slate-400 mb-6">Baro qaabka loo isticmaalo loola hadlo sirdoonka caqliga macmalka ah (AI) si aad u fududayso noloshaada.</p>
-                    <a href="./bestai.html" class="text-blue-500 font-bold flex items-center gap-2">Akhri Wax Badan <span>→</span></a>
-                </div>
+  <div class="mobile-nav">
 
-                <!-- Normal Card -->
-                <div class="glass p-8 group hover:border-purple-500/50 transition">
-                    <div class="text-4xl mb-6">💵</div>
-                    <h3 class="text-2xl font-bold mb-4 group-hover:text-purple-400 transition">Making Money with AI</h3>
-                    <p class="text-slate-400 mb-6">Bilow lacag ka samynta AI maanta. Baro qalabka lacagta lagu abuuro.</p>
-                    <a href="./makingmoneyai.html" class="text-purple-500 font-bold flex items-center gap-2">Bilow Hadda <span>→</span></a>
-                </div>
+    <a href="./index.html" class="mobile-link">
+      Home
+    </a>
 
-                <!-- Normal Card -->
-                <div class="glass p-8 group hover:border-emerald-500/50 transition">
-                    <div class="text-4xl mb-6">💰</div>
-                    <h3 class="text-2xl font-bold mb-4 group-hover:text-emerald-400 transition">Online Income</h3>
-                    <p class="text-slate-400 mb-6">Baro Freelancing, Remote Work iyo qaababka lacag looga sameeyo internet-ka.</p>
-                    <a href="./onlineincome.html" class="text-emerald-500 font-bold flex items-center gap-2">Baro Freelancing <span>→</span></a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <a href="./blog.html" class="mobile-link">
+      Blog
+    </a>
 
-    <!-- NEWSLETTER SECTION -->
-    <section class="relative z-10 py-24 px-6">
-        <div class="max-w-4xl mx-auto glass p-12 text-center border-blue-500/20">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ku Biir Community-ga Premium</h2>
-            <p class="text-slate-400 mb-10">Hel casharro cusub, SEO tips, iyo updates gaar ah oo toos ugu dhacaya email-kaaga.</p>
-            
-            <form action="https://formspree.io/f/xzdaoeyv" method="POST" class="flex flex-col sm:flex-row gap-4">
-                <input type="email" name="email" required placeholder="Gali Email-kaaga" 
-                    class="flex-1 bg-white/5 border border-white/10 rounded-full px-6 py-4 outline-none focus:border-blue-500 transition">
-                <button type="submit" class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-10 py-4 rounded-full transition">
-                    Subscribe Now
-                </button>
-            </form>
-            <p class="mt-4 text-xs text-slate-500 italic">No spam. Ka bax wakhti kasta.</p>
-        </div>
-    </section>
+    <a href="./about.html" class="mobile-link">
+      About
+    </a>
 
-    <!-- FOOTER -->
-    <footer class="relative z-10 bg-slate-950/80 border-t border-white/5 py-16 px-6">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
-            <div class="md:col-span-2">
-                <h3 class="text-2xl font-bold mb-4">TechSomalia</h3>
-                <p class="text-slate-400 max-w-sm mb-6">Hormuudka barashada tignoolajiyadda iyo AI ee Af-Soomaaliga. Waxaan dhisnaa jiilka mustaqbalka.</p>
-                <div class="flex gap-4">
-                    <a href="https://www.youtube.com/@WalalMaxamed-i3u" class="text-2xl hover:text-blue-400 transition">YT</a>
-                    <a href="https://www.facebook.com/TechSomalia" class="text-2xl hover:text-blue-400 transition">FB</a>
-                    <a href="https://t.me/TechSomalia" class="text-2xl hover:text-blue-400 transition">TG</a>
-                </div>
-            </div>
-            <div>
-                <h4 class="font-bold mb-4 uppercase tracking-widest text-sm text-blue-500">Links</h4>
-                <div class="flex flex-col gap-2 text-slate-400">
-                    <a href="./blog.html" class="hover:text-white">Blog</a>
-                    <a href="./about.html" class="hover:text-white">About</a>
-                    <a href="./privecy.html" class="hover:text-white">Privacy</a>
-                    <a href="./terms&conditions.html" class="hover:text-white">Terms</a>
-                </div>
-            </div>
-            <div>
-                <h4 class="font-bold mb-4 uppercase tracking-widest text-sm text-blue-500">Contact</h4>
-                <p class="text-slate-400">Mogadishu, Somalia</p>
-                <p class="text-slate-400">support@techsomalia.com</p>
-            </div>
-        </div>
-        <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-white/5 text-center text-slate-500 text-sm">
-            © 2026 TechSomalia. All rights reserved. | Developed by Mohamed Ahmed Ali
-        </div>
-    </footer>
+    <a href="./contact.html" class="mobile-link">
+      Contact
+    </a>
 
-    <!-- SCRIPTS -->
-    <script>
-        // --- THREE.JS NEURAL BACKGROUND ---
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('bg-canvas'), alpha: true, antialias: true });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setPixelRatio(window.devicePixelRatio);
+    <a href="./faq.html" class="mobile-link accent-link">
+      FAQ
+    </a>
 
-        const geometry = new THREE.BufferGeometry();
-        const vertices = [];
-        for (let i = 0; i < 3000; i++) {
-            vertices.push(THREE.MathUtils.randFloatSpread(20), THREE.MathUtils.randFloatSpread(20), THREE.MathUtils.randFloatSpread(20));
-        }
-        geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
-        const material = new THREE.PointsMaterial({ color: 0x3b82f6, size: 0.02, transparent: true, opacity: 0.4 });
-        const points = new THREE.Points(geometry, material);
-        scene.add(points);
-        camera.position.z = 5;
+   
+  </div>
 
-        function animate() {
-            requestAnimationFrame(animate);
-            points.rotation.y += 0.0005;
-            points.rotation.x += 0.0002;
-            renderer.render(scene, camera);
-        }
-        animate();
+  <a href="./blog.html" class="mobile-cta">
+    Bilow Barashada →
+  </a>
 
-        // --- GSAP ANIMATIONS ---
-        gsap.registerPlugin(ScrollTrigger);
+</div>
+<!-- SIMPLE TOGGLE SCRIPT -->
 
-        const tl = gsap.timeline();
-        tl.from("#hero-pill", { y: -20, opacity: 0, duration: 0.8 })
-          .from("#hero-title", { y: 50, opacity: 0, duration: 1, ease: "power4.out" }, "-=0.4")
-          .from("#hero-sub", { opacity: 0, duration: 1 }, "-=0.6")
-          .from("#hero-btns", { y: 20, opacity: 0, duration: 0.8 }, "-=0.8");
+             <!-- hero Section -->
+<section class="relative z-10 min-h-[90vh] flex items-center px-5 md:px-10 pt-32 pb-20">
 
-        gsap.utils.toArray(".stat-card, .glass").forEach(card => {
-            gsap.from(card, {
-                scrollTrigger: {
-                    trigger: card,
-                    start: "top 90%",
-                    toggleActions: "play none none reverse"
-                },
-                y: 40,
-                opacity: 0,
-                duration: 1,
-                ease: "power3.out"
-            });
-        });
+  <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
-        // --- INTERACTIVE MOUSE MOVEMENT ---
-        window.addEventListener('mousemove', (e) => {
-            const x = (e.clientX / window.innerWidth) - 0.5;
-            const y = (e.clientY / window.innerHeight) - 0.5;
-            gsap.to(points.rotation, { y: x * 0.4, x: y * 0.4, duration: 2 });
-        });
+<!-- LEFT -->
+<div class="max-w-2xl">
 
-        // --- MENU LOGIC ---
-        const menuBtn = document.getElementById('menuBtn');
-        const closeBtn = document.getElementById('closeBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
+  <div class="eyebrow inline-flex items-center gap-2 mb-6" style="color:var(--mint)">
+    <span class="w-2 h-2 rounded-full" style="background:var(--mint)"></span>
+    AI • DIGITAL SKILLS • Online Income
+  </div>
 
-        menuBtn.onclick = () => mobileMenu.classList.add('active');
-        closeBtn.onclick = () => mobileMenu.classList.remove('active');
+  <h1 class="font-display font-semibold text-5xl md:text-6xl lg:text-7xl leading-tight mb-6">
+    Baro 
+    <span style="color:var(--coral)">AI</span>
+    Xirfadaha casriga ah &
+    <br>
+    <span style="color:var(--coral)"> Online income.</span>
+  
+  </h1>
 
-        window.addEventListener('resize', () => {
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-        });
-    </script>
+  <p class="text-lg md:text-xl leading-relaxed mb-8"
+     style="color:var(--cream-dim)">
+     Haddii aad rabto inaad barato AI  ama hababka lacagta looga sameeyo internet-ka,
+    waxaad joogtaa meesha saxda ah.
+    TechSomalia waxay ku hagaysaa tallaabo tallaabo,
+    si aad uga gudubto bilow ilaa xirfad dhab ah oo noloshaada beddeli karta.
+  </p>
+
+  <div class="flex flex-col sm:flex-row gap-4 mb-8">
+
+    <a href="#start"
+       class="btn-primary px-8 py-4 text-center">
+      Bilow Hadda →
+    </a>
+
+    <a href="./blog.html"
+       class="btn-secondary px-8 py-4 text-center">
+      Eeg Casharrada
+    </a>
+
+  </div>
+
+  <div class="flex flex-wrap gap-6 text-sm">
+    <div><strong>50+</strong> Casharro</div>
+    <div><strong>100%</strong> Af-Soomaali</div>
+    <div><strong>AI + skill + income</strong> Hal Meel</div>
+  </div>
+
+</div>
+
+<!-- HERO SHOWCASE -->
+<div class="relative card overflow-hidden h-[500px]">
+
+  <!-- Slide 1 -->
+  <div class="hero-slide active absolute inset-0">
+    <img src="./ChatGPT Image Apr 2, 2026, 01_30_01 PM.png" class="w-full h-full object-cover">
+    <div class="hero-overlay">
+      <span class="hero-tag">AI & ChatGPT</span>
+      <h3>Baro AI-da Casriga ah</h3>
+      <p>Isticmaal ChatGPT iyo qalabka AI si aad u barato xirfado cusub.</p>
+    </div>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="hero-slide absolute inset-0">
+    <img src="./pexels-sora-shimazaki-5926382.jpg" class="w-full h-full object-cover">
+    <div class="hero-overlay">
+      <span class="hero-tag">Coding</span>
+      <h3>Noqo Web Developer</h3>
+      <p>Ka bilow HTML, CSS iyo JavaScript adigoo eber ka bilaabaya.</p>
+    </div>
+  </div>
+
+  <!-- Slide 3 -->
+  <div class="hero-slide absolute inset-0">
+    <img src="./eb47bcf8-f12a-49ea-a97a-0df21cee097a.webp" class="w-full h-full object-cover">
+    <div class="hero-overlay">
+      <span class="hero-tag">Online Income</span>
+      <h3>Hel Dakhligaaga Ugu Horreeya</h3>
+      <p>Baro habab dhab ah oo lacag looga sameeyo internet-ka.</p>
+    </div>
+  </div>
+
+  <!-- Slide 4 -->
+  <div class="hero-slide absolute inset-0">
+    <img src="./WhatsApp Image 2026-04-03 at 13.22.37.jpeg" class="w-full h-full object-cover">
+    <div class="hero-overlay">
+      <span class="hero-tag">Affiliate</span>
+      <h3>Affiliate Marketing</h3>
+      <p>Bilow affiliate marketing adigoo aan lacag badan haysan.</p>
+    </div>
+  </div>
+
+  <!-- Slide 5 -->
+  <div class="hero-slide absolute inset-0">
+    <img src="./ChatGPT Image Apr 2, 2026, 02_22_04 PM.png"    class="w-full h-full object-cover">
+    <div class="hero-overlay">
+      <span class="hero-tag">Success</span>
+      <h3>Dhis Mustaqbalkaaga</h3>
+      <p>Xirfadaha maanta la barto ayaa noqon kara shaqadaada berri.</p>
+    </div>
+  </div>
+
+  <!-- Dots -->
+  <div id="heroIndicators"
+       class="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-2 z-30">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+</div>
+   </div>
+   </section>
+   <!-- SEARCH -->
+<section class="relative z-10 px-5 md:px-10 -mt-6 mb-12">
+
+  <div class="max-w-4xl mx-auto">
+
+    <div class="card p-4 md:p-5">
+
+      <div class="flex items-center gap-3">
+
+        <svg width="20" height="20" fill="none"
+          stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24"
+          style="color:var(--cream-dim)">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="M21 21l-4.3-4.3"></path>
+        </svg>
+
+        <input
+          id="siteSearch"
+          type="text"
+          placeholder="Raadi xirfadaada AI, Online Income, Digital Skills..."
+          class="w-full bg-transparent outline-none text-base"
+          style="color:var(--cream)"
+        >
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+   <!-- GUIDED START -->
+
+<section id="start" class="relative z-10 py-24 px-5 md:px-10">
+  <div class="max-w-7xl mx-auto">
+
+<!-- Section Header -->
+<div class="mb-16 reveal text-center max-w-4xl mx-auto">
+
+  <span class="eyebrow" style="color:var(--mint)">
+    Jidkaaga Guusha
+  </span>
+
+  <h2 class="font-display font-semibold text-4xl md:text-5xl mt-4 mb-5 tracking-tight">
+    4 Tallaabo oo Kugu Hoggaaminaya inaad gaarto
+    <span style="color:var(--coral)">Natiijo Dhab ah</span>
+  </h2>
+
+  <p class="max-w-3xl mx-auto text-lg md:text-xl leading-relaxed"
+     style="color:var(--cream-dim)">
+    Ma rabtaa inaad barato AI ama hababka lacagta looga sameeyo internet-ka,
+    laakiin maku haysataa dhibaato ah in aadan garanayn meesha laga bilaabo, ha walwalin.
+    Waxaan kuu diyaarinay waddo cad oo tallaabo-tallaabo ah si aad uga gudubto bilow ilaa xirfad dhab ah.
+  </p>
+
+</div>
+
+<div class="relative">
+
+  <!-- Progress Line -->
+  <svg class="hidden md:block absolute left-0 right-0 top-10 w-full"
+       height="4"
+       viewBox="0 0 1000 4"
+       preserveAspectRatio="none">
+
+    <line x1="60" y1="2" x2="940" y2="2"
+          stroke="var(--line)"
+          stroke-width="2"/>
+
+    <line id="pathProgress"
+          class="path-line"
+          x1="60"
+          y1="2"
+          x2="940"
+          y2="2"
+          stroke="var(--coral)"
+          stroke-width="2"/>
+
+  </svg>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-7 relative">
+
+    <!-- STEP 1 -->
+    <a href="./studingTechnology.html" class="card card-hover p-7 reveal block">
+
+      <div class="step-dot w-11 h-11 rounded-full flex items-center justify-center font-mono font-bold mb-6 border"
+           style="border-color:var(--coral); color:var(--coral)">
+        01
+      </div>
+
+      <h3 class="font-display font-semibold text-xl mb-3">
+        Bilow Sax ah
+      </h3>
+
+      <p class="text-sm mb-5"
+         style="color:var(--cream-dim)">
+        Faham aasaaska tignoolajiyadda iyo jidka saxda ah ee lagu bilaabo.
+        Tani waa saldhigga guushaada mustaqbalka.
+      </p>
+
+      <span class="tag"
+            style="color:var(--coral); border-color:rgba(255,107,74,0.3)">
+        Beginner Guide
+      </span>
+
+    </a>
+
+    <!-- STEP 2 -->
+    <a href="./bestai.html" class="card card-hover p-7 reveal block">
+
+      <div class="step-dot w-11 h-11 rounded-full flex items-center justify-center font-mono font-bold mb-6 border"
+           style="border-color:var(--line); color:var(--cream-dim)">
+        02
+      </div>
+
+      <h3 class="font-display font-semibold text-xl mb-3">
+        Baro AI-da Casriga ah
+      </h3>
+
+      <p class="text-sm mb-5"
+         style="color:var(--cream-dim)">
+        Faham sida ChatGPT iyo qalabka AI u shaqeeyaan,
+        una isticmaal si aad shaqooyin badan ugu qabato waqti yar.
+      </p>
+
+      <span class="tag"
+            style="color:var(--mint); border-color:rgba(111,224,190,0.3)">
+        AI Tools
+      </span>
+
+    </a>
+    <!-- STEP 3 -->
+    <a href="./makingmoneyai.html" class="card card-hover p-7 reveal block">
+
+      <div class="step-dot w-11 h-11 rounded-full flex items-center justify-center font-mono font-bold mb-6 border"
+           style="border-color:var(--line); color:var(--cream-dim)">
+        03
+      </div>
+
+      <h3 class="font-display font-semibold text-xl mb-3">
+        Noqo Xirfadle Heer Sare ah
+      </h3>
+
+      <p class="text-sm mb-5"
+         style="color:var(--cream-dim)">
+        Kor u qaad xirfadahaaga adigoo isticmaalaya qalab(AI) iyo farsamooyin ay isticmaalaan xirfadlayaasha casriga ah.
+      </p>
+
+      <span class="tag"
+            style="color:var(--cream)">
+        Advanced
+      </span>
+
+    </a>
+
+
+    <!-- STEP 4 -->
+    <a href="./onlineincome.html" class="card card-hover p-7 reveal block">
+
+      <div class="step-dot w-11 h-11 rounded-full flex items-center justify-center font-mono font-bold mb-6 border"
+           style="border-color:var(--line); color:var(--cream-dim)">
+        04
+      </div>
+
+      <h3 class="font-display font-semibold text-xl mb-3">
+        Hel Dakhligaaga Ugu Horreeya
+      </h3>
+
+      <p class="text-sm mb-5"
+         style="color:var(--cream-dim)">
+        Baro habab dhab ah oo lacag looga sameeyo internet-ka adigoon u baahnayn khibrad ama maalgelin weyn.
+      </p>
+
+      <span class="tag"
+            style="color:var(--cream)">
+        Online Income
+      </span>
+
+    </a>
+
+    
+  </div>
+
+</div>
+
+  </div>
+</section>
+<!-- FEATURED -->
+
+<section id="featured" class="relative z-10 py-24 px-5 md:px-10" style="background:var(--surface); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="max-w-7xl mx-auto">
+
+
+<div class="mb-16 reveal text-center max-w-3xl mx-auto">
+  <span class="eyebrow" style="color:var(--coral)">
+    Casharrada Ugu Caansan
+  </span>
+
+  <h2 class="font-display font-semibold text-4xl md:text-5xl mt-3 mb-5 tracking-tight">
+    Halkaan Ka Bilow Haddii Aad Rabto inaad gaarto
+    <span style="color:var(--coral)">Natiijo Dhab ah</span>
+  </h2>
+
+  <p class="text-lg leading-relaxed" style="color:var(--cream-dim)">
+    Kuwani waa casharrada ugu qiimaha badan ee ay akhriyeen boqolaal booqde.
+    Haddii aad cusub tahay, waxaan kugula talineynaa inaad ka bilowdo halkan.
+  </p>
+</div>
+
+<div class="grid lg:grid-cols-2 gap-6">
+
+<!-- MAIN FEATURE -->
+<a href="./usingChatgptAndOhterAI.html"
+   class="card card-hover overflow-hidden lg:row-span-2 reveal flex flex-col"
+   style="border-color:rgba(255,107,74,0.35)">
+
+  <!-- FEATURE IMAGE -->
+  <div class="relative">
+
+    <img src="./usingchatgpt.jpg"
+         alt="ChatGPT AI Guide"
+         class="w-full h-72 object-cover">
+
+    <div class="absolute top-5 left-5 flex gap-3">
+
+      <span class="tag"
+            style="background:var(--coral);
+                   color:#1A0E09;
+                   border:none;
+                   font-weight:700;">
+        ★ #1 Bilowga Ugu Fiican
+      </span>
+
+      <span class="tag"
+            style="background:rgba(15,17,21,.8);
+                   color:var(--mint);
+                   border-color:rgba(111,224,190,.3)">
+        Using AI
+      </span>
+
+    </div>
+
+  </div>
+
+  <!-- CONTENT -->
+  <div class="p-8 flex flex-col flex-1 justify-between">
+
+    <div>
+
+      <h3 class="font-display font-semibold text-3xl mb-4 leading-tight">
+        Sida Loo Isticmaalo ChatGPT iyo AI-yada Kale
+      </h3>
+
+      <p class="text-base mb-6"
+         style="color:var(--cream-dim)">
+        Dadka badankoodu waxay AI u isticmaalaan si khaldan.
+        Baro prompt-yada saxda ah, farsamooyinka casriga ah,
+        iyo sida aad uga heli karto jawaabo tayo sare leh
+        daqiiqado gudahood.
+      </p>
+
+    </div>
+
+    <div class="flex items-center justify-between font-mono text-xs"
+         style="color:var(--cream-dim)">
+
+      <span>3 daqiiqo akhris</span>
+
+      <span style="color:var(--cream)">
+        Akhri Hadda →
+      </span>
+
+    </div>
+
+  </div>
+
+</a>
+
+
+<!-- CARD 2 -->
+  <a href="./10skills.html"
+     class="card card-hover p-7 reveal flex flex-col justify-between">
+
+    <div>
+
+      <span class="tag inline-block mb-5"
+            style="color:var(--mint); border-color:rgba(111,224,190,0.3)">
+        Digital Skills
+      </span>
+
+      <h3 class="font-display font-semibold text-xl mb-3 leading-snug">
+        Dooro xirfad aad maanta bilowdo
+      </h3>
+
+      <p class="text-sm mb-5"
+         style="color:var(--cream-dim)">
+        Wabseedkaan aad ku jirto waxaa ku diyaarsan boqolaal
+         xirfadood, guji halkaan si aad maantaba xirfad u bilowdo
+      </p>
+
+    </div>
+
+    <div class="flex items-center justify-between font-mono text-xs"
+         style="color:var(--cream-dim)">
+      <span>3 daqiiqo</span>
+      <span>→</span>
+    </div>
+
+  </a>
+
+  <!-- CARD 3 -->
+  <a href="./earnmoney.html"
+     class="card card-hover p-7 reveal flex flex-col justify-between">
+
+    <div>
+
+      <span class="tag inline-block mb-5"
+            style="color:var(--cream)">
+        Online Income
+      </span>
+
+      <h3 class="font-display font-semibold text-xl mb-3 leading-snug">
+        Billow lacag ka samaynta AI Xitaa Haddii Aad Bilow Tahay
+      </h3>
+
+      <p class="text-sm mb-5"
+         style="color:var(--cream-dim)">
+        Baro Hababka ay maanta dad badan u adeegsadaan AI si ay uga helaan dakhli dheeraad ah internet-ka.
+      </p>
+
+    </div>
+
+    <div class="flex items-center justify-between font-mono text-xs"
+         style="color:var(--cream-dim)">
+      <span>2 daqiiqo</span>
+      <span>→</span>
+    </div>
+
+  </a>
+
+  
+  <!-- CARD 4 -->
+  <a href="./aiforaffliate.html"
+     class="card card-hover p-7 reveal flex flex-col justify-between lg:col-start-2">
+
+    <div>
+
+      <span class="tag inline-block mb-5"
+            style="color:var(--coral); border-color:rgba(255,107,74,0.3)">
+        Affiliate Marketing
+      </span>
+
+      <h3 class="font-display font-semibold text-xl mb-3 leading-snug">
+       Xirfada ugu fudud ee aad internetka lacag uga samayn kartid maanta
+      </h3>
+
+      <p class="text-sm mb-5"
+         style="color:var(--cream-dim)">
+        Si aad xirfadaan u bilowdo uma baahnid waqti badan 
+        ama lacag inaad galiso, kaliya fahan yar ayaad ubaahan tahay
+      </p>
+
+    </div>
+
+    <div class="flex items-center justify-between font-mono text-xs"
+         style="color:var(--cream-dim)">
+      <span>5 daqiiqo</span>
+      <span>→</span>
+    </div>
+
+  </a>
+
+</div>
+
+  </div>
+</section>
+<!-- LATEST ARTICLES -->
+<section id="latest" class="relative z-10 py-24 px-5 md:px-10"
+  style="background:var(--surface); border-bottom:1px solid var(--line);">
+
+  <div class="max-w-7xl mx-auto">
+
+    <div class="mb-16 reveal text-center max-w-3xl mx-auto">
+
+      <span class="eyebrow" style="color:var(--mint)">
+        Cusub & Trending
+      </span>
+
+      <h2 class="font-display font-semibold text-4xl md:text-5xl mt-3 mb-5 tracking-tight">
+        Latest Articles
+        <span style="color:var(--coral)">🔥 SEO Updates</span>
+      </h2>
+
+      <p class="text-lg leading-relaxed" style="color:var(--cream-dim)">
+        Maqaalladii ugu dambeeyay ee TechSomalia oo si joogto ah loo cusbooneysiiyo.
+      </p>
+
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-6">
+
+      <!-- CARD -->
+<a href="./imageGenerotors.html"
+   class="card card-hover overflow-hidden reveal">
+
+  <img src="imageGenerotor.png"
+       alt="AI Photo Editor"
+       class="w-full h-52 object-cover">
+
+  <div class="p-7">
+
+    <span class="tag mb-5 inline-block"
+          style="color:var(--coral)">
+      Photo Editor
+    </span>
+
+    <h3 class="font-display font-semibold text-xl mb-3">
+      Ku Dhis AI Sawirro Cajiib ah — Bilaash
+    </h3>
+
+    <p class="text-sm"
+       style="color:var(--cream-dim)">
+      Baro qalabka ugu fiican ee AI sawir-samaynta iyo sawir-hagaajinta.
+    </p>
+
+    <div class="flex items-center justify-between font-mono text-xs mt-6"
+         style="color:var(--cream-dim)">
+      <span>5 min</span>
+      <span style="color:var(--cream)">Akhri →</span>
+    </div>
+
+  </div>
+
+</a>
+<!-- card 2 -->
+
+<a href="./aiforblogging.html"
+   class="card card-hover overflow-hidden reveal flex flex-col">
+
+  <img src="ChatGPT Image Mar 27, 2026, 01_06_27 PM.png"
+       alt="Blogging"
+       class="w-full h-52 object-cover">
+
+  <div class="p-7 flex flex-col flex-1 justify-between">
+
+    <div>
+      <span class="tag mb-5 inline-block"
+            style="color:var(--mint)">
+        BLOGGING
+      </span>
+
+      <h3 class="font-display font-semibold text-xl mb-3">
+        Sida Blog Lacag Looga Sameeyo 2026
+      </h3>
+
+      <p class="text-sm"
+         style="color:var(--cream-dim)">
+        Baro blogging-ka casriga ah, SEO iyo hababka monetization-ka ee maanta shaqeeya.
+      </p>
+    </div>
+
+    <div class="flex items-center justify-between font-mono text-xs mt-6"
+         style="color:var(--cream-dim)">
+      <span>5 min</span>
+      <span style="color:var(--cream)">Akhri →</span>
+    </div>
+
+  </div>
+
+</a>
+<!-- card 3 -->
+ <a href="./makemoneychatgpt.html"
+   class="card card-hover overflow-hidden reveal flex flex-col">
+
+  <img src="ChatGPT Image Apr 2, 2026, 01_30_01 PM.png"
+       alt="ChatGPT Money"
+       class="w-full h-52 object-cover">
+
+  <div class="p-7 flex flex-col flex-1 justify-between">
+
+    <div>
+      <span class="tag mb-5 inline-block"
+            style="color:var(--cream)">
+        AI MONEY
+      </span>
+
+      <h3 class="font-display font-semibold text-xl mb-3">
+        ChatGPT Lacag Ka Samee 2026 💵
+      </h3>
+
+      <p class="text-sm"
+         style="color:var(--cream-dim)">
+        Habab dhab ah oo aad ChatGPT ugu adeegsan karto freelancing, content creation iyo online income.
+      </p>
+    </div>
+
+    <div class="flex items-center justify-between font-mono text-xs mt-6"
+         style="color:var(--cream-dim)">
+      <span>3 min</span>
+      <span style="color:var(--cream)">Akhri →</span>
+    </div>
+
+  </div>
+
+</a>
+    </div>
+
+  </div>
+</section>
+<!-- CATEGORIES -->
+<section id="categories" class="relative z-10 py-24 px-5 md:px-10" style="background:var(--surface); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Section Header -->
+    <div class="mb-16 reveal text-center max-w-4xl mx-auto">
+
+      <span class="eyebrow" style="color:var(--coral)">
+        Sahami Mawduucyada
+      </span>
+
+      <h2 class="font-display font-semibold text-4xl md:text-5xl mt-4 mb-5 tracking-tight">
+        Dooro Xirfadda Aad Rabto
+        <span style="color:var(--coral)">Inaad Maanta Bilowdo</span>
+      </h2>
+
+      <p class="text-lg md:text-xl leading-relaxed max-w-3xl mx-auto"
+         style="color:var(--cream-dim)">
+        Haddii aad rabto inaad barato AI, Coding, Affiliate Marketing ama
+        hababka lacagta looga sameeyo internet-ka, qaybahan ayaa kuu fududeynaya
+        inaad si degdeg ah u hesho casharrada kuugu muhiimsan.
+      </p>
+
+    </div>
+
+    <!-- Categories Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
+      <!-- Coding -->
+      <a href="./webdevelopment.html"
+         class="card card-hover p-6 reveal"
+         style="border-top:3px solid #8B9DFF">
+
+        <h3 class="font-display font-semibold text-lg mb-3">
+          💻 Web development
+        </h3>
+
+        <p class="text-sm leading-relaxed"
+           style="color:var(--cream-dim)">
+          Ka bilow HTML, CSS iyo JavaScript si aad u barato dhismaha websites iyo apps casri ah.
+        </p>
+
+      </a>
+
+
+      <!-- vedio editing -->
+      <a href="./aiforvedioeditors.html"
+         class="card card-hover p-6 reveal"
+         style="border-top:3px solid var(--coral)">
+
+        <h3 class="font-display font-semibold text-lg mb-3">
+         👨‍💻 Vedio editing
+        </h3>
+
+        <p class="text-sm leading-relaxed"
+           style="color:var(--cream-dim)">
+          Baro Vedio editing, AI tools  kaa caawinaya inaad noqoto vedio editor suuqa qiimo wayn ka leh.
+        </p>
+
+      </a>
+      <!-- Dropshiping -->
+      <a href="./aidropshiping.html"
+         class="card card-hover p-6 reveal"
+         style="border-top:3px solid #FFC15E">
+
+        <h3 class="font-display font-semibold text-lg mb-3">
+          💸Dropshiping
+        </h3>
+
+        <p class="text-sm leading-relaxed"
+           style="color:var(--cream-dim)">
+          Faham sida loo samaysto ganacsi xoogan adigoo gurigaada joogo ama sariirtaada jiifo .
+        </p>
+
+      </a>
+
+      <!-- Online Income -->
+      <a href="./onlineincome.html"
+         class="card card-hover p-6 reveal"
+         style="border-top:3px solid var(--mint)">
+
+        <h3 class="font-display font-semibold text-lg mb-3">
+          💰 Online Income
+        </h3>
+
+        <p class="text-sm leading-relaxed"
+           style="color:var(--cream-dim)">
+          Baro habab dhab ah oo lacag looga sameeyo internet-ka adigoo isticmaalaya xirfado iyo qalab casri ah.
+        </p>
+
+      </a>
+
+      
+      
+
+      <!-- 10 xirfadood -->
+      <a href="./10skills.html"
+         class="card card-hover p-6 reveal"
+         style="border-top:3px solid #C9CCD6">
+
+        <h3 class="font-display font-semibold text-lg mb-3">
+          🤹 10 skills
+        </h3>
+
+        <p class="text-sm leading-relaxed"
+           style="color:var(--cream-dim)">
+          10 xirafadood ee ugu saamaynta badan suuqa shaqada(2026).
+        </p>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- NEWSLETTER -->
+<section class="relative z-10 py-24 px-5 md:px-10">
+  <div class="max-w-4xl mx-auto card p-10 md:p-14 text-center reveal" style="border-color:rgba(255,107,74,0.25)">
+    <span class="eyebrow" style="color:var(--coral)">Ha Iska Dhaafin</span>
+    <h2 class="font-display font-semibold text-3xl md:text-4xl mt-3 mb-4 tracking-tight">Hel Cashar Cusub Toddobaad Walba</h2>
+    <p class="mb-9 max-w-lg mx-auto" style="color:var(--cream-dim)">Mid kaliya oo email ah — cashar gaaban, AI tip, iyo qalab cusub, toos loogu soo diro inbox-kaaga.</p>
+    <form action="https://formspree.io/f/xzdaoeyv" method="POST" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+      <input type="email" name="email" required placeholder="email@tusaale.com"
+        class="flex-1 px-5 py-4 rounded-full outline-none text-sm" style="background:var(--surface-2); border:1px solid var(--line); color:var(--cream)">
+      <button type="submit" class="btn-primary px-7 py-4 text-sm whitespace-nowrap">Iska Diiwaan Geli</button>
+    </form>
+    <p class="mt-4 text-xs" style="color:var(--cream-dim)">Wax spam ah malahan. Ka bax wakhti kasta.</p>
+  </div>
+</section>
+<!-- FAQ SECTION (EXPANDED) -->
+<section id="faq" class="relative z-10 py-24 px-5 md:px-10"
+  style="background:var(--surface); border-top:1px solid var(--line);">
+
+  <div class="max-w-5xl mx-auto">
+
+    <div class="mb-16 reveal text-center max-w-3xl mx-auto">
+
+      <span class="eyebrow" style="color:var(--coral)">
+        SEO + Trust Builder
+      </span>
+
+      <h2 class="font-display font-semibold text-4xl md:text-5xl mt-3 mb-5">
+        Frequently Asked
+        <span style="color:var(--mint)">Questions</span>
+      </h2>
+
+      <p class="text-lg leading-relaxed" style="color:var(--cream-dim)">
+        Su’aalaha ugu muhiimsan ee ku saabsan TechSomalia, barashada tech, iyo lacag samaynta online.
+      </p>
+
+    </div>
+
+    <div class="space-y-5">
+
+      <!-- 1 -->
+      <div class="card card-hover p-6 reveal">
+        <details>
+          <summary class="font-display font-semibold cursor-pointer">
+            Waa maxay TechSomalia?
+          </summary>
+          <p class="mt-4 text-sm leading-relaxed" style="color:var(--cream-dim)">
+            TechSomalia waa website loogu talagalay barashada technology-ga, AI tools, coding, digital skills iyo
+            online income. Ujeeddadu waa in dhalinyarada Soomaaliyeed lagu caawiyo xirfado casri ah oo ay shaqo ama
+            dakhli kaga sameyn karaan internet-ka.
+          </p>
+        </details>
+      </div>
+
+      <!-- 2 -->
+      <div class="card card-hover p-6 reveal">
+        <details>
+          <summary class="font-display font-semibold cursor-pointer">
+            Yaa iska leh TechSomalia?
+          </summary>
+          <p class="mt-4 text-sm leading-relaxed" style="color:var(--cream-dim)">
+            TechSomalia waxaa sameeyay hal-abuure Somali ah oo diiradda saaraya tech education iyo digital growth.
+            Website-ku wuxuu ku dhisan yahay fikir ah in aqoonta tech-ga laga dhigo mid fudud oo qof walba fahmi karo.
+          </p>
+        </details>
+      </div>
+      <!-- 3 -->
+      <div class="card card-hover p-6 reveal">
+        <details>
+          <summary class="font-display font-semibold cursor-pointer">
+            Sidee lacag looga sameeyaa TechSomalia ama internet-ka?
+          </summary>
+          <p class="mt-4 text-sm leading-relaxed" style="color:var(--cream-dim)">
+            Lacag sameynta internet-ka waxay ku xirantahay xirfaddaada. Waxaad isticmaali kartaa:
+            blogging + ads, affiliate marketing, freelancing ama AI tools si aad u sameyso content ama adeegyo.
+            TechSomalia waxay ku baraysaa sida xirfadahaas loo barto loona isticmaalo.
+          </p>
+        </details>
+      </div>
+
+      <!-- 4 -->
+      <div class="card card-hover p-6 reveal">
+        <details>
+          <summary class="font-display font-semibold cursor-pointer">
+            Ma bilaabi karaa xitaa haddii aan eber ahay?
+          </summary>
+          <p class="mt-4 text-sm leading-relaxed" style="color:var(--cream-dim)">
+            Haa. TechSomalia waxaa loogu talagalay bilowga (beginners). Wax walba waxaa lagu sharxaa si fudud,
+            talaabo-talaabo ah si aad uga bilowdo eber ilaa heer xirfad leh.
+          </p>
+        </details>
+      </div>
+
+  
+    </div>
+
+  </div>
+</section>
+<!-- FOOTER -->
+<footer class="relative z-10 px-5 md:px-10 py-20"
+style="border-top:1px solid var(--line);">
+
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+    <!-- BRAND -->
+    <div class="lg:col-span-1">
+      <h3 class="font-display font-semibold text-3xl mb-4">
+        TechSomalia
+      </h3>
+
+      <p class="text-sm leading-relaxed mb-6"
+      style="color:var(--cream-dim)">
+        Baro AI, Coding, Online Income iyo Teknoolajiyadda casriga ah
+        adigoo ku baranaya Af-Soomaali. Waxaan ka caawinnaa dhalinyarada
+        Soomaaliyeed inay dhistaan xirfado mustaqbal leh.
+      </p>
+
+      <div class="flex gap-4 text-sm">
+        <a href="https://www.youtube.com/@WalalMaxamed-i3u"
+        class="hover:text-[var(--coral)] transition">
+          YouTube
+        </a>
+
+        <a href="https://www.facebook.com/TechSomalia"
+        class="hover:text-[var(--coral)] transition">
+          Facebook
+        </a>
+
+        <a href="https://t.me/TechSomalia"
+        class="hover:text-[var(--coral)] transition">
+          Telegram
+        </a>
+      </div>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div>
+      <h4 class="font-semibold mb-4"
+      style="color:var(--coral)">
+        Quick Links
+      </h4>
+
+      <div class="flex flex-col gap-3 text-sm"
+      style="color:var(--cream-dim)">
+
+        <a href="./index.html" class="hover:text-[var(--cream)]">
+          Home
+        </a>
+
+        <a href="./blog.html" class="hover:text-[var(--cream)]">
+          Blog
+        </a>
+
+        <a href="./about.html" class="hover:text-[var(--cream)]">
+          About Us
+        </a>
+
+        <a href="./contact.html" class="hover:text-[var(--cream)]">
+          Contact
+        </a>
+
+      </div>
+    </div>
+
+    <!-- RESOURCES -->
+    <div>
+      <h4 class="font-semibold mb-4"
+      style="color:var(--coral)">
+        Resources
+      </h4>
+
+      <div class="flex flex-col gap-3 text-sm"
+      style="color:var(--cream-dim)">
+
+        <a href="./faq.html" class="hover:text-[var(--cream)]">
+          FAQ
+        </a>
+
+        <a href="./bestai.html" class="hover:text-[var(--cream)]">
+          AI Guides
+        </a>
+
+        <a href="./AiWebApliactions.html" class="hover:text-[var(--cream)]">
+          Web Tutorials
+        </a>
+
+      </div>
+    </div>
+
+    <!-- LEGAL -->
+    <div>
+      <h4 class="font-semibold mb-4"
+      style="color:var(--coral)">
+        Legal
+      </h4>
+
+      <div class="flex flex-col gap-3 text-sm"
+      style="color:var(--cream-dim)">
+
+        <a href="./privacy.html"
+        class="hover:text-[var(--cream)]">
+          Privacy Policy
+        </a>
+
+        <a href="./terms.html"
+        class="hover:text-[var(--cream)]">
+          Terms & Conditions
+        </a>
+
+        <a href="./Disclaimer.html"
+        class="hover:text-[var(--cream)]">
+          Disclaimer
+        </a>
+
+      </div>
+
+      <div class="mt-6">
+        <p class="text-sm"
+        style="color:var(--cream-dim)">
+          Mogadishu, Somalia
+        </p>
+
+        <p class="text-sm mt-1"
+        style="color:var(--cream-dim)">
+          support@techsomalia.com
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- BOTTOM BAR -->
+  <div
+    class="max-w-7xl mx-auto mt-14 pt-7 flex flex-col md:flex-row justify-between items-center gap-3 text-xs"
+    style="border-top:1px solid var(--line); color:var(--cream-dim)">
+
+    <span>
+      © 2026 TechSomalia. All Rights Reserved.
+    </span>
+
+    <span>
+      Helping Somali Youth Build Digital Skills.
+    </span>
+
+  </div>
+
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const menuBtn = document.getElementById("menuBtn");
+  const closeBtn = document.getElementById("closeBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  // OPEN MENU
+  menuBtn?.addEventListener("click", () => {
+    mobileMenu.classList.add("active");
+  });
+
+  // CLOSE MENU
+  closeBtn?.addEventListener("click", () => {
+    mobileMenu.classList.remove("active");
+  });
+
+  // CLOSE ON LINK CLICK
+  mobileMenu?.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.remove("active");
+    });
+  });
+
+});
+
+// scroll reveal
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+}, { threshold: 0.15 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+const pathIo = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+}, { threshold: 0.3 });
+const pathEl = document.getElementById('pathProgress');
+if (pathEl) pathIo.observe(pathEl);
+
+// // daily tips rotation
+// const tips = [
+//   "Marka aad weydiinayso ChatGPT, sheeg doorka uu ka ciyaarayo — tusaale: Noqo macalin AI ah.",
+//   "Isticmaal step by step erayada marka aad rabto jawaab faahfaahsan oo habaysan.",
+//   "Ku celcelin su'aasha haddii jawaabtu aan caddeyn — AI-gu wuxuu hagaajiyaa marka la sax siiyo.",
+//   "Isticmaal AI si aad u soo koobto maqaallo dhaadheer — waqti badan ayuu ku badbaadiyaa."
+// ];
+// let tipIndex = 0;
+// const tipText = document.getElementById('tipText');
+// const tipDots = document.getElementById('tipDots');
+// tips.forEach((_, i) => {
+//   const d = document.createElement('span');
+//   d.className = 'w-1.5 h-1.5 rounded-full';
+//   d.style.background = i === 0 ? 'var(--coral)' : 'var(--line)';
+//   tipDots.appendChild(d);
+// });
+// function showTip(i) {
+//   tipText.style.opacity = 0;
+//   tipText.style.transform = 'translateY(6px)';
+//   setTimeout(() => {
+//     tipText.textContent = tips[i];
+//     tipText.style.opacity = 1;
+//     tipText.style.transform = 'translateY(0)';
+//     [...tipDots.children].forEach((d, di) => d.style.background = di === i ? 'var(--coral)' : 'var(--line)');
+//   }, 250);
+// }
+// setInterval(() => { tipIndex = (tipIndex + 1) % tips.length; showTip(tipIndex); }, 6000);
+
+// document.getElementById('tipDate').textContent = new Date().toLocaleDateString('so-SO', { day: 'numeric', month: 'short' });
+
+
+const slides =
+document.querySelectorAll('.hero-slide');
+
+const dots =
+document.querySelectorAll('.dot');
+
+let current = 0;
+
+function showSlide(index){
+
+slides.forEach(slide=>{
+slide.classList.remove('active');
+});
+
+dots.forEach(dot=>{
+dot.classList.remove('active');
+});
+
+slides[index].classList.add('active');
+dots[index].classList.add('active');
+
+}
+
+setInterval(()=>{
+
+current++;
+
+if(current >= slides.length){
+current = 0;
+}
+
+showSlide(current);
+
+},3000);
+
+const searchInput =
+document.getElementById("siteSearch");
+
+if(searchInput){
+
+searchInput.addEventListener("keydown",(e)=>{
+
+if(e.key !== "Enter") return;
+
+const keyword =
+searchInput.value.trim().toLowerCase();
+
+if(!keyword) return;
+
+const pages = {
+
+"ai":"./bestai.html",
+"chatgpt":"./usingChatgptAndOhterAI.html",
+"online income":"./onlineincome.html",
+"money":"./earnmoney.html",
+"affiliate":"./aiforaffliate.html",
+"bloging":"./aiforblogging.html",
+"web":"./webdevelopment.html",
+"coding":"./webdevelopment.html",
+"skills":"./10skills.html",
+"video":"./aiforvedioeditors.html",
+"dropshipping":"./aidropshiping.html",
+"photo":"./imageGenerotors.html",
+"digital skills":"./10skills.html",
+"xirfad":"./10skills.html",
+"lacag":"./make100$.html",
+"lacagsameen":"./make100$.html",
+"lacaglabixid":"./payoneer.html",
+"graphic":"./aiforgraphicdesghners.html",
+"blog":"./blog.html",
+"freelencing":"./freelancing.html",
+"daqliJoogto ah":"./passiveincomeaitools.html",
+
+"daqli":"./passiveincomeaitools.html",
+"isticmaalka AI":"./usingChatgptAndOhterAI.html",
+"isticmaalka":"./usingChatgptAndOhterAI.html",
+"jv":"./jv.html",
+"javascript":"./jv.html",
+"react":"./react.html",
+"react":"./react.html",
+"waafi":"./waafi.html",
+"payoneer":"./payoneer.html",
+"online":"./onlineincome.html",
+"edit":"./imageGenerotors.html",
+"100$":"./make100$.html",
+"github":"./git&github.html",
+"hosting":"./hosting&domain.html",
+"domain":"./hosting&domain.html",
+"fiver":"./fiver.html",
+"programming":"./programing.html",
+"programing":"./programing.html",
+"website":"./website.html",
+"student":"./aitoolsforstudents.html",
+"socialmedia":"./socialmediaautomization.html",
+"social":"./socialmediaautomization.html",
+"youtope":"./aiforyoutope.html",
+"frontend":"./frontendvsbackend.html",
+"backend":"./frontendvsbackend.html"
+
+
+
+
+
+
+
+};
+
+for(let key in pages){
+
+if(keyword.includes(key)){
+
+window.location.href =
+pages[key];
+
+return;
+
+}
+
+}
+
+alert("waan ka xunahay Pagekaan diyaar kuma ahan Maqaalkaan, fadlan isku day keyword kale ama booqo blog-ka si aad u hesho dhamaan casharada. Mahadsanid!");
+
+});
+}
+</script>
 </body>
 </html>

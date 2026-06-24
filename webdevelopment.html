@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="so" class="scroll-smooth">
-<head>
-           <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-26STFV9LR7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-26STFV9LR7');
-</script>
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-26STFV9LR7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-26STFV9LR7');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barashada Web Development - TechSomali</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-     <link rel="icon" href="./techsomalia-logo.png">
+    <link rel="icon" href="./techsomalia-logo.png">
     <script>
         tailwind.config = { 
             darkMode: 'class', 
@@ -31,8 +31,7 @@
         #scroll-progress { position: fixed; top: 0; left: 0; height: 4px; background: #2563eb; z-index: 100; width: 0%; transition: width 0.1s; }
         
         /* Typography - Responsive sizes */
-        .article-body { color: #475569; line-height: 1.8; }
-        .dark .article-body { color: #94a3b8; }
+        .article-body { color: #94a3b8; line-height: 1.8; }
         .article-body p { margin-bottom: 1.5rem; font-size: 1.1rem; }
         
         /* Code styling for mobile */
@@ -50,109 +49,100 @@
             border: 1px solid #334155;
             margin: 1rem 0;
         }
-
-        /* Nav Mobile Logic */
-        #mobile-menu { display: none; }
-        #mobile-menu.active { display: flex; }
     </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
-<body class="bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
+<body class="bg-[#0b0f19] text-[#f8fafc]">
 
     <div id="scroll-progress"></div>
 
-    <nav class="glass-nav sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 border-b border-slate-200 dark:border-slate-800">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16 md:h-20">
-                <div class="flex items-center gap-2">
-                    <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold italic text-xl">T</div>
-                    <span class="text-xl md:text-2xl font-black italic tracking-tighter text-slate-900 dark:text-white">TechSomali</span>
-                </div>
-
-                <div class="hidden md:flex items-center space-x-8 font-bold text-sm">
-                    <a href="./index.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600">home</a>
-                    <a href="./blog.html" class="text-blue-600">Blog</a>
-                    <a href="./about.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600">about</a>
-                    <a href="./contact.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600">contact</a>
-                    <button id="theme-toggle" class="p-2 bg-slate-100 dark:bg-slate-800 rounded-full text-lg">🌙</button>
-                </div>
-
-                <div class="flex md:hidden items-center gap-3">
-                    <button id="theme-toggle-m" class="p-2 bg-slate-100 dark:bg-slate-800 rounded-full">🌙</button>
-                    <button id="menu-btn" class="p-2 text-blue-600 text-2xl">☰</button>
-                </div>
-            </div>
+    <nav class="glass-nav sticky top-0 z-[100] border-b border-white/10 h-20">
+      <div class="max-w-7xl mx-auto flex justify-between items-center h-full px-6">
+        <a href="./index.html" class="flex items-center gap-2">
+          <span class="text-2xl font-bold font-display text-white">Tech<span style="color:var(--coral)">Somali</span></span>
+        </a>
+        <div class="flex items-center">
+          <ul class="hidden md:flex items-center space-x-1 font-semibold text-sm text-[var(--cream-dim)]">
+            <li><a href="./index.html" class="px-4 py-2 rounded-lg hover:text-[var(--coral)] transition">Home</a></li>
+            <li><a href="./blog.html" class="px-4 py-2 rounded-lg text-[var(--coral)] font-bold">Blog</a></li>
+            <li><a href="./about.html" class="px-4 py-2 rounded-lg hover:text-[var(--coral)] transition">About</a></li>
+            <li><a href="./contact.html" class="px-4 py-2 rounded-lg hover:text-[var(--coral)] transition">Contact</a></li>
+          </ul>
+          <button id="menu-btn" class="md:hidden text-2xl text-blue-600 ml-4">☰</button>
         </div>
-
-        <div id="mobile-menu" class="absolute top-16 left-0 w-full bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex-col p-6 space-y-4 md:hidden shadow-xl transition-all">
-            <a href="./index.html" class="font-bold py-2 border-b dark:border-slate-800 dark:text-white">Home</a>
-            <a href="./blog.html" class="font-bold py-2 border-b dark:border-slate-800 text-blue-600">Blog</a>
-            <a href="./about.html" class="font-bold py-2 dark:text-white">about</a>
-            <a href="./contact.html" class="font-bold py-2 dark:text-white">contact</a>
-        </div>
+      </div>
     </nav>
 
+    <div id="mobile-menu" class="bg-slate-900 flex-col p-6 space-y-4 md:hidden border-b border-white/5 hidden">
+        <a href="./index.html" class="font-bold text-white block py-2 border-b border-white/5">Home</a>
+        <a href="./blog.html" class="font-bold text-[var(--coral)] block py-2 border-b border-white/5">Blog</a>
+        <a href="./about.html" class="font-bold text-white block py-2 border-b border-white/5">About</a>
+        <a href="./contact.html" class="font-bold text-white block py-2">Contact</a>
+    </div>
+
+
     <main class="max-w-4xl mx-auto px-4 sm:px-6 py-8 md:py-16">
-        <article class="bg-white dark:bg-slate-900 rounded-3xl md:rounded-[2.5rem] p-6 sm:p-10 md:p-16 shadow-xl border border-slate-100 dark:border-slate-800 article-body">
+        <article class="bg-[#131926] rounded-3xl md:rounded-[2.5rem] p-6 sm:p-10 md:p-16 shadow-xl border border-white/5 article-body">
             
-            <h1 class="text-2xl sm:text-3xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-8 leading-tight">
+            <h1 class="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white mb-8 leading-tight">
                 💻 Barashada Web Development: HTML, CSS, JavaScript iyo Frameworks Casri ah
             </h1>
 
             <p>Barashada Web Development waxay ka mid tahay xirfadaha ugu qiimaha badan ee qofka casriga ah uu barto. Maanta, shirkado badan oo caalami ah waxay raadinayaan dad awood u leh dhisidda websites responsive ah, web applications casri ah, iyo interface user-friendly ah. Web Development waxaa ka mid ah HTML, CSS, JavaScript, iyo frameworks kala duwan oo fududeeya horumarinta software-ka casriga ah. Fahamka qotodheer ee luqadahaan iyo sida ay isku xirmaan waxay qofka ka dhigtaa developer awood leh oo fursado shaqo ka heli kara gudaha iyo dibadda.</p>
 
-            <h2 class="text-xl sm:text-2xl font-bold text-blue-600 mt-10 mb-4 border-l-4 border-blue-600 pl-4">1️⃣ HTML – Aasaaska Dhismaha Webka</h2>
+            <h2 class="text-xl sm:text-2xl font-bold text-blue-400 mt-10 mb-4 border-l-4 border-blue-500 pl-4">1️⃣ HTML – Aasaaska Dhismaha Webka</h2>
             <p>HTML (HyperText Markup Language) waa luqadda dhismaha website-ka, oo bixisa structure-ka boggaaga. Waxay kuu ogolaaneysaa inaad ku darto headings, paragraphs, images, links, forms, iyo lists. Fahamka HTML waa tallaabada ugu horeysa ee qof kasta oo raba inuu noqdo web developer. Qof aan HTML aqoon u lahayn ma dhisi karo web pages sax ah. Waxaa muhiim ah inaad barato semantic HTML si website-kaagu u noqdo search engine friendly, accessible, oo fudud in la maamulo mustaqbalka.</p>
             
-            <h4 class="font-bold text-slate-700 dark:text-slate-300 italic mb-4 text-lg">Hadii aan tusaale yar usoo qaadano qaabka loo qorayo html waxay noqonaysaa:</h4>
+            <h4 class="font-bold text-slate-300 italic mb-4 text-lg">Hadii aan tusaale yar usoo qaadano qaabka loo qorayo html waxay noqonaysaa:</h4>
             
             <div class="grid grid-cols-1 gap-4 mb-8">
-                <div class="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700">
+                <div class="p-4 bg-slate-950 rounded-xl border border-white/5">
                     <ul class="space-y-3">
-                        <li><code class="text-blue-600 font-bold">&lt;!DOCTYPE html&gt;</code> - Tani waxay sheegaysaa in dukumiintigu yahay HTML5.</li>
-                        <li><code class="text-blue-600 font-bold">&lt;html&gt;&lt;/html&gt;</code> - Waxay calaamadeysaa bilowga iyo dhammaadka dukumiintiga HTML.</li>
-                        <li><code class="text-blue-600 font-bold">&lt;head&gt;&lt;/head&gt;</code> - Qaybtan waxay ka kooban tahay macluumaadka aan muuqan ee bogga.</li>
-                        <li><code class="text-blue-600 font-bold">&lt;body&gt;&lt;/body&gt;</code> - Qaybtan waxay ka kooban tahay dhammaan waxyaabaha muuqda ee bogga.</li>
+                        <li><code class="text-blue-400 font-bold">&lt;!DOCTYPE html&gt;</code> - Tani waxay sheegaysaa in dukumiintigu yahay HTML5.</li>
+                        <li><code class="text-blue-400 font-bold">&lt;html&gt;&lt;/html&gt;</code> - Waxay calaamadeysaa bilowga iyo dhammaadka dukumiintiga HTML.</li>
+                        <li><code class="text-blue-400 font-bold">&lt;head&gt;&lt;/head&gt;</code> - Qaybtan waxay ka kooban tahay macluumaadka aan muuqan ee bogga.</li>
+                        <li><code class="text-blue-400 font-bold">&lt;body&gt;&lt;/body&gt;</code> - Qaybtan waxay ka kooban tahay dhammaan waxyaabaha muuqda ee bogga.</li>
                     </ul>
                 </div>
             </div>
 
-            <h2 class="text-xl sm:text-2xl font-bold text-blue-600 mt-10 mb-4 border-l-4 border-blue-600 pl-4">2️⃣ CSS – Qurxinta iyo Layout-ka</h2>
+            <h2 class="text-xl sm:text-2xl font-bold text-blue-400 mt-10 mb-4 border-l-4 border-blue-500 pl-4">2️⃣ CSS – Qurxinta iyo Layout-ka</h2>
             <p>CSS (Cascading Style Sheets) waxay ka dhigtaa website-ka mid soo jiidasho leh, isla markaana leh design casri ah. Waxaad ku maamuli kartaa colors, fonts, spacing, borders, background images, iyo responsive layouts. Fahamka CSS flexbox iyo grid layout wuxuu kuu ogolaanayaa inaad dhisto layout ka shaqeeya desktop iyo mobile.</p>
             
-            <div class="code-snippet">
-                <button onclick="copyCode(this)" class="absolute top-2 right-2 bg-slate-700 text-xs py-1 px-2 rounded">Copy</button>
-                <code>body { background-color: #f0f0f0; margin: 0 auto; padding: 20px; }</code>
+            <div class="code-snippet bg-slate-950 border border-white/5 relative my-4">
+                <button onclick="copyCode(this)" class="absolute top-2 right-2 bg-slate-800 hover:bg-slate-700 text-xs py-1 px-2 rounded text-white">Copy</button>
+                <code class="text-green-400">body { background-color: #f0f0f0; margin: 0 auto; padding: 20px; }</code>
             </div>
 
-            <h2 class="text-xl sm:text-2xl font-bold text-blue-600 mt-10 mb-4 border-l-4 border-blue-600 pl-4">3️⃣ JavaScript – Interactivity</h2>
+            <h2 class="text-xl sm:text-2xl font-bold text-blue-400 mt-10 mb-4 border-l-4 border-blue-500 pl-4">3️⃣ JavaScript – Interactivity</h2>
             <p>JavaScript waa luqadda programming-ka ee ka dhigaysa webka mid interactive. Waxaad ku dari kartaa functionality sida form validation, dynamic content updates, iyo API requests.</p>
             
-            <div class="code-snippet">
-                <button onclick="copyCode(this)" class="absolute top-2 right-2 bg-slate-700 text-xs py-1 px-2 rounded">Copy</button>
-                <code>document.getElementById("myButton").addEventListener("click", function() { alert("Asc TechSomali!"); });</code>
+            <div class="code-snippet bg-slate-950 border border-white/5 relative my-4">
+                <button onclick="copyCode(this)" class="absolute top-2 right-2 bg-slate-800 hover:bg-slate-700 text-xs py-1 px-2 rounded text-white">Copy</button>
+                <code class="text-green-400">document.getElementById("myButton").addEventListener("click", function() { alert("Asc TechSomali!"); });</code>
             </div>
 
-            <h2 class="text-xl sm:text-2xl font-bold text-blue-600 mt-10 mb-4 border-l-4 border-blue-600 pl-4">4️⃣ Frameworks Casri ah</h2>
+            <h2 class="text-xl sm:text-2xl font-bold text-blue-400 mt-10 mb-4 border-l-4 border-blue-500 pl-4">4️⃣ Frameworks Casri ah</h2>
             <div class="space-y-6">
-                <div class="p-6 bg-slate-50 dark:bg-slate-800/30 rounded-2xl">
-                    <h3 class="font-bold text-lg mb-2 text-slate-900 dark:text-white">React.js</h3>
-                    <p>React waa library caan ah oo frontend development loogu talagalay. Waxay kuu ogolaaneysaa inaad dhisto components reusable ah, taasoo ka dhigaysa code-ka nadiif iyo fast.</p>
+                <div class="p-6 bg-slate-950 rounded-2xl border border-white/5">
+                    <h3 class="font-bold text-lg mb-2 text-white">React.js</h3>
+                    <p class="text-slate-400">React waa library caan ah oo frontend development loogu talagalay. Waxay kuu ogolaaneysaa inaad dhisto components reusable ah, taasoo ka dhigaysa code-ka nadiif iyo fast.</p>
                 </div>
-                <div class="p-6 bg-slate-50 dark:bg-slate-800/30 rounded-2xl">
-                    <h3 class="font-bold text-lg mb-2 text-slate-900 dark:text-white">Node.js & Express</h3>
-                    <p>Node.js iyo Express waxay kuu ogolaanayaan inaad backend-ka ku dhisto JavaScript. Fahamka backend-ka wuxuu developer-ka ka dhigaa full-stack developer.</p>
+                <div class="p-6 bg-slate-950 rounded-2xl border border-white/5">
+                    <h3 class="font-bold text-lg mb-2 text-white">Node.js & Express</h3>
+                    <p class="text-slate-400">Node.js iyo Express waxay kuu ogolaanayaan inaad backend-ka ku dhisto JavaScript. Fahamka backend-ka wuxuu developer-ka ka dhigaa full-stack developer.</p>
                 </div>
             </div>
 
             <div class="mt-12 p-6 sm:p-10 bg-blue-600 text-white rounded-[2rem] shadow-xl">
                 <h3 class="text-xl font-bold mb-4 italic">Ugu dambeyn...</h3>
-                <p class="mb-0">Hadii aan soo koobo barta aad ka billaabaysa web-developer waxay noqonaysaa frontend developer kadib backend developer kadibna waxaad noqonaysaa full stack developer hadii aad labadas isku darto. Barashada web development waa maalgashi weyn oo mustaqbalkaaga xirfadeed.</p>
+                <p class="mb-0 text-white/90">Hadii aan soo koobo barta aad ka billaabaysa web-developer waxay noqonaysaa frontend developer kadib backend developer kadibna waxaad noqonaysaa full stack developer hadii aad labadas isku darto. Barashada web development waa maalgashi weyn oo mustaqbalkaaga xirfadeed.</p>
             </div>
         </article>
     </main>
 
-    <footer class="bg-white dark:bg-slate-900 py-10 border-t border-slate-200 dark:border-slate-800 text-center">
+    <footer class="bg-[#131926] py-10 border-t border-white/5 text-center">
         <p class="text-slate-500 text-sm">© 2026 TechSomali. Dhammaan xuquuqdu waa dhowran tahay.</p>
     </footer>
 
@@ -167,28 +157,30 @@
 
         // Theme Toggle
         const themeBtn = document.getElementById('theme-toggle');
-        const themeBtnM = document.getElementById('theme-toggle-m');
         function toggleTheme() {
             document.documentElement.classList.toggle('dark');
-            const icon = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
-            themeBtn.innerText = icon;
-            themeBtnM.innerText = icon;
         }
-        themeBtn.onclick = toggleTheme;
-        themeBtnM.onclick = toggleTheme;
+        if(themeBtn) themeBtn.onclick = toggleTheme;
 
         // Mobile Menu Toggle
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        menuBtn.onclick = () => mobileMenu.classList.toggle('active');
+        if(menuBtn && mobileMenu) {
+            menuBtn.onclick = () => {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('flex');
+            };
+        }
 
         // Scroll Progress
         window.onscroll = () => {
             const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             const scrolled = (winScroll / height) * 100;
-            document.getElementById("scroll-progress").style.width = scrolled + "%";
+            const progress = document.getElementById("scroll-progress");
+            if(progress) progress.style.width = scrolled + "%";
         };
     </script>
 </body>
+
 </html>
