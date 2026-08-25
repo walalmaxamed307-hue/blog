@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+           <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-26STFV9LR7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-26STFV9LR7');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Vibe Coding Waa Maxay? Tutorial Dhamaystiran oo AI Coding ah 2026</title>
+
+  <meta name="description" content="Vibe Coding waa maxay? Baro sida AI loogu isticmaalo qorista code, samaynta websites iyo apps, Cursor, GitHub Copilot, prompts sax ah, faa'iidooyinka, khaladaadka iyo sida loo bilaabo Vibe Coding tallaabo tallaabo.">
+
+  <meta name="keywords" content="Vibe Coding waa maxay, Vibe Coding, Vibe Coding Somali, Vibe Coding tutorial, Vibe Coding tutorial Somali, AI Coding, AI programming, coding with AI, sida loo barto Vibe Coding, Cursor Vibe Coding, GitHub Copilot, AI code generator">
+<meta name="robots" content="index, follow">
+ <meta name="author" content="TechSomali">
+
+  <link rel="icon" href="./techsomalia-logo.png">
+
+<script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } } }
+    </script>
+    <style>
+        
+        /* --- General Setup --- */
+        .glass-nav { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        #mobile-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: 9999; display: none; }
+        #mobile-overlay.active { display: flex; }
+        #scroll-progress { position: fixed; top: 0; left: 0; height: 4px; background: #2563eb; z-index: 100; width: 0%; }
+
+        /* --- ARTCLE BODY DESIGN (Halkan ayay dhibaatadu ka jirtay) --- */
+        .article-body { color: #475569; line-height: 1.8; font-size: 1.15rem; }
+        .dark .article-body { color: #94a3b8; }
+
+        /* Cinwaannada kala duwan */
+        .article-body h1 { font-size: 2.5rem; font-weight: 800; color: #1e293b; margin-bottom: 1.5rem; }
+        .article-body h2 { font-size: 1.9rem; font-weight: 800; color: #2563eb; margin-top: 2.5rem; margin-bottom: 1.25rem; border-left: 5px solid #2563eb; padding-left: 1rem; }
+        .article-body h3 { font-size: 1.6rem; font-weight: 700; color: #1e293b; margin-top: 2rem; margin-bottom: 1rem; }
+        .article-body h4 { font-size: 1.3rem; font-weight: 700; color: #334155; margin-top: 1.5rem; }
+        .dark .article-body h1, .dark .article-body h3, .dark .article-body h4 { color: #f1f5f9; }
+
+        /* Hagaajinta Liisaska (Lists) - Tan ayaa muhiim u ah koodhkaaga */
+        .article-body ul { list-style-type: disc !important; margin-bottom: 1.5rem; padding-left: 1.5rem; }
+        .article-body ol { list-style-type: decimal !important; margin-bottom: 1.5rem; padding-left: 1.5rem; }
+        .article-body li { margin-bottom: 0.6rem; }
+        .article-body li::marker { color: #2563eb; font-weight: bold; }
+
+        /* Strong & Links */
+        .article-body strong { color: #1e293b; font-weight: 700; }
+        .dark .article-body strong { color: #f8fafc; }
+        .article-body a { color: #2563eb; text-decoration: underline; font-weight: 600; }
+        
+        /* Sawirrada */
+        .article-body img { border-radius: 2rem; margin: 2rem 0; width: 100%; height: auto; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+    </style>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div id="scroll-progress"></div>
+
+<nav class="glass-nav sticky top-0 z-[100] border-b border-white/10 h-20">
+  <div class="max-w-7xl mx-auto flex justify-between items-center h-full px-6">
+    <a href="./index.html" class="flex items-center gap-2">
+  
+      <span class="text-2xl font-bold font-display text-white">Tech<span style="color:var(--coral)">Somali</span></span>
+    </a>
+    <div class="flex items-center">
+      <ul class="hidden md:flex items-center space-x-1 font-semibold text-sm text-[var(--cream-dim)]">
+        <li><a href="./index.html" class="px-4 py-2 rounded-lg hover:text-[var(--coral)] transition">Home</a></li>
+        <li><a href="./blog.html" class="px-4 py-2 rounded-lg text-[var(--coral)] font-bold">Blog</a></li>
+        <li><a href="./about.html" class="px-4 py-2 rounded-lg hover:text-[var(--coral)] transition">About</a></li>
+        <li><a href="./contact.html" class="px-4 py-2 rounded-lg hover:text-[var(--coral)] transition">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div id="mobile-overlay" class="bg-white dark:bg-slate-950 flex-col items-center justify-center space-y-8 text-2xl font-bold transition-all dark:text-white">
+        <button id="close-menu" class="absolute top-6 right-8 text-6xl text-slate-400">&times;</button>
+        <a href="./index.html">home</a>
+        <a href="./about.html">about</a>
+        <a href="./blog.html">Blog</a>
+        <a href="./contact.html">contact</a>
+    </div>
+
+<script>
+    // Logic-ga Dark Mode
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeToggleIcon = document.getElementById('theme-toggle-icon');
+    const htmlElement = document.documentElement;
+
+    // Hubi haddii uu qofku horay u doortay dark mode
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        htmlElement.classList.add('dark');
+        themeToggleIcon.innerText = '☀️';
+    } else {
+        htmlElement.classList.remove('dark');
+        themeToggleIcon.innerText = '🌙';
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+        if (htmlElement.classList.contains('dark')) {
+            htmlElement.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+            themeToggleIcon.innerText = '🌙';
+        } else {
+            htmlElement.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+            themeToggleIcon.innerText = '☀️';
+        }
+    });
+</script>
+    <header class="py-16 px-6 text-center max-w-4xl mx-auto">
+        <div class="mb-4 inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-full text-xs font-bold uppercase">Technology</div>
+        <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-6 leading-tight text-white">
+          Vibe Coding Waa Maxay? Tutorial Dhamaystiran oo Lagu Barto AI Coding 2026
+        </h1>
+        <div class="flex justify-center items-center gap-4 text-slate-500 text-sm">
+            <span>By TechSomali</span> • <span>Augosto 2026</span> • <span>5 min read</span>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 pb-24">
+     <div class="article-body">            
+<article>
+
+  <header>
+   <header>
+        <p> | <strong>Qoraaga:</strong> Khabiirka AI & Software Engineering </p>
+    </header>
+    <p>
+      Waxaa laga yaabaa inaad maalmo ama xitaa bilo ku bixisay barashada HTML, CSS, JavaScript ama React,
+      kadibna aad aragtay qof aan code badan gacantiisa ku qorin oo haddana sameeyay website ama application shaqaynaya.
+      Markaas su'aashu waxay noqotay: <strong>“Sidee ayuu taas u sameeyay?”</strong>
+    </p>
+
+    <p>
+      Jawaabta maanta waxay si weyn ugu xiran tahay eray cusub oo dunida software-ka si degdeg ah ugu fiday:
+      <strong>Vibe Coding</strong>.
+    </p>
+
+    <p>
+      Laakiin Vibe Coding ma aha sixir, mana aha hab lagu beddelay aqoonta programming-ka hal habeen.
+      Waa qaab cusub oo qofka iyo AI-ga looga dhigo laba dhinac oo wada shaqeeya: adigu waxaad sharaxaysaa
+      waxa software-ku qabanayo, AI-na waxay kaa caawisaa qorista, wax-ka-beddelka, fahamka iyo mararka qaarkood
+      tijaabinta code-ka.
+    </p>
+
+    <p>
+      Maqaalkan waxaan ku kala furfureyn doonaa <strong>Vibe Coding waa maxay</strong>, sida uu u shaqeeyo,
+      waxa looga baahan yahay qof bilow ah, qalabka sida <strong>Cursor</strong> iyo <strong>GitHub Copilot</strong>,
+      sida prompt wanaagsan loo qoro, sida app dhab ah loo dhiso, khaladaadka laga fogaado iyo sababta
+      Vibe Coding uusan uga dhignayn in programming la joojiyay.
+    </p>
+  </header>
+
+  <section class="article-toc">
+    <h2>Table of Contents</h2>
+
+    <ul>
+      <li><a href="#vibe-coding">Vibe Coding Waa Maxay?</a></li>
+      <li><a href="#history">Xaggee ayuu ka yimid magaca Vibe Coding?</a></li>
+      <li><a href="#how-it-works">Sidee Vibe Coding u shaqeeyaa?</a></li>
+      <li><a href="#difference">Vibe Coding iyo Programming-ka caadiga ah maxay ku kala duwan yihiin?</a></li>
+      <li><a href="#tools">Qalabka lagu sameeyo Vibe Coding</a></li>
+      <li><a href="#cursor">Sida Cursor loogu isticmaalo Vibe Coding</a></li>
+      <li><a href="#copilot">GitHub Copilot iyo Vibe Coding</a></li>
+      <li><a href="#prompt">Sida loo qoro Prompt wanaagsan</a></li>
+      <li><a href="#tutorial">Vibe Coding Tutorial: Tallaabo tallaabo</a></li>
+      <li><a href="#project">Tusaale: Website yar oo AI lagu dhisayo</a></li>
+      <li><a href="#debugging">Sida AI looga caawisto Error-ka</a></li>
+      <li><a href="#security">Vibe Coding iyo Security</a></li>
+      <li><a href="#advantages">Faa'iidooyinka Vibe Coding</a></li>
+      <li><a href="#disadvantages">Dhibaatooyinka iyo xaddidaadaha</a></li>
+      <li><a href="#learn">Sidee loo barta Vibe Coding?</a></li>
+      <li><a href="#career">Vibe Coding ma shaqo iyo xirfad buu noqon karaa?</a></li>
+      <li><a href="#future">Mustaqbalka Vibe Coding</a></li>
+      <li><a href="#faq">Su'aalaha inta badan la isweydiiyo</a></li>
+    </ul>
+  </section>
+
+  <section id="vibe-coding">
+    <h2>Vibe Coding Waa Maxay?</h2>
+
+    <p>
+      <strong>Vibe Coding</strong> waa hab software lagu horumariyo iyadoo qofku si dabiici ah AI ugu sharaxayo
+      waxa uu doonayo in program-ku qabto, halkii uu gacantiisa uga qori lahaa qayb kasta oo code ah.
+      AI-ga ayaa markaas soo saari kara code, sharxi kara files, sixi kara bugs, soo jeedin kara isbeddello
+      ama ka caawin kara dhisidda feature cusub.
+    </p>
+
+    <p>
+      Ereyga “vibe coding” wuxuu si weyn u caan baxay 2025, waxaana si gaar ah loogu nisbeeyaa computer scientist
+      <strong>Andrej Karpathy</strong>. IBM waxay Vibe Coding ku qeexday hab horumarinta software ah oo ku tiirsan
+      prompts si AI u soo saarto code, iyadoo horumariyuhu xoogga saarayo natiijada, testing-ka iyo hagaajinta. 
+     
+    </p>
+
+    <p>
+      Tusaale ahaan, halkii aad oran lahayd:
+    </p>
+
+    <pre><code>Waxaan rabaa button React ah.
+Waxaan rabaa inuu noqdo blue.
+Waxaan rabaa hover effect.
+Waxaan rabaa inuu marka la gujiyo furo modal.</code></pre>
+
+    <p>
+      waxaad AI u sheegi kartaa baahida oo dhan hal prompt:
+    </p>
+
+    <pre><code>Build a reusable React button component.
+Use Tailwind CSS.
+Make it accessible.
+Add hover and focus states.
+When clicked, open a modal that displays a short message.
+Keep the component clean and reusable.</code></pre>
+
+    <p>
+      AI ayaa isku dayi karta inay soo saarto qaybta code-ka, adiguna waxaad dib u eegaysaa,
+      tijaabinaysaa oo sharxaysaa waxa khaldan ama waxa aad rabto in la beddelo.
+    </p>
+
+    <div class="note">
+      <strong>Qodob muhiim ah:</strong>
+      Vibe Coding macnaheedu ma aha “AI wax walba samee aniguna waxba ha fahmin”.
+      Workflow caafimaad qaba wuxuu ku salaysan yahay in qofku fahmo natiijada, dib u eego code-ka,
+      tijaabiyo oo xakameeyo waxa AI sameyso.
+    </div>
+  </section>
+
+  <section id="history">
+    <h2>Xaggee ayuu ka yimid magaca Vibe Coding?</h2>
+
+    <p>
+      Vibe Coding wuxuu ka soo baxay kobaca AI coding assistants iyo coding agents kuwaas oo awood u leh
+      inay fahmaan codebase, sameeyaan isbeddello badan, raadiyaan files, shaqeeyaan terminal-ka,
+      isla markaana ka caawiyaan developer-ka hawlo ka ballaaran code completion.
+    </p>
+
+    <p>
+      Inta lagu jiro 2025 iyo 2026, qalabka AI coding-ku wuxuu ka gudbay fikraddii ahayd:
+      “AI wuxuu kuu dhamaystiraa line-ka aad qoreyso”
+      una gudbay:
+      “AI wuxuu kaala shaqayn karaa task dhan.”
+    </p>
+
+    <p>
+      Tusaale ahaan, Cursor Agent wuxuu awood u leeyahay inuu baaro codebase-ka, wax ka beddelo files badan,
+      isticmaalo terminal-ka, dhiso features, hagaajiyo bugs iyo qoro tests.
+    </p>
+
+    <p>
+      Taasi waa sababta Vibe Coding looga fahmi karo inuu yahay isbeddel ku yimid habka developer-ku
+      software-ka ula macaamilayo. Halkii developer-ku uu noqon lahaa qofka kaliya ee qora code,
+      wuxuu mararka qaar noqon karaa qofka:
+      <strong>qeexa dhibaatada, dhisa qorshaha, hagga AI-ga, dib u eega code-ka, tijaabiya natiijada
+      iyo go'aamiya waxa la aqbalayo.</strong>
+    </p>
+  </section>
+
+  <section id="how-it-works">
+    <h2>Sidee Vibe Coding u shaqeeyaa?</h2>
+
+    <p>
+      Si aad si dhab ah u fahanto Vibe Coding, ka fikir software development-ka sidii wada sheekeysi u dhexeeya
+      adiga iyo AI.
+    </p>
+
+    <h3>1. Waxaad qeexaysaa dhibaatada</h3>
+
+    <p>
+      Tallaabada ugu horreysa waa inaadan isla markiiba oran “ii samee app”.
+      Waa inaad sharaxdaa waxa app-ku qabanayo, cidda isticmaali doonta iyo natiijada aad rabto.
+    </p>
+
+    <h3>2. AI waxay fahmaysaa context-ka</h3>
+
+    <p>
+      Coding agents-ka casriga ah waxay akhriyi karaan files iyo folders ku jira project-ka si ay uga fahmaan
+      structure-ka jira. Cursor, tusaale ahaan, wuxuu isticmaali karaa codebase search iyo file context si
+      uu u go'aamiyo meesha isbeddelka loo baahan yahay.
+    </p>
+
+    <h3>3. AI waxay soo jeedinaysaa ama samaysaa code</h3>
+
+    <p>
+      Markaas AI waxay abuuri kartaa code cusub, beddeli kartaa code hore ama kuu sharxi kartaa sababta
+      qayb gaar ahi u shaqayn la'dahay.
+    </p>
+
+    <h3>4. Waxaad tijaabinaysaa</h3>
+
+    <p>
+      Qaybtan waa mid aad muhiim u ah. Code la soo saaray ma aha inuu si toos ah sax u noqdo.
+      Waxaad u baahan tahay inaad application-ka orodsiiso, eegto browser-ka, akhrido console-ka,
+      samayso build iyo tests marka loo baahdo.
+    </p>
+
+    <h3>5. Waxaad AI siisay feedback</h3>
+
+    <p>
+      Markaad hesho bug ama behavior khaldan, waxaad AI u soo gudbin kartaa error-ka iyo context-ka.
+      Kadib waxaad ku celin kartaa:
+    </p>
+
+    <pre><code>The login form renders correctly,
+but submitting the form gives a 500 error.
+
+Here is the error:
+[PASTE ERROR]
+
+Find the root cause, explain it first,
+then propose the safest fix.</code></pre>
+
+    <h3>6. Waxaad dib u eegaysaa isbeddelka</h3>
+
+    <p>
+      Gaar ahaan project muhiim ah, waa in la eego diff-ka, files-ka la beddelay iyo dependencies cusub.
+      Git ayaa door weyn ku leh arrintan sababtoo ah wuxuu kuu oggolaanayaa inaad aragto isbeddelada
+      oo aad dib ugu noqoto commit hore.
+    </p>
+  </section>
+
+  <section id="difference">
+    <h2>Vibe Coding iyo Programming-ka caadiga ah maxay ku kala duwan yihiin?</h2>
+
+    <p>
+      Programming-ka dhaqameed, developer-ku badanaa wuxuu si toos ah u qoraa code-ka:
+      functions, components, APIs, database queries iyo logic.
+    </p>
+
+    <p>
+      Vibe Coding-na wuxuu soo geliyaa AI-ga qayb weyn oo ka mid ah qorista ama wax-ka-beddelka code-ka.
+      Sidaas darteed farqiga ugu weyn ma aha in code la joojiyay; farqigu wuxuu ku jiraa
+      <strong>habka aad software-ka u hagayso</strong>.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Programming Caadi ah</th>
+          <th>Vibe Coding</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Developer-ku wuxuu qoraa code badan</td>
+          <td>AI ayaa qora qayb weyn oo code ah</td>
+        </tr>
+        <tr>
+          <td>Documentation iyo syntax ayaa gacanta badan lagu xafido</td>
+          <td>Prompt iyo context ayaa noqda muhiim</td>
+        </tr>
+        <tr>
+          <td>Debugging badanaa gacanta ayaa loo sameeyaa</td>
+          <td>AI ayaa kaa caawin karta diagnosis iyo fixes</td>
+        </tr>
+        <tr>
+          <td>Development-ka qaarkii waqti badan ayuu qaataa</td>
+          <td>Prototyping iyo iteration-ku way dheereyn karaan</td>
+        </tr>
+        <tr>
+          <td>Fahamka implementation-ka ayaa badanaa toos ah</td>
+          <td>Waxaa muhiim noqda fahamka architecture iyo verification</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      Labadan hab ma aha laba wax oo si buuxda isugu lid ah. Developer wanaagsan wuxuu isku dari karaa
+      programming-ka aasaasiga ah iyo AI-assisted development.
+    </p>
+  </section>
+
+  <section id="tools">
+    <h2>Qalabka lagu sameeyo Vibe Coding</h2>
+
+    <p>
+      Ma jiro hal software oo keliya oo lagu sameeyo Vibe Coding. Waxaa jira IDEs, coding assistants,
+      coding agents iyo platforms kala duwan.
+    </p>
+
+    <h3>Cursor</h3>
+
+    <p>
+      Cursor waa AI editor loogu talagalay programming-ka. Agent-ka Cursor wuxuu awood u leeyahay inuu
+      codebase-ka baaro, files badan wax ka beddelo, terminal isticmaalo, features dhiso, tests sameeyo
+      oo kaa caawiyo bug fixing.
+    </p>
+
+    <p>
+      Tani waxay ka dhigaysaa Cursor qalab si gaar ah ugu habboon qof doonaya inuu isku daro IDE iyo
+      AI agent workflow.
+    </p>
+
+    <p>
+      <a href="https://cursor.com/docs" target="_blank" rel="noopener noreferrer">
+        Akhri Cursor Documentation
+      </a>
+    </p>
+
+    <h3>GitHub Copilot</h3>
+
+    <p>
+      GitHub Copilot wuxuu kaa caawin karaa code suggestions, su'aalaha programming-ka, command-line assistance
+      iyo hawlo kale oo AI-assisted development ah. GitHub waxay sidoo kale bixisaa coding-agent workflows
+      kuwaas oo awood u leh inay qorsheeyaan, sameeyaan isbeddello iyo abuuraan pull request si developer-ku
+      u review-gareeyo.
+    </p>
+
+    <p>
+      <a href="https://docs.github.com/en/copilot" target="_blank" rel="noopener noreferrer">
+        Booqo GitHub Copilot Documentation
+      </a>
+    </p>
+
+    <h3>VS Code + AI Extensions</h3>
+
+    <p>
+      Haddii aad horey u isticmaalaysay VS Code, uma baahnid inaad isla markiiba IDE cusub u guurto.
+      Waxaa jira AI extensions iyo integrations kuu oggolaanaya inaad AI ku dhex isticmaasho workflow-gaaga.
+    </p>
+
+    <p>
+      Waxa muhiimka ahi ma aha magaca editor-ka oo keliya; waxa muhiimka ah waa sida aad AI ugu siinayso
+      context sax ah, sida aad u xaqiijinayso code-ka iyo sida aad u maamulayso project-ka.
+    </p>
+
+    <h3>Git</h3>
+
+    <p>
+      Git laftiisa ma aha AI tool, laakiin wuxuu muhiim u yahay Vibe Coding.
+      Sababtu waa sahlan tahay: haddii AI wax badan beddesho, waa inaad leedahay hab aad ku arki karto
+      waxa la beddelay oo aad ugu laaban karto xaalad hore.
+    </p>
+  </section>
+
+  <section id="cursor">
+    <h2>Sida Cursor loogu isticmaalo Vibe Coding</h2>
+
+    <p>
+      Cursor wuxuu ku habboonaan karaa workflow-ka beginner-ka iyo developer-ka khibradda leh.
+      Documentation-ka rasmiga ahi wuxuu tilmaamayaa in Agent-ku codebase-ka fahmi karo, sameyn karo edits
+      iyo inuu terminal-ka isticmaali karo.
+    </p>
+
+    <h3>Tallaabada 1: Fur project-ka</h3>
+
+    <p>
+      Fur folder-ka project-kaaga gudaha Cursor. Ha bilaabin adigoo AI siinaya amar aan lahayn context.
+      Marka hore u oggolow inuu fahmo project-ka.
+    </p>
+
+    <h3>Tallaabada 2: Weydii inuu sharaxo project-ka</h3>
+
+    <pre><code>Explain this codebase to me.
+
+Tell me:
+1. The main entry point
+2. The important folders
+3. Where routing is handled
+4. Where API calls are handled
+5. Where authentication is handled
+6. What I should understand before making changes</code></pre>
+
+    <p>
+      Cursor documentation-ka rasmiga ahi wuxuu tusaale ahaan soo jeedinayaa in agent-ka la weydiiyo inuu
+      sharaxo codebase-ka, entry points-ka iyo modules-ka muhiimka ah ka hor inta aan isbeddello waaweyn la samayn.
+    </p>
+
+    <h3>Tallaabada 3: U gudub task yar</h3>
+
+    <p>
+      Ha ku bilaabin:
+      <strong>“Build me Facebook.”</strong>
+    </p>
+
+    <p>
+      Ku bilow task qeexan:
+    </p>
+
+    <pre><code>Add a student search field to the Students page.
+
+Requirements:
+- Search by name
+- Search by student ID
+- Update results as the user types
+- Do not change the existing API structure
+- Keep the current UI style
+- Tell me which files you plan to modify before editing</code></pre>
+
+    <p>
+      Qaabkan wuxuu yareeyaa jahawareerka, wuxuuna kuu sahlayaa inaad fahanto isbeddelka la samaynayo.
+    </p>
+
+    <h3>Tallaabada 4: Review garee diff-ka</h3>
+
+    <p>
+      Ha gujin wax kasta oo AI kuu soo saarto adigoon eegin. Cursor wuxuu leeyahay diff iyo checkpoint
+      workflows kaa caawin kara dib-u-eegista iyo rollback-ka.
+    </p>
+  </section>
+
+  <section id="copilot">
+    <h2>GitHub Copilot iyo Vibe Coding</h2>
+
+    <p>
+      GitHub Copilot wuxuu markii hore aad ugu caan baxay coding suggestions iyo chat assistance,
+      laakiin ecosystem-ka GitHub wuxuu hadda ku darayaa workflows agentic ah oo hawlo coding ka ballaaran
+      ka qaban kara developer-ka.
+    </p>
+
+    <p>
+      Tusaale ahaan, GitHub docs waxay sharxayaan in coding agents lagu siin karo task ama issue,
+      kadibna agent-ku sameeyo isbeddellada oo abuuro pull request si loo review-gareeyo.
+    </p>
+
+    <p>
+      Tani waxay si fiican ula jaanqaadaysaa fikradda Vibe Coding:
+      <strong>adigu waxaad qeexaysaa waxa la doonayo, AI-na waxay kaa caawinaysaa implementation-ka.</strong>
+    </p>
+  </section>
+
+  <section id="prompt">
+    <h2>Sida loo qoro Prompt wanaagsan oo Vibe Coding ah</h2>
+
+    <p>
+      Dad badan waxay u malaynayaan in Vibe Coding uu ku saabsan yahay “AI wax walba u sheeg”.
+      Xaqiiqadu waa in tayada prompt-ka ay si weyn u saameyn karto tayada natiijada.
+    </p>
+
+    <h3>Prompt liita</h3>
+
+    <pre><code>Make me a website.</code></pre>
+
+    <p>
+      Prompt-kan wuxuu ka tagayaa su'aalo aad u badan:
+      website noocee ah? ciddee isticmaalaysa? technology kee? design noocee ah? pages intee le'eg?
+    </p>
+
+    <h3>Prompt fiican</h3>
+
+    <pre><code>Build a responsive React website for a Somali technology blog.
+
+Requirements:
+- Use React and Tailwind CSS
+- Create Home, Article, Category and Search pages
+- Mobile-first responsive layout
+- Add a reusable Header and Footer
+- Use semantic HTML
+- Keep components modular
+- Do not add unnecessary dependencies
+- Explain the folder structure before implementation</code></pre>
+
+    <h3>Qaabka Prompt-ka ugu fiican</h3>
+
+    <p>
+      Prompt adag wuxuu badanaa ka kooban yahay dhowr qaybood:
+    </p>
+
+    <ol>
+      <li><strong>Context:</strong> Waa maxay project-ka?</li>
+      <li><strong>Goal:</strong> Maxaad rabtaa in la sameeyo?</li>
+      <li><strong>Constraints:</strong> Maxaa aan la beddelin?</li>
+      <li><strong>Technical stack:</strong> React, Node.js, PHP, iwm.</li>
+      <li><strong>Acceptance criteria:</strong> Sidee ku ogaanaysaa in task-ku sax yahay?</li>
+    </ol>
+
+    <h3>Tusaale Prompt Advanced ah</h3>
+
+    <pre><code>You are working inside an existing React + Vite application.
+
+Goal:
+Add a reusable authentication form.
+
+Requirements:
+- Keep the current project architecture
+- Do not rewrite unrelated components
+- Use the existing styling system
+- Add email validation
+- Add password validation
+- Show accessible error messages
+- Disable submit while loading
+- Handle API errors gracefully
+
+Before editing:
+1. Inspect the existing authentication files
+2. Identify reusable components
+3. Explain the files you will change
+
+After editing:
+1. Run the build
+2. Report any errors
+3. Summarize the changes</code></pre>
+  </section>
+
+  <section id="tutorial">
+    <h2>Vibe Coding Tutorial: Sida Tallaabo Tallaabo Loogu Bilaabo</h2>
+
+    <p>
+      Hadda aan ka gudubno sharaxaadda oo aan galno qaybta ugu faa'iidada badan:
+      <strong>sidee dhab ahaan loogu sameeyaa Vibe Coding?</strong>
+    </p>
+
+    <h3>Tallaabada 1: Dooro project yar</h3>
+
+    <p>
+      Qof bilow ah ma habboona inuu ku bilaabo system aad u weyn oo leh authentication, payments,
+      database, roles, notifications iyo dashboards badan.
+    </p>
+
+    <p>
+      Ku bilow project sida:
+    </p>
+
+    <ul>
+      <li>To-do app</li>
+      <li>Expense tracker</li>
+      <li>Weather dashboard</li>
+      <li>Blog website</li>
+      <li>Student management mini app</li>
+      <li>Portfolio website</li>
+    </ul>
+
+    <h3>Tallaabada 2: Qeex requirement-ka</h3>
+
+    <p>
+      Qor waxyaabaha aad rabto kahor intaadan AI u gudbin.
+    </p>
+
+    <pre><code>Project: Expense Tracker
+
+Features:
+- Add expense
+- Delete expense
+- Category selection
+- Total monthly expenses
+- Search expenses
+- Responsive UI</code></pre>
+
+    <h3>Tallaabada 3: Samee plan</h3>
+
+    <p>
+      Haddii task-ku weyn yahay, ha ka codsan AI inuu wax walba hal mar dhiso.
+      Qaybi project-ka.
+    </p>
+
+    <pre><code>First, create the implementation plan only.
+
+Do not edit files yet.
+
+Break the project into:
+1. Project structure
+2. UI components
+3. State management
+4. Data model
+5. Validation
+6. Testing
+
+Wait for the next instruction before implementation.</code></pre>
+
+    <p>
+      Cursor wuxuu leeyahay Plan Mode oo loogu talagalay xaaladaha ay jiraan features badan ama project-ku
+      u baahan yahay in marka hore la fahmo scope-ka iyo approach-ka.
+    </p>
+
+    <h3>Tallaabada 4: Dhis qaybta koowaad</h3>
+
+    <p>
+      Kadib waxaad codsan kartaa hal qayb oo cad.
+    </p>
+
+    <pre><code>Implement the first phase only:
+Create the expense form and expense list.
+
+Do not add authentication, backend or database yet.</code></pre>
+
+    <h3>Tallaabada 5: Orod project-ka</h3>
+
+    <p>
+      Markasta tijaabi natiijada. Haddii aad isticmaalayso React/Vite, tusaale ahaan:
+    </p>
+
+    <pre><code>npm run dev</code></pre>
+
+    <p>
+      Kadib browser-ka ka hubi UI-ga.
+    </p>
+
+    <h3>Tallaabada 6: Qaado error-ka</h3>
+
+    <p>
+      Haddii browser-ku ku tuso:
+    </p>
+
+    <pre><code>ReferenceError: handleSubmit is not defined</code></pre>
+
+    <p>
+      Ha ku ekaan:
+    </p>
+
+    <pre><code>Fix it.</code></pre>
+
+    <p>
+      Isticmaal:
+    </p>
+
+    <pre><code>I get this error:
+
+ReferenceError: handleSubmit is not defined
+
+The error occurs in:
+src/components/ExpenseForm.jsx
+
+Please:
+1. Find the root cause
+2. Explain why it happens
+3. Show the smallest safe fix
+4. Avoid changing unrelated files</code></pre>
+
+    <h3>Tallaabada 7: Dib u eeg code-ka</h3>
+
+    <p>
+      Markaad aragto fix shaqaynaya, baro waxa la beddelay.
+      Tani waa halka Vibe Coding uu uga noqon karo waxbarasho halkii uu ka ahaan lahaa shortcut keliya.
+    </p>
+  </section>
+
+  <section id="project">
+    <h2>Tusaale: Sida AI loogu Dhiso Website Yar</h2>
+
+    <p>
+      Bal qiyaas inaad rabto inaad dhisto website loogu talagalay blog technology oo Somali ah.
+      Halkii aad AI siin lahayd codsi aan caddayn, waxaad u kala jebin kartaa sidan.
+    </p>
+
+    <h3>Phase 1: Structure</h3>
+
+    <pre><code>Create this React structure:
+
+src/
+  components/
+  pages/
+  layouts/
+  data/
+  hooks/
+
+Create reusable:
+- Header
+- Footer
+- ArticleCard
+- CategoryCard
+
+Do not implement API integration yet.</code></pre>
+
+    <h3>Phase 2: Homepage</h3>
+
+    <pre><code>Build the homepage using the existing reusable components.
+
+Sections:
+- Hero
+- Featured articles
+- Categories
+- Trending posts
+- Newsletter section
+
+Requirements:
+- Responsive
+- Semantic HTML
+- Mobile friendly
+- Accessible buttons and links</code></pre>
+
+    <h3>Phase 3: Article Page</h3>
+
+    <pre><code>Create an article page.
+
+Include:
+- Article title
+- Author
+- Publish date
+- Featured image
+- Table of contents
+- Article body
+- Related articles
+
+Keep the component reusable for multiple articles.</code></pre>
+
+    <h3>Phase 4: Search</h3>
+
+    <pre><code>Add a site-wide article search.
+
+Users should be able to:
+- Search by title
+- Search by category
+- See matching results
+- See an empty state when no result is found
+
+Do not add a backend yet.
+Use local mock data first.</code></pre>
+
+    <p>
+      Halkaan waxaad arkaysaa farqiga u dhexeeya “AI ii samee website”
+      iyo “AI waxay fulisaa plan cad”.
+      Midka labaad wuxuu kaa siinayaa xakameyn badan iyo natiijo la saadaalin karo.
+    </p>
+  </section>
+
+  <section id="debugging">
+    <h2>Sida AI looga caawisto Error-ka iyo Debugging-ka</h2>
+
+    <p>
+      Mid ka mid ah faa'iidooyinka ugu waaweyn ee AI-assisted coding waa debugging.
+      Laakiin AI waxay si fiican kuu caawin kartaa marka aad siisid xog ku filan.
+    </p>
+
+    <h3>Waxyaabaha aad AI siisid</h3>
+
+    <ul>
+      <li>Error message-ka oo dhan.</li>
+      <li>File-ka khaladku ka dhacay.</li>
+      <li>Relevant code.</li>
+      <li>Waxii aad filaysay inuu dhaco.</li>
+      <li>Waxii dhab ahaan dhacay.</li>
+    </ul>
+
+    <h3>Tusaale</h3>
+
+    <pre><code>Expected:
+The dashboard should display the student's name.
+
+Actual:
+It displays "undefined".
+
+Error:
+No console error.
+
+Relevant response:
+{
+  "student": {
+    "fullName": "Ahmed Ali"
+  }
+}
+
+Component:
+{student.name}
+
+Find the mismatch and explain it.</code></pre>
+
+    <p>
+      AI waxay markaas kuu sheegi kartaa in response-ku leeyahay <code>fullName</code> halka component-ku
+      raadinayo <code>name</code>.
+    </p>
+
+    <p>
+      Habkani wuxuu kaa caawinayaa inaad barato debugging mindset:
+      <strong>maxaan filayay, maxaa dhacay, xaggee ayay xogtu ka leexatay?</strong>
+    </p>
+  </section>
+
+  <section id="security">
+    <h2>Vibe Coding iyo Security: Maxaa Laga Digtoonaadaa?</h2>
+
+    <p>
+      Haddii aad AI ku tiirsanaato, security waa meel aan laga indho-tiri karin.
+      Coding agent-ku wuxuu heli karaa files, wax ka beddeli karaa code, mararka qaarna wuxuu isticmaali karaa
+      tools sida terminal ama web browsing iyadoo ku xiran qalabka iyo settings-ka.
+    </p>
+
+    <p>
+      Cursor waxay si rasmi ah uga digtaa in AI agents ay si lama filaan ah u dhaqmi karaan sababo ay ka mid yihiin
+      prompt injection iyo hallucinations, waxayna ku talisaa in guardrails-ka la ilaaliyo oo isbeddellada
+      muhiimka ah dib loo eego.
+    </p>
+
+    <h3>Ha gelin secrets prompt-ka</h3>
+
+    <p>
+      Ha ku dhejin AI:
+    </p>
+
+    <ul>
+      <li>API keys</li>
+      <li>Database passwords</li>
+      <li>Private tokens</li>
+      <li>Authentication secrets</li>
+      <li>Production credentials</li>
+    </ul>
+
+    <p>
+      Isticmaal environment variables iyo hababka secrets management ee ku habboon project-kaaga.
+    </p>
+
+    <h3>AI code si otomaatig ah ha loogu aaminin production</h3>
+
+    <p>
+      Code soo baxa waa in la review-gareeyaa, la test-gareeyaa, lana fahmaa ka hor inta aan la gelin
+      production.
+    </p>
+
+    <h3>Git isticmaal</h3>
+
+    <p>
+      Samee commits yaryar.
+      Markaad AI ka codsanayso feature weyn, commit samee ka hor isbeddelka.
+      Sidaas ayaad si fudud ugu noqon kartaa state-kii hore haddii natiijadu xumaato.
+    </p>
+  </section>
+
+  <section id="advantages">
+    <h2>Faa'iidooyinka Vibe Coding</h2>
+
+    <h3>1. Development-ku wuu dedejin karaa</h3>
+
+    <p>
+      Hawlo badan oo repetitive ah sida component scaffolding, basic forms, boilerplate iyo refactoring
+      waxaa lagu dhammayn karaa waqti ka yar marka AI si sax ah loo hago.
+    </p>
+
+    <h3>2. Prototype si dhakhso ah ayaad u samayn kartaa</h3>
+
+    <p>
+      Haddii aad fikrad leedahay laakiin aadan rabin inaad maalmo ku bixiso setup iyo boilerplate,
+      AI ayaa kaa caawin karta inaad si degdeg ah u samayso version hore.
+    </p>
+
+    <h3>3. Waxaad diiradda saari kartaa problem solving</h3>
+
+    <p>
+      Halkii wakhti badan lagu bixin lahaa typing, developer-ku wuxuu diiradda saari karaa:
+      architecture, user experience, business logic iyo testing.
+    </p>
+
+    <h3>4. Beginner-ku wuxuu si fudud u tijaabin karaa fikrado</h3>
+
+    <p>
+      Qof baranaya programming wuxuu AI waydiin karaa:
+      “Maxay function-kan u qabanaysaa?”,
+      “Maxay <code>map()</code> halkan uga shaqaynaysaa?”,
+      ama
+      “Igu sharax error-kan si beginner ah.”
+    </p>
+
+    <p>
+      Si kastaba ha ahaatee, tani waxay faa'iido weyn leedahay marka qofku isku dayayo inuu fahmo jawaabta,
+      halkii uu si indho la'aan ah u copy-gareyn lahaa.
+    </p>
+
+    <h3>5. Refactoring ayaa fududaan karta</h3>
+
+    <p>
+      Waxaad AI ka codsan kartaa inuu code urursan ka dhigo components ama functions yaryar,
+      iyadoo aan laga tagin behavior-kii hore.
+    </p>
+  </section>
+
+  <section id="disadvantages">
+    <h2>Dhibaatooyinka iyo Xaddidaadaha Vibe Coding</h2>
+
+    <p>
+      Waa qalad in la yiraahdo Vibe Coding waa hab qumman oo aan wax dhib ah lahayn.
+      Dhibaatooyinka ugu waaweyn waxay ka yimaadaan marka qofku aqbalo code uusan fahmin ama uusan tijaabin.
+    </p>
+
+    <h3>1. Code shaqaynaya oo aan la fahmin</h3>
+
+    <p>
+      App-ku wuxuu yeelan karaa muuqaal fiican, laakiin haddii aad garanayn sida uu u shaqeeyo,
+      bug weyn marka uu yimaado waxaad ku xirnaan kartaa AI mar kasta.
+    </p>
+
+    <h3>2. Hallucination</h3>
+
+    <p>
+      AI waxay soo saari kartaa function aan jirin, API khaldan, package aan sax ahayn ama implementation
+      aan ku habboonayn project-ka.
+    </p>
+
+    <h3>3. Code complexity</h3>
+
+    <p>
+      Haddii aad 20 jeer tiraahdo “fix this” adigoon architecture-ka dib u eegin, project-ku wuxuu isu beddeli
+      karaa code isku dhex yaacsan.
+    </p>
+
+    <h3>4. Security bugs</h3>
+
+    <p>
+      Code generated by AI weli wuxuu u baahan yahay security review.
+      Haddii authentication, authorization, payments ama data privacy ay qayb ka yihiin project-ka,
+      review iyo testing waa lama huraan.
+    </p>
+
+    <h3>5. Dependency overload</h3>
+
+    <p>
+      AI mararka qaar waxay ku dari kartaa libraries badan si ay xal degdeg ah u samayso.
+      Taasi waxay kordhin kartaa complexity iyo maintenance.
+    </p>
+
+    <div class="note">
+      <strong>Xeer dahabi ah:</strong>
+      AI ha kuu noqoto developer assistant, laakiin ha ka dhigin sanduuq madow aad code kasta ku kalsoonaato.
+    </div>
+  </section>
+
+  <section id="learn">
+    <h2>Sidee loo barta Vibe Coding?</h2>
+
+    <p>
+      Dad badan waxay rabaan inay bartaan Vibe Coding laakiin waxay bilaabaan qalabka halkii ay ka bilaabi
+      lahaayeen aasaaska.
+      Habka ugu wanaagsan waa inaad isku darto <strong>programming fundamentals + AI workflow</strong>.
+    </p>
+
+    <h3>Bilow HTML</h3>
+
+    <p>
+      Bar sida webpage loo dhiso:
+      headings, paragraphs, links, images, forms iyo semantic elements.
+    </p>
+
+    <h3>Kadib CSS</h3>
+
+    <p>
+      Bar layout, Flexbox, Grid, responsive design iyo basic visual styling.
+    </p>
+
+    <h3>Kadib JavaScript</h3>
+
+    <p>
+      JavaScript waa aasaas weyn oo web development-ka ah.
+      MDN waxay bixisaa guide dhamaystiran oo daboolaya variables, functions, objects, promises,
+      modules, error handling iyo qaybo kale oo luuqadda ah.
+    </p>
+
+    <p>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank" rel="noopener noreferrer">
+        Bar JavaScript adigoo isticmaalaya MDN Guide
+      </a>
+    </p>
+
+    <h3>Kadib Git iyo GitHub</h3>
+
+    <p>
+      Faham:
+      repositories, commits, branches, pull requests iyo rollback.
+    </p>
+
+    <h3>Kadib React ama framework kale</h3>
+
+    <p>
+      Marka aad leedahay JavaScript fundamentals, waxaad u gudbi kartaa React, Next.js ama stack kale oo aad danaynayso.
+    </p>
+
+    <p>
+      Akhriska documentation-ka rasmiga ahi waa muhiim. Haddii aad React baranayso, isticmaal documentation-ka
+      React si aad u fahanto components, state, effects iyo patterns-ka muhiimka ah.
+    </p>
+
+    <p>
+      <a href="https://react.dev/learn" target="_blank" rel="noopener noreferrer">
+        React Learn – Documentation rasmi ah
+      </a>
+    </p>
+
+    <h3>Markaas AI ku dar</h3>
+
+    <p>
+      Marka aad fahamto fundamentals-ka, AI wuxuu bilaabaa inuu noqdo multiplier.
+      Waxaad fahmi kartaa code-ka uu qoray, khaladka wuu kuu muuqan karaa, waxaana kuu fududaanaya inaad
+      qiimeyso talada AI.
+    </p>
+  </section>
+
+  <section id="career">
+    <h2>Vibe Coding ma shaqo iyo xirfad buu noqon karaa?</h2>
+
+    <p>
+      Haa, laakiin waa muhiim in si sax ah loo fahmo.
+      Vibe Coding laftiisa badanaa ma aha “job title” aad ku ekaan karto.
+      Waxa qiimo leh waa xirfadda ka dambaysa:
+    </p>
+
+    <ul>
+      <li>Problem solving</li>
+      <li>Programming fundamentals</li>
+      <li>AI-assisted development</li>
+      <li>Testing</li>
+      <li>Debugging</li>
+      <li>Git and GitHub</li>
+      <li>UI/UX understanding</li>
+      <li>Database and API knowledge</li>
+      <li>Security awareness</li>
+    </ul>
+
+    <p>
+      Tusaale ahaan, freelancer wuxuu isticmaali karaa AI si uu u dedejiyo:
+      landing pages, dashboards, forms, bug fixes, integrations iyo prototypes.
+      Laakiin client-ka waxa muhiimka u ah natiijada:
+      <strong>software shaqaynaya, ammaan ah, la maintain-gareyn karo oo buuxiya requirements-ka.</strong>
+    </p>
+
+    <p>
+      Sidaa darteed, qofka isku dara programming fundamentals iyo AI tools wuxuu heli karaa workflow
+      ka xoog badan qof ku tiirsan prompt keliya.
+    </p>
+  </section>
+
+  <section id="seo-context">
+    <h2>Vibe Coding, AI Coding iyo Future-ka Developer-ka</h2>
+
+    <p>
+      Waxaa muhiim ah in la kala saaro saddex erey:
+      <strong>AI Coding</strong>, <strong>AI-assisted development</strong> iyo <strong>Vibe Coding</strong>.
+    </p>
+
+    <p>
+      AI Coding waa erey ballaaran oo lagu tilmaami karo isticmaalka AI ee programming-ka.
+      AI-assisted development waxay tilmaamaysaa in AI lagu taageerayo qayb ka mid ah workflow-ga.
+      Vibe Coding-na badanaa waxaa loola jeedaa habka qofku AI ugu sharaxayo intent-ka iyo task-ka,
+      iyadoo AI ay qayb weyn ka qaadanayso qorista ama isbeddelka code-ka.
+    </p>
+
+    <p>
+      Dhammaan saddexdan hab waxay ka muuqanayaan isbeddelka cusub ee software development-ka:
+      developer-ku wuxuu sii noqonayaa qof maamula system, context, constraints, tests iyo quality,
+      halkii uu kaliya ka ahaan lahaa qof code line-by-line u qora.
+    </p>
+  </section>
+
+  <section id="workflow">
+    <h2>Workflow-ka ugu fiican ee Vibe Coding</h2>
+
+    <p>
+      Haddii aad rabto inaad Vibe Coding si xirfad leh u isticmaasho, workflow-kan ayaa kaa caawin kara:
+    </p>
+
+    <ol>
+      <li><strong>Understand:</strong> Faham requirement-ka.</li>
+      <li><strong>Plan:</strong> Samee plan ka hor implementation-ka.</li>
+      <li><strong>Context:</strong> AI sii files iyo xogta relevant-ka ah.</li>
+      <li><strong>Implement:</strong> Samee hal qayb markiiba.</li>
+      <li><strong>Run:</strong> Orod application-ka.</li>
+      <li><strong>Test:</strong> Hubi behavior-ka.</li>
+      <li><strong>Review:</strong> Akhri diff-ka iyo code-ka.</li>
+      <li><strong>Commit:</strong> Samee Git commit haddii wax walba sax yihiin.</li>
+      <li><strong>Iterate:</strong> Kadib u gudub feature-ka xiga.</li>
+    </ol>
+
+    <p>
+      Tani waxay ka fiican tahay workflow aan nidaam lahayn oo ah:
+      <strong>prompt → copy → error → prompt kale → error kale → prompt kale.</strong>
+    </p>
+  </section>
+
+  <section id="internal-links">
+    <h2>Waxyaabo kale oo TechSomalia aad ka sii akhrisan karto</h2>
+
+    <p>
+      Haddii aad hadda bilaabayso barashada AI iyo programming, maqaalkan waxaad ka sii raacin kartaa
+      qaybaha kale ee TechSomalia:
+    </p>
+
+    <ul>
+      <li>
+        <a href="usingChatgptAndOhterAI.html">
+           AI si khaldan ayaad u isticmaashaa! <span>isticmaal habkaan</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="./10skills.html">
+          Baro Digital Skills
+        </a>
+      </li>
+
+      <li>
+        <a href="./programing.html">
+         waa maxay programming
+        </a>
+      </li>
+
+     
+    </ul>
+
+    <p>
+      Inta aad ku dhex akhrinayso maqaalada la xiriira, isku day inaad sameysato chain waxbarasho:
+      HTML → CSS → JavaScript → Git → React → AI Coding.
+      Tani waxay kuu dhisaysaa foundation adag oo ka fiican inaad si toos ah ugu booddo prompt-only development.
+    </p>
+  </section>
+
+  <section id="future">
+    <h2>Mustaqbalka Vibe Coding sidee noqon karaa?</h2>
+
+    <p>
+      Qalabka coding agents wuxuu sii kordhinayaa awooddiisa.
+      Cursor, tusaale ahaan, wuxuu hadda diiradda saarayaa agent workflows, planning, debugging,
+      codebase understanding iyo xitaa subagents.
+    </p>
+
+    <p>
+      GitHub-na wuxuu ballaarinayaa coding-agent workflows kuwaas oo task loo diri karo agent,
+      isbeddello la sameeyo, kadibna qofku review-gareeyo pull request-ka.
+    </p>
+
+    <p>
+      Tani waxay muujinaysaa in mustaqbalka developer-ku laga yaabo inuu waqti yar ku bixiyo repetitive coding,
+      waqti badanna ku bixiyo:
+      architecture, requirements, testing, product thinking, security iyo code review.
+    </p>
+
+    <p>
+      Laakiin hal arrin ayaa u badan inay sii ahaato muhiim:
+      <strong>qofku wuxuu u baahan yahay inuu fahmo waxa uu AI sameynayo.</strong>
+      Software dhab ah ma aha kaliya inuu browser-ka ku qurux badnaado; waa inuu noqdaa mid la fahmi karo,
+      la dayactiri karo, la tijaabin karo oo ammaan ah.
+    </p>
+  </section>
+
+  <section id="faq">
+    <h2>Su'aalaha Inta Badan La Isweydiiyo ee Vibe Coding</h2>
+
+    <h3>Vibe Coding waa maxay?</h3>
+
+    <p>
+      Vibe Coding waa hab AI lagu isticmaalo horumarinta software-ka iyadoo qofku si natural language ah
+      u qeexayo waxa uu doonayo, AI-na ay ka caawiso soo saarista, wax-ka-beddelka iyo mararka qaarkood
+      tijaabinta code-ka.
+    </p>
+
+    <h3>Vibe Coding ma la mid baa AI Coding?</h3>
+
+    <p>
+      Labadu way isku dhow yihiin laakiin isku macne ma aha.
+      AI Coding waa eray ballaaran, halka Vibe Coding uu inta badan tilmaamayo workflow ay AI qayb weyn
+      kaga jirto qorista code-ka iyadoo developer-ku diiradda saarayo intent, feedback iyo natiijada.
+    </p>
+
+    <h3>Ma u baahanahay inaan barto programming si aan u sameeyo Vibe Coding?</h3>
+
+    <p>
+      Waxaad samayn kartaa prototypes adigoo leh aqoon yar, laakiin haddii aad rabto inaad samayso software
+      tayo sare leh, waxaa aad muhiim u ah inaad barato programming fundamentals, debugging, Git, testing
+      iyo security.
+    </p>
+
+    <h3>Cursor ma ku habboon yahay Vibe Coding?</h3>
+
+    <p>
+      Haa. Cursor Agent wuxuu leeyahay awood uu ku fahmo codebase, wax uga beddelo files badan,
+      ordo terminal commands oo ka caawiyo features iyo bug fixes.
+    </p>
+
+    <h3>GitHub Copilot ma lagu sameyn karaa Vibe Coding?</h3>
+
+    <p>
+      Haa. GitHub Copilot wuxuu leeyahay AI coding assistance iyo agent-oriented workflows kuwaas oo kaa
+      caawin kara code, debugging iyo coding tasks.
+    </p>
+
+    <h3>AI code kasta ma sax baa?</h3>
+
+    <p>
+      Maya. AI waxay soo saari kartaa code khaldan, aan ammaan ahayn ama aan ku habboonayn architecture-ka.
+      Mar kasta waa in la review-gareeyo oo la tijaabiyo.
+    </p>
+
+    <h3>Vibe Coding ma beddeli doonaa programmers?</h3>
+
+    <p>
+      Vibe Coding wuxuu beddeli karaa qaar ka mid ah hawlaha programmer-ku qaban jiray, gaar ahaan
+      repetitive coding, laakiin software development weli wuxuu u baahan yahay planning, architecture,
+      testing, debugging, security iyo fahamka requirements-ka.
+    </p>
+
+    <h3>Vibe Coding ma ku habboon yahay beginner?</h3>
+
+    <p>
+      Haa, laakiin beginner-ku waa inuu AI u isticmaalaa macallin iyo assistant, ma aha inuu ka dhigo
+      meel uu si indho la'aan ah code uga soo qaato.
+    </p>
+
+    <h3>Maxaan marka hore barta?</h3>
+
+    <p>
+      HTML, CSS, JavaScript, Git, API basics iyo ugu yaraan hal framework sida React.
+      Kadib waxaad AI ku dari kartaa workflow-gaaga si aad u hesho xawaare dheeraad ah.
+    </p>
+
+    <h3>Vibe Coding lacag ma laga samayn karaa?</h3>
+
+    <p>
+      AI lafteeda lacag toos ah kuuma samaynayso. Laakiin xirfadda aad ku dhisto adigoo isticmaalaya AI
+      waxay kaa caawin kartaa freelance projects, websites, SaaS prototypes, automation iyo adeegyo
+      software haddii aad soo saari karto natiijo tayo leh.
+    </p>
+  </section>
+
+  <section id="conclusion">
+    <h2>Gunaanad: Vibe Coding ma yahay Mustaqbalka Programming-ka?</h2>
+
+    <p>
+      <strong>Vibe Coding</strong> wuxuu beddelayaa sida dad badan ula shaqeeyaan code.
+      Waxa maanta suuragal ka dhigay AI coding assistants iyo coding agents wuxuu ahaa in qofku software
+      fikradiisa ku sharixi karo luuqad dabiici ah, kadibna AI uga caawiso implementation-ka.
+    </p>
+
+    <p>
+      Laakiin halkan waxaa ku jira sirta ay dad badan seegaan:
+      <strong>Vibe Coding-ka ugu awoodda badan ma aha qofka prompt-ka ugu dheer qoraya; waa qofka si fiican
+      u fahmaya dhibaatada, technology-ga, code-ka iyo sida loo hubiyo natiijada.</strong>
+    </p>
+
+    <p>
+      Haddii aad tahay beginner, ha ka baqin AI.
+      Isticmaal.
+      Laakiin isla markaana bar fundamentals-ka.
+    </p>
+
+    <p>
+      Haddii aad tahay developer, ha u arkin AI oo keliya code generator.
+      U arag assistant awood u leh inuu kaa caawiyo planning, implementation, debugging, refactoring,
+      testing iyo exploration.
+    </p>
+
+    <p>
+      Ugu dambayn, Vibe Coding ma aha in programmer-ka la tirtiro.
+      Waa isbeddel ku yimid <strong>sida programmer-ku u shaqeeyo</strong>.
+      Qofka isku dara aqoonta programming-ka, fahamka product-ka iyo awoodda AI wuxuu yeelan karaa
+      workflow aad uga dhakhso badan kii hore.
+    </p>
+
+    <p>
+      Haddii aad maanta rabto inaad bilowdo, ha ka fikirin inaad dhisto application weyn.
+      Qaado hal project yar, dooro Cursor ama coding assistant aad fahmi karto, samee plan,
+      u qor AI prompt cad, tijaabi code-ka, akhri khaladaadka oo ku celi.
+      Halkaas ayay dhab ahaan ka bilaabataa safarkaaga <strong>Vibe Coding</strong>.
+    </p>
+
+  </section>
+
+</article>
+
+            <div class="mt-12 pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-4 items-center justify-between">
+                <span class="font-bold dark:text-white">La wadaag asxaabta:</span>
+                <div class="flex gap-2">
+<a href="https://api.whatsapp.com/send?text=Halkan ka aqri maqaal aad u xiiso badan: https://techsomali.com/payoneer.html" 
+   target="_blank" 
+   class="px-4 py-2 bg-green-500 text-white rounded-xl text-sm font-bold"style="color: #f8fafc; text-decoration: none;">
+   
+   WhatsApp
+</a>
+               <a href="https://www.facebook.com/sharer/sharer.php?u=https://techsomali.com/payoneer.html" 
+   target="_blank" 
+   class="px-4 py-2 bg-blue-600 text-white rounded-xl text-sm font-bold" style="color: #f8fafc; text-decoration: none;">
+   Facebook
+</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6 mt-12">
+            <a href="aiAgents.html" class="p-6 bg-[#131926] rounded-3xl border border-white/5 text-white dark:border-slate-800 hover:border-blue-500 transition shadow-lg">
+                <span class="text-xs text-slate-500 uppercase">Maqaalkii hore</span>
+                <p class="font-bold dark:text-white mt-1">waa maxay Agentic AI</p>
+            </a>
+            <a href="webdevelopment.html" class="p-6 bg-[#131926] rounded-3xl border border-white/5 text-white dark:border-slate-800 hover:border-blue-500 transition shadow-lg">
+                <span class="text-xs text-slate-500 uppercase">Maqaalka xiga</span>
+                <p class="font-bold dark:text-white mt-1">Barashada Web development </p>
+            </a>
+        </div>
+
+    <script>
+        // Scroll Progress Bar
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("scroll-progress").style.width = scrolled + "%";
+        };
+
+        // Mobile Menu
+        const overlay = document.getElementById('mobile-overlay');
+        document.getElementById('open-menu').addEventListener('click', () => overlay.classList.add('active'));
+        document.getElementById('close-menu').addEventListener('click', () => overlay.classList.remove('active'));
+    </script>
+</body>
+</html>
