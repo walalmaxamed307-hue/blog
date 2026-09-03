@@ -2081,13 +2081,22 @@ body::before {
 <div class="newsletter-strip" role="complementary" aria-label="Newsletter signup">
   <h2>Ku Biir Community-ga Premium</h2>
   <p>Hel casharro cusub, SEO tips, iyo updates gaar ah oo toos kugu imaanaya email-kaaga.</p>
-  <form action="https://formspree.io/f/xzdaoeyv" method="POST">
-    <input type="email" name="email" required placeholder="Gali Email-kaaga" autocomplete="email">
-    <button type="submit">Subscribe</button>
-  </form>
+
+  <div id="newsletterContainer">
+    <!-- 1. Foomka Diwaan-gelinta -->
+    <form id="newsletterForm" action="https://formspree.io/f/xzdaoeyv" method="POST">
+      <input type="email" name="email" required placeholder="Gali Email-kaaga" autocomplete="email">
+      <button type="submit">Subscribe</button>
+    </form>
+
+    <!-- 2. Qoraalka soo baxaya marka uu horay u diwangashay -->
+    <div id="alreadySubscribedMessage" class="hidden" style="background:rgba(34, 197, 94, 0.15); border:1px solid rgba(34, 197, 94, 0.4); color:#4ade80; padding:15px; border-radius:12px; margin-top:10px; text-align:center; font-weight:600;">
+      ✓ Horay ayaad ugu biirtay premium community. Mahadsanid!
+    </div>
+  </div>
+
   <p class="nl-note">No spam. Ka bax wakhti kasta.</p>
 </div>
-
 <!-- ============================================================
      FOOTER
      ============================================================ -->
@@ -2363,6 +2372,49 @@ if ('IntersectionObserver' in window) {
 } else {
   document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const newsletterForm = document.getElementById("newsletterForm");
+  const alreadySubscribedMessage = document.getElementById("alreadySubscribedMessage");
+
+  // Hal furaha oo labada bogba ka wadada akhrinayaan browser-ka
+  const IS_SUBSCRIBED_KEY = "techsomalia_subscribed";
+
+  // 1. Hubi marka boggu soo load-garoobo
+  if (localStorage.getItem(IS_SUBSCRIBED_KEY) === "true") {
+    if (newsletterForm && alreadySubscribedMessage) {
+      newsletterForm.style.display = "none"; // Qari foomka
+      alreadySubscribedMessage.classList.remove("hidden"); // Muuji qoraalka
+      alreadySubscribedMessage.style.display = "block";
+    }
+  }
+
+  // 2. Marka uu Submit gujiyo, kaydi browser-ka
+  if (newsletterForm) {
+    newsletterForm.addEventListener("submit", () => {
+      localStorage.setItem(IS_SUBSCRIBED_KEY, "true");
+    });
+  }
+});
+  const newsletterForm = document.getElementById("newsletterForm");
+  const alreadySubscribedMessage = document.getElementById("alreadySubscribedMessage");
+
+  const IS_SUBSCRIBED_KEY = "techsomalia_subscribed";
+
+  // Hubi marka uu bog kasta soo load-garoobo
+  if (localStorage.getItem(IS_SUBSCRIBED_KEY) === "true") {
+    if (newsletterForm && alreadySubscribedMessage) {
+      newsletterForm.classList.add("hidden");
+      alreadySubscribedMessage.classList.remove("hidden");
+    }
+  }
+
+  // Marka uu meel kasta ka submit-gareeyo, labada bogba waa loo kaydinayaa
+  if (newsletterForm) {
+    newsletterForm.addEventListener("submit", () => {
+      localStorage.setItem(IS_SUBSCRIBED_KEY, "true");
+    });
+  }
+
 </script>
 
 </body>

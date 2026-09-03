@@ -548,15 +548,11 @@ transform:scale(1.2);
 </div>
    </div>
    </section>
-   <!-- SEARCH -->
-<section class="relative z-10 px-5 md:px-10 -mt-6 mb-12">
-
-  <div class="max-w-4xl mx-auto">
-
-    <div class="card p-4 md:p-5">
-
+<!-- SEARCH -->
+<section class="relative z-20 px-5 md:px-10 -mt-6 mb-12">
+  <div class="max-w-4xl mx-auto relative">
+    <div class="card p-4 md:p-5 relative z-10">
       <div class="flex items-center gap-3">
-
         <svg width="20" height="20" fill="none"
           stroke="currentColor" stroke-width="2"
           viewBox="0 0 24 24"
@@ -571,14 +567,16 @@ transform:scale(1.2);
           placeholder="Raadi xirfadaada AI, Online Income, Digital Skills..."
           class="w-full bg-transparent outline-none text-base"
           style="color:var(--cream)"
+          autocomplete="off"
         >
-
       </div>
-
     </div>
 
+    <!-- Dropdown List-ka Natiijooyinka (Madow Buuxa & Layer Sare) -->
+    <div id="searchResults" 
+         class="hidden absolute top-full left-0 right-0 mt-2 bg-[#0d131f] border border-gray-700 rounded-xl shadow-2xl overflow-hidden z-[999] max-h-80 overflow-y-auto">
+    </div>
   </div>
-
 </section>
    <!-- GUIDED START -->
 
@@ -1133,17 +1131,17 @@ transform:scale(1.2);
       </a>
 
       <!-- Online Income -->
-      <a href="./onlineincome.html"
+      <a href="./dataAnalysis.html"
          class="card card-hover p-6 reveal"
          style="border-top:3px solid var(--mint)">
 
         <h3 class="font-display font-semibold text-lg mb-3">
-          💰 Online Income
+        🖥️ Data Analysis
         </h3>
 
         <p class="text-sm leading-relaxed"
            style="color:var(--cream-dim)">
-          Baro habab dhab ah oo lacag looga sameeyo internet-ka adigoo isticmaalaya xirfado iyo qalab casri ah.
+          Baro sida loo sameeyo data analysis loo maamulo ganacsiyada waawayn xogtooda.
         </p>
 
       </a>
@@ -1178,11 +1176,22 @@ transform:scale(1.2);
     <span class="eyebrow" style="color:var(--coral)">Ha Iska Dhaafin</span>
     <h2 class="font-display font-semibold text-3xl md:text-4xl mt-3 mb-4 tracking-tight">Hel Cashar Cusub Toddobaad Walba</h2>
     <p class="mb-9 max-w-lg mx-auto" style="color:var(--cream-dim)">Mid kaliya oo email ah — cashar gaaban, AI tip, iyo qalab cusub, toos loogu soo diro inbox-kaaga.</p>
-    <form action="https://formspree.io/f/xzdaoeyv" method="POST" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-      <input type="email" name="email" required placeholder="email@tusaale.com"
-        class="flex-1 px-5 py-4 rounded-full outline-none text-sm" style="background:var(--surface-2); border:1px solid var(--line); color:var(--cream)">
-      <button type="submit" class="btn-primary px-7 py-4 text-sm whitespace-nowrap">Iska Diiwaan Geli</button>
-    </form>
+    
+    <!-- Container-ka Foomka iyo Qoraalka -->
+    <div id="newsletterContainer">
+      <!-- 1. Foomka Diwaan-gelinta -->
+      <form id="newsletterForm" action="https://formspree.io/f/xzdaoeyv" method="POST" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input type="email" name="email" required placeholder="email@tusaale.com"
+          class="flex-1 px-5 py-4 rounded-full outline-none text-sm" style="background:var(--surface-2); border:1px solid var(--line); color:var(--cream)">
+        <button type="submit" class="btn-primary px-7 py-4 text-sm whitespace-nowrap">Iska Diiwaan Geli</button>
+      </form>
+
+      <!-- 2. Qoraalka soo baxaya marka uu horay u diwangashay -->
+      <div id="alreadySubscribedMessage" class="hidden p-4 rounded-2xl max-w-md mx-auto" style="background:rgba(34, 197, 94, 0.1); border:1px solid rgba(34, 197, 94, 0.3); color:#4ade80;">
+       ✓ Horay ayaad ugu biirtay premium community. Mahadsanid!
+      </div>
+    </div>
+
     <p class="mt-4 text-xs" style="color:var(--cream-dim)">Wax spam ah malahan. Ka bax wakhti kasta.</p>
   </div>
 </section>
@@ -1522,183 +1531,124 @@ current = 0;
 showSlide(current);
 
 },3000);
+const searchInput = document.getElementById("siteSearch");
+const searchResults = document.getElementById("searchResults");
 
-const searchInput =
-document.getElementById("siteSearch");
+if (searchInput && searchResults) {
 
-if(searchInput){
+  // Map-ka dhamaan pages-ka iyo keywords-kooda
+  const searchDatabase = [
+    { title: "Best AI Tools", url: "./bestai.html", keywords: ["best ai", "bestai","best ai tools","AI ugu fiican"] },
+    { title: "ChatGPT & AI Usage", url: "./usingChatgptAndOhterAI.html", keywords: ["chatgpt", "isticmaalka ai", "isticmaalka ai kale","isticmaalka chatgpt"] },
+    { title: "Online Income", url: "./onlineincome.html", keywords: ["online income", "online","lacag internetka","lacag online","sidee lacag looga sameeya internetka"] },
+    { title: "Earn Money", url: "./earnmoney.html", keywords: ["money","lacag hel","lacag sidoo looo helaa","earn money"] },
+    { title: "AI for Affiliate", url: "./aiforaffliate.html", keywords: ["affiliate","affliate marketing","xayisiin shirkad","xayisiin"]},
+    { title: "AI for Blogging", url: "./aiforblogging.html", keywords: ["bloging"] },
+    { title: "Web Development", url: "./webdevelopment.html", keywords: ["web", "webdevelopment"] },
+    { title: "10 Digital Skills", url: "./10skills.html", keywords: ["skills", "digital skills", "xirfad"] },
+    { title: "AI for Video Editors", url: "./aiforvedioeditors.html", keywords: ["video"] },
+    { title: "AI Dropshipping", url: "./aidropshiping.html", keywords: ["dropshipping"] },
+    { title: "AI Image Generators", url: "./imageGenerotors.html", keywords: ["photo", "edit"] },
+    { title: "Payoneer Guide", url: "./payoneer.html", keywords: ["lacaglabixid", "payoneer"] },
+    { title: "AI for Graphic Designers", url: "./aiforgraphicdesghners.html", keywords: ["graphic"] },
+    { title: "Freelancing Guide", url: "./freelancing.html", keywords: ["freelencing"] },
+    { title: "Passive Income AI Tools", url: "./passiveincomeaitools.html", keywords: ["daqlijoogto ah", "daqli"] },
+    { title: "JavaScript Basics", url: "./jv.html", keywords: ["jv", "javascript"] },
+    { title: "React Development", url: "./react.html", keywords: ["react"] },
+    { title: "Waafi Payment", url: "./waafi.html", keywords: ["waafi"] },
+    { title: "Make $100 Guide", url: "./make100$.html", keywords: ["100$"] },
+    { title: "Git & GitHub", url: "./git&github.html", keywords: ["github"] },
+    { title: "Hosting & Domain", url: "./hosting&domain.html", keywords: ["hosting", "domain"] },
+    { title: "Fiverr Freelancing", url: "./fiver.html", keywords: ["fiver"] },
+    { title: "Programming Basics", url: "./programing.html", keywords: ["programming", "programing"] },
+    { title: "AI Tools for Students", url: "./aitoolsforstudents.html", keywords: ["student"] },
+    { title: "Social Media Automation", url: "./socialmediaautomization.html", keywords: ["socialmedia", "social"] },
+    { title: "AI for YouTube", url: "./aiforyoutope.html", keywords: ["youtope"] },
+    { title: "Frontend vs Backend", url: "./frontendvsbackend.html", keywords: ["frontend", "backend"] },
+    { title: "Partnerstack Guide", url: "./Partnerstack.html", keywords: ["partnerstack", "partnerstack lacag ka samee", "lacag ka samee partnerstack", "partnerstack lacag", "affliateprogram", "shirkada partnerstack"] },
+    { title: "TikTok Income", url: "./makeMoneyTiktok.html", keywords: ["tiktok", "lacag ka samee tiktok", "lacag tiktok", "ka samee lacag tiktok", "tiktok lacag badan", "tiktoklacagkasamee"] },
+    { title: "Facebook Income", url: "./makeMoneyFacebook.html", keywords: ["facebook", "lacag ka samee facebook", "lacag facebook", "ka samee lacag facebook", "facebook lacag badan", "facebooklacagkasamee"] },
+    { title: "YouTube Income", url: "./makeMoneyYoutope.html", keywords: ["youtube", "lacag ka samee youtube", "lacag youtube", "ka samee lacag youtube", "youtube lacag badan", "youtubelacagkasamee"] },
+    { title: "Telegram Income", url: "./makeMoneyTelegram.html", keywords: ["telegram", "lacag ka samee telegram", "lacag telegram", "ka samee lacag telegram", "telegram lacag badan", "telegramlacagkasamee"] },
+    { title: "Website Income", url: "./makingMoneyWebsite.html", keywords: ["website", "lacag ka samee website", "lacag website", "ka samee lacag website", "website lacag badan", "websitelacagkasamee", "website samayn", "websitesamayn"] },
+    { title: "Blogging Skill & Income", url: "./Blogging.html", keywords: ["lacag ka samee blog", "blog website", "ka samee lacag website blog", "lacag ka samee blog website", "blogging", "xirfada blogging", "xirfada blog", "blogging lacag"] },
+    { title: "Data Analysis Skill", url: "./dataAnalysis.html", keywords: ["ka samee lacag data analysis", "lacag ka samee data analysis", "data analysis", "xirfada data analsyse", "xirfadadata analysis", "data analysis lacag"] },
+    { title: "AI Automation Skill", url: "./aiAutomation.html", keywords: ["ai automation", "aiautomation", "fahanka ai automation", "fahanka aiautomation", "xirfada ai automation", "xirfada aiautomation", "waa maxay ai automation", "waa maxay aiautomation", "ai automation skill", "aiautomation skill"] },
+    { title: "Vibe Coding", url: "./vipeCoding.html", keywords: ["vibe coding", "waa maxay vibe coding", "vibecoding", "vibecoders"] },
+    { title: "AI Agents", url: "./aiAgents.html", keywords: ["ai agents", "waa maxay ai agents", "agentic coding", "aiagents"] },
+    { title: "Copywriting Skill", url: "./copywriting.html", keywords: ["copywriting", "waa maxay copy writng", "copy writing", "xirfada copwriting"] },
+    { title: "Upwork Freelancing", url: "./ubwork.html", keywords: ["upwork", "upwork lacag", "ka shaqee upwork", "sidee looga shaqeeyaa upwork"] }
+  ];
 
-searchInput.addEventListener("keydown",(e)=>{
+  // Shaqada baaritaanka marka qofku wax qorayo (Input Event)
+  searchInput.addEventListener("input", (e) => {
+    const query = e.target.value.toLowerCase().trim();
 
-if(e.key !== "Enter") return;
+    if (!query) {
+      searchResults.classList.add("hidden");
+      searchResults.innerHTML = "";
+      return;
+    }
 
-const keyword =
-searchInput.value.trim().toLowerCase();
+    // Filter garee maqaallada keyword-kooda ama title-kooda uu ku jiro query-ga
+    const matches = searchDatabase.filter((item) => {
+      const matchTitle = item.title.toLowerCase().includes(query);
+      const matchKeyword = item.keywords.some((kw) => kw.toLowerCase().includes(query));
+      return matchTitle || matchKeyword;
+    });
 
-if(!keyword) return;
+    // Soosaar natiijada
+    if (matches.length > 0) {
+      searchResults.innerHTML = matches
+        .map(
+          (item) => `
+            <a href="${item.url}" class="block p-3 hover:bg-gray-800/60 border-b border-gray-800/50 last:border-none transition duration-150">
+              <div class="text-sm font-medium" style="color:var(--cream)">${item.title}</div>
+              <div class="text-xs opacity-60 mt-0.5" style="color:var(--cream-dim)">Guji si aad u akhriso maqaalka</div>
+            </a>
+          `
+        )
+        .join("");
+      searchResults.classList.remove("hidden");
+    } else {
+      searchResults.innerHTML = `
+        <div class="p-4 text-center text-sm opacity-70" style="color:var(--cream-dim)">
+          Maqaal ama xirfad la xiriirta "${query}" ma ahaan mid la helay.
+        </div>
+      `;
+      searchResults.classList.remove("hidden");
+    }
+  });
 
-const pages = {
-
-"best ai":"./bestai.html",
-"bestai":"./bestai.html",
-"chatgpt":"./usingChatgptAndOhterAI.html",
-"online income":"./onlineincome.html",
-"money":"./earnmoney.html",
-"affiliate":"./aiforaffliate.html",
-"bloging":"./aiforblogging.html",
-"web":"./webdevelopment.html",
-"webdevelopment":"./webdevelopment.html", 
-"skills":"./10skills.html",
-"video":"./aiforvedioeditors.html",
-"dropshipping":"./aidropshiping.html",
-"photo":"./imageGenerotors.html",
-"digital skills":"./10skills.html",
-"xirfad":"./10skills.html",
-// "lacag":"./make100$.html",
-// "lacagsameen":"./make100$.html",
-"lacaglabixid":"./payoneer.html",
-"graphic":"./aiforgraphicdesghners.html",
-
-"freelencing":"./freelancing.html",
-"daqliJoogto ah":"./passiveincomeaitools.html",
-
-"daqli":"./passiveincomeaitools.html",
-"isticmaalka AI":"./usingChatgptAndOhterAI.html",
-"isticmaalka":"./usingChatgptAndOhterAI.html",
-"jv":"./jv.html",
-"javascript":"./jv.html",
-"react":"./react.html",
-"react":"./react.html",
-"waafi":"./waafi.html",
-"payoneer":"./payoneer.html",
-"online":"./onlineincome.html",
-"edit":"./imageGenerotors.html",
-"100$":"./make100$.html",
-"github":"./git&github.html",
-"hosting":"./hosting&domain.html",
-"domain":"./hosting&domain.html",
-"fiver":"./fiver.html",
-"programming":"./programing.html",
-"programing":"./programing.html",
-"website":"./website.html",
-"student":"./aitoolsforstudents.html",
-"socialmedia":"./socialmediaautomization.html",
-"social":"./socialmediaautomization.html",
-"youtope":"./aiforyoutope.html",
-"frontend":"./frontendvsbackend.html",
-"backend":"./frontendvsbackend.html",
-"partnerstack":"./Partnerstack.html",
-"partnerstack lacag ka samee":"./Partnerstack.html",
-"lacag ka samee partnerstack":"./Partnerstack.html",
-"partnerstack lacag":"./Partnerstack.html",
-"affliateprogram":"./Partnerstack.html",
-"shirkada partnerstack":"./Partnerstack.html",
-"tiktok":"./makeMoneyTiktok.html",
-"lacag ka samee tiktok":"./makeMoneyTiktok.html",
-"lacag tiktok":"./makeMoneyTiktok.html",
-"ka samee lacag tiktok":"./makeMoneyTiktok.html",
-"lacag ka samee tiktok":"./makeMoneyTiktok.html",
-"tiktok lacag badan":"./makeMoneyTiktok.html",
-"tiktoklacagkasamee":"./makeMoneyTiktok.html",
-"facebook":"./makeMoneyFacebook.html",
-"lacag ka samee facebook":"./makeMoneyFacebook.html",
-"lacag facebook":"./makeMoneyFacebook.html",
-"ka samee lacag facebook":"./makeMoneyFacebook.html",
-"lacag ka samee facebook":"./makeMoneyFacebook.html",
-"facebook lacag badan":"./makeMoneyFacebook.html",
-"facebooklacagkasamee":"./makeMoneyFacebook.html",
-"youtube":"./makeMoneyYoutope.html",
-"youTube":"./makeMoneyYoutope.html",
-"lacag ka samee youtube":"./makeMoneyYoutope.html",
-"lacag youtube":"./makeMoneyYoutope.html",
-"ka samee lacag youtube":"./makeMoneyYoutope.html",
-"lacag ka samee youtube":"./makeMoneyYoutope.html",
-"youtube lacag badan":"./makeMoneyYoutope.html",
-"youtubelacagkasamee":"./makeMoneyYoutope.html",
-"telegram":"./makeMoneyTelegram.html",
-"telegram":"./makeMoneyTelegram.html",
-"lacag ka samee telegram":"./makeMoneyTelegram.html",
-"lacag telegram":"./makeMoneyTelegram.html",
-"ka samee lacag telegram":"./makeMoneyTelegram.html",
-"lacag ka samee telegram":"./makeMoneyTelegram.html",
-"telegram lacag badan":"./makeMoneyTelegram.html",
-"telegramlacagkasamee":"./makeMoneyTelegram.html",
-"website":"./makingMoneyWebsite.html",
-"website":"./makingMoneyWebsite.html",
-"lacag ka samee website":"./makingMoneyWebsite.html",
-"lacag website":"./makingMoneyWebsite.html",
-"ka samee lacag website":"./makingMoneyWebsite.html",
-"lacag ka samee website":"./makingMoneyWebsite.html",
-"website lacag badan":"./makingMoneyWebsite.html",
-"websitelacagkasamee":"./makingMoneyWebsite.html",
-"website samayn":"./makingMoneyWebsite.html",
-"websitesamayn":"./makingMoneyWebsite.html",
-"lacag ka samee blog":"./Blogging.html",
-"blog website":"./Blogging.html",
-"ka samee lacag website blog":"./Blogging.html",
-"lacag ka samee blog website":"./Blogging.html",
-"blogging":"./Blogging.html",
-"xirfada blogging":"./Blogging.html",
-"xirfada blog":"./Blogging.html",
-"blogging lacag":"./Blogging.html",
-"blog website":"./dataAnalysis.html",
-"ka samee lacag data analysis":"./dataAnalysis.html",
-"lacag ka samee data analysis":"./dataAnalysis.html",
-"data analysis":"./dataAnalysis.html",
-"xirfada data analsyse":"./dataAnalysis.html",
-"xirfadadata analysis":"./dataAnalysis.html",
-"data analysis lacag":"./dataAnalysis.html",
-"AI Automation":"./aiAutomation.html",
-"AIAutomation":"./aiAutomation.html",
-"AIautomation":"./aiAutomation.html",
-"fahanka ai automation":"./aiAutomation.html",
-"fahanka aiautomation":"./aiAutomation.html",
-"xirfada ai automation":"./aiAutomation.html",
-"xirfada aiautomation":"./aiAutomation.html",
-"ai automation":"./aiAutomation.html",
-"waa maxay ai automation":"./aiAutomation.html",
-"waa maxay aiautomation":"./aiAutomation.html",
-"ai automation skill":"./aiAutomation.html",
-"aiautomation skill":"./aiAutomation.html",
-"vibe coding":"./vipeCoding.html",
-"waa maxay vibe coding":"./vipeCoding.html",
-"vibecoding":"./vipeCoding.html",
-"vibecoders":"./vipeCoding.html",
-"copywriting":"./copywriting.html",
-"waa maxay copy writng":"./copywriting.html",
-"copy writing":"./copywriting.html",
-"xirfada copwriting":"./copywriting.html",
-"upwork":"./ubwork.html",
-"upwork lacag":"./ubwork.html",
-"ka shaqee upwork":"./ubwork.html",
-"sidee looga shaqeeyaa upwork":"./ubwork.html",
-
-
-
-
-
-
-
-
-};
-
-for(let key in pages){
-
-if(keyword.includes(key)){
-
-window.location.href =
-pages[key];
-
-return;
-
+  // Marka qofku uu meel ka baxsan search-ka ku jiido cursor-ka, qari dropdown-ka
+  document.addEventListener("click", (e) => {
+    if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+      searchResults.classList.add("hidden");
+    }
+  });
 }
+document.addEventListener("DOMContentLoaded", () => {
+    const newsletterForm = document.getElementById("newsletterForm");
+    const alreadySubscribedMessage = document.getElementById("alreadySubscribedMessage");
 
-}
+    // Calaamadda ku kaydsanaysa browser-ka
+    const IS_SUBSCRIBED_KEY = "techsomalia_subscribed";
 
-alert("waan ka xunahay Pagekaan diyaar kuma ahan Maqaalkaan, fadlan isku day keyword kale ama booqo blog-ka si aad u hesho dhamaan casharada. Mahadsanid!");
+    // 1. Hubi haddii uu horay u diwaangashay
+    if (localStorage.getItem(IS_SUBSCRIBED_KEY) === "true") {
+      if (newsletterForm && alreadySubscribedMessage) {
+        newsletterForm.classList.add("hidden");
+        alreadySubscribedMessage.classList.remove("hidden");
+      }
+    }
 
-});
-}
+    // 2. Marka uu Submit gujiyo, kaydi
+    if (newsletterForm) {
+      newsletterForm.addEventListener("submit", () => {
+        localStorage.setItem(IS_SUBSCRIBED_KEY, "true");
+      });
+    }
+  });
 </script>
 </body>
 </html>
