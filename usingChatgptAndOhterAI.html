@@ -1,430 +1,789 @@
 <!DOCTYPE html>
 <html lang="so">
 <head>
-           <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-26STFV9LR7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-26STFV9LR7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-26STFV9LR7');
+    </script>
 
-  gtag('config', 'G-26STFV9LR7');
-</script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Baro Isticmaalka ChatGPT iyo AI Kale Si Sax Ah | Hagaha Bilowga 2026</title>
-<meta name="description" content="Baro sida saxda ah ee loo isticmaalo ChatGPT iyo AI kale sida Midjourney, Leonardo AI iyo tools kale. Hagahan wuxuu ku barayaa prompting, productivity, freelancing iyo sida AI loogu isticmaalo lacag sameynta.">
+    <title>Sida Loo Isticmaalo AI? Hagaha AI Tools, ChatGPT iyo Productivity | TechSomalia</title>
+    <meta name="description" content="Sida loo isticmaalo AI si sax ah? Baro AI tools, ChatGPT, prompting, waxbarasho, shaqo, freelancing, content creation, programming, ganacsi iyo sida AI loogu kordhiyo productivity-ga.">
+    <meta name="author" content="TechSomalia">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://www.techsomalia.com/usingChatgptAndOhterAI.html">
+    <link rel="icon" href="./techsomalia-logo.png">
 
-<meta name="keywords" content="ChatGPT Somali, sida loo isticmaalo ChatGPT, AI tools, Midjourney, Leonardo AI, AI prompt engineering, AI lacag sameyn, AI productivity, artificial intelligence Somali, AI beginner guide, AI freelancing, AI skills 2026">
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Sida Loo Isticmaalo AI? Hagaha AI Tools, ChatGPT iyo Productivity">
+    <meta property="og:description" content="Hagaha TechSomalia ee isticmaalka AI: prompting, waxbarasho, shaqo, freelancing, content creation, coding, business iyo AI tools.">
+    <meta property="og:url" content="https://www.techsomalia.com/usingChatgptAndOhterAI.html">
+    <meta property="og:site_name" content="TechSomalia">
+    <meta property="og:image" content="https://www.techsomalia.com/techsomalia-logo.png">
 
-<meta name="robots" content="index, follow">
- <meta name="author" content="TechSomali">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sida Loo Isticmaalo AI? Hagaha AI Tools, ChatGPT iyo Productivity">
+    <meta name="twitter:description" content="Baro sida AI loogu isticmaalo waxbarasho, shaqo, freelancing, coding, content creation iyo ganacsi online.">
+    <meta name="twitter:image" content="https://www.techsomalia.com/techsomalia-logo.png">
 
-  <link rel="icon" href="./techsomalia-logo.png">
+    <!-- Article structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.techsomalia.com/usingChatgptAndOhterAI.html"
+      },
+      "headline": "Sida Loo Isticmaalo AI? Hagaha AI Tools, ChatGPT iyo Productivity",
+      "description": "Hagaha AI ee TechSomalia oo sharxaya sida AI iyo AI tools loogu isticmaalo waxbarasho, shaqo, freelancing, coding, content creation iyo ganacsi.",
+      "image": ["https://www.techsomalia.com/techsomalia-logo.png"],
+      "author": {
+        "@type": "Organization",
+        "name": "TechSomalia",
+        "url": "https://www.techsomalia.com/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "TechSomalia",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.techsomalia.com/techsomalia-logo.png"
+        }
+      },
+      "datePublished": "2026-02-01",
+      "dateModified": "2026-09-04",
+      "inLanguage": "so"
+    }
+    </script>
 
-<script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <script>
-        tailwind.config = { darkMode: 'class', theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } } }
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        };
     </script>
+
     <style>
-        
-        /* --- General Setup --- */
         .glass-nav { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
         #mobile-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: 9999; display: none; }
         #mobile-overlay.active { display: flex; }
         #scroll-progress { position: fixed; top: 0; left: 0; height: 4px; background: #2563eb; z-index: 100; width: 0%; }
 
-        /* --- ARTCLE BODY DESIGN (Halkan ayay dhibaatadu ka jirtay) --- */
-        .article-body { color: #475569; line-height: 1.8; font-size: 1.15rem; }
+        .article-body { color: #475569; line-height: 1.85; font-size: 1.1rem; }
         .dark .article-body { color: #94a3b8; }
-
-        /* Cinwaannada kala duwan */
-        .article-body h1 { font-size: 2.5rem; font-weight: 800; color: #1e293b; margin-bottom: 1.5rem; }
-        .article-body h2 { font-size: 1.9rem; font-weight: 800; color: #2563eb; margin-top: 2.5rem; margin-bottom: 1.25rem; border-left: 5px solid #2563eb; padding-left: 1rem; }
-        .article-body h3 { font-size: 1.6rem; font-weight: 700; color: #1e293b; margin-top: 2rem; margin-bottom: 1rem; }
-        .article-body h4 { font-size: 1.3rem; font-weight: 700; color: #334155; margin-top: 1.5rem; }
-        .dark .article-body h1, .dark .article-body h3, .dark .article-body h4 { color: #f1f5f9; }
-
-        /* Hagaajinta Liisaska (Lists) - Tan ayaa muhiim u ah koodhkaaga */
+        .article-body h2 { font-size: 1.9rem; font-weight: 800; color: #2563eb; margin-top: 2.6rem; margin-bottom: 1.25rem; border-left: 5px solid #2563eb; padding-left: 1rem; }
+        .article-body h3 { font-size: 1.5rem; font-weight: 700; color: #1e293b; margin-top: 2rem; margin-bottom: 1rem; }
+        .dark .article-body h3 { color: #f1f5f9; }
+        .article-body h4 { font-size: 1.2rem; font-weight: 700; color: #334155; margin-top: 1.5rem; margin-bottom: .75rem; }
+        .dark .article-body h4 { color: #e2e8f0; }
+        .article-body p { margin-bottom: 1.1rem; }
         .article-body ul { list-style-type: disc !important; margin-bottom: 1.5rem; padding-left: 1.5rem; }
         .article-body ol { list-style-type: decimal !important; margin-bottom: 1.5rem; padding-left: 1.5rem; }
-        .article-body li { margin-bottom: 0.6rem; }
-        .article-body li::marker { color: #2563eb; font-weight: bold; }
-
-        /* Strong & Links */
+        .article-body li { margin-bottom: .65rem; }
+        .article-body li::marker { color: #2563eb; font-weight: 700; }
         .article-body strong { color: #1e293b; font-weight: 700; }
         .dark .article-body strong { color: #f8fafc; }
         .article-body a { color: #2563eb; text-decoration: underline; font-weight: 600; }
-        
-        /* Sawirrada */
-        .article-body img { border-radius: 2rem; margin: 2rem 0; width: 100%; height: auto; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+        .article-body img { border-radius: 2rem; margin: 2rem 0; width: 100%; height: auto; box-shadow: 0 20px 25px -5px rgba(0,0,0,.1); }
+        .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: .98rem; }
+        .article-body th, .article-body td { border: 1px solid rgba(148,163,184,.2); padding: .8rem; text-align: left; }
+        .article-body th { background: rgba(37,99,235,.08); color: #1e293b; font-weight: 800; }
+        .dark .article-body th { color: #f8fafc; }
+        .article-body blockquote { border-left: 4px solid #2563eb; padding: .75rem 1rem; margin: 1.5rem 0; background: rgba(37,99,235,.06); border-radius: .5rem; }
+        .code-snippet { background: #0f172a; color: #e2e8f0; padding: 1.1rem; border-radius: .9rem; overflow-x: auto; margin: 1.5rem 0; border: 1px solid #334155; font-size: .92rem; }
+        .notice-box { background: rgba(37,99,235,.06); border: 1px solid rgba(37,99,235,.2); border-radius: 1.25rem; padding: 1.15rem; margin: 1.5rem 0; }
     </style>
-<link rel="stylesheet" href="./style.css">
-</head>
-<body>
 
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
     <div id="scroll-progress"></div>
 
-   
-<nav class="glass-nav sticky top-0 z-[100] border-b border-white/10 h-20">
-  <div class="max-w-7xl mx-auto flex justify-between items-center h-full px-6">
-    <a href="./index.html" class="flex items-center gap-2">
-  
-      <span class="text-2xl font-bold font-display text-white">Tech<span style="color:var(--coral)">Somali</span></span>
-    </a>
-    <div class="flex items-center">
-      <ul class="hidden md:flex items-center space-x-1 font-semibold text-sm text-[var(--cream-dim)]">
-        <li><a href="./index.html" class="px-4 py-2 rounded-lg hover:text-[var(--coral)] transition">Home</a></li>
-        <li><a href="./blog.html" class="px-4 py-2 rounded-lg text-[var(--coral)] font-bold">Blog</a></li>
-        <li><a href="./about.html" class="px-4 py-2 rounded-lg hover:text-[var(--coral)] transition">About</a></li>
-        <li><a href="./contact.html" class="px-4 py-2 rounded-lg hover:text-[var(--coral)] transition">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+    <nav class="glass-nav sticky top-0 z-[100] border-b border-white/10 h-20">
+        <div class="max-w-7xl mx-auto flex justify-between items-center h-full px-6">
+            <a href="./index.html" class="flex items-center gap-2 no-underline">
+                <span class="text-2xl font-bold font-display text-white">Tech<span style="color:var(--coral)">Somali</span></span>
+            </a>
+            <div class="flex items-center">
+                <ul class="hidden md:flex items-center space-x-1 font-semibold text-sm text-[var(--cream-dim)]">
+                    <li><a href="./index.html" class="px-4 py-2 rounded-lg hover:text-[var(--coral)] transition no-underline">Home</a></li>
+                    <li><a href="./blog.html" class="px-4 py-2 rounded-lg text-[var(--coral)] font-bold no-underline">Blog</a></li>
+                    <li><a href="./about.html" class="px-4 py-2 rounded-lg hover:text-[var(--coral)] transition no-underline">About</a></li>
+                    <li><a href="./contact.html" class="px-4 py-2 rounded-lg hover:text-[var(--coral)] transition no-underline">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <div id="mobile-overlay" class="bg-white dark:bg-slate-950 flex-col items-center justify-center space-y-8 text-2xl font-bold transition-all dark:text-white">
-        <button id="close-menu" class="absolute top-6 right-8 text-6xl text-slate-400">&times;</button>
-        <a href="./index.html">home</a>
-        <a href="./about.html">about</a>
-        <a href="./blog.html">Blog</a>
-        <a href="./contact.html">contact</a>
+    <div id="mobile-menu" class="bg-slate-900 flex-col p-6 space-y-4 md:hidden border-b border-white/5 hidden">
+        <a href="./index.html" class="font-bold text-white block py-2 border-b border-white/5 no-underline">Home</a>
+        <a href="./blog.html" class="font-bold text-[var(--coral)] block py-2 border-b border-white/5 no-underline">Blog</a>
+        <a href="./about.html" class="font-bold text-white block py-2 border-b border-white/5 no-underline">About</a>
+        <a href="./contact.html" class="font-bold text-white block py-2 no-underline">Contact</a>
     </div>
 
-<script>
-    // Logic-ga Dark Mode
-    const themeToggleBtn = document.getElementById('theme-toggle');
-    const themeToggleIcon = document.getElementById('theme-toggle-icon');
-    const htmlElement = document.documentElement;
-
-    // Hubi haddii uu qofku horay u doortay dark mode
-    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        htmlElement.classList.add('dark');
-        themeToggleIcon.innerText = '☀️';
-    } else {
-        htmlElement.classList.remove('dark');
-        themeToggleIcon.innerText = '🌙';
-    }
-
-    themeToggleBtn.addEventListener('click', () => {
-        if (htmlElement.classList.contains('dark')) {
-            htmlElement.classList.remove('dark');
-            localStorage.setItem('theme', 'light');
-            themeToggleIcon.innerText = '🌙';
-        } else {
-            htmlElement.classList.add('dark');
-            localStorage.setItem('theme', 'dark');
-            themeToggleIcon.innerText = '☀️';
-        }
-    });
-</script>
-    <header class="py-16 px-6 text-center max-w-4xl mx-auto">
-        <div class="mb-4 inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-full text-xs font-bold uppercase">Technology</div>
+    <header class="py-12 md:py-16 px-6 text-center max-w-4xl mx-auto">
+        <div class="mb-4 inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-full text-xs font-bold uppercase">Artificial Intelligence</div>
         <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-6 leading-tight text-white">
-     Baro Isticmaalka ChatGPT iyo AI Kale Si Sax Ah – Hagaha Qofka Bilowga ah
+            Sida Loo Isticmaalo AI? Hagaha AI Tools, ChatGPT iyo Productivity
         </h1>
-        <div class="flex justify-center items-center gap-4 text-slate-500 text-sm">
-            <span>By TechSomali</span> • <span>Febraayo 2026</span> • <span>5 min read</span>
+        <p class="text-base md:text-lg text-slate-300 max-w-3xl mx-auto leading-8">
+            Baro sida AI loogu isticmaalo si wax-ku-ool ah: waxbarasho, shaqo, freelancing, programming,
+            content creation, research, ganacsi iyo online income.
+        </p>
+        <div class="flex flex-wrap justify-center items-center gap-3 text-slate-500 text-sm mt-6">
+            <span>By TechSomalia</span><span>•</span><span>La cusbooneysiiyay Sebtembar 2026</span><span>•</span><span>10+ min read</span>
         </div>
     </header>
 
     <main class="max-w-4xl mx-auto px-6 pb-24">
-     <div class="article-body">
-<article>
-
-<p>
-Bal ka fikir inaad haysato caawiye maskax badan leh oo aan daalin, oo 24/7 diyaar kuu ah, kaa caawinaya qoraal, design, research, coding iyo xitaa lacag sameyn. Taasi waa ChatGPT iyo AI tools-ka casriga ah.
-</p>
-
-<p>
-Laakiin xaqiiqdu waxay tahay: 90% dadka isticmaala AI si qaldan ayay u isticmaalaan. Waxay weydiiyaan su’aalo gaaban, natiijo liita ayay helaan, kadibna waxay yiraahdaan “AI waxba ma taro.”
-</p>
-
-<p>
-Maqaalkan waxaad ku baran doontaa sida saxda ah ee loo isticmaalo ChatGPT iyo AI kale si aad uga faa’iidaysato waxbarasho, shaqo, freelancing iyo ganacsi online ah.
-</p>
-
-<hr>
-
-<h2>Waa Maxay ChatGPT iyo AI?</h2>
-
-<p>
-Artificial Intelligence (AI) waa tiknoolajiyad u oggolaanaysa computer-ka inuu qabto hawlo u baahan fikir sida bani’aadamka.
-</p>
-
-<p>
-ChatGPT waa AI chatbot awood u leh:
-</p>
-
-<ul>
-<li>Qoraal samayn</li>
-<li>Su’aalo ka jawaabid</li>
-<li>Barnaamijyo sharaxid</li>
-<li>Content creation</li>
-<li>Idea generation</li>
-</ul>
-
-<p>
-Laakiin ChatGPT ma aha sixir. Tayada natiijada waxay ku xiran tahay sida aad u isticmaasho.
-</p>
-
-<hr>
-
-<h2>Maxay Dadku Si Qaldan U Isticmaalaan AI?</h2>
-
-<p>
-Khaladaadka ugu badan:
-</p>
-
-<ul>
-<li>Prompt gaaban oo aan faahfaahin lahayn</li>
-<li>Inay AI ka filaan shaqo dhan hal amar</li>
-<li>Inay copy/paste sameeyaan adigoon fahmin</li>
-<li>Inay AI u arkaan “Google beddelkiisa” kaliya</li>
-</ul>
-
-<p>
-AI ma aha search engine kaliya, waa tool aad u baahan tahay inaad hagto.
-</p>
-
-<hr>
-
-<h2>Sidee Loo Qoraa Prompt Sax Ah?</h2>
-
-<p>
-Prompt waa amarka aad siiso AI. Haddii prompt-kaagu liito, natiijada waa liidataa.
-</p>
-
-<h3>Prompt Liita</h3>
-
-<blockquote>
-write article about AI
-</blockquote>
-
-<h3>Prompt Xooggan</h3>
-
-<blockquote>
-Write a detailed 2000-word article about AI for beginners in Somali language, include headings, examples, SEO keywords, and practical use cases for freelancing and online income.
-</blockquote>
-
-<p>
-Farqiga natiijada waa aad u weyn.
-</p>
-
-<hr>
-
-<h2>Qaabka PRO Prompt (Formula)</h2>
-
-<p>
-Isticmaal qaabkan:
-</p>
-
-<ul>
-<li>Role (cidda AI noqonayso)</li>
-<li>Task (waxa aad rabto)</li>
-<li>Context (macluumaad)</li>
-<li>Format (qaabka natiijada)</li>
-<li>Constraints (xaddidaad)</li>
-</ul>
-
-<p><b>Tusaale:</b></p>
-
-<blockquote>
-You are a professional SEO copywriter. Write a 1500-word blog post about AI tools in Somali. Use headings, examples, and make it beginner friendly.
-</blockquote>
-
-<hr>
-
-<h2>AI Tools Ugu Muhiimsan 2026</h2>
-
-<h3>1. ChatGPT</h3>
-<p>Qoraal, coding, fikir iyo content creation.</p>
-
-<h3>2. Midjourney</h3>
-<p>Image generation tayo sare leh.</p>
-
-<h3>3. Leonardo AI</h3>
-<p>Design iyo graphics.</p>
-
-<h3>4. Canva AI</h3>
-<p>Design fudud iyo social media posts.</p>
-
-<h3>5. Google Gemini</h3>
-<p>Research iyo AI assistance.</p>
-
-<hr>
-
-<h2>Sidee AI Kuu Caawin Karaa Lacag Sameynta?</h2>
-
-<p>
-AI waa fursad ganacsi oo weyn haddii si sax ah loo isticmaalo.
-</p>
-
-<h3>1. Freelancing</h3>
-<ul>
-<li>Article writing</li>
-<li>Logo design</li>
-<li>Social media content</li>
-</ul>
-
-<h3>2. YouTube Automation</h3>
-<p>AI wuxuu kaa caawin karaa script writing iyo thumbnails.</p>
-
-<h3>3. Blogging</h3>
-<p>AI wuxuu kaa caawin karaa SEO articles.</p>
-
-<h3>4. Digital Products</h3>
-<p>Ebooks, templates, guides.</p>
-
-<hr>
-
-<h2>AI iyo Productivity</h2>
-
-<p>
-AI wuxuu badbaadiyaa waqti badan.
-</p>
-
-<ul>
-<li>Qoraal 5 saac qaadan jiray → 5 daqiiqo</li>
-<li>Research adag → hal prompt</li>
-<li>Design → automated</li>
-</ul>
-
-<hr>
-
-<h2>Farsamooyinka Pro Users isticmaalaan</h2>
-
-<ul>
-<li>Chain of thought prompting</li>
-<li>Role-based prompts</li>
-<li>Iterative refinement</li>
-<li>Multi-step prompting</li>
-</ul>
-
-<hr>
-
-<h2>Prompt Tusaalooyin (Ready to Use)</h2>
-
-<h3>Blog Writing</h3>
-<blockquote>
-Write SEO optimized blog post about AI tools in Somali with headings and examples.
-</blockquote>
-
-<h3>Business Idea</h3>
-<blockquote>
-Give me 10 online business ideas using AI for beginners.
-</blockquote>
-
-<h3>Learning Plan</h3>
-<blockquote>
-Create 30-day plan to learn AI tools and make money online.
-</blockquote>
-
-<hr>
-
-<h2>Khaladaadka Ay Dadku Sameeyaan</h2>
-
-<ul>
-<li>Inay AI ku tiirsanaadaan 100%</li>
-<li>Inay copy/paste sameeyaan</li>
-<li>Inay prompt liita isticmaalaan</li>
-<li>Inay is dhiibaan degdeg</li>
-</ul>
-
-<hr>
-
-<h2>Mustaqbalka AI</h2>
-
-<p>
-AI wuxuu noqonayaa qayb muhiim ah oo shaqo kasta ah.
-</p>
-
-<ul>
-<li>Automation</li>
-<li>AI workers</li>
-<li>Smart businesses</li>
-<li>Digital economy</li>
-</ul>
-
-<hr>
-
-<h2>Gunaanad</h2>
-
-<p>
-ChatGPT iyo AI tools kale ma aha wax la iska isticmaalo si fudud, waa xirfad la barto. Qofka barta sida saxda ah ee loo isticmaalo AI wuxuu heli karaa fursado shaqo, freelancing iyo ganacsi online ah.
-</p>
-
-<p>
-Sirta guusha ma aha AI laftiisa, waa sida aad u isticmaasho.
-</p>
-
-<hr>
-
-<h2>FAQ</h2>
-
-<h3>ChatGPT ma lacag baa?</h3>
-<p>Waxaa jira free version iyo paid version.</p>
-
-<h3>Ma ku shaqayn karaa AI?</h3>
-<p>Haa, freelancing, blogging iyo digital marketing.</p>
-
-<h3>AI ma barnaamijin baa?</h3>
-<p>Qayb ka mid ah AI waa programming laakiin isticmaalka ma u baahna coding.</p>
-
-<div class="w-full pt-10 pb-14 text-center">
-    <a href="./index.html" class="inline-flex items-center justify-center gap-3 w-full sm:w-auto px-10 py-4 bg-gradient-to-r from-blue-605 via-blue-600 to-blue-700 text-white font-extrabold rounded-2xl shadow-[0_10px_30px_rgba(37,99,235,0.3)] hover:shadow-[0_15px_35px_rgba(37,99,235,0.5)] hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 border border-white/10 text-base tracking-wide no-underline appearance-none" style="text-decoration: none !important;">
-        <span class="no-underline text-white" style="text-decoration: none !important;">🌐 Booqo Website-ka Guud</span>
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 animate-pulse text-white/90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
-        </svg>
-    </a>
-</div>
-</article>
+        <article class="article-body">
+
+            <img src="./usingchatgpt.jpg" alt="TechSomalia - AI iyo digital skills" width="1200" height="630" fetchpriority="high" decoding="async">
+            
+            <div class="notice-box">
+                <p class="mb-0">
+                    <strong>Jawaabta kooban:</strong> AI si faa'iido leh looma isticmaalo adigoo kaliya weydiinaya su'aalo.
+                    Waxaad u baahan tahay inaad AI siisid <strong>ujeeddo, macluumaad, context, format iyo xaddidaad</strong>,
+                    kadibna aad hubiso natiijada. Habkan wuxuu AI uga dhigayaa qalab waxbarasho, shaqo, programming,
+                    content creation iyo business.
+                </p>
+            </div>
+
+            <p>
+                AI wuxuu noqday qayb ka mid ah shaqooyin badan oo digital ah. Dadku waxay u isticmaalaan inay qoraal diyaariyaan,
+                fikrado helaan, xog ururiyaan, code fahmaan, images ama videos diyaariyaan, tarjumaad sameeyaan,
+                shaqooyin soo noqnoqda otomaatig uga dhigaan, ama ay go'aannada ka hor sameeyaan analysis hore.
+            </p>
+
+            <p>
+                Laakiin AI tool keliya ma sameeyo shaqada oo dhan. Natiijada aad hesho waxay si weyn ugu xirnaan kartaa
+                sida aad u qeexdo waxa aad rabto, xogta aad siiso iyo sida aad u hubiso jawaabta.
+                Sidaas darteed, maqaalkaan waxaan uga hadleynaa <strong>isticmaalka AI guud ahaan</strong>, ma aha ChatGPT oo keliya.
+            </p>
+
+            <nav aria-label="Table of Contents" class="my-8">
+                <h2 class="!mt-0">Waxa aad maqaalkan ka baran doonto</h2>
+                <ul>
+                    <li><a href="#what-is-ai">AI waa maxay, maxaase lagu qaban karaa?</a></li>
+                    <li><a href="#choose-tool">Sidee loo doortaa AI tool sax ah?</a></li>
+                    <li><a href="#prompt">Sidee loo qoro prompt wanaagsan?</a></li>
+                    <li><a href="#workflow">Habka AI loogu shaqeeyo: Prompt → Review → Improve</a></li>
+                    <li><a href="#learning">AI iyo waxbarashada</a></li>
+                    <li><a href="#work">AI iyo shaqada maalinlaha ah</a></li>
+                    <li><a href="#freelancing">AI iyo freelancing</a></li>
+                    <li><a href="#content">AI iyo content creation</a></li>
+                    <li><a href="#coding">AI iyo programming</a></li>
+                    <li><a href="#business">AI iyo ganacsi</a></li>
+                    <li><a href="#research">AI iyo research</a></li>
+                    <li><a href="#income">AI iyo online income</a></li>
+                    <li><a href="#mistakes">Khaladaadka isticmaalayaasha AI</a></li>
+                    <li><a href="#roadmap">Qorshe lagu barto AI</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <section id="what-is-ai" class="scroll-mt-28">
+                <h2>AI Waa Maxay, Maxaase Lagu Qaban Karaa?</h2>
+
+                <p>
+                    Artificial Intelligence (AI) waa magaca loo isticmaalo nidaamyo kombiyuutar oo qaban kara hawlo u baahan
+                    habayn xog, aqoonsi patterns, saadaalin, soo saarid content ama caawinta go'aan qaadashada.
+                    AI ma aha hal application oo keliya; waa technology ay isticmaalaan tools iyo services kala duwan.
+                </p>
+
+                <p>
+                    Tusaale ahaan, AI waxaa lagu isticmaali karaa:
+                </p>
+
+                <ul>
+                    <li>Qoraal iyo editing</li>
+                    <li>Research iyo summarization</li>
+                    <li>Image generation iyo image editing</li>
+                    <li>Video iyo audio workflows</li>
+                    <li>Coding iyo debugging assistance</li>
+                    <li>Data analysis iyo classification</li>
+                    <li>Translation</li>
+                    <li>Customer support iyo automation</li>
+                    <li>Idea generation iyo planning</li>
+                </ul>
+
+                <p>
+                    Sidaas darteed su'aasha fiican ma aha oo keliya <strong>“AI maxay qabataa?”</strong>;
+                    waa <strong>“dhibaatadee ayaan AI ku xallin karaa?”</strong>
+                </p>
+            </section>
+
+            <section id="choose-tool" class="scroll-mt-28">
+                <h2>Sidee Loo Doortaa AI Tool Sax Ah?</h2>
+
+                <p>
+                    Ma jiro AI tool hal mar ugu fiican qof kasta. Tool-ka saxda ahi wuxuu ku xiran yahay shaqada aad qabanayso.
+                </p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Shaqada</th>
+                            <th>Nooca AI tool-ka</th>
+                            <th>Tusaale isticmaal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Qoraal</td>
+                            <td>AI writing assistant</td>
+                            <td>Draft, rewrite, outline</td>
+                        </tr>
+                        <tr>
+                            <td>Images</td>
+                            <td>AI image generator/editor</td>
+                            <td>Concepts, ads, product visuals</td>
+                        </tr>
+                        <tr>
+                            <td>Video</td>
+                            <td>AI video/editor tools</td>
+                            <td>Captions, scripts, editing support</td>
+                        </tr>
+                        <tr>
+                            <td>Coding</td>
+                            <td>AI coding assistant</td>
+                            <td>Explain, debug, refactor</td>
+                        </tr>
+                        <tr>
+                            <td>Research</td>
+                            <td>AI research assistant</td>
+                            <td>Summarize, compare, organize</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>
+                    Halkii aad 20 tools isku mar baran lahayd, dooro hal tool oo si fiican kuu caawinaya shaqada aad hadda hayso.
+                    Markaas marka aad fahanto workflow-ga, waxaad qiimeyn kartaa tool kale.
+                </p>
+            </section>
+
+            <section id="prompt" class="scroll-mt-28">
+                <h2>Sidee Loo Qoraa Prompt Wanaagsan?</h2>
+
+                <p>
+                    Prompt waa tilmaanta aad AI siinayso. Prompt fiican wuxuu yareeyaa jahawareerka oo wuxuu AI siinayaa context-ka loo baahan yahay.
+                </p>
+
+                <h3>Prompt daciif ah</h3>
+                <blockquote>“Qor article ku saabsan AI.”</blockquote>
+
+                <h3>Prompt ka fiican</h3>
+                <blockquote>
+                    “Waxaad tahay qoraa technology ah. Qor maqaal Af-Soomaali ah oo loogu talagalay qof beginner ah,
+                    oo sharxaya 7 hab oo AI loogu isticmaalo shaqo, waxbarasho iyo business. Isticmaal headings cad,
+                    tusaalooyin la taaban karo, kana fogow sheegashooyin aan la hubin.”
+                </blockquote>
+
+                <h3>Formula fudud oo prompt ah</h3>
+                <ol>
+                    <li><strong>Role:</strong> AI muxuu matalayaa?</li>
+                    <li><strong>Task:</strong> Maxaad rabtaa inuu sameeyo?</li>
+                    <li><strong>Context:</strong> Maxay tahay xogta uu u baahan yahay?</li>
+                    <li><strong>Format:</strong> Jawaabtu sidee ha u ekaato?</li>
+                    <li><strong>Constraints:</strong> Maxaa laga fogaadaa ama xadkee jira?</li>
+                </ol>
+
+                <div class="code-snippet"><code>Role: You are a technical tutor.
+Task: Explain JavaScript promises.
+Context: I am a beginner who knows functions and async/await.
+Format: Somali explanation + 2 simple examples.
+Constraint: Avoid unnecessary jargon.</code></div>
+            </section>
+
+            <section id="workflow" class="scroll-mt-28">
+                <h2>Habka Saxda ah: Prompt → Review → Improve</h2>
+
+                <p>
+                    Mid ka mid ah khaladaadka ugu waaweyn waa in dadka ay qaataan jawaabta ugu horreysa ee AI bixiyo.
+                    Habka ka fiican waa inaad u aragto AI inuu yahay <strong>assistant</strong> aad dib ula shaqeynayso.
+                </p>
+
+                <ol>
+                    <li>Qeex waxa aad rabto.</li>
+                    <li>Sii AI context ku filan.</li>
+                    <li>Hel draft-ka koowaad.</li>
+                    <li>Hubi khaladaadka iyo facts-ka.</li>
+                    <li>U sheeg waxa u baahan hagaajin.</li>
+                    <li>Samee version-ka ugu dambeeya.</li>
+                </ol>
+
+                <p>
+                    Habkaan wuxuu ka wanaagsan yahay inaad AI ku tiraahdo “wax walba ii samee”, sababtoo ah adiga ayaa weli gacanta ku haya tayada iyo go'aanka ugu dambeeya.
+                </p>
+            </section>
+
+            <section id="learning" class="scroll-mt-28">
+                <h2>AI iyo Waxbarashada</h2>
+
+                <p>
+                    AI wuxuu noqon karaa tutor kaa caawiya inaad fahanto cashar. Laakiin halkii aad ka oran lahayd
+                    “answer-kan ii samee”, waxaad ka codsan kartaa inuu kuu sharxo habka iyo sababta.
+                </p>
+
+                <h3>Waxbarashada waxaad AI ugu isticmaali kartaa</h3>
+                <ul>
+                    <li>Sharaxaad beginner-friendly ah</li>
+                    <li>Tusaalooyin dheeraad ah</li>
+                    <li>Su'aalo practice ah</li>
+                    <li>Quiz iyo flashcards</li>
+                    <li>Qorshe waxbarasho</li>
+                    <li>In laguu saxo qoraal ama code</li>
+                </ul>
+
+                <p>
+                    Habka fiican waa inaad isku daydo su'aasha marka hore, kadib AI ka codsato feedback. Taasi waxay kaa caawin kartaa inaad wax barato halkii aad copy/paste uga sameyn lahayd jawaab kasta.
+                </p>
+            </section>
+
+            <section id="work" class="scroll-mt-28">
+                <h2>AI iyo Shaqada Maalinlaha ah</h2>
+
+                <p>
+                    Shaqooyin badan waxaa ku jira hawlo soo noqnoqda: email drafting, summaries, meeting notes,
+                    idea organization, document formatting iyo data preparation. AI wuxuu kaa caawin karaa hawlahaas,
+                    laakiin output-ka waa in la hubiyaa ka hor inta aan qof kale loo dirin.
+                </p>
+
+                <h3>Workflow tusaale ah</h3>
+                <p>
+                    Qoraallo badan → AI wuxuu ka sameeyaa summary → adiga ayaa hubiya → waxaad ka samaysaa decision points → version-ka ugu dambeeya ayaa la isticmaalaa.
+                </p>
+
+                <p>
+                    Ujeeddadu waa <strong>waqti badbaadin</strong>, ma aha inaad mas'uuliyadda fikirkaaga AI u dhiibto.
+                </p>
+            </section>
+
+            <section id="freelancing" class="scroll-mt-28">
+                <h2>AI iyo Freelancing</h2>
+
+                <p>
+                    AI wuxuu freelancer-ka ka caawin karaa inuu si dhaqso badan u diyaariyo shaqada, laakiin adeegga la iibinayo waa inuu weli leeyahay natiijo uu client-ku qiimeeyo.
+                </p>
+
+                <h3>Tusaalooyin adeegyo</h3>
+                <ul>
+                    <li>Content writing iyo editing</li>
+                    <li>Social media content</li>
+                    <li>Product descriptions</li>
+                    <li>Basic research</li>
+                    <li>Image preparation</li>
+                    <li>Video scripting iyo editing support</li>
+                    <li>AI-assisted virtual assistance</li>
+                    <li>AI workflow setup</li>
+                </ul>
+
+                <p>
+                    Haddii aad rabto inaad freelancing ka bilowdo, akhri:
+                    <a href="./workingfiver.html">Sidee lacag looga sameeyaa Fiverr?</a>
+                </p>
+            </section>
+
+            <section id="content" class="scroll-mt-28">
+                <h2>AI iyo Content Creation</h2>
+
+                <p>
+                    AI waxaa loo isticmaali karaa dhammaan silsiladda content-ka: fikrad → outline → draft → editing → repurposing.
+                    Tani waxay si gaar ah faa'iido ugu leedahay creators iyo bloggers leh mawduuc joogto ah.
+                </p>
+
+                <h3>Blogging</h3>
+                <p>
+                    AI wuxuu kaa caawin karaa research organization, outlines, title ideas iyo editing. Laakiin maqaalka ugu dambeeya waa inuu leeyahay value dhab ah, examples, experiences ama analysis kuu gaar ah.
+                </p>
+
+                <p>
+                    Waxaad ka sii akhrisan kartaa:
+                    <a href="./onlineincome.html">Sidee lacag looga sameeyaa internetka?</a>
+                </p>
+
+                <h3>Social media</h3>
+                <p>
+                    Hal topic waxaad u rogi kartaa short video script, caption, carousel outline iyo long-form article. Taas waxay kaa caawin kartaa inaad content badan ka samayso hal fikrad adigoon wax walba eber ka bilaabin.
+                </p>
+            </section>
+
+            <section id="coding" class="scroll-mt-28">
+                <h2>AI iyo Programming</h2>
+
+                <p>
+                    Developer-ku wuxuu AI u isticmaali karaa inuu code sharaxo, bugs fahmo, tests diyaariyo, documentation qorista ka caawiyo ama xalal kala duwan isbarbardhigo.
+                </p>
+
+                <h3>Waxyaabaha AI kuu qaban karo</h3>
+                <ul>
+                    <li>Explain code line by line</li>
+                    <li>Find possible bugs</li>
+                    <li>Suggest refactoring</li>
+                    <li>Create test cases</li>
+                    <li>Explain APIs</li>
+                    <li>Generate boilerplate</li>
+                    <li>Help with documentation</li>
+                </ul>
+
+                <p>
+                    Laakiin ha ku tiirsanaan code aad fahmi weydo. Code AI bixiyo waa in la akhriyaa, la tijaabiyaa oo la hubiyaa.
+                </p>
+
+                <p>
+                    TechSomalia waxaad ka sii baran kartaa:
+                    <a href="./webdevelopment.html">Barashada Web Development</a> iyo
+                    <a href="./dataAnalysis.html">Data Analysis</a>.
+                </p>
+            </section>
+
+            <section id="business" class="scroll-mt-28">
+                <h2>AI iyo Ganacsi Online ah</h2>
+
+                <p>
+                    Business-ku wuxuu AI uga faa'iidaysan karaa research, content, customer support, product descriptions,
+                    idea validation, workflows iyo analysis.
+                </p>
+
+                <h3>Qorshe fudud</h3>
+                <ol>
+                    <li>Ogow dhibaatada customer-ka.</li>
+                    <li>AI u isticmaal inaad fikradaha iyo xogta abaabusho.</li>
+                    <li>Samee offer cad.</li>
+                    <li>Tijaabi adigoo isticmaalaya audience yar.</li>
+                    <li>Cabbir waxa shaqeeyay.</li>
+                    <li>Kadib automate ama scale garee qaybaha soo noqnoqda.</li>
+                </ol>
+
+                <p>
+                    AI ma beddelayo business model-kaaga; wuxuu noqon karaa layer kaa caawiya inaad hawlaha si wanaagsan u qabato.
+                </p>
+
+                <p>
+                    Waxaad sidoo kale akhrisan kartaa:
+                    <a href="./aiforbusinessonline.html">Sida AI loogu isticmaalo ganacsi online ah</a>.
+                </p>
+            </section>
+
+            <section id="research" class="scroll-mt-28">
+                <h2>AI iyo Research</h2>
+
+                <p>
+                    AI wuxuu ku fiican yahay inuu kaa caawiyo inaad abaabusho xog badan, soo koobto qoraallo ama aad soo saarto su'aalo dheeraad ah. Laakiin marka xogtu muhiim tahay, gaar ahaan lacag, caafimaad, sharci ama business decisions, waa inaad xaqiijisaa xogta adigoo raacaya ilo lagu kalsoon yahay.
+                </p>
+
+                <h3>Habka hubinta</h3>
+                <ol>
+                    <li>AI ka hel jawaabta ama summary-ga hore.</li>
+                    <li>Raadi source-ka asalka ah.</li>
+                    <li>Hubi taariikhda iyo context-ka.</li>
+                    <li>Isbarbar dhig ilo kale haddii arrintu muhiim tahay.</li>
+                    <li>Kadib go'aan qaado.</li>
+                </ol>
+            </section>
+
+            <section id="income" class="scroll-mt-28">
+                <h2>AI iyo Online Income</h2>
+
+                <p>
+                    AI wuxuu kuu fududeyn karaa inaad xirfad ka dhigto adeeg, ama aad content iyo audience ka dhisto. Hababka ugu waaweyn waxaa ka mid noqon kara:
+                </p>
+
+                <ul>
+                    <li>AI-assisted freelancing</li>
+                    <li>AI content creation</li>
+                    <li>AI-related affiliate content</li>
+                    <li>Digital products</li>
+                    <li>AI automation services</li>
+                    <li>AI-enhanced web development</li>
+                    <li>AI-assisted data analysis</li>
+                </ul>
+
+                <p>
+                    Waxa muhiimka ah waa inaad lacag ka samayso <strong>qiimaha aad soo saartay</strong>, ma aha inaad sheegato inaad AI taqaan oo keliya.
+                </p>
+
+                <p>
+                    Maqaalkan ayaa kaa caawinaya aasaaska:
+                    <a href="./onlineincome.html">10 hab oo lacag looga sameeyo internetka</a>.
+                </p>
+
+                <p>
+                    Waxaad sidoo kale akhrisan kartaa:
+                    <a href="./makingMoneyAI.html">Sidee AI lacag looga sameeyaa?</a>
+                </p>
+            </section>
+
+            <section id="skills" class="scroll-mt-28">
+                <h2>AI iyo Digital Skills: Sidee Isku Darsan Kartaa?</h2>
+
+                <p>
+                    Fursadda ugu xooggan badanaa waxay timaadaa marka AI lagu daro xirfad kale. Tusaale ahaan:
+                </p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Xirfad</th>
+                            <th>AI waxaa looga isticmaali karaa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Web Development</td><td>Debugging, documentation, testing, code assistance</td></tr>
+                        <tr><td>Data Analysis</td><td>Exploration, summaries, code assistance, reporting</td></tr>
+                        <tr><td>Graphic Design</td><td>Ideas, variations, image workflows</td></tr>
+                        <tr><td>Video Editing</td><td>Scripts, captions, content planning</td></tr>
+                        <tr><td>Marketing</td><td>Ideas, copy drafts, customer research support</td></tr>
+                        <tr><td>Writing</td><td>Outlines, editing, repurposing, brainstorming</td></tr>
+                    </tbody>
+                </table>
+
+                <p>
+                    Taasi waa sababta aysan u fiicneyn in AI loo barto sidii wax gooni ah oo aan xirfad kale lahayn. <strong>AI + skill</strong> ayaa inta badan ka qiimo badan “AI ayaan garanayaa” oo keliya.
+                </p>
+            </section>
+
+            <section id="mistakes" class="scroll-mt-28">
+                <h2>10 Khalad oo Dadku Ka Sameeyaan Isticmaalka AI</h2>
+
+                <ol>
+                    <li><strong>Prompt aan context lahayn.</strong> Waxaad heli kartaa jawaab guud.</li>
+                    <li><strong>Copy/paste 100%.</strong> Waxaad qaadan kartaa khalad ama content aan ku habboonayn.</li>
+                    <li><strong>Facts aan la hubin.</strong> AI wuxuu keeni karaa khaladaad.</li>
+                    <li><strong>Tool badan isku mar.</strong> Waxaad lumin kartaa focus.</li>
+                    <li><strong>AI loogu beddelo fikirkaaga.</strong> Adiga ayaa go'aanka ugu dambeeya leh.</li>
+                    <li><strong>Content badan oo generic ah.</strong> Quantity keliya ma abuurto value.</li>
+                    <li><strong>Code aan la fahmin.</strong> Code shaqaynaya maanta ayaa dhibaato keeni kara berri.</li>
+                    <li><strong>Private data lagu geliyo si taxaddar la'aan ah.</strong> Ha gelin xog aad xasaasi u aragto adigoon fahmin siyaasadda tool-ka.</li>
+                    <li><strong>AI loo isticmaalo shortcut kasta.</strong> Mararka qaar barashadu waxay u baahan tahay inaad adigu shaqada qabato.</li>
+                    <li><strong>Natiijada ugu horreysa lagu qanaco.</strong> Review iyo revision ayaa muhiim ah.</li>
+                </ol>
+            </section>
+
+            <section id="roadmap" class="scroll-mt-28">
+                <h2>Qorshe 30-Maalmood ah oo Lagu Barto Isticmaalka AI</h2>
+
+                <h3>Usbuuca 1 — Aasaaska</h3>
+                <ul>
+                    <li>Faham AI, LLMs iyo noocyada AI tools.</li>
+                    <li>Baro prompt structure.</li>
+                    <li>Samee 10 prompts oo kala duwan.</li>
+                </ul>
+
+                <h3>Usbuuca 2 — AI iyo shaqada</h3>
+                <ul>
+                    <li>Qoraal iyo editing.</li>
+                    <li>Research iyo summaries.</li>
+                    <li>Planning iyo productivity.</li>
+                </ul>
+
+                <h3>Usbuuca 3 — AI iyo xirfaddaada</h3>
+                <ul>
+                    <li>Dooro coding, writing, design, data ama marketing.</li>
+                    <li>AI ku dar workflow-gaaga.</li>
+                    <li>Samee project dhab ah.</li>
+                </ul>
+
+                <h3>Usbuuca 4 — Monetization iyo workflow</h3>
+                <ul>
+                    <li>Ogow adeeg aad bixin karto.</li>
+                    <li>Samee sample/portfolio.</li>
+                    <li>Raadi meesha audience-kaagu joogo.</li>
+                    <li>Qor workflow aad mar kasta ku celin karto.</li>
+                </ul>
+
+                <div class="notice-box">
+                    <p class="mb-0">
+                        <strong>Formula:</strong> Baro AI → ku dar xirfad → samee project → hel feedback → hagaaji → adeeg ama content ka dhig.
+                    </p>
+                </div>
+            </section>
+
+            <section id="security" class="scroll-mt-28">
+                <h2>Amniga iyo Privacy-ga Marka AI La Isticmaalayo</h2>
+
+                <p>
+                    Kahor intaadan xog ku shubin AI tool, faham nooca xogta aad dirayso iyo siyaasadaha adeegga aad isticmaalayso.
+                    Ha ku darin passwords, private keys, confidential client information ama xog kale oo xasaasi ah adigoon si cad u fahmin sida adeeggu u maareeyo xogta.
+                </p>
+
+                <p>
+                    Sidoo kale, marka AI laguu soo saaro code, emails, reports ama documents muhiim ah, dib u eeg ka hor intaadan dirin ama production gelin.
+                </p>
+            </section>
+
+            <section id="faq" class="scroll-mt-28">
+                <h2>FAQ: Su'aalaha Inta Badan Laga Weydiiyo Isticmaalka AI</h2>
+
+                <h3>AI sidee loo isticmaalaa?</h3>
+                <p>
+                    AI waxaa loo isticmaali karaa qoraal, research, waxbarasho, coding, design, video, data analysis, planning iyo automation. Isticmaalka ugu fiican wuxuu ku xiran yahay dhibaatada aad rabto inaad xalliso.
+                </p>
+
+                <h3>ChatGPT ma yahay AI-ga oo dhan?</h3>
+                <p>
+                    Maya. ChatGPT waa hal AI product. Waxaa jira noocyo iyo tools badan oo AI ah oo loogu talagalay qoraal, images, video, coding, research iyo hawlo kale.
+                </p>
+
+                <h3>Qof bilow ah ma isticmaali karaa AI?</h3>
+                <p>
+                    Haa. Waxaad ka bilaabi kartaa hal tool iyo hal shaqo oo cad, sida waxbarasho, writing ama coding assistance.
+                </p>
+
+                <h3>AI ma samayn karaa shaqadayda oo dhan?</h3>
+                <p>
+                    Mararka qaar AI wuxuu otomaatig ka dhigi karaa qayb shaqada ka mid ah, laakiin natiijada ugu dambeysa waxay weli u baahan kartaa review, context iyo go'aan bini'aadan.
+                </p>
+
+                <h3>AI ma lagu samayn karaa lacag?</h3>
+                <p>
+                    Haa, marka AI lagu daro xirfad, adeeg, content ama business model. AI laftiisa ma aha dakhli la hubo.
+                </p>
+
+                <h3>Prompt engineering ma muhiim baa?</h3>
+                <p>
+                    Fahamka sida loo qoro prompts cad wuxuu kaa caawin karaa inaad si fiican ula shaqeyso AI, gaar ahaan marka hawshu u baahan tahay context iyo output gaar ah.
+                </p>
+
+                <h3>AI ma beddeli doonaa programmers?</h3>
+                <p>
+                    AI wuxuu caawin karaa coding iyo automation, laakiin developer-ku weli wuxuu u baahan yahay inuu fahmo architecture, debugging, security, testing, business requirements iyo go'aannada system-ka.
+                </p>
+
+                <h3>AI ma sax baa mar walba?</h3>
+                <p>
+                    Maya. AI wuxuu keeni karaa khaladaad ama jawaabo aan dhammaystirnayn. Facts muhiim ah waa in la xaqiijiyaa.
+                </p>
+            </section>
+
+            <section id="related" class="scroll-mt-28">
+                <h2>Maqaallo Kale oo TechSomalia ah</h2>
+                <ul>
+                    <li><a href="./makingMoneyAI.html">Sidee AI lacag looga sameeyaa?</a></li>
+                    <li><a href="./onlineincome.html">Sidee lacag looga sameeyaa internetka?</a></li>
+                    <li><a href="./webdevelopment.html">Barashada Web Development</a></li>
+                    <li><a href="./dataAnalysis.html">xirfada Data Analysis: Beginner ilaa Pro</a></li>
+                    <li><a href="./10skills.html">xirfadaha ugu fiican ee la barto 2027-2028</a></li>
+                    <li><a href="./aitoolsforstudents.html">sidoo adigoo arday AI uga faaidaysan kartaa?</a></li>
+                    <li><a href="./aiforaffliate.html">Waa maxay Affiliate Marketing?</a></li>
+                    <li><a href="./workingfiver.html">Sidee Fiverr lacag looga sameeyaa?</a></li>
+                </ul>
+            </section>
+
+            <div class="notice-box">
+                <p class="mb-0">
+                    <strong>Affiliate disclosure:</strong> Qaar ka mid ah links-ka TechSomalia waxay noqon karaan affiliate links.
+                    Haddii aad adeeg ku iibsato ama iska diiwaangeliso link affiliate ah, TechSomalia waxay heli kartaa commission,
+                    iyadoo qiimaha adiga kuuusan khasab ahaan isbeddelin.
+                </p>
+            </div>
+
+            <h2>Gunaanad</h2>
+
+            <p>
+                Isticmaalka AI si fiican ma aha inaad hesho tool badan. Waa inaad ogaataa waxa aad rabto inaad qabato,
+                doorato tool ku habboon, bixiso prompt ama instructions cad, kadibna hubiso natiijada.
+            </p>
+
+            <p>
+                Qofka AI si joogto ah uga faa'iidaysanaya wuxuu badanaa isku daraa saddex arrimood:
+                <strong>AI + xirfad + problem solving.</strong>
+            </p>
+
+            <p>
+                Haddii aad baranayso programming, AI wuxuu kaa caawin karaa coding. Haddii aad baranayso data analysis,
+                AI wuxuu kaa caawin karaa exploration iyo documentation. Haddii aad dhisayso website iyo business,
+                AI wuxuu kaa caawin karaa content, research iyo automation.
+            </p>
+
+            <p>
+                Sidaas darteed ha ku mashquulin su'aasha “AI tool-kee ugu fiican?”
+                Marar badan su'aasha ka muhiimsan waa:
+                <strong>“Dhibaatadee ayaan xallinayaa, AI-na qaybtee ayuu iga caawin karaa?”</strong>
+            </p>
+
+            <p>
+                Haddii aad rabto inaad sii ballaariso fahamkaaga AI, ka bilow
+                <a href="./makingMoneyAI.html">AI iyo online income</a>, kadibna u gudub
+                <a href="./ai.html">waa maxay ai</a> ama
+                <a href="./bestai.html">best AI tools</a> iyadoo ku xiran xirfadda aad rabto inaad dhisto.
+            </p>
+
+            <blockquote>
+                <strong>AI waa qalab; qiimaha dhabta ahi wuxuu ka yimaadaa sida aad ugu isticmaasho xirfad iyo dhibaato dhab ah.</strong>
+            </blockquote>
+
+            <div class="w-full pt-10 pb-10 text-center">
+                <a href="./blog.html" class="inline-flex items-center justify-center gap-3 w-full sm:w-auto px-10 py-4 bg-gradient-to-r from-blue-600 via-blue-600 to-blue-700 text-white font-extrabold rounded-2xl shadow-[0_10px_30px_rgba(37,99,235,0.3)] hover:shadow-[0_15px_35px_rgba(37,99,235,0.5)] hover:scale-[1.03] transition-all duration-300 border border-white/10 text-base no-underline">
+                    <span>📚 Akhri maqaallo kale</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
 
             <div class="mt-12 pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-4 items-center justify-between">
-                <span class="font-bold dark:text-white">La wadaag asxaabta:</span>
-                <div class="flex gap-2">
-<a href="https://api.whatsapp.com/send?text=Halkan ka aqri maqaal aad u xiiso badan: https://techsomali.com/payoneer.html" 
-   target="_blank" 
-   class="px-4 py-2 bg-green-500 text-white rounded-xl text-sm font-bold"style="color: #f8fafc; text-decoration: none;">
-   
-   WhatsApp
-</a>
-               <a href="https://www.facebook.com/sharer/sharer.php?u=https://techsomali.com/payoneer.html" 
-   target="_blank" 
-   class="px-4 py-2 bg-blue-600 text-white rounded-xl text-sm font-bold" style="color: #f8fafc; text-decoration: none;">
-   Facebook
-</a>
+                <span class="font-bold dark:text-white">La wadaag:</span>
+                <div class="flex gap-2 flex-wrap">
+                    <a href="https://api.whatsapp.com/send?text=Sida%20Loo%20Isticmaalo%20AI%20-%20TechSomalia%20https%3A%2F%2Fwww.techsomalia.com%2FusingChatgptAndOhterAI.html" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-green-500 text-white rounded-xl text-sm font-bold no-underline">WhatsApp</a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.techsomalia.com/usingChatgptAndOhterAI.html" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-blue-600 text-white rounded-xl text-sm font-bold no-underline">Facebook</a>
                 </div>
             </div>
-        </div>
 
-        <div class="grid md:grid-cols-2 gap-6 mt-12">
-            <a href="contentstrategy.html" class="p-6 bg-[#131926] rounded-3xl border border-white/5 text-white dark:border-slate-800 hover:border-blue-500 transition shadow-lg">
-                <span class="text-xs text-slate-500 uppercase">Maqaalkii hore</span>
-                <p class="font-bold dark:text-white mt-1">qorista articles tayo leh</p>
-            </a>
-            <a href="frontendrodmap2026.html" class="p-6 bg-[#131926] rounded-3xl border border-white/5 text-white dark:border-slate-800 hover:border-blue-500 transition shadow-lg">
-                <span class="text-xs text-slate-500 uppercase">Maqaalka xiga</span>
-                <p class="font-bold dark:text-white mt-1">frontend rodmap 2026 </p>
-            </a>
-        </div>
+            <div class="grid md:grid-cols-2 gap-6 mt-12">
+                <a href="./aiforgraphicdesghners.html" class="p-6 bg-[#131926] rounded-3xl border border-white/5 text-white hover:border-blue-500 transition shadow-lg no-underline">
+                    <span class="text-xs text-slate-500 uppercase">Maqaal la xiriira</span>
+                    <p class="font-bold mt-2">Xirfada Graphic Desghn iyo AI</p>
+                </a>
+                <a href="./aiforvedioeditors.html" class="p-6 bg-[#131926] rounded-3xl border border-white/5 text-white hover:border-blue-500 transition shadow-lg no-underline">
+                    <span class="text-xs text-slate-500 uppercase">Sii wad</span>
+                    <p class="font-bold mt-2">Barashada Vedio Editing iyadoo laga faaidaysanayo AI</p>
+                </a>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="bg-[#131926] py-10 border-t border-white/5 text-center">
+        <p class="text-slate-500 text-sm">© 2026 TechSomalia. Dhammaan xuquuqdu waa dhowran tahay.</p>
+    </footer>
 
     <script>
-        // Scroll Progress Bar
-        window.onscroll = function() {
-            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            let scrolled = (winScroll / height) * 100;
-            document.getElementById("scroll-progress").style.width = scrolled + "%";
-        };
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-        // Mobile Menu
-        const overlay = document.getElementById('mobile-overlay');
-        document.getElementById('open-menu').addEventListener('click', () => overlay.classList.add('active'));
-        document.getElementById('close-menu').addEventListener('click', () => overlay.classList.remove('active'));
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('flex');
+            });
+        }
+
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+            const progress = document.getElementById('scroll-progress');
+            if (progress) progress.style.width = scrolled + '%';
+        });
     </script>
 </body>
 </html>
