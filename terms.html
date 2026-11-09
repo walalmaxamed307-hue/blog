@@ -7,34 +7,33 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-26STFV9LR7');
   </script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms & Conditions - TechSomali</title>
-  <meta name="description" content="Full Terms and Conditions for TechSomali website. Rules, guidelines, and legal information for users.">
-  <meta name="keywords" content="TechSomali Terms and Conditions, Website Terms, User Agreement, TechSomali Legal, Website Rules, TechSomali Policies">
-  <meta name="author" content="TechSomali">
+  <title>Terms & Conditions - TechSomalia</title>
+  <meta name="description" content="Read the Terms and Conditions governing the use of TechSomalia, covering content, affiliate partnerships, intellectual property, and website usage.">
+  <meta name="keywords" content="TechSomalia Terms and Conditions, AI, Digital Skills, Make Money Online, Affiliate Disclosure, Website Terms">
+  <meta name="author" content="TechSomalia">
   <link rel="icon" href="./techsomalia-logo.png">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght=500;600;700;900&family=Inter:wght=400;500;600;700;800&family=JetBrains+Mono:wght=400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700;900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 
   <script>
     tailwind.config = {
       darkMode: 'class',
-      theme: { 
-        extend: { 
-          fontFamily: { 
-            sans: ['Inter', 'sans-serif'] 
-          } 
-        } 
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif']
+          }
+        }
       }
     }
-  </script> 
+  </script>
 
   <style>
     :root{
@@ -70,31 +69,53 @@
       font-weight:700;
     }
 
-    .glass-nav { 
+    .glass-nav {
       background:rgba(22,36,58,0.75);
-      backdrop-filter: blur(12px); 
-      -webkit-backdrop-filter: blur(12px); 
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
     }
 
-    #mobile-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: 9999; display: none; }
-    #mobile-overlay.active { display: flex; }
-    
-    .terms-container h2 { 
-      font-family: 'Fraunces', serif;
-      font-size: 1.75rem; 
-      font-weight: 700; 
-      margin-top: 2.5rem; 
-      margin-bottom: 1rem; 
-      color: var(--coral); 
+    #mobile-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 9999;
+      display: none;
     }
-    .terms-container p { margin-bottom: 1.25rem; line-height: 1.8; color: var(--cream-dim); font-size: 1.05rem; }
-    .terms-container ul { margin-bottom: 1.5rem; list-style-type: none; padding-left: 0; }
-    .terms-container li { 
-      margin-bottom: 0.75rem; 
-      padding-left: 1.5rem; 
-      position: relative; 
+
+    #mobile-overlay.active { display: flex; }
+
+    .terms-container h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--coral);
+    }
+
+    .terms-container p {
+      margin-bottom: 1.25rem;
+      line-height: 1.8;
+      color: var(--cream-dim);
+      font-size: 1.05rem;
+    }
+
+    .terms-container ul {
+      margin-bottom: 1.5rem;
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .terms-container li {
+      margin-bottom: 0.75rem;
+      padding-left: 1.5rem;
+      position: relative;
       color: var(--cream-dim);
     }
+
     .terms-container li::before {
       content: "•";
       position: absolute;
@@ -110,12 +131,12 @@
   <!-- NAV -->
   <nav class="glass-nav sticky top-0 z-50 border-b border-white/10 h-20">
     <div class="max-w-7xl mx-auto px-6 h-full flex justify-between items-center">
+
       <div class="flex items-center gap-2">
-     <!-- LOGO -->
-    <a href="./index.html" class="font-display font-bold text-xl tracking-tight">
-      Tech<span style="color:var(--coral)">Somalia</span>
-    </a>
-</div>
+        <a href="./index.html" class="font-display font-bold text-xl tracking-tight">
+          Tech<span style="color:var(--coral)">Somalia</span>
+        </a>
+      </div>
 
       <ul class="hidden md:flex items-center space-x-8 font-bold text-sm text-[var(--cream-dim)]">
         <li><a href="./index.html" class="hover:text-[var(--coral)] transition">Home</a></li>
@@ -124,77 +145,209 @@
         <li><a href="./contact.html" class="hover:text-[var(--coral)] transition">Contact</a></li>
         <li><a href="./terms&conditions.html" class="text-[var(--coral)] underline decoration-2 underline-offset-4 font-extrabold">Terms</a></li>
       </ul>
-      <button id="open-menu" class="md:hidden text-3xl style='color:var(--coral)'">☰</button>
+
+      <button id="open-menu" class="md:hidden text-3xl" style="color:var(--coral)">☰</button>
     </div>
   </nav>
 
   <!-- MOBILE OVERLAY -->
   <div id="mobile-overlay" class="bg-[#0F1B2D] flex-col items-center justify-center space-y-8 text-2xl font-bold transition-all">
+
     <button id="close-menu" class="absolute top-6 right-8 text-6xl text-[var(--cream-dim)] hover:text-[var(--coral)]">&times;</button>
+
     <a href="./index.html" class="hover:text-[var(--coral)]">Home</a>
     <a href="./blog.html" class="hover:text-[var(--coral)]">Blog</a>
     <a href="./about.html" class="hover:text-[var(--coral)]">About</a>
     <a href="./contact.html" class="hover:text-[var(--coral)]">Contact</a>
+
     <div class="h-px w-20 bg-white/10"></div>
+
     <a href="./privacy.html" class="text-lg text-[var(--cream-dim)] hover:text-[var(--coral)]">Privacy Policy</a>
     <a href="./terms&conditions.html" class="text-[var(--coral)]">Terms & Conditions</a>
   </div>
 
   <!-- HERO -->
   <header class="py-24 text-center px-6">
+
     <h1 class="text-5xl md:text-7xl font-bold font-display tracking-tight mb-6">
       Terms & <span style="color:var(--coral)">Conditions</span>
     </h1>
+
     <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/5 text-[var(--mint)] rounded-full text-xs font-bold uppercase tracking-widest border border-white/10">
-      Last updated: June 2026
+      Last updated: November 2026
     </div>
+
   </header>
 
   <!-- MAIN CONTENT -->
   <main class="max-w-4xl mx-auto px-6 py-16">
-    <div class="card p-10 md:p-16 shadow-2xl terms-container"> 
-      <p class="text-lg font-medium">Welcome to <strong>TechSomali</strong>. By accessing and using this website, you accept and agree to comply with the Terms and Conditions outlined below. These terms apply directly to all visitors, users, and others who interact with our services.</p>
-      
-      <h2>1. Introduction</h2>
-      <p>These terms govern your administrative usage of TechSomali. If you strongly disagree with any specific operational parameter or clause within these terms, you must immediately cease all browsing sessions on this platform.</p>
-      
+
+    <div class="card p-10 md:p-16 shadow-2xl terms-container">
+
+      <p class="text-lg font-medium">
+        Welcome to <strong>TechSomalia</strong>. These Terms and Conditions govern your access to and use of our website. By visiting or using TechSomalia, you agree to follow these terms. If you do not agree with them, please discontinue using our website.
+      </p>
+
+      <h2>1. About TechSomalia</h2>
+
+      <p>
+        TechSomalia is a digital technology and educational platform that provides information, resources, and insights across three main areas: Artificial Intelligence (AI), Digital Skills, and Making Money Online.
+      </p>
+
+      <p>
+        Our content is designed to help individuals discover useful AI tools, develop practical digital skills, explore online opportunities, and understand the evolving digital economy.
+      </p>
+
       <h2>2. Intellectual Property Rights</h2>
-      <p>All core components hosted on <strong>TechSomali</strong>—including text articles, code blocks, programming tutorials, graphical interfaces, and structural designs—are the exclusive intellectual property of TechSomali and its founders. You are strictly prohibited from copying, distributing, republishing, or modifying our content for commercial purposes without explicit written validation.</p>
+
+      <p>
+        Unless otherwise stated, the original content published on TechSomalia, including articles, written materials, graphics, website design, and other original resources, belongs to TechSomalia and is protected by applicable intellectual property laws.
+      </p>
+
+      <p>
+        You may read, share, and reference our content for personal and educational purposes, provided that proper credit and a link to the original source are included where appropriate.
+      </p>
+
+      <p>
+        You may not reproduce, republish, distribute, or commercially exploit our original content without prior written permission from TechSomalia.
+      </p>
 
       <h2>3. Acceptable Website Usage</h2>
-      <p>By leveraging this technical blog, you warrant that you will engage with the services for entirely lawful and educational purposes. Prohibited behaviors include, but are not limited to:</p>
+
+      <p>
+        You agree to use TechSomalia responsibly and only for lawful purposes. You must not:
+      </p>
+
       <ul>
-        <li>Uploading or broadcasting malicious code, security exploits, or defamatory commentary.</li>
-        <li>Attempting unauthorized computational access to restricted sections of the server interface.</li>
-        <li>Utilizing any automated mining script to harvest user parameters or personal details without consent.</li>
+        <li>Use the website for fraudulent, misleading, or illegal activities.</li>
+        <li>Attempt to gain unauthorized access to our website, servers, or systems.</li>
+        <li>Upload or distribute malicious software, harmful code, or security threats.</li>
+        <li>Copy or scrape website content for unauthorized commercial purposes.</li>
+        <li>Interfere with the website's functionality, security, or availability.</li>
+        <li>Use our platform to distribute spam or misleading information.</li>
       </ul>
 
-      <h2>4. Third-Party External Hyperlinks</h2>
-      <p><strong>TechSomali</strong> explicitly contains reference linkages that route to external web domains. We maintain zero authority over, and assume no responsibility for, the data structures, accuracy, or privacy policies of those third-party nodes. Navigating outside our platform is entirely at your own discretion.</p>
+      <h2>4. Educational and Financial Disclaimer</h2>
 
-      <h2>5. Limitation of Liability & Disclaimers</h2>
-      <p>All informational assets and development pathways detailed on <strong>TechSomali</strong> are designed strictly for educational frameworks. While we prioritize accurate data synthesis, we offer no absolute guarantees on script configurations or financial outcomes. The user assumes full technical risks associated with code implementations.</p>
-      
-      <h2>6. Advertisement Infrastructure & Revenue</h2>
-      <p>TechSomali collaborates with Google AdSense to safely serve contextual advertisements. By interacting with our interface, you formally acknowledge and approve the utilization of standard tracking cookies engineered to match optimized ad units to your user persona.</p>
-      
-      <h2>7. Privacy Integration</h2>
-      <p>Your entire browsing session is concurrently structured around our digital guidelines. Please thoroughly review our updated <a href="./privacy.html" class="text-[var(--mint)] font-bold underline">Privacy Policy</a> to comprehend how your anonymized logs are protected.</p>
-      
-      <h2>8. Modifications to Operational Terms</h2>
-      <p>TechSomali holds the absolute right to update, revise, or change these conditions at any given moment. Structural modifications become instantly valid upon public publication. Your continued use of the platform verifies your binding agreement to the updated versions.</p>
-      
-      <h2>9. Governing Law</h2>
-      <p>These framework terms are compiled and governed in absolute alignment with the digital regulations of Somalia. Any legal discrepancies or structural conflicts arising from your usage will fall under the jurisdiction of the national court architectures.</p>
-      
-      <h2>10. Contact Information</h2>
-      <p>If you require further clarity or wish to address inquiries regarding these operational frameworks, do not hesitate to contact our desk through our <a href="./contact.html" class="text-[var(--coral)] font-bold underline">Contact Page</a>.
-      
+      <p>
+        All information published on TechSomalia is provided for general informational and educational purposes only.
+      </p>
+
+      <p>
+        Our articles about AI tools, digital skills, freelancing, affiliate marketing, online business, and making money online are intended to provide knowledge and guidance. They should not be considered professional financial, legal, or business advice.
+      </p>
+
+      <p>
+        We do not guarantee that following any tutorial, strategy, recommendation, or opportunity discussed on our website will generate income or produce specific results. Your results may vary depending on your skills, experience, effort, location, and other factors.
+      </p>
+
+      <p>
+        You are responsible for evaluating opportunities and making your own decisions before investing money, purchasing products, or using third-party services.
+      </p>
+
+      <h2>5. Affiliate Disclosure</h2>
+
+      <p>
+        TechSomalia may participate in affiliate marketing programs. This means that some links published on our website may be affiliate links.
+      </p>
+
+      <p>
+        If you click an affiliate link and make a purchase, register for a service, or complete another qualifying action, TechSomalia may receive a commission or referral fee at no additional cost to you.
+      </p>
+
+      <p>
+        These partnerships help support the operation and development of TechSomalia. However, affiliate relationships do not automatically determine our opinions, reviews, or recommendations.
+      </p>
+
+      <p>
+        We aim to provide useful and honest information to help our audience make informed decisions. Users should always review the terms, pricing, and policies of third-party products or services before taking action.
+      </p>
+
+      <h2>6. Third-Party Links and Services</h2>
+
+      <p>
+        TechSomalia may contain links to external websites, applications, tools, and services operated by third parties.
+      </p>
+
+      <p>
+        These links are provided for convenience and informational purposes. We do not own or control these external platforms and are not responsible for their content, accuracy, availability, security, pricing, or privacy practices.
+      </p>
+
+      <p>
+        Accessing third-party websites or using their services is at your own discretion. We encourage you to review their applicable terms and privacy policies before using them.
+      </p>
+
+      <h2>7. Advertising and Cookies</h2>
+
+      <p>
+        TechSomalia may use third-party advertising services, analytics tools, and similar technologies to understand website performance and improve user experience.
+      </p>
+
+      <p>
+        These services may use cookies or similar technologies to collect information about website visits, user interactions, and browsing activity in accordance with their respective privacy policies and applicable requirements.
+      </p>
+
+      <p>
+        The use of cookies and tracking technologies is explained further in our Privacy Policy.
+      </p>
+
+      <h2>8. Privacy</h2>
+
+      <p>
+        We respect the privacy of our visitors. Information collected through our website may be used to operate, maintain, analyze, and improve our services.
+      </p>
+
+      <p>
+        For more information about how information is collected, used, and protected, please review our
+        <a href="./privacy.html" class="text-[var(--mint)] font-bold underline">Privacy Policy</a>.
+      </p>
+
+      <h2>9. Limitation of Liability</h2>
+
+      <p>
+        TechSomalia makes reasonable efforts to provide useful, accurate, and up-to-date information. However, we do not guarantee that all website content will always be complete, accurate, reliable, or available without interruption.
+      </p>
+
+      <p>
+        To the extent permitted by applicable law, TechSomalia shall not be responsible for any direct or indirect loss, damage, or consequences arising from the use of our website, reliance on published information, or interactions with third-party products and services.
+      </p>
+
+      <h2>10. Changes to These Terms</h2>
+
+      <p>
+        We reserve the right to update, modify, or replace these Terms and Conditions at any time to reflect changes to our website, services, or applicable requirements.
+      </p>
+
+      <p>
+        Any updated version will be published on this page with a revised update date. Your continued use of TechSomalia after changes are published indicates your acceptance of the updated terms.
+      </p>
+
+      <h2>11. Governing Law</h2>
+
+      <p>
+        These Terms and Conditions are intended to be interpreted in accordance with the applicable laws of Somalia, subject to any mandatory legal requirements that may apply.
+      </p>
+
+      <h2>12. Contact Information</h2>
+
+      <p>
+        If you have questions, concerns, or requests regarding these Terms and Conditions, you can contact us through our
+        <a href="./contact.html" class="text-[var(--coral)] font-bold underline">Contact Page</a>.
+      </p>
+
       <!-- FOOTER INNER -->
       <div class="mt-20 pt-10 border-t border-white/10 text-center">
-        <div class="font-bold text-[var(--cream)] mb-2 font-display text-lg">© 2026 TechSomali — Empowering Innovation</div>
-        <p class="text-sm text-[var(--cream-dim)] opacity-70">Dedicated to delivering high-tier modern technology, programming, and AI insights globally.</p>
+
+        <div class="font-bold text-[var(--cream)] mb-2 font-display text-lg">
+          © 2026 TechSomalia — Empowering Innovation
+        </div>
+
+        <p class="text-sm text-[var(--cream-dim)] opacity-70">
+          Helping people explore AI, develop digital skills, and discover online opportunities.
+        </p>
+
       </div>
+
     </div>
   </main>
 
@@ -202,14 +355,17 @@
     const overlay = document.getElementById('mobile-overlay');
     const openBtn = document.getElementById('open-menu');
     const closeBtn = document.getElementById('close-menu');
+
     openBtn.addEventListener('click', () => {
       overlay.classList.add('active');
       document.body.style.overflow = 'hidden';
     });
+
     closeBtn.addEventListener('click', () => {
       overlay.classList.remove('active');
       document.body.style.overflow = 'auto';
     });
   </script>
+
 </body>
 </html>

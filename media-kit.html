@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TechSomalia Media Kit — audience, reach, content and partnership opportunities." />
+  <title>TechSomalia | Media Kit</title>
+  <link rel="icon" href="./techsomalia-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #101a2b;
+      --panel: #17243a;
+      --panel-2: #1d2d45;
+      --text: #f4f6fa;
+      --muted: #aebbd0;
+      --coral: #ff806f;
+      --mint: #8ce0c2;
+      --line: rgba(220,232,248,.13);
+      --max: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font-family: "DM Sans", sans-serif; line-height: 1.65;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
+    .topbar {
+      border-bottom: 1px solid var(--line); background: rgba(16,26,43,.92);
+    }
+    .nav {
+      min-height: 76px; display: flex; align-items: center;
+      justify-content: space-between; gap: 24px;
+    }
+    .brand { font-size: 1.2rem; font-weight: 700; letter-spacing: -.04em; }
+    .brand span { color: var(--coral); }
+    .nav-links { display: flex; gap: 24px; color: var(--muted); font-size: .9rem; }
+    .nav-links a:hover { color: var(--mint); }
+    .button {
+      display: inline-flex; align-items: center; justify-content: center;
+      border-radius: 999px; padding: 11px 19px; font-weight: 700;
+      background: var(--coral); color: #182235; transition: transform .2s ease;
+    }
+    .button:hover { transform: translateY(-2px); }
+    .hero { padding: 92px 0 76px; }
+    .eyebrow {
+      display: inline-block; color: var(--mint); text-transform: uppercase;
+      letter-spacing: .15em; font-size: .75rem; font-weight: 700;
+      margin-bottom: 18px;
+    }
+    h1, h2, h3 { line-height: 1.12; }
+    h1 {
+      font-family: Fraunces, Georgia, serif; font-size: clamp(3rem, 7vw, 5.7rem);
+      letter-spacing: -.055em; max-width: 850px; margin: 0 0 22px;
+    }
+    h1 em { color: var(--coral); font-style: normal; }
+    .hero-copy { color: var(--muted); max-width: 680px; font-size: 1.12rem; margin: 0 0 30px; }
+    .hero-meta { color: var(--muted); font-size: .86rem; margin-top: 18px; }
+    section { padding: 66px 0; border-top: 1px solid var(--line); }
+    .section-head { max-width: 690px; margin-bottom: 30px; }
+    .section-head h2 {
+      font-family: Fraunces, Georgia, serif; font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: -.04em; margin: 0 0 12px;
+    }
+    .section-head p, .muted { color: var(--muted); }
+    .grid { display: grid; gap: 16px; }
+    .stats { grid-template-columns: repeat(4, 1fr); }
+    .card {
+      background: var(--panel); border: 1px solid var(--line);
+      border-radius: 18px; padding: 24px;
+    }
+    .stat-value { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 700; letter-spacing: -.06em; }
+    .stat-label { color: var(--muted); font-size: .9rem; margin-top: 5px; }
+    .accent { color: var(--mint); }
+    .two-col { grid-template-columns: 1fr 1fr; }
+    .three-col { grid-template-columns: repeat(3, 1fr); }
+    .card h3 { font-size: 1.15rem; margin: 0 0 10px; }
+    .card p { color: var(--muted); margin: 0; }
+    .country-list { display: grid; gap: 12px; }
+    .country {
+      display: grid; grid-template-columns: 150px 1fr 55px;
+      align-items: center; gap: 14px; font-size: .92rem;
+    }
+    .bar { height: 9px; background: #2b3b53; border-radius: 99px; overflow: hidden; }
+    .bar > span { display: block; height: 100%; background: var(--mint); border-radius: inherit; }
+    .count { text-align: right; font-weight: 700; }
+    .tags { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 18px; }
+    .tag {
+      border: 1px solid var(--line); color: var(--mint);
+      padding: 7px 12px; border-radius: 999px; font-size: .84rem;
+    }
+    .partnership { background: linear-gradient(135deg, #1b2a40, #17243a); }
+    .partnership .card { background: rgba(16,26,43,.5); }
+    .contact-box {
+      border-radius: 24px; padding: clamp(26px, 5vw, 48px);
+      background: var(--mint); color: #142238;
+      display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    }
+    .contact-box h2 {
+      font-family: Fraunces, Georgia, serif; font-size: clamp(2rem, 4vw, 3rem);
+      margin: 0 0 8px; letter-spacing: -.04em;
+    }
+    .contact-box p { margin: 0; max-width: 620px; color: #34445a; }
+    .contact-box .button { background: #142238; color: white; white-space: nowrap; }
+    footer { padding: 28px 0 42px; color: var(--muted); font-size: .85rem; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    @media (max-width: 800px) {
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .three-col { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 600px) {
+      .wrap { width: min(100% - 28px, var(--max)); }
+      .hero { padding: 68px 0 54px; }
+      section { padding: 50px 0; }
+      .two-col, .stats { grid-template-columns: 1fr 1fr; }
+      .country { grid-template-columns: 105px 1fr 42px; gap: 9px; font-size: .82rem; }
+      .contact-box { align-items: flex-start; flex-direction: column; }
+    }
+    @media print {
+      body { background: white; color: #182235; }
+      .topbar, .button { display: none; }
+      .card { background: #f4f6f8; border-color: #ddd; }
+      .stat-label, .muted, .card p, .section-head p, footer { color: #536174; }
+      section { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="https://techsomalia.com">Tech<span>Somalia</span></a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#audience">Audience</a>
+        <a href="#content">Content</a>
+        <a href="#partnerships">Partnerships</a>
+      </nav>
+      <a class="button" href="mailto:info@techsomalia.com?subject=TechSomalia%20Partnership">Work with us</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap hero" id="about">
+      <span class="eyebrow">Media Kit · 2026</span>
+      <h1>Technology, skills<br>and <em>digital opportunity.</em></h1>
+      <p class="hero-copy">
+        TechSomalia is a Somali-focused digital platform sharing practical knowledge
+        about artificial intelligence, digital skills and making money online.
+        We help our audience discover useful tools, build relevant skills and understand
+        opportunities in the digital economy.
+      </p>
+<a
+  class="button"
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=info@techsomalia.com&su=TechSomalia%20Partnership"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Explore a partnership
+</a>
+      <div class="hero-meta">Website: techsomalia.com &nbsp;·&nbsp; Audience and website figures shown below</div>
+    </div>
+
+    <section id="reach">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Digital reach</span>
+          <h2>Recent platform performance</h2>
+          <p>Reported website performance over the last three months. Search clicks are approximate, based on the current figures provided.</p>
+        </div>
+        <div class="grid stats">
+          <div class="card"><div class="stat-value accent">18K+</div><div class="stat-label">Google Search impressions</div></div>
+          <div class="card"><div class="stat-value">~6K+</div><div class="stat-label">Google Search clicks</div></div>
+          <div class="card"><div class="stat-value accent">1K+</div><div class="stat-label">Google Analytics active users</div></div>
+          <div class="card"><div class="stat-value">10K+</div><div class="stat-label">Google Analytics events</div></div>
+        </div>
+        <p class="muted" style="font-size:.82rem;margin-top:14px;">Google Search Console and Google Analytics 4 figures are separate measurement systems. Event count represents tracked interactions, not unique visitors.</p>
+      </div>
+    </section>
+
+    <section id="audience">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Audience geography</span>
+          <h2>Reaching audiences across markets</h2>
+          <p>Top five countries by active users in the Analytics country report shared with us.</p>
+        </div>
+        <div class="grid two-col">
+          <div class="card country-list">
+            <div class="country"><strong>Somalia</strong><div class="bar"><span style="width:100%"></span></div><span class="count">189</span></div>
+            <div class="country"><strong>United States</strong><div class="bar"><span style="width:25.4%"></span></div><span class="count">48</span></div>
+            <div class="country"><strong>China</strong><div class="bar"><span style="width:10.1%"></span></div><span class="count">19</span></div>
+            <div class="country"><strong>Ethiopia</strong><div class="bar"><span style="width:9%"></span></div><span class="count">17</span></div>
+            <div class="country"><strong>Germany</strong><div class="bar"><span style="width:8.5%"></span></div><span class="count">16</span></div>
+          </div>
+          <div class="card">
+            <h3>Core audience</h3>
+            <p>Our content is designed for Somali-speaking readers interested in practical technology, AI tools, digital learning and online opportunities, while also attracting visitors from international markets.</p>
+            <div class="tags">
+              <span class="tag">Somalia</span><span class="tag">United States</span>
+              <span class="tag">China</span><span class="tag">Ethiopia</span><span class="tag">Germany</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="content">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">What we publish</span>
+          <h2>Three connected content areas</h2>
+          <p>Useful, accessible content for people who want to understand technology and make progress in the digital world.</p>
+        </div>
+        <div class="grid three-col">
+          <article class="card">
+            <h3>Artificial Intelligence</h3>
+            <p>AI tools, practical use cases, tutorials and explanations that make emerging technology easier to understand and apply.</p>
+          </article>
+          <article class="card">
+            <h3>Digital Skills</h3>
+            <p>Programming, web development, technology guides and learning resources for people building digital capabilities.</p>
+          </article>
+          <article class="card">
+            <h3>Making Money Online</h3>
+            <p>Educational content about affiliate marketing, online platforms, digital work and internet-based income opportunities.</p>
+          </article>
+        </div>
+        <div class="grid two-col" style="margin-top:16px;">
+          <div class="card"><div class="stat-value accent">70+</div><div class="stat-label">Published articles</div></div>
+          <div class="card"><div class="stat-value">300+</div><div class="stat-label">WhatsApp community members</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Discovery channels</span>
+          <h2>How readers find TechSomalia</h2>
+          <p>Our reported traffic channels include:</p>
+        </div>
+        <div class="grid three-col">
+          <div class="card"><h3 class="accent">Organic Search</h3><p>Readers discover educational articles through search engines.</p></div>
+          <div class="card"><h3 class="accent">Social Media</h3><p>Content is discovered and shared through social platforms.</p></div>
+          <div class="card"><h3 class="accent">Direct Traffic</h3><p>Visitors access the website directly or return to content they know.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="partnership" id="partnerships">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Partnership opportunities</span>
+          <h2>Let's build a relevant campaign</h2>
+          <p>We are open to discussing campaigns that fit our audience and the partner's goals. Placement, format and scope can be agreed together rather than restricted to fixed packages.</p>
+        </div>
+        <div class="grid three-col">
+          <div class="card"><h3>Affiliate campaigns</h3><p>Relevant tools, platforms and services introduced through contextual content.</p></div>
+          <div class="card"><h3>Sponsored content</h3><p>Sponsored articles, product explainers and clearly disclosed promotions.</p></div>
+          <div class="card"><h3>Custom collaborations</h3><p>Flexible campaigns shaped around the partner's objectives, available placements and audience fit.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="contact-box">
+          <div>
+            <h2>Interested in working together?</h2>
+            <p>Tell us about your product, campaign goals and preferred collaboration. We can discuss suitable options and availability.</p>
+          </div>
+          <a class="button" href="mailto:info@techsomalia.com?subject=TechSomalia%20Media%20Kit%20Partnership">Contact TechSomalia</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© 2026 TechSomalia. All rights reserved.</span>
+      <span><a href="https://techsomalia.com">techsomalia.com</a> · <a href="mailto:info@techsomalia.com">info@techsomalia.com</a></span>
+    </div>
+  </footer>
+</body>
+</html>
